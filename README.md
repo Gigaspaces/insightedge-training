@@ -1,2 +1,1 @@
 # insightedge-training
-# insightedge-training
