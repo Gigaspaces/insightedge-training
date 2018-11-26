@@ -11,29 +11,17 @@
        http://www.openspaces.org/schema/events http://www.openspaces.org/schema/12.2/events/openspaces-events.xsd
        http://www.openspaces.org/schema/remoting http://www.openspaces.org/schema/12.2/remoting/openspaces-remoting.xsd">
 
-    <!--
-        Spring property configurer which allows us to use system properties (such as user.name).
-    -->
-    <bean id="propertiesConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="properties">
-            <props>
-                <prop key="dataGridName">dataGrid</prop>
-            </props>
-        </property>
-    </bean>
+
+
+    <!-- Enable scan for OpenSpaces and Spring components -->
+    <context:component-scan base-package="common"/>
+
 
     <!--
         A bean representing an embedded space.
     -->
-<!-- Enable scan for OpenSpaces and Spring components -->
-<context:component-scan base-package="common"/>
-
-<!-- Enable support for @Notify annotation -->
-<os-events:annotation-support />
-    <os-core:embedded-space id="space" name="demo">
-    </os-core:embedded-space>
+    <os-core:embedded-space id="space" name="demo"></os-core:embedded-space>
 	<os-core:giga-space id="gigaSpace" space="space"/>
-	<bean id="listener" class="common.Listener">
-    </bean>
+
 
 </beans>
