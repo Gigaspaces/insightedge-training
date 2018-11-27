@@ -44,7 +44,7 @@ public class DelayRec implements java.io.Serializable{
     // ToDo Add constructor with expected fields
     // ToDo verify you understand ID and routing see: https://docs.gigaspaces.com/xap/14.0/dev-java/space-object-id-operations.html
     // And https://docs.gigaspaces.com/xap/14.0/dev-java/pojo-attribute-annotations.html
-
+    
     public Integer getYear() {
         return year;
     }
