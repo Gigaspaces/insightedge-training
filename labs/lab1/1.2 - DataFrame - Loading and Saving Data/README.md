@@ -1,6 +1,7 @@
 # 1.2 - DataFrame - Loading and Saving Data
 
-In this lab you will need to do the following:
+Requirements:
+
 1. load zeppelin "1.2 exercise - DataFrame - Loading and Saving Data" Notebook. This Notebook contain 4 pargraph.
 2. Fill the missing code (?) in each paragraph and run it.
 
