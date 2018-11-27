@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0eb5e13-8578-48c5-beb0-81d64439c4ec" name="Default" comment="README file template">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab 1.2 - DataFrame - Loading and Saving Data.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab 1.2 exercise - DataFrame - Loading and Saving Data.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab 1.2 solution - DataFrame - Loading and Saving Data.json" afterPath="$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab 1.2 solution - DataFrame - Loading and Saving Data.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/README.md" afterPath="$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,7 +79,17 @@
         <entry file="file://$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="207">
-              <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Lab 1.2 solution - DataFrame - Loading and Saving Data.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab 1.2 solution - DataFrame - Loading and Saving Data.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="0" column="20446" lean-forward="false" selection-start-line="0" selection-start-column="20446" selection-end-line="0" selection-end-column="20446" />
               <folding />
             </state>
           </provider>
@@ -128,6 +138,8 @@
         <option value="$PROJECT_DIR$/labs/lab1/1.6 - Data.6Frame - Exercise on Operations and SQL Usage/Lab 6.5 - DataFrame - Exercise on Operations and SQL Usage.json" />
         <option value="$PROJECT_DIR$/labs/lab1/README.md" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab 1.2 solution - DataFrame - Loading and Saving Data.json" />
+        <option value="$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab 1.2 exercise - DataFrame - Loading and Saving Data.json" />
         <option value="$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/README.md" />
       </list>
     </option>
@@ -465,7 +477,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2048" height="1129" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -480,7 +491,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31655034" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31655034" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -671,10 +682,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab 1.2 solution - DataFrame - Loading and Saving Data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="0" column="20446" lean-forward="false" selection-start-line="0" selection-start-column="20446" selection-end-line="0" selection-end-column="20446" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab 1.2 exercise - DataFrame - Loading and Saving Data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="0" column="20568" lean-forward="false" selection-start-line="0" selection-start-column="20568" selection-end-line="0" selection-end-column="20568" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
-          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
       </provider>
