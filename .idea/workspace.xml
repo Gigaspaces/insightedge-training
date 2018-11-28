@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0eb5e13-8578-48c5-beb0-81d64439c4ec" name="Default" comment="README file template">
+    <list default="true" id="e0eb5e13-8578-48c5-beb0-81d64439c4ec" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab1/1.1 - InsightEdge Installation and Simple Example/building-maven/data/video-games-sales.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab1/1.1 - InsightEdge Installation and Simple Example/building-maven/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab1/1.1 - InsightEdge Installation and Simple Example/building-maven/src/main/scala/com/gigaspaces/ietraining/SimpleExample.scala" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/2010-summary.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/2010-summary.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/2010-summary.parquet/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/2010-summary.parquet/part-r-00000-1a9822ba-b8fb-4d8e-844a-ea30d0801b9e.gz.parquet" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab 1.2 exercise - DataFrame - Loading and Saving Data.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab 1.2 solution - DataFrame - Loading and Saving Data.json" afterPath="$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab 1.2 solution - DataFrame - Loading and Saving Data.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/README.md" afterPath="$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/README.md" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab 1.2 solution - DataFrame - Loading and Saving Data.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab1/1.3_DataFrame_Exercise_on_Loading_and_Saving_Data/Lab_1.3_DataFrame_Exercise_on_Loading_and_Saving_Data.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab1/1.4 - DataFrame - Operations/Lab_1.4_DataFrame_Operations.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab1/1.5 - DataFrame - Using SQL/Lab_1.5_DataFrame_Using_SQL.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab1/1.6 - Data.6Frame - Exercise on Operations and SQL Usage/Lab_1.6_DataFrame_Exercise_on_Operations_and_SQL_Usage.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab1/1.7 - DataFrame - Load DataFrame from Grid/load-dataframe-from-grid/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab1/1.7 - DataFrame - Load DataFrame from Grid/load-dataframe-from-grid/src/main/scala/com/gigaspaces/ietraining/LoadDataframeFromGrid.scala" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab1/1.8 - DataFrame - Save DataFrame to Grid/save-dataframe-to-grid/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab1/1.8 - DataFrame - Save DataFrame to Grid/save-dataframe-to-grid/src/main/scala/com/gigaspaces/ietraining/SaveDataframeToGrid.scala" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab1/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab4/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab5/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab6/README.md" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/insightedge-training.iml" afterPath="$PROJECT_DIR$/.idea/insightedge-training.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,81 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Lab_1.3_DataFrame_Exercise_on_Loading_and_Saving_Data.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labs/lab1/1.3_DataFrame_Exercise_on_Loading_and_Saving_Data/Lab_1.3_DataFrame_Exercise_on_Loading_and_Saving_Data.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="6073" lean-forward="false" selection-start-line="0" selection-start-column="6073" selection-end-line="0" selection-end-column="6073" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Lab_1.4_DataFrame_Operations.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labs/lab1/1.4 - DataFrame - Operations/Lab_1.4_DataFrame_Operations.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2462">
-              <caret line="0" column="18722" lean-forward="false" selection-start-line="0" selection-start-column="18722" selection-end-line="0" selection-end-column="18722" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Lab_1.5_DataFrame_Using_SQL.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labs/lab1/1.5 - DataFrame - Using SQL/Lab_1.5_DataFrame_Using_SQL.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="5476" lean-forward="false" selection-start-line="0" selection-start-column="5476" selection-end-line="0" selection-end-column="5476" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Lab_1.6_DataFrame_Exercise_on_Operations_and_SQL_Usage.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labs/lab1/1.6 - Data.6Frame - Exercise on Operations and SQL Usage/Lab_1.6_DataFrame_Exercise_on_Operations_and_SQL_Usage.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="5935" lean-forward="false" selection-start-line="0" selection-start-column="5935" selection-end-line="0" selection-end-column="5935" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Lab 1.2 solution - DataFrame - Loading and Saving Data.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab 1.2 solution - DataFrame - Loading and Saving Data.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="0" column="20446" lean-forward="false" selection-start-line="0" selection-start-column="20446" selection-end-line="0" selection-end-column="20446" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labs/lab1/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="11" lean-forward="false" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -144,10 +95,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="77" />
+    <option name="y" value="27" />
     <option name="width" value="2048" />
-    <option name="height" value="1129" />
+    <option name="height" value="1125" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -184,14 +136,21 @@
               <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
               <item name="labs" type="462c0819:PsiDirectoryNode" />
-              <item name="lab1" type="462c0819:PsiDirectoryNode" />
+              <item name="lab2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
               <item name="labs" type="462c0819:PsiDirectoryNode" />
-              <item name="lab1" type="462c0819:PsiDirectoryNode" />
-              <item name="1.2 - DataFrame - Loading and Saving Data" type="462c0819:PsiDirectoryNode" />
+              <item name="lab2" type="462c0819:PsiDirectoryNode" />
+              <item name="2.1- FlightDelay-load-data-Exercise" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="lab2" type="462c0819:PsiDirectoryNode" />
+              <item name="2.1- FlightDelay-load-data-Solution" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -335,7 +294,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SimpleExample">
+  <component name="RunManager" selected="Scala Console.Scala Console">
+    <configuration name="Scala Console" type="ScalaScriptConsoleRunConfiguration" factoryName="Scala Console" temporary="true">
+      <module name="insightedge-training" />
+      <setting name="vmparams4" value="-Djline.terminal=NONE" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="consoleArgs" value="-usejavacp" />
+    </configuration>
     <configuration name="SimpleExample" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -436,9 +401,14 @@
       <properties />
       <listeners />
     </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Application.SimpleExample" />
+      <item index="1" class="java.lang.String" itemvalue="Scala Console.Scala Console" />
+    </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.SimpleExample" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Scala Console.Scala Console" />
+        <item index="1" class="java.lang.String" itemvalue="Application.SimpleExample" />
       </list>
     </recent_temporary>
   </component>
@@ -472,11 +442,19 @@
       <option name="project" value="LOCAL" />
       <updated>1543323943834</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="README file template">
+      <created>1543332881809</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1543332881809</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2048" height="1129" extended-state="0" />
+    <frame x="0" y="23" width="2048" height="1129" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -486,12 +464,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31655034" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31655034" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -602,14 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labs/lab1/1.1 - InsightEdge Installation and Simple Example/building-maven/src/main/scala/com/gigaspaces/ietraining/SimpleExample.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/labs/lab1/1.3_DataFrame_Exercise_on_Loading_and_Saving_Data/Lab_1.3_DataFrame_Exercise_on_Loading_and_Saving_Data.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -658,22 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/lab1/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="11" lean-forward="false" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab_1.2_DataFrame_Loading_and_Saving_Data.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1617">
@@ -684,7 +638,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab 1.2 solution - DataFrame - Loading and Saving Data.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
+        <state relative-caret-position="-2646">
           <caret line="0" column="20446" lean-forward="false" selection-start-line="0" selection-start-column="20446" selection-end-line="0" selection-end-column="20446" />
           <folding />
         </state>
@@ -700,8 +654,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="230">
+          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/lab1/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="11" lean-forward="false" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/lab1/1.1 - InsightEdge Installation and Simple Example/building-maven/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/lab1/1.1 - InsightEdge Installation and Simple Example/building-maven/src/main/scala/com/gigaspaces/ietraining/SimpleExample.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
           <folding />
         </state>
       </provider>
