@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0eb5e13-8578-48c5-beb0-81d64439c4ec" name="Default" comment="" />
+    <list default="true" id="e0eb5e13-8578-48c5-beb0-81d64439c4ec" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Loading and Saving Data/2010-summary.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Loading and Saving Data/2010-summary.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Loading and Saving Data/2010-summary.parquet/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Loading and Saving Data/2010-summary.parquet/part-r-00000-1a9822ba-b8fb-4d8e-844a-ea30d0801b9e.gz.parquet" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Loading and Saving Data/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Loading and Saving Data/exercise - DataFrame - Loading and Saving Data.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Loading and Saving Data/solution - DataFrame - Loading and Saving Data.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/labs/lab2/README.md">
           <provider selected="true" editor-type-id="text-editor">
@@ -21,11 +30,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AI-And-ML-Overview/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SaveDataframeToGrid.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Save DataFrame to Grid/save-dataframe-to-grid/src/main/scala/com/gigaspaces/ietraining/SaveDataframeToGrid.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-13">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -90,10 +129,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -104,18 +141,118 @@
             <path>
               <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
               <item name="labs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
-              <item name="labs" type="462c0819:PsiDirectoryNode" />
               <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFrame - Operations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFrame - Save DataFrame to Grid" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFrame - Save DataFrame to Grid" type="462c0819:PsiDirectoryNode" />
+              <item name="save-dataframe-to-grid" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFrame - Save DataFrame to Grid" type="462c0819:PsiDirectoryNode" />
+              <item name="save-dataframe-to-grid" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFrame - Save DataFrame to Grid" type="462c0819:PsiDirectoryNode" />
+              <item name="save-dataframe-to-grid" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFrame - Save DataFrame to Grid" type="462c0819:PsiDirectoryNode" />
+              <item name="save-dataframe-to-grid" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFrame - Save DataFrame to Grid" type="462c0819:PsiDirectoryNode" />
+              <item name="save-dataframe-to-grid" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFrame - Save DataFrame to Grid" type="462c0819:PsiDirectoryNode" />
+              <item name="save-dataframe-to-grid" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="gigaspaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFrame - Save DataFrame to Grid" type="462c0819:PsiDirectoryNode" />
+              <item name="save-dataframe-to-grid" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="gigaspaces" type="462c0819:PsiDirectoryNode" />
+              <item name="ietraining" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFrame-Loading-And-Saving-Data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -129,118 +266,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/labs/lab2/main/java/common/stubs" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Exercise/main/resources/Flight Delay Lab 2.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/main/resources/Flight Delay Lab 2 Solution.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/labs/lab2/README.md</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -414,10 +439,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2048" height="1129" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -428,7 +454,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31655034" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31655034" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -483,94 +509,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/labs/lab2/main/java/common/solution/DelayRec.java" />
-    <entry file="file://$PROJECT_DIR$/labs/lab2/main/java/common/solution/FlightDelayed.java" />
-    <entry file="file://$PROJECT_DIR$/labs/lab2/main/java/common/solution/Listener.java" />
-    <entry file="file://$PROJECT_DIR$/labs/lab2/main/java/common/stubs/DelayRec.java" />
-    <entry file="file://$PROJECT_DIR$/labs/lab2/main/java/common/stubs/FlightDelayed.java" />
-    <entry file="file://$PROJECT_DIR$/labs/lab2/main/java/common/stubs/Listener.java" />
-    <entry file="file://$PROJECT_DIR$/labs/lab2/main/resources/Flight Delay Prediction example.json" />
-    <entry file="file://$PROJECT_DIR$/labs/lab2/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/labs/lab1/1.1 - InsightEdge Installation and Simple Example/building-maven/data/video-games-sales.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="148" column="40" lean-forward="false" selection-start-line="148" selection-start-column="40" selection-end-line="148" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/main/resources/Flight Delay Lab 2 Solution.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Exercise/main/resources/META-INF/spring/pu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Exercise/main/resources/Flight Delay Lab 2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Exercise/main/java/common/DelayRec.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/lab1/1.3_DataFrame_Exercise_on_Loading_and_Saving_Data/Lab_1.3_DataFrame_Exercise_on_Loading_and_Saving_Data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="6073" lean-forward="false" selection-start-line="0" selection-start-column="6073" selection-end-line="0" selection-end-column="6073" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/lab1/1.4 - DataFrame - Operations/Lab_1.4_DataFrame_Operations.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2462">
-          <caret line="0" column="18722" lean-forward="false" selection-start-line="0" selection-start-column="18722" selection-end-line="0" selection-end-column="18722" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/lab1/1.5 - DataFrame - Using SQL/Lab_1.5_DataFrame_Using_SQL.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5476" lean-forward="false" selection-start-line="0" selection-start-column="5476" selection-end-line="0" selection-end-column="5476" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/lab1/1.6 - Data.6Frame - Exercise on Operations and SQL Usage/Lab_1.6_DataFrame_Exercise_on_Operations_and_SQL_Usage.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5935" lean-forward="false" selection-start-line="0" selection-start-column="5935" selection-end-line="0" selection-end-column="5935" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/labs/lab2/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -579,74 +517,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labs/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab_1.2_DataFrame_Loading_and_Saving_Data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1617">
-          <caret line="0" column="13266" lean-forward="false" selection-start-line="0" selection-start-column="13266" selection-end-line="0" selection-end-column="13266" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab 1.2 solution - DataFrame - Loading and Saving Data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2646">
-          <caret line="0" column="20446" lean-forward="false" selection-start-line="0" selection-start-column="20446" selection-end-line="0" selection-end-column="20446" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab 1.2 exercise - DataFrame - Loading and Saving Data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="0" column="20568" lean-forward="false" selection-start-line="0" selection-start-column="20568" selection-end-line="0" selection-end-column="20568" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/lab1/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="11" lean-forward="false" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/lab1/1.1 - InsightEdge Installation and Simple Example/building-maven/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/lab1/1.1 - InsightEdge Installation and Simple Example/building-maven/src/main/scala/com/gigaspaces/ietraining/SimpleExample.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/lab2/main/java/common/solution/DelayRec.java" />
+    <entry file="file://$PROJECT_DIR$/labs/lab2/main/java/common/solution/FlightDelayed.java" />
+    <entry file="file://$PROJECT_DIR$/labs/lab2/main/java/common/solution/Listener.java" />
+    <entry file="file://$PROJECT_DIR$/labs/lab2/main/java/common/stubs/DelayRec.java" />
+    <entry file="file://$PROJECT_DIR$/labs/lab2/main/java/common/stubs/FlightDelayed.java" />
+    <entry file="file://$PROJECT_DIR$/labs/lab2/main/java/common/stubs/Listener.java" />
+    <entry file="file://$PROJECT_DIR$/labs/lab2/main/resources/Flight Delay Prediction example.json" />
+    <entry file="file://$PROJECT_DIR$/labs/lab2/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/labs/lab1/1.1 - InsightEdge Installation and Simple Example/building-maven/data/video-games-sales.csv" />
+    <entry file="file://$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/main/resources/Flight Delay Lab 2 Solution.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Exercise/main/resources/META-INF/spring/pu.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Exercise/main/resources/Flight Delay Lab 2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Exercise/main/java/common/DelayRec.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/lab1/1.3_DataFrame_Exercise_on_Loading_and_Saving_Data/Lab_1.3_DataFrame_Exercise_on_Loading_and_Saving_Data.json" />
+    <entry file="file://$PROJECT_DIR$/labs/lab1/1.4 - DataFrame - Operations/Lab_1.4_DataFrame_Operations.json" />
+    <entry file="file://$PROJECT_DIR$/labs/lab1/1.5 - DataFrame - Using SQL/Lab_1.5_DataFrame_Using_SQL.json" />
+    <entry file="file://$PROJECT_DIR$/labs/lab1/1.6 - Data.6Frame - Exercise on Operations and SQL Usage/Lab_1.6_DataFrame_Exercise_on_Operations_and_SQL_Usage.json" />
+    <entry file="file://$PROJECT_DIR$/labs/lab2/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/README.md" />
+    <entry file="file://$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab_1.2_DataFrame_Loading_and_Saving_Data.json" />
+    <entry file="file://$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab 1.2 solution - DataFrame - Loading and Saving Data.json" />
+    <entry file="file://$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab 1.2 exercise - DataFrame - Loading and Saving Data.json" />
+    <entry file="file://$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/README.md" />
+    <entry file="file://$PROJECT_DIR$/labs/lab1/README.md" />
+    <entry file="file://$PROJECT_DIR$/labs/lab1/1.1 - InsightEdge Installation and Simple Example/building-maven/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/labs/lab1/1.1 - InsightEdge Installation and Simple Example/building-maven/src/main/scala/com/gigaspaces/ietraining/SimpleExample.scala" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AI-And-ML-Overview/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Loading and Saving Data/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Save DataFrame to Grid/save-dataframe-to-grid/src/main/scala/com/gigaspaces/ietraining/SaveDataframeToGrid.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
