@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/InsightEdge Installation and Simple Example/building-maven/building-maven.iml" filepath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/InsightEdge Installation and Simple Example/building-maven/building-maven.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/insightedge-training.iml" filepath="$PROJECT_DIR$/.idea/insightedge-training.iml" />
     </modules>
   </component>

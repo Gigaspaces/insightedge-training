@@ -2,15 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0eb5e13-8578-48c5-beb0-81d64439c4ec" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Loading and Saving Data/2010-summary.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Loading and Saving Data/2010-summary.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Loading and Saving Data/2010-summary.parquet/_SUCCESS" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Loading and Saving Data/2010-summary.parquet/part-r-00000-1a9822ba-b8fb-4d8e-844a-ea30d0801b9e.gz.parquet" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Loading and Saving Data/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Loading and Saving Data/exercise - DataFrame - Loading and Saving Data.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Loading and Saving Data/solution - DataFrame - Loading and Saving Data.json" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/pom.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Load DataFrame from Grid/load-dataframe-from-grid/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Save DataFrame to Grid/save-dataframe-to-grid/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Save DataFrame to Grid/save-dataframe-to-grid/src/main/scala/com/gigaspaces/ietraining/SaveDataframeToGrid.scala" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Load DataFrame from Grid/load-dataframe-from-grid/src/main/scala/com/gigaspaces/ietraining/LoadDataframeFromGrid.scala" afterPath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/src/main/scala/com/gigaspaces/ietraining/SaveAndLoadDataFrameFromGrid.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Operations/Exercise - DataFrame - Operations.json" afterPath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Operations/Exercise - DataFrame - Operations.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Operations/Solution - DataFrame - Operations.json" afterPath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Operations/Solution - DataFrame - Operations.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/insightedge-training.iml" afterPath="$PROJECT_DIR$/.idea/insightedge-training.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
+    <ignored path="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-DataFrame-To-Grid/save-dataframe-to-grid/target/" />
+    <ignored path="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Load-DataFrame-From-Grid/load-dataframe-from-grid/target/" />
+    <ignored path="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/target/" />
+    <ignored path="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/InsightEdge Installation and Simple Example/building-maven/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,50 +29,82 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labs/lab2/README.md">
+      <file leaf-file-name="SaveAndLoadDataFrameFromGrid.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/src/main/scala/com/gigaspaces/ietraining/SaveAndLoadDataFrameFromGrid.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="322">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding>
+                <element signature="e#877#921#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimpleExample.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/InsightEdge Installation and Simple Example/building-maven/src/main/scala/com/gigaspaces/ietraining/SimpleExample.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/README.md">
+      <file leaf-file-name="SaveMode.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-sql_2.11/2.3.2/spark-sql_2.11-2.3.2.jar!/org/apache/spark/sql/SaveMode.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="161">
+              <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/README.md">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="506">
+              <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AI-And-ML-Overview/README.md">
+      <file leaf-file-name="InsightEdgeConfig.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/gigaspaces/insightedge/insightedge-core/14.0.0/insightedge-core-14.0.0.jar!/org/insightedge/spark/context/InsightEdgeConfig.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="115">
+              <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SaveDataframeToGrid.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Save DataFrame to Grid/save-dataframe-to-grid/src/main/scala/com/gigaspaces/ietraining/SaveDataframeToGrid.scala">
+      <file leaf-file-name="InsightEdgeSparkContext.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/gigaspaces/insightedge/insightedge-core/14.0.0/insightedge-core-14.0.0.jar!/org/insightedge/spark/context/InsightEdgeSparkContext.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-13">
+            <state relative-caret-position="23">
+              <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Option.scala" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.10.4-sources.jar!/scala/Option.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2070">
+              <caret line="96" column="22" lean-forward="false" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="insightedge-core-14.0.0.pom" pinned="false" current-in-tab="false">
+        <entry file="file://$MAVEN_REPOSITORY$/org/gigaspaces/insightedge/insightedge-core/14.0.0/insightedge-core-14.0.0.pom">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -71,6 +112,14 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Scala Worksheet" />
+        <option value="Scala Script" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -106,13 +155,27 @@
         <option value="$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab 1.2 solution - DataFrame - Loading and Saving Data.json" />
         <option value="$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab 1.2 exercise - DataFrame - Loading and Saving Data.json" />
         <option value="$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/README.md" />
+        <option value="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-DataFrame-To-Grid/save-dataframe-to-grid/README.md" />
+        <option value="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-DataFrame-To-Grid/save-dataframe-to-grid/pom.xml" />
+        <option value="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Load-DataFrame-From-Grid/load-dataframe-from-grid/pom.xml" />
+        <option value="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-DataFrame-To-Grid/save-dataframe-to-grid/src/main/scala/com/gigaspaces/ietraining/SaveDataframeToGrid.scala" />
+        <option value="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Load-DataFrame-From-Grid/load-dataframe-from-grid/src/main/scala/com/gigaspaces/ietraining/LoadDataframeFromGrid.scala" />
+        <option value="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Load-DataFrame-From-Grid/load-dataframe-from-grid/src/main/scala/com/gigaspaces/ietraining/SaveAndLoadDataFrameFromGrid.scala" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="2048" />
-    <option name="height" value="1129" />
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="253" />
+    <option name="y" value="66" />
+    <option name="width" value="1795" />
+    <option name="height" value="1075" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -129,8 +192,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -154,30 +219,37 @@
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
               <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
               <item name="labs" type="462c0819:PsiDirectoryNode" />
-              <item name="DataFrame - Operations" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFrame-Loading-And-Saving-Data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
               <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
               <item name="labs" type="462c0819:PsiDirectoryNode" />
-              <item name="DataFrame - Save DataFrame to Grid" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFrame-Operations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
               <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
               <item name="labs" type="462c0819:PsiDirectoryNode" />
-              <item name="DataFrame - Save DataFrame to Grid" type="462c0819:PsiDirectoryNode" />
-              <item name="save-dataframe-to-grid" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFrame-Save-And-Load-From-Grid" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
               <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
               <item name="labs" type="462c0819:PsiDirectoryNode" />
-              <item name="DataFrame - Save DataFrame to Grid" type="462c0819:PsiDirectoryNode" />
-              <item name="save-dataframe-to-grid" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFrame-Save-And-Load-From-Grid" type="462c0819:PsiDirectoryNode" />
+              <item name="save-load-dataframe-from-grid" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFrame-Save-And-Load-From-Grid" type="462c0819:PsiDirectoryNode" />
+              <item name="save-load-dataframe-from-grid" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -185,8 +257,8 @@
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
               <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
               <item name="labs" type="462c0819:PsiDirectoryNode" />
-              <item name="DataFrame - Save DataFrame to Grid" type="462c0819:PsiDirectoryNode" />
-              <item name="save-dataframe-to-grid" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFrame-Save-And-Load-From-Grid" type="462c0819:PsiDirectoryNode" />
+              <item name="save-load-dataframe-from-grid" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -195,8 +267,8 @@
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
               <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
               <item name="labs" type="462c0819:PsiDirectoryNode" />
-              <item name="DataFrame - Save DataFrame to Grid" type="462c0819:PsiDirectoryNode" />
-              <item name="save-dataframe-to-grid" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFrame-Save-And-Load-From-Grid" type="462c0819:PsiDirectoryNode" />
+              <item name="save-load-dataframe-from-grid" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
@@ -206,8 +278,8 @@
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
               <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
               <item name="labs" type="462c0819:PsiDirectoryNode" />
-              <item name="DataFrame - Save DataFrame to Grid" type="462c0819:PsiDirectoryNode" />
-              <item name="save-dataframe-to-grid" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFrame-Save-And-Load-From-Grid" type="462c0819:PsiDirectoryNode" />
+              <item name="save-load-dataframe-from-grid" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
@@ -218,8 +290,8 @@
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
               <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
               <item name="labs" type="462c0819:PsiDirectoryNode" />
-              <item name="DataFrame - Save DataFrame to Grid" type="462c0819:PsiDirectoryNode" />
-              <item name="save-dataframe-to-grid" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFrame-Save-And-Load-From-Grid" type="462c0819:PsiDirectoryNode" />
+              <item name="save-load-dataframe-from-grid" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
@@ -231,8 +303,8 @@
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
               <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
               <item name="labs" type="462c0819:PsiDirectoryNode" />
-              <item name="DataFrame - Save DataFrame to Grid" type="462c0819:PsiDirectoryNode" />
-              <item name="save-dataframe-to-grid" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFrame-Save-And-Load-From-Grid" type="462c0819:PsiDirectoryNode" />
+              <item name="save-load-dataframe-from-grid" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
@@ -245,26 +317,144 @@
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
               <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
               <item name="labs" type="462c0819:PsiDirectoryNode" />
-              <item name="DataFrame-Loading-And-Saving-Data" type="462c0819:PsiDirectoryNode" />
+              <item name="InsightEdge Installation and Simple Example" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="InsightEdge Installation and Simple Example" type="462c0819:PsiDirectoryNode" />
+              <item name="building-maven" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="InsightEdge Installation and Simple Example" type="462c0819:PsiDirectoryNode" />
+              <item name="building-maven" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="InsightEdge Installation and Simple Example" type="462c0819:PsiDirectoryNode" />
+              <item name="building-maven" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="InsightEdge Installation and Simple Example" type="462c0819:PsiDirectoryNode" />
+              <item name="building-maven" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="InsightEdge Installation and Simple Example" type="462c0819:PsiDirectoryNode" />
+              <item name="building-maven" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="InsightEdge Installation and Simple Example" type="462c0819:PsiDirectoryNode" />
+              <item name="building-maven" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="gigaspaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Core-IE-And-Spark-APIs" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="InsightEdge Installation and Simple Example" type="462c0819:PsiDirectoryNode" />
+              <item name="building-maven" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="gigaspaces" type="462c0819:PsiDirectoryNode" />
+              <item name="ietraining" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="IE-And-Spark-Streaming" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="lab2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="scala-sdk-2.10.4" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="scala-sdk-2.10.4" type="70bed36:NamedLibraryElementNode" />
+              <item name="scala-library-2.10.4.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="scala-sdk-2.10.4" type="70bed36:NamedLibraryElementNode" />
+              <item name="scala-library-2.10.4.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2853855" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-DataFrame-To-Grid/save-dataframe-to-grid" />
+      <recent name="$PROJECT_DIR$/labs/lab2/main/java/common/stubs" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/labs/lab2/main/java/common/solution" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/labs/lab2/main/java/common/stubs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -279,12 +469,82 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Scala Console.Scala Console">
-    <configuration name="Scala Console" type="ScalaScriptConsoleRunConfiguration" factoryName="Scala Console" temporary="true">
-      <module name="insightedge-training" />
-      <setting name="vmparams4" value="-Djline.terminal=NONE" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="consoleArgs" value="-usejavacp" />
+  <component name="RunManager" selected="Application.SaveAndLoadDataFrameFromGrid">
+    <configuration name="LoadDataframeFromGrid" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.gigaspaces.ietraining.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.gigaspaces.ietraining.LoadDataframeFromGrid" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="load-dataframe-from-grid" />
+      <envs />
+    </configuration>
+    <configuration name="SaveAndLoadDataFrameFromGrid" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.gigaspaces.ietraining.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.gigaspaces.ietraining.SaveAndLoadDataFrameFromGrid" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="load-dataframe-from-grid" />
+      <envs />
+    </configuration>
+    <configuration name="SaveDataframeToGrid" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.gigaspaces.ietraining.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.gigaspaces.ietraining.SaveDataframeToGrid" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="save-dataframe-to-grid" />
+      <envs />
+    </configuration>
+    <configuration name="SimpleExample (1)" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.gigaspaces.ietraining.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.gigaspaces.ietraining.SimpleExample" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="building-maven" />
+      <envs />
     </configuration>
     <configuration name="SimpleExample" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -386,14 +646,20 @@
       <properties />
       <listeners />
     </configuration>
-    <list size="2">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.SimpleExample" />
-      <item index="1" class="java.lang.String" itemvalue="Scala Console.Scala Console" />
+      <item index="1" class="java.lang.String" itemvalue="Application.SaveDataframeToGrid" />
+      <item index="2" class="java.lang.String" itemvalue="Application.LoadDataframeFromGrid" />
+      <item index="3" class="java.lang.String" itemvalue="Application.SaveAndLoadDataFrameFromGrid" />
+      <item index="4" class="java.lang.String" itemvalue="Application.SimpleExample (1)" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Scala Console.Scala Console" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.SimpleExample (1)" />
         <item index="1" class="java.lang.String" itemvalue="Application.SimpleExample" />
+        <item index="2" class="java.lang.String" itemvalue="Application.SaveAndLoadDataFrameFromGrid" />
+        <item index="3" class="java.lang.String" itemvalue="Application.LoadDataframeFromGrid" />
+        <item index="4" class="java.lang.String" itemvalue="Application.SaveDataframeToGrid" />
       </list>
     </recent_temporary>
   </component>
@@ -438,33 +704,33 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2048" height="1129" extended-state="0" />
+    <frame x="0" y="0" width="2048" height="1152" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36237258" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900834" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31655034" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31954136" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -509,6 +775,54 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/gigaspaces/insightedge/insightedge-core/14.0.0/insightedge-core-14.0.0.jar!/org/insightedge/spark/context/InsightEdgeConfig.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/gigaspaces/insightedge/insightedge-core/14.0.0/insightedge-core-14.0.0.jar!/org/insightedge/spark/context/InsightEdgeSparkContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.10.4-sources.jar!/scala/Option.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2070">
+          <caret line="96" column="22" lean-forward="false" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/org/gigaspaces/insightedge/insightedge-core/14.0.0/insightedge-core-14.0.0.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/InsightEdge Installation and Simple Example/building-maven/src/main/scala/com/gigaspaces/ietraining/SimpleExample.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/labs/lab2/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -517,14 +831,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="file://$PROJECT_DIR$/labs/lab2/main/java/common/solution/DelayRec.java" />
     <entry file="file://$PROJECT_DIR$/labs/lab2/main/java/common/solution/FlightDelayed.java" />
     <entry file="file://$PROJECT_DIR$/labs/lab2/main/java/common/solution/Listener.java" />
@@ -573,14 +880,6 @@
     <entry file="file://$PROJECT_DIR$/labs/lab1/1.4 - DataFrame - Operations/Lab_1.4_DataFrame_Operations.json" />
     <entry file="file://$PROJECT_DIR$/labs/lab1/1.5 - DataFrame - Using SQL/Lab_1.5_DataFrame_Using_SQL.json" />
     <entry file="file://$PROJECT_DIR$/labs/lab1/1.6 - Data.6Frame - Exercise on Operations and SQL Usage/Lab_1.6_DataFrame_Exercise_on_Operations_and_SQL_Usage.json" />
-    <entry file="file://$PROJECT_DIR$/labs/lab2/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/labs/README.md" />
     <entry file="file://$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab_1.2_DataFrame_Loading_and_Saving_Data.json" />
     <entry file="file://$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab 1.2 solution - DataFrame - Loading and Saving Data.json" />
@@ -589,30 +888,7 @@
     <entry file="file://$PROJECT_DIR$/labs/lab1/README.md" />
     <entry file="file://$PROJECT_DIR$/labs/lab1/1.1 - InsightEdge Installation and Simple Example/building-maven/pom.xml" />
     <entry file="file://$PROJECT_DIR$/labs/lab1/1.1 - InsightEdge Installation and Simple Example/building-maven/src/main/scala/com/gigaspaces/ietraining/SimpleExample.scala" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="file://$PROJECT_DIR$/AI-And-ML-Overview/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -621,7 +897,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Loading and Saving Data/README.md">
+    <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Loading and Saving Data/README.md" />
+    <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -629,13 +906,165 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame - Save DataFrame to Grid/save-dataframe-to-grid/src/main/scala/com/gigaspaces/ietraining/SaveDataframeToGrid.scala">
+    <entry file="file://$PROJECT_DIR$/labs/lab2/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-DataFrame-To-Grid/save-dataframe-to-grid/README.md" />
+    <entry file="file://$MAVEN_REPOSITORY$/org/gigaspaces/insightedge/insightedge-core/14.0.0/insightedge-core-14.0.0.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-DataFrame-To-Grid/save-dataframe-to-grid/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.10.4-sources.jar!/scala/Option.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2070">
+          <caret line="96" column="22" lean-forward="false" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/gigaspaces/insightedge/insightedge-core/14.0.0/insightedge-core-14.0.0.jar!/org/insightedge/spark/context/InsightEdgeSparkContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/gigaspaces/insightedge/insightedge-core/14.0.0/insightedge-core-14.0.0.jar!/org/insightedge/spark/context/InsightEdgeConfig.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-sql_2.11/2.3.2/spark-sql_2.11-2.3.2.jar!/org/apache/spark/sql/SaveMode.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-DataFrame-To-Grid/save-dataframe-to-grid/src/main/scala/com/gigaspaces/ietraining/SaveDataframeToGrid.scala" />
+    <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/InsightEdge Installation and Simple Example/building-maven/src/main/scala/com/gigaspaces/ietraining/SimpleExample.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/src/main/scala/com/gigaspaces/ietraining/SaveAndLoadDataFrameFromGrid.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#877#921#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-sdk-2.10.4</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>building-maven</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2853855" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: org.gigaspaces.insightedge:insightedge-core:12.2.1</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
