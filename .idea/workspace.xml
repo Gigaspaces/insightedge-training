@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0eb5e13-8578-48c5-beb0-81d64439c4ec" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day1/4_Hadoop_And_Spark_Introduction/RDD/README.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/RDD/Exercise - RDD.json" afterPath="$PROJECT_DIR$/Day1/4_Hadoop_And_Spark_Introduction/RDD/Exercise - RDD.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/RDD/cities.csv" afterPath="$PROJECT_DIR$/Day1/4_Hadoop_And_Spark_Introduction/RDD/cities.csv" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/README.md" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Loading-And-Saving-Data/README.md" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Loading-And-Saving-Data/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Operations/README.md" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Operations/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Using-SQL/README.md" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Using-SQL/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-DataFrame-To-Grid/save-dataframe-to-grid/target/" />
     <ignored path="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Load-DataFrame-From-Grid/load-dataframe-from-grid/target/" />
@@ -63,8 +64,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Loading-And-Saving-Data/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="368">
+              <caret line="16" column="3" lean-forward="false" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -73,18 +74,18 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Operations/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="53" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="53" />
+            <state relative-caret-position="345">
+              <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Using-SQL/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="414">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -101,16 +102,16 @@
         </entry>
       </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/README.md">
+        <entry file="file://$PROJECT_DIR$/Day2/6_What_is_InsightEdge/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="24" lean-forward="true" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day1/4_Hadoop_And_Spark_Introduction/RDD/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="207">
@@ -171,10 +172,10 @@
         <option value="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Load-DataFrame-From-Grid/load-dataframe-from-grid/src/main/scala/com/gigaspaces/ietraining/LoadDataframeFromGrid.scala" />
         <option value="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Load-DataFrame-From-Grid/load-dataframe-from-grid/src/main/scala/com/gigaspaces/ietraining/SaveAndLoadDataFrameFromGrid.scala" />
         <option value="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/build.sbt" />
-        <option value="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Using-SQL/README.md" />
-        <option value="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Operations/README.md" />
-        <option value="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Loading-And-Saving-Data/README.md" />
         <option value="$PROJECT_DIR$/Day1/4_Hadoop_And_Spark_Introduction/RDD/README.md" />
+        <option value="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Loading-And-Saving-Data/README.md" />
+        <option value="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Operations/README.md" />
+        <option value="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Using-SQL/README.md" />
       </list>
     </option>
   </component>
@@ -217,20 +218,52 @@
             <path>
               <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
-              <item name="Day1" type="462c0819:PsiDirectoryNode" />
+              <item name="Day2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
-              <item name="Day1" type="462c0819:PsiDirectoryNode" />
-              <item name="4_Hadoop_And_Spark_Introduction" type="462c0819:PsiDirectoryNode" />
+              <item name="Day2" type="462c0819:PsiDirectoryNode" />
+              <item name="5_Structured_API_And_DataFrame" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
-              <item name="Day1" type="462c0819:PsiDirectoryNode" />
-              <item name="4_Hadoop_And_Spark_Introduction" type="462c0819:PsiDirectoryNode" />
-              <item name="RDD" type="462c0819:PsiDirectoryNode" />
+              <item name="Day2" type="462c0819:PsiDirectoryNode" />
+              <item name="5_Structured_API_And_DataFrame" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFrame-Loading-And-Saving-Data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day2" type="462c0819:PsiDirectoryNode" />
+              <item name="5_Structured_API_And_DataFrame" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFrame-Operations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day2" type="462c0819:PsiDirectoryNode" />
+              <item name="5_Structured_API_And_DataFrame" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFrame-Save-And-Load-From-Grid" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day2" type="462c0819:PsiDirectoryNode" />
+              <item name="5_Structured_API_And_DataFrame" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFrame-Using-SQL" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day2" type="462c0819:PsiDirectoryNode" />
+              <item name="6_What_is_InsightEdge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -527,7 +560,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545052455491</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="formatting">
+      <created>1545135395186</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1545135395186</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -599,7 +639,8 @@
     <MESSAGE value="Initial RDD exercise" />
     <MESSAGE value="Fixed the DataFrame query methods - select" />
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="formatting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -776,22 +817,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Day2/6_What_is_InsightEdge/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day2/7_Administrator_And_Deployment/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Day3/8_InsightEdge_Advantages/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -840,18 +865,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Loading-And-Saving-Data/README.md">
+    <entry file="file://$PROJECT_DIR$/Day1/4_Hadoop_And_Spark_Introduction/RDD/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Using-SQL/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="207">
+          <caret line="9" column="81" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="81" />
           <folding />
         </state>
       </provider>
@@ -864,18 +881,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Operations/README.md">
+    <entry file="file://$PROJECT_DIR$/Day2/7_Administrator_And_Deployment/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="53" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="53" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Day1/4_Hadoop_And_Spark_Introduction/RDD/README.md">
+    <entry file="file://$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Loading-And-Saving-Data/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="81" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="81" />
+        <state relative-caret-position="368">
+          <caret line="16" column="3" lean-forward="false" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Operations/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day2/6_What_is_InsightEdge/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="24" lean-forward="true" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Using-SQL/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
