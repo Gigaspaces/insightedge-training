@@ -2,12 +2,178 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0eb5e13-8578-48c5-beb0-81d64439c4ec" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day2/6_What_is_InsightEdge/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day2/7_Administrator_And_Deployment/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day3/10_Machine_Learning/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day3/8_InsightEdge_Advantages/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day3/9_Structured_Streaming/README.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Day2/README.md" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/README.md" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AI-And-ML-Overview/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$081459ea96e4056644e7$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$58096572d6d9aa7464d5$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$8c2163758ba3eba17c1a$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$f10c6148b95659ceeedd$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/target/classes/com/gigaspaces/ietraining/Person$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/target/classes/com/gigaspaces/ietraining/SaveAndLoadDataFrameFromGrid$$typecreator5$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/target/classes/com/gigaspaces/ietraining/SaveAndLoadDataFrameFromGrid$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day3/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GraphX-In-IE/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/IE-Admin-Overview/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/IE-And-Spark-Streaming/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/IE-Spark-Architecture-And-Fundamentals/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/IE-Workspace-Intro/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Scala-For-IE/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Exercise/main/java/common/DelayRec.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Exercise/main/resources/Flight Delay Lab 2.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Exercise/main/resources/META-INF/spring/pu.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Exercise/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__avalon_framework_avalon_framework_4_1_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__com_atomikos_atomikos_util_3_8_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__com_atomikos_transactions_3_8_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__com_atomikos_transactions_api_3_8_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__com_atomikos_transactions_jta_3_8_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__commons_collections_commons_collections_3_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__commons_logging_commons_logging_api_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__javax_jms_jms_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__logkit_logkit_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_aopalliance_com_springsource_org_aopalliance_1_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_j2ee_connector_1_5_spec_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_gigaspaces_xap_asm_14_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_gigaspaces_xap_common_14_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_gigaspaces_xap_datagrid_14_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_gigaspaces_xap_jms_14_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_gigaspaces_xap_openspaces_14_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_gigaspaces_xap_trove_14_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_4_0_1_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_hibernate_hibernate_core_4_1_9_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_0_api_1_0_1_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_hsqldb_hsqldb_2_3_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_jacorb_jacorb_2_2_3_jonas_patch_20071018.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_jacorb_jacorb_idl_2_2_3_jonas_patch_20071018.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_javassist_javassist_3_17_1_GA.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_jboss_jbossts_jbossjta_4_16_6_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_1_0_GA.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_jboss_spec_javax_servlet_jboss_servlet_api_3_0_spec_1_0_2_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_1_spec_1_0_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_mockito_mockito_all_1_9_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_objectweb_howl_howl_1_0_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_ow2_carol_carol_3_0_RC7.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_ow2_carol_irmi_irmi_1_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_ow2_jotm_jotm_core_2_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_springframework_security_spring_security_config_4_2_8_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_springframework_security_spring_security_core_4_2_8_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_springframework_security_spring_security_web_4_2_8_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_springframework_spring_aop_4_3_19_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_springframework_spring_beans_4_3_19_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_springframework_spring_context_4_3_19_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_springframework_spring_core_4_3_19_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_springframework_spring_expression_4_3_19_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_19_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_springframework_spring_orm_4_3_19_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_springframework_spring_tx_4_3_19_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/libraries/Maven__org_springframework_spring_web_4_3_19_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/flightDelayDemo.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/main/java/common/DelayRec.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/main/resources/Flight Delay Lab 2 Solution.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/main/resources/META-INF/spring/pu.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Solution/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2010-summary.parquet/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/2010-summary.parquet/part-r-00000-1a9822ba-b8fb-4d8e-844a-ea30d0801b9e.gz.parquet" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab2/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab3/3.1 - FlightDelay-count-data/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab3/3.2 - FlightDelay-count-not-delayed-flights/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/labs/lab3/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/presentation/Hadoop&amp;Spark Introduction.pptx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/presentation/Introduction to Big Data.pptx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/presentation/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/presentation/Structured API &amp; DataFrame.pptx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/transaction.log" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Loading-And-Saving-Data/2010-summary.csv" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Loading-And-Saving-Data/2010-summary.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Loading-And-Saving-Data/2010-summary.json" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Loading-And-Saving-Data/2010-summary.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Loading-And-Saving-Data/2010-summary.parquet/_SUCCESS" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Loading-And-Saving-Data/2010-summary.parquet/_SUCCESS" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Loading-And-Saving-Data/2010-summary.parquet/part-r-00000-1a9822ba-b8fb-4d8e-844a-ea30d0801b9e.gz.parquet" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Loading-And-Saving-Data/2010-summary.parquet/part-r-00000-1a9822ba-b8fb-4d8e-844a-ea30d0801b9e.gz.parquet" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Loading-And-Saving-Data/Exercise - DataFrame - Loading and Saving Data.json" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Loading-And-Saving-Data/Exercise - DataFrame - Loading and Saving Data.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Loading-And-Saving-Data/README.md" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Loading-And-Saving-Data/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Loading-And-Saving-Data/Solution - DataFrame - Loading and Saving Data.json" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Loading-And-Saving-Data/Solution - DataFrame - Loading and Saving Data.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Operations/Exercise - DataFrame - Operations.json" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Operations/Exercise - DataFrame - Operations.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Operations/Solution - DataFrame - Operations.json" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Operations/Solution - DataFrame - Operations.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/.idea/misc.xml" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/.idea/misc.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/.idea/modules.xml" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/.idea/modules.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/.idea/modules/dataframe-save-and-load-from-grid.iml" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/.idea/modules/dataframe-save-and-load-from-grid.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/.idea/sbt.xml" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/.idea/sbt.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/.idea/workspace.xml" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/build.sbt" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/build.sbt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/build.properties" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/build.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/plugins.sbt" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/plugins.sbt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$081459ea96e4056644e7.cache" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$081459ea96e4056644e7.cache" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$081459ea96e4056644e7.class" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$081459ea96e4056644e7.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$58096572d6d9aa7464d5.cache" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$58096572d6d9aa7464d5.cache" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$58096572d6d9aa7464d5.class" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$58096572d6d9aa7464d5.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$8c2163758ba3eba17c1a.cache" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$8c2163758ba3eba17c1a.cache" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$8c2163758ba3eba17c1a.class" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$8c2163758ba3eba17c1a.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$f10c6148b95659ceeedd.cache" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$f10c6148b95659ceeedd.cache" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$f10c6148b95659ceeedd.class" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$f10c6148b95659ceeedd.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/default/dataframe-save-and-load-from-grid-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/default/dataframe-save-and-load-from-grid-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/default/dataframe-save-and-load-from-grid-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/default/dataframe-save-and-load-from-grid-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-compile-internal.xml" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-compile-internal.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-compile.xml" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-compile.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-optional.xml" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-optional.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-plugin.xml" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-plugin.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-pom.xml" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-pom.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-provided.xml" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-provided.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-runtime-internal.xml" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-runtime-internal.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-runtime.xml" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-runtime.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-scala-tool.xml" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-scala-tool.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-test-internal.xml" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-test-internal.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-test.xml" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-test.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/ivy-report.css" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/ivy-report.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/ivy-report.xsl" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/ivy-report.xsl" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/$global/$global/streams/out" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/$global/$global/streams/out" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/input_dsp" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/input_dsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/ivyConfiguration/$global/streams/out" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/ivySbt/$global/streams/out" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/ivySbt/$global/streams/out" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/projectDescriptors/$global/streams/out" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/projectDescriptors/$global/streams/out" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/update/$global/streams/out" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/$global/$global/discoveredMainClasses/data" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/$global/$global/discoveredMainClasses/data" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/compile/$global/streams/out" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/compile/$global/streams/out" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/compileIncremental/$global/streams/export" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/compileIncremental/$global/streams/export" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/compileIncremental/$global/streams/out" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/copyResources/$global/streams/copy-resources" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/copyResources/$global/streams/copy-resources" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/copyResources/$global/streams/out" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/copyResources/$global/streams/out" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/dependencyClasspath/$global/streams/export" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/exportedProducts/$global/streams/export" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/internalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/internalDependencyClasspath/$global/streams/export" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/managedClasspath/$global/streams/export" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/unmanagedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/unmanagedClasspath/$global/streams/export" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/unmanagedJars/$global/streams/export" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/unmanagedJars/$global/streams/export" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/runtime/dependencyClasspath/$global/streams/export" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/runtime/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/runtime/exportedProducts/$global/streams/export" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/runtime/fullClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/runtime/fullClasspath/$global/streams/export" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/runtime/managedClasspath/$global/streams/export" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/runtime/unmanagedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/runtime/unmanagedClasspath/$global/streams/export" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/project/target/streams/runtime/unmanagedJars/$global/streams/export" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/runtime/unmanagedJars/$global/streams/export" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/pom.xml" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/pom.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/save-load-dataframe-from-grid.iml" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/save-load-dataframe-from-grid.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/src/main/scala/com/gigaspaces/ietraining/SaveAndLoadDataFrameFromGrid.scala" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/src/main/scala/com/gigaspaces/ietraining/SaveAndLoadDataFrameFromGrid.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/target/classes/com/gigaspaces/ietraining/Person.class" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/target/classes/com/gigaspaces/ietraining/Person.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/target/classes/com/gigaspaces/ietraining/SaveAndLoadDataFrameFromGrid.class" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/target/classes/com/gigaspaces/ietraining/SaveAndLoadDataFrameFromGrid.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Using-SQL/Exercise - DataFrame - Using SQL.json" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Using-SQL/Exercise - DataFrame - Using SQL.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Using-SQL/Solution - DataFrame - Using SQL.json" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Using-SQL/Solution - DataFrame - Using SQL.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Using-SQL/cities.csv" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Using-SQL/cities.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/RDD/Exercise - RDD.json" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/RDD/Exercise - RDD.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/RDD/cities.csv" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/RDD/cities.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-DataFrame-To-Grid/save-dataframe-to-grid/target/" />
@@ -23,48 +189,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SaveAndLoadDataFrameFromGrid.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/src/main/scala/com/gigaspaces/ietraining/SaveAndLoadDataFrameFromGrid.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
-              <folding>
-                <element signature="e#877#921#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Exercise - DataFrame - Operations.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Operations/Exercise - DataFrame - Operations.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-254">
-              <caret line="0" column="2935" lean-forward="false" selection-start-line="0" selection-start-column="2935" selection-end-line="0" selection-end-column="2935" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/presentation/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cities.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/RDD/cities.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="15" column="54" lean-forward="false" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day2/6_What_is_InsightEdge/README.md">
           <provider selected="true" editor-type-id="text-editor">
@@ -105,7 +229,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day3/10_Machine_Learning/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -116,10 +240,30 @@
         </entry>
       </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/README.md">
+        <entry file="file://$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Loading-And-Saving-Data/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Exercise - DataFrame - Operations.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Operations/Exercise - DataFrame - Operations.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -215,57 +359,6 @@
               <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
-              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
-              <item name="Day2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
-              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
-              <item name="Day2" type="462c0819:PsiDirectoryNode" />
-              <item name="5_Structured_API_And_DataFrame" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
-              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
-              <item name="Day2" type="462c0819:PsiDirectoryNode" />
-              <item name="6_What_is_InsightEdge" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
-              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
-              <item name="Day2" type="462c0819:PsiDirectoryNode" />
-              <item name="7_Administrator_And_Deployment" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
-              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
-              <item name="Day3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
-              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
-              <item name="Day3" type="462c0819:PsiDirectoryNode" />
-              <item name="8_InsightEdge_Advantages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
-              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
-              <item name="Day3" type="462c0819:PsiDirectoryNode" />
-              <item name="9_Structured_Streaming" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
-              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
-              <item name="Day3" type="462c0819:PsiDirectoryNode" />
-              <item name="10_Machine_Learning" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
-              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
-              <item name="presentation" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -285,11 +378,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame" />
       <recent name="$PROJECT_DIR$/Day3/10_Machine_Learning" />
       <recent name="$PROJECT_DIR$/Day3/9_Structured_Streaming" />
       <recent name="$PROJECT_DIR$/Day3/8_InsightEdge_Advantages" />
       <recent name="$PROJECT_DIR$/Day2/7_Administrator_And_Deployment" />
-      <recent name="$PROJECT_DIR$/Day2/6_What_is_InsightEdge" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame" />
@@ -573,9 +666,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38394585" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38394585" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36237258" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900834" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3288201" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2401491" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -638,11 +731,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/labs/lab2/main/java/common/solution/FlightDelayed.java" />
-    <entry file="file://$PROJECT_DIR$/labs/lab2/main/java/common/solution/Listener.java" />
-    <entry file="file://$PROJECT_DIR$/labs/lab2/main/java/common/stubs/DelayRec.java" />
-    <entry file="file://$PROJECT_DIR$/labs/lab2/main/java/common/stubs/FlightDelayed.java" />
-    <entry file="file://$PROJECT_DIR$/labs/lab2/main/java/common/stubs/Listener.java" />
     <entry file="file://$PROJECT_DIR$/labs/lab2/main/resources/Flight Delay Prediction example.json" />
     <entry file="file://$PROJECT_DIR$/labs/lab2/pom.xml" />
     <entry file="file://$PROJECT_DIR$/labs/lab1/1.1 - InsightEdge Installation and Simple Example/building-maven/data/video-games-sales.csv" />
@@ -788,9 +876,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
           <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
-          <folding>
-            <element signature="e#877#921#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -851,6 +937,46 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Day3/10_Machine_Learning/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Loading-And-Saving-Data/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transaction.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Operations/Exercise - DataFrame - Operations.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day3/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
