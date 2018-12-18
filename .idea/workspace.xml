@@ -2,11 +2,73 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0eb5e13-8578-48c5-beb0-81d64439c4ec" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/.idea/modules/dataframe-save-and-load-from-grid.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/.idea/sbt.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/build.sbt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/build.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/plugins.sbt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$081459ea96e4056644e7.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$081459ea96e4056644e7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$58096572d6d9aa7464d5.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$58096572d6d9aa7464d5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$8c2163758ba3eba17c1a.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$8c2163758ba3eba17c1a.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$f10c6148b95659ceeedd.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/config-classes/$f10c6148b95659ceeedd.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/default/dataframe-save-and-load-from-grid-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/default/dataframe-save-and-load-from-grid-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-compile-internal.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-compile.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-optional.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-plugin.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-provided.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-runtime-internal.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-runtime.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-scala-tool.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-test-internal.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-dataframe-save-and-load-from-grid-build-test.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/ivy-report.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/ivy-report.xsl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/$global/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/input_dsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/ivySbt/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/projectDescriptors/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/update/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/$global/$global/discoveredMainClasses/data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/compile/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/compileIncremental/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/compileIncremental/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/copyResources/$global/streams/copy-resources" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/copyResources/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/dependencyClasspath/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/exportedProducts/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/internalDependencyClasspath/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/managedClasspath/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/unmanagedClasspath/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/compile/unmanagedJars/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/runtime/exportedProducts/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/runtime/fullClasspath/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/runtime/unmanagedClasspath/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/project/target/streams/runtime/unmanagedJars/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/save-load-dataframe-from-grid.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/src/main/scala/com/gigaspaces/ietraining/SaveAndLoadDataFrameFromGrid.scala" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/target/classes/com/gigaspaces/ietraining/Person.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Save-And-Load-From-Grid/save-load-dataframe-from-grid/target/classes/com/gigaspaces/ietraining/SaveAndLoadDataFrameFromGrid.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Loading-And-Saving-Data/README.md" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Loading-And-Saving-Data/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Operations/README.md" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Operations/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Using-SQL/README.md" afterPath="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Using-SQL/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-DataFrame-To-Grid/save-dataframe-to-grid/target/" />
     <ignored path="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Load-DataFrame-From-Grid/load-dataframe-from-grid/target/" />
@@ -81,7 +143,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Using-SQL/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="414">
@@ -111,11 +173,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Day1/4_Hadoop_And_Spark_Introduction/RDD/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" column="81" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="81" />
+            <state relative-caret-position="368">
+              <caret line="16" column="57" lean-forward="true" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -172,10 +234,10 @@
         <option value="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Load-DataFrame-From-Grid/load-dataframe-from-grid/src/main/scala/com/gigaspaces/ietraining/LoadDataframeFromGrid.scala" />
         <option value="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Load-DataFrame-From-Grid/load-dataframe-from-grid/src/main/scala/com/gigaspaces/ietraining/SaveAndLoadDataFrameFromGrid.scala" />
         <option value="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-And-Load-From-Grid/build.sbt" />
-        <option value="$PROJECT_DIR$/Day1/4_Hadoop_And_Spark_Introduction/RDD/README.md" />
         <option value="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Loading-And-Saving-Data/README.md" />
         <option value="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Operations/README.md" />
         <option value="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Using-SQL/README.md" />
+        <option value="$PROJECT_DIR$/Day1/4_Hadoop_And_Spark_Introduction/RDD/README.md" />
       </list>
     </option>
   </component>
@@ -225,40 +287,6 @@
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
               <item name="Day2" type="462c0819:PsiDirectoryNode" />
               <item name="5_Structured_API_And_DataFrame" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
-              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
-              <item name="Day2" type="462c0819:PsiDirectoryNode" />
-              <item name="5_Structured_API_And_DataFrame" type="462c0819:PsiDirectoryNode" />
-              <item name="DataFrame-Loading-And-Saving-Data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
-              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
-              <item name="Day2" type="462c0819:PsiDirectoryNode" />
-              <item name="5_Structured_API_And_DataFrame" type="462c0819:PsiDirectoryNode" />
-              <item name="DataFrame-Operations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
-              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
-              <item name="Day2" type="462c0819:PsiDirectoryNode" />
-              <item name="5_Structured_API_And_DataFrame" type="462c0819:PsiDirectoryNode" />
-              <item name="DataFrame-Save-And-Load-From-Grid" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
-              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
-              <item name="Day2" type="462c0819:PsiDirectoryNode" />
-              <item name="5_Structured_API_And_DataFrame" type="462c0819:PsiDirectoryNode" />
-              <item name="DataFrame-Using-SQL" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
-              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
-              <item name="Day2" type="462c0819:PsiDirectoryNode" />
-              <item name="6_What_is_InsightEdge" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
@@ -567,12 +595,18 @@
       <option name="project" value="LOCAL" />
       <updated>1545135395186</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="formatting">
+      <created>1545135887708</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1545135887708</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -586,7 +620,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288201" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2401491" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2401491" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -865,14 +899,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Day1/4_Hadoop_And_Spark_Introduction/RDD/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="81" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -917,6 +943,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day1/4_Hadoop_And_Spark_Introduction/RDD/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="57" lean-forward="true" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
           <folding />
         </state>
       </provider>
