@@ -1,4 +1,4 @@
-# Lab: DataFrame Loading And Saving Data
+# Lab: DataFrame Operations
 
 Instructions:
 
@@ -7,5 +7,5 @@ Start InsightEdge in Demo mode:
     run ./insightedge demo
 Open Zeppelin on http://localhost:9090
 Import to Zeppelin the following Notebook:
-insightedge-training/Day2/5_Structured_API_And_DataFrame/DataFrame-Loading-And-Saving-Data/Exercise - DataFrame - Loading and Saving Data.json
+insightedge-training/Day2/5_Structured_API_And_DataFrame/DataFrame-Operations/Exercise - DataFrame - Operations.json
 Follow the instructions inside the Notebook paragraph
