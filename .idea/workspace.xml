@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0eb5e13-8578-48c5-beb0-81d64439c4ec" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Day3/9_Structured_Streaming/Exercise - Structured Streaming 1.json" afterPath="$PROJECT_DIR$/Day3/9 Structured Streaming/Exercise - Structured Streaming 1.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Day3/9_Structured_Streaming/README.md" afterPath="$PROJECT_DIR$/Day3/9 Structured Streaming/README.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Day3/9_Structured_Streaming/Solution - Structured Streaming 1.json" afterPath="$PROJECT_DIR$/Day3/9 Structured Streaming/Solution - Structured Streaming 1.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5 RDD API/Lab-5.1 - RDD Transformations and Actions/Lab-5.1 - RDD Transformations and Actions.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5 RDD API/Lab-5.2 - RDD Exercise 1/Lab-5.2 - RDD Exercise 1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5 RDD API/Lab-5.3 - RDD Exercise 2/Lab-5.3 - RDD Exercise 2.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5 RDD API/Lab-5.4 - RDD Pair RDDs/Lab-5.4 - RDD Pair RDDs.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.1 - DataFrame Loading And Saving Data/2010-summary.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.1 - DataFrame Loading And Saving Data/2010-summary.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.1 - DataFrame Loading And Saving Data/2010-summary.parquet/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.1 - DataFrame Loading And Saving Data/2010-summary.parquet/part-r-00000-1a9822ba-b8fb-4d8e-844a-ea30d0801b9e.gz.parquet" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.1 - DataFrame Loading And Saving Data/Lab-6.1  Exercise - DataFrame Loading and Saving Data.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.1 - DataFrame Loading And Saving Data/Lab-6.1  Solution - DataFrame Loading and Saving Data.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.2 - DataFrame Exercise on Loading and Saving Data/Lab 6.2 Exercise - DataFrame - Exercise on Loading and Saving Data.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.3 - DataFrame Operations/Lab-6.3 Exercise - DataFrame Operations.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.3 - DataFrame Operations/Lab-6.3 Solution - DataFrame Operations.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.4 - DataFrame Using SQL/Lab-6.4 Exercise - DataFrame Using SQL.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.4 - DataFrame Using SQL/Lab-6.4 Solution - DataFrame Using SQL.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.4 - DataFrame Using SQL/cities.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.5 - DataFrame  Exercise on Operations and SQL Usage/Lab 6.5 - DataFrame - Exercise on Operations and SQL Usage.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-DataFrame-To-Grid/save-dataframe-to-grid/target/" />
@@ -63,18 +77,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.4 - DataFrame Using SQL/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Lab-6.3 Exercise - DataFrame Operations.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.3 - DataFrame Operations/Lab-6.3 Exercise - DataFrame Operations.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="92">
+              <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -150,7 +154,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="333" />
+    <option name="x" value="378" />
     <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="1129" />
@@ -183,23 +187,23 @@
             <path>
               <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
-              <item name="Day1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
-              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
               <item name="Day2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
-              <item name="Day3" type="462c0819:PsiDirectoryNode" />
+              <item name="Day2" type="462c0819:PsiDirectoryNode" />
+              <item name="5 RDD API" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
               <item name="Day3" type="462c0819:PsiDirectoryNode" />
-              <item name="9 Structured Streaming" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day4" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -219,11 +223,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Data" />
+      <recent name="$PROJECT_DIR$/Day2/5 RDD API/Lab-5.1 - RDD Transformations and Actions" />
       <recent name="$PROJECT_DIR$/Day2/6_Structured_API_And_DataFrame/Lab-6.5 - DataFrame - Exercise on Operations and SQL Usage" />
       <recent name="$PROJECT_DIR$/Day2/6_Structured_API_And_DataFrame/Lab-6.2 - DataFrame Exercise on Loading and Saving Data" />
       <recent name="$PROJECT_DIR$/Day2/5_RDD_API" />
-      <recent name="$PROJECT_DIR$/Day1/4_Hadoop_And_Spark_Introduction" />
-      <recent name="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Day1/4_Hadoop_And_Spark_Introduction/RDD" />
@@ -511,11 +515,18 @@
       <option name="project" value="LOCAL" />
       <updated>1545135887708</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="formatting">
+      <created>1545743567240</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1545743567241</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="333" y="23" width="1920" height="1129" extended-state="0" />
+    <frame x="378" y="23" width="1920" height="1129" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -756,8 +767,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.4 - DataFrame Using SQL/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="92">
+          <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
           <folding />
         </state>
       </provider>
