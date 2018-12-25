@@ -1,4 +1,4 @@
-# Lab: DataFrame-Using-SQL
+# Lab: DataFrame Operations
 
 # Instructions
 
@@ -12,7 +12,6 @@
 
 3. Import to Zeppelin the following Notebook:
 
-    insightedge-training/Day2/5_Structured_API_And_DataFrame/DataFrame-Using-SQL/
-    Exercise - DataFrame - Using SQL.json
+    insightedge-training/Day2/5_Structured_API_And_DataFrame/DataFrame-Operations/Exercise - DataFrame - Operations.json
 
-4. Follow the instructions inside the Notebook paragraph
+4. Follow the instructions inside the Notebook paragraphs.

@@ -14,4 +14,4 @@
 
     insightedge-training/Day2/5_Structured_API_And_DataFrame/DataFrame-Loading-And-Saving-Data/Exercise - DataFrame - Loading and Saving Data.json
 
-4. Follow the instructions inside the Notebook paragraph
+4. Follow the instructions inside the Notebook paragraphs.
