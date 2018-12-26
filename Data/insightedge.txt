@@ -1,0 +1,1 @@
+InsightEdge is a high performance Spark distribution for low latency workloads, high availability, and hybrid transactional/analytical processing in one unified solution.
