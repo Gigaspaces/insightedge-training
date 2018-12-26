@@ -12,6 +12,6 @@
 
 3. Import to Zeppelin the following Notebook:
 
-    insightedge-training/Day2/5 RDD API/Lab-5.4 - RDD Pair RDDs/Lab 5.4 Solution - RDD Pair RDDs.json
-    
+    insightedge-training/Day2/5 RDD API/Lab-5.4 - RDD Pair RDDs/Lab 5.4 Exercise - RDD Pair RDDs.json
+
 4. Follow the instructions inside the Notebook paragraphs.
