@@ -2,23 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0eb5e13-8578-48c5-beb0-81d64439c4ec" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5 RDD API/Lab-5.1 - RDD Transformations and Actions/Lab-5.1 - RDD Transformations and Actions.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5 RDD API/Lab-5.2 - RDD Exercise 1/Lab-5.2 - RDD Exercise 1.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5 RDD API/Lab-5.3 - RDD Exercise 2/Lab-5.3 - RDD Exercise 2.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/5 RDD API/Lab-5.4 - RDD Pair RDDs/Lab-5.4 - RDD Pair RDDs.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.1 - DataFrame Loading And Saving Data/2010-summary.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.1 - DataFrame Loading And Saving Data/2010-summary.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.1 - DataFrame Loading And Saving Data/2010-summary.parquet/_SUCCESS" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.1 - DataFrame Loading And Saving Data/2010-summary.parquet/part-r-00000-1a9822ba-b8fb-4d8e-844a-ea30d0801b9e.gz.parquet" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.1 - DataFrame Loading And Saving Data/Lab-6.1  Exercise - DataFrame Loading and Saving Data.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.1 - DataFrame Loading And Saving Data/Lab-6.1  Solution - DataFrame Loading and Saving Data.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.2 - DataFrame Exercise on Loading and Saving Data/Lab 6.2 Exercise - DataFrame - Exercise on Loading and Saving Data.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.3 - DataFrame Operations/Lab-6.3 Exercise - DataFrame Operations.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.3 - DataFrame Operations/Lab-6.3 Solution - DataFrame Operations.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.4 - DataFrame Using SQL/Lab-6.4 Exercise - DataFrame Using SQL.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.4 - DataFrame Using SQL/Lab-6.4 Solution - DataFrame Using SQL.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.4 - DataFrame Using SQL/cities.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.5 - DataFrame  Exercise on Operations and SQL Usage/Lab 6.5 - DataFrame - Exercise on Operations and SQL Usage.json" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day2/5 RDD API/Lab-5.3 - RDD Exercise 2/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day2/5 RDD API/Lab-5.4 - RDD Pair RDDs/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.2 - DataFrame Exercise on Loading and Saving Data/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.5 - DataFrame  Exercise on Operations and SQL Usage/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.6 - DataFrame Load DataFrame From Grid/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.7 - DataFrame Save DataFrame To Grid/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day4/15 GraphX/Lab-15.1 - GraphX Creation Structural Operators/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day4/15 GraphX/Lab-15.2 - GraphX Connected Components/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day4/15 GraphX/Lab-15.3 - GraphX Neighbourhood Aggregation/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Day4/15 GraphX/Lab-15.4 - GraphX Airline Demo/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Day3/flght delay prediction example/Flight Delay Prediction example.json" afterPath="$PROJECT_DIR$/Day4/flght delay prediction example/Flight Delay Prediction example.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Day3/flght delay prediction example/README.md" afterPath="$PROJECT_DIR$/Day4/flght delay prediction example/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Day3/flght delay prediction example/main/java/common/DelayRec.java" afterPath="$PROJECT_DIR$/Day4/flght delay prediction example/main/java/common/DelayRec.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Day3/flght delay prediction example/main/resources/Flight Delay Lab 2.json" afterPath="$PROJECT_DIR$/Day4/flght delay prediction example/main/resources/Flight Delay Lab 2.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Day3/flght delay prediction example/main/resources/META-INF/spring/pu.xml" afterPath="$PROJECT_DIR$/Day4/flght delay prediction example/main/resources/META-INF/spring/pu.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Day3/flght delay prediction example/pom.xml" afterPath="$PROJECT_DIR$/Day4/flght delay prediction example/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/Core-IE-And-Spark-APIs/labs/DataFrame-Save-DataFrame-To-Grid/save-dataframe-to-grid/target/" />
@@ -35,7 +34,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day2/8 Administrator And Deployment/README.md">
+        <entry file="file://$PROJECT_DIR$/Day2/5 RDD API/Lab-5.3 - RDD Exercise 2/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -45,7 +44,7 @@
         </entry>
       </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day3/10 Machine Learning/README.md">
+        <entry file="file://$PROJECT_DIR$/Day2/5 RDD API/Lab-5.4 - RDD Pair RDDs/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -55,30 +54,80 @@
         </entry>
       </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.1 - DataFrame Loading And Saving Data/README.md">
+        <entry file="file://$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.2 - DataFrame Exercise on Loading and Saving Data/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.3 - DataFrame Operations/README.md">
+        <entry file="file://$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.5 - DataFrame  Exercise on Operations and SQL Usage/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.6 - DataFrame Load DataFrame From Grid/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.7 - DataFrame Save DataFrame To Grid/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day4/15 GraphX/Lab-15.1 - GraphX Creation Structural Operators/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day4/15 GraphX/Lab-15.2 - GraphX Connected Components/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day4/15 GraphX/Lab-15.3 - GraphX Neighbourhood Aggregation/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.4 - DataFrame Using SQL/README.md">
+        <entry file="file://$PROJECT_DIR$/Day4/15 GraphX/Lab-15.4 - GraphX Airline Demo/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -187,6 +236,11 @@
             <path>
               <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
               <item name="Day2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -198,12 +252,169 @@
             <path>
               <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day2" type="462c0819:PsiDirectoryNode" />
+              <item name="5 RDD API" type="462c0819:PsiDirectoryNode" />
+              <item name="Lab-5.1 - RDD Transformations and Actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day2" type="462c0819:PsiDirectoryNode" />
+              <item name="5 RDD API" type="462c0819:PsiDirectoryNode" />
+              <item name="Lab-5.2 - RDD Exercise 1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day2" type="462c0819:PsiDirectoryNode" />
+              <item name="5 RDD API" type="462c0819:PsiDirectoryNode" />
+              <item name="Lab-5.3 - RDD Exercise 2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day2" type="462c0819:PsiDirectoryNode" />
+              <item name="5 RDD API" type="462c0819:PsiDirectoryNode" />
+              <item name="Lab-5.4 - RDD Pair RDDs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day2" type="462c0819:PsiDirectoryNode" />
+              <item name="6 Structured API And DataFrame" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day2" type="462c0819:PsiDirectoryNode" />
+              <item name="6 Structured API And DataFrame" type="462c0819:PsiDirectoryNode" />
+              <item name="Lab-6.1 - DataFrame Loading And Saving Data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day2" type="462c0819:PsiDirectoryNode" />
+              <item name="6 Structured API And DataFrame" type="462c0819:PsiDirectoryNode" />
+              <item name="Lab-6.2 - DataFrame Exercise on Loading and Saving Data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day2" type="462c0819:PsiDirectoryNode" />
+              <item name="6 Structured API And DataFrame" type="462c0819:PsiDirectoryNode" />
+              <item name="Lab-6.3 - DataFrame Operations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day2" type="462c0819:PsiDirectoryNode" />
+              <item name="6 Structured API And DataFrame" type="462c0819:PsiDirectoryNode" />
+              <item name="Lab-6.4 - DataFrame Using SQL" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day2" type="462c0819:PsiDirectoryNode" />
+              <item name="6 Structured API And DataFrame" type="462c0819:PsiDirectoryNode" />
+              <item name="Lab-6.5 - DataFrame  Exercise on Operations and SQL Usage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day2" type="462c0819:PsiDirectoryNode" />
+              <item name="6 Structured API And DataFrame" type="462c0819:PsiDirectoryNode" />
+              <item name="Lab-6.6 - DataFrame Load DataFrame From Grid" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day2" type="462c0819:PsiDirectoryNode" />
+              <item name="6 Structured API And DataFrame" type="462c0819:PsiDirectoryNode" />
+              <item name="Lab-6.6 - DataFrame Load DataFrame From Grid" type="462c0819:PsiDirectoryNode" />
+              <item name="load-dataframe-from-grid" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day2" type="462c0819:PsiDirectoryNode" />
+              <item name="6 Structured API And DataFrame" type="462c0819:PsiDirectoryNode" />
+              <item name="Lab-6.7 - DataFrame Save DataFrame To Grid" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day2" type="462c0819:PsiDirectoryNode" />
+              <item name="6 Structured API And DataFrame" type="462c0819:PsiDirectoryNode" />
+              <item name="Lab-6.7 - DataFrame Save DataFrame To Grid" type="462c0819:PsiDirectoryNode" />
+              <item name="save-dataframe-to-grid" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day2" type="462c0819:PsiDirectoryNode" />
+              <item name="8 Administrator And Deployment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
               <item name="Day3" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
               <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day3" type="462c0819:PsiDirectoryNode" />
+              <item name="9 Structured Streaming" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day3" type="462c0819:PsiDirectoryNode" />
+              <item name="10 Machine Learning" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
               <item name="Day4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day4" type="462c0819:PsiDirectoryNode" />
+              <item name="15 GraphX" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day4" type="462c0819:PsiDirectoryNode" />
+              <item name="15 GraphX" type="462c0819:PsiDirectoryNode" />
+              <item name="Lab-15.1 - GraphX Creation Structural Operators" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day4" type="462c0819:PsiDirectoryNode" />
+              <item name="15 GraphX" type="462c0819:PsiDirectoryNode" />
+              <item name="Lab-15.2 - GraphX Connected Components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day4" type="462c0819:PsiDirectoryNode" />
+              <item name="15 GraphX" type="462c0819:PsiDirectoryNode" />
+              <item name="Lab-15.3 - GraphX Neighbourhood Aggregation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day4" type="462c0819:PsiDirectoryNode" />
+              <item name="15 GraphX" type="462c0819:PsiDirectoryNode" />
+              <item name="Lab-15.4 - GraphX Airline Demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insightedge-training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insightedge-training" type="462c0819:PsiDirectoryNode" />
+              <item name="Day4" type="462c0819:PsiDirectoryNode" />
+              <item name="flght delay prediction example" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -223,18 +434,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Day4" />
       <recent name="$PROJECT_DIR$/Data" />
       <recent name="$PROJECT_DIR$/Day2/5 RDD API/Lab-5.1 - RDD Transformations and Actions" />
       <recent name="$PROJECT_DIR$/Day2/6_Structured_API_And_DataFrame/Lab-6.5 - DataFrame - Exercise on Operations and SQL Usage" />
       <recent name="$PROJECT_DIR$/Day2/6_Structured_API_And_DataFrame/Lab-6.2 - DataFrame Exercise on Loading and Saving Data" />
-      <recent name="$PROJECT_DIR$/Day2/5_RDD_API" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Day1/4_Hadoop_And_Spark_Introduction/RDD" />
-      <recent name="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Using-SQL" />
-      <recent name="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame/DataFrame-Operations" />
-      <recent name="$PROJECT_DIR$/Day2/5_Structured_API_And_DataFrame" />
-      <recent name="$PROJECT_DIR$/Day3/10_Machine_Learning" />
+      <recent name="$PROJECT_DIR$/Day4/15 GraphX/Lab-15.4 - GraphX Airline Demo" />
+      <recent name="$PROJECT_DIR$/Day4/15 GraphX/Lab-15.3 - GraphX Neighbourhood Aggregation" />
+      <recent name="$PROJECT_DIR$/Day4/15 GraphX/Lab-15.2 - GraphX Connected Components" />
+      <recent name="$PROJECT_DIR$/Day4/15 GraphX/Lab-15.1 - GraphX Creation Structural Operators" />
+      <recent name="$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.7 - DataFrame Save DataFrame To Grid" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -522,7 +733,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545743567241</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Data folder">
+      <created>1545806611223</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1545806611223</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -594,25 +812,14 @@
     <MESSAGE value="Fixed the DataFrame query methods - select" />
     <MESSAGE value="first commit" />
     <MESSAGE value="formatting" />
-    <option name="LAST_COMMIT_MESSAGE" value="formatting" />
+    <MESSAGE value="Data folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Data folder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Exercise/main/resources/Flight Delay Lab 2.json" />
-    <entry file="file://$PROJECT_DIR$/labs/lab2/2.1- FlightDelay-load-data-Exercise/main/java/common/DelayRec.java" />
-    <entry file="file://$PROJECT_DIR$/labs/lab1/1.3_DataFrame_Exercise_on_Loading_and_Saving_Data/Lab_1.3_DataFrame_Exercise_on_Loading_and_Saving_Data.json" />
-    <entry file="file://$PROJECT_DIR$/labs/lab1/1.4 - DataFrame - Operations/Lab_1.4_DataFrame_Operations.json" />
-    <entry file="file://$PROJECT_DIR$/labs/lab1/1.5 - DataFrame - Using SQL/Lab_1.5_DataFrame_Using_SQL.json" />
-    <entry file="file://$PROJECT_DIR$/labs/lab1/1.6 - Data.6Frame - Exercise on Operations and SQL Usage/Lab_1.6_DataFrame_Exercise_on_Operations_and_SQL_Usage.json" />
-    <entry file="file://$PROJECT_DIR$/labs/README.md" />
-    <entry file="file://$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab_1.2_DataFrame_Loading_and_Saving_Data.json" />
-    <entry file="file://$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab 1.2 solution - DataFrame - Loading and Saving Data.json" />
-    <entry file="file://$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/Lab 1.2 exercise - DataFrame - Loading and Saving Data.json" />
-    <entry file="file://$PROJECT_DIR$/labs/lab1/1.2 - DataFrame - Loading and Saving Data/README.md" />
-    <entry file="file://$PROJECT_DIR$/labs/lab1/README.md" />
     <entry file="file://$PROJECT_DIR$/labs/lab1/1.1 - InsightEdge Installation and Simple Example/building-maven/pom.xml" />
     <entry file="file://$PROJECT_DIR$/labs/lab1/1.1 - InsightEdge Installation and Simple Example/building-maven/src/main/scala/com/gigaspaces/ietraining/SimpleExample.scala" />
     <entry file="file://$PROJECT_DIR$/README.md" />
@@ -769,6 +976,102 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day2/5 RDD API/Lab-5.1 - RDD Transformations and Actions/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day2/5 RDD API/Lab-5.2 - RDD Exercise 1/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day2/5 RDD API/Lab-5.3 - RDD Exercise 2/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day2/5 RDD API/Lab-5.4 - RDD Pair RDDs/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.2 - DataFrame Exercise on Loading and Saving Data/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.5 - DataFrame  Exercise on Operations and SQL Usage/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.6 - DataFrame Load DataFrame From Grid/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day2/6 Structured API And DataFrame/Lab-6.7 - DataFrame Save DataFrame To Grid/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day4/15 GraphX/Lab-15.1 - GraphX Creation Structural Operators/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day4/15 GraphX/Lab-15.2 - GraphX Connected Components/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day4/15 GraphX/Lab-15.3 - GraphX Neighbourhood Aggregation/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day4/15 GraphX/Lab-15.4 - GraphX Airline Demo/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
