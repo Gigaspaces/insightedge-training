@@ -12,6 +12,6 @@
 
 3. Import to Zeppelin the following Notebook:
 
-    insightedge-training/Day2/5_Structured_API_And_DataFrame/DataFrame-Loading-And-Saving-Data/Exercise - DataFrame - Loading and Saving Data.json
-
+    insightedge-training/Day2/5 RDD API/Lab-5.2 - RDD Exercise 1/Lab 5.2 Exercise - RDD Exercise 1.json
+    
 4. Follow the instructions inside the Notebook paragraphs.

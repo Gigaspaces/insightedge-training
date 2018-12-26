@@ -12,6 +12,6 @@
 
 3. Import to Zeppelin the following Notebook:
 
-    insightedge-training/Day2/5_Structured_API_And_DataFrame/DataFrame-Loading-And-Saving-Data/Exercise - DataFrame - Loading and Saving Data.json
-
+    insightedge-training/Day2/6 Structured API And DataFrame/Lab-6.2 - DataFrame Exercise on Loading and Saving Data/Lab 6.2 Exercise - DataFrame Loading and Saving Data.json
+    
 4. Follow the instructions inside the Notebook paragraphs.
