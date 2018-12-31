@@ -5,23 +5,38 @@
        xmlns:os-core="http://www.openspaces.org/schema/core"
        xmlns:os-events="http://www.openspaces.org/schema/events"
        xmlns:os-remoting="http://www.openspaces.org/schema/remoting" xmlns:os-sla="http://www.openspaces.org/schema/sla"
+       xmlns:blob-store="http://www.openspaces.org/schema/off-heap-blob-store"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
-       http://www.openspaces.org/schema/core http://www.openspaces.org/schema/12.2/core/openspaces-core.xsd
-       http://www.openspaces.org/schema/events http://www.openspaces.org/schema/12.2/events/openspaces-events.xsd
-       http://www.openspaces.org/schema/remoting http://www.openspaces.org/schema/12.2/remoting/openspaces-remoting.xsd">
+       http://www.openspaces.org/schema/core http://www.openspaces.org/schema/14.0/core/openspaces-core.xsd
+       http://www.openspaces.org/schema/events http://www.openspaces.org/schema/14.0/events/openspaces-events.xsd
+       http://www.openspaces.org/schema/remoting http://www.openspaces.org/schema/14.0/remoting/openspaces-remoting.xsd
+       http://www.openspaces.org/schema/off-heap-blob-store http://www.openspaces.org/schema/14.0/off-heap-blob-store/openspaces-off-heap-blob-store.xsd">
 
 
 
-    <!-- Enable scan for OpenSpaces and Spring components -->
+
+<!-- Enable scan for OpenSpaces and Spring components -->
     <context:component-scan base-package="common"/>
 
 
-    <!--
-        A bean representing an embedded space.
-    -->
-    <os-core:embedded-space id="space" name="demo"></os-core:embedded-space>
-	<os-core:giga-space id="gigaSpace" space="space"/>
+    <os-events:annotation-support />
+
+
+    <blob-store:off-heap-blob-store id="offheapBlobstore" memory-threshold="1g"/>
+
+    <os-core:embedded-space id="space" name="insightedge-space">
+        <os-core:blob-store-data-policy persistent="false" blob-store-handler="offheapBlobstore">
+            <os-core:blob-store-cache-query class="common.FlightDelayed" where="delayed = true"/>
+            <os-core:blob-store-cache-query class="common.DelayRec" where="year > 2007"/>
+        </os-core:blob-store-data-policy>
+    </os-core:embedded-space>
+    <os-core:giga-space id="gigaSpace" space="space"/>
+    <bean id="listener" class="common.Listener">
+    </bean>
+
+
+
 
 
 </beans>

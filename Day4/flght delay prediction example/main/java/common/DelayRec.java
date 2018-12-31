@@ -1,4 +1,4 @@
-package common.solution;
+package common;
 
 import com.gigaspaces.annotation.pojo.SpaceId;
 import com.gigaspaces.annotation.pojo.SpaceIndex;
@@ -9,17 +9,26 @@ import com.gigaspaces.metadata.index.SpaceIndexType;
  * Created by ester on 07/01/2018.
  */
 public class DelayRec implements java.io.Serializable{
-    // Corrospond to CSV of following structure
-    //Year	Month	DayofMonth	DayOfWeek	DepTime	CRSDepTime	ArrTime	CRSArrTime	UniqueCarrier	FlightNum	TailNum	ActualElapsedTime	CRSElapsedTime	AirTime	ArrDelay	DepDelay	Origin	Dest	Distance	TaxiIn	TaxiOut	Cancelled	CancellationCode	Diverted	CarrierDelay	WeatherDelay	NASDelay	SecurityDelay	LateAircraftDelay
-
-    // ToDo Build a class represnting part of the fields in this record
-    // Must include dayOfWeek, crsDepTime, depDelay, month, dayOfMonth, year
-
     //Flight number + date
     String id;
 
     String flightNumber;
 
+    Integer year;
+
+    Integer month;
+
+    Integer dayOfMonth;
+
+    Integer dayOfWeek;
+
+    Integer crsDepTime;
+
+    Integer depDelay;
+
+    String origin;
+
+    double distance;
 
     @SpaceId
     public String getId() {
@@ -39,12 +48,6 @@ public class DelayRec implements java.io.Serializable{
         this.flightNumber = flightNumber;
     }
 
-    // ToDo add more fields, Decide on indexes
-    // ToDo Add default constuctor
-    // ToDo Add constructor with expected fields
-    // ToDo verify you understand ID and routing see: https://docs.gigaspaces.com/xap/14.0/dev-java/space-object-id-operations.html
-    // And https://docs.gigaspaces.com/xap/14.0/dev-java/pojo-attribute-annotations.html
-    
     public Integer getYear() {
         return year;
     }
