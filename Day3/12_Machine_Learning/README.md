@@ -1,7 +1,6 @@
-# Lab: Structured_Streaming 
+# Lab: Machine Learning
 
-###Reading directory including text files from a stream and writing tranformation into  memory table stream. 
-
+###Using K-Means and logistic regression - to model spam and valid emails
 # Instructions
 
 1. Start InsightEdge in Demo mode:
@@ -14,6 +13,6 @@
 
 3. Import to Zeppelin the following Notebook:
 
-    insightedge-training/Day3/9_Structured_Streaming/Exercise - Structured Streaming 1.json
+    insightedge-training/Day3/12_Machine_Learning/Exercise - Machine learning 1.json
 
 4. Follow the instructions inside the Notebook paragraph
