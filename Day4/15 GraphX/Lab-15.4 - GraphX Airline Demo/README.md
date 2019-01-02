@@ -1,4 +1,4 @@
-# Lab: DataFrame-Using-SQL
+# Lab: GraphX Airline Demo
 
 # Instructions
 
