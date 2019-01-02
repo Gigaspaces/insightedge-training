@@ -13,6 +13,6 @@
 3. Import to Zeppelin the following Notebook:
 
     insightedge-training/Day4/515 GraphX/Lab-15.1 - GraphX Creation Structural Operators/
-    Lab 15.1 GraphX - Creation, Structural Operators.json
+    Lab 15.1 Example - GraphX Creation Structural Operators.json
 
 4. Follow the instructions inside the Notebook paragraphs.
