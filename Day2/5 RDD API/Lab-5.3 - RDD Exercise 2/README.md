@@ -1,4 +1,4 @@
-# Lab: DataFrame Loading And Saving Data
+# Lab: RDD Exercise 2
 
 # Instructions
 
