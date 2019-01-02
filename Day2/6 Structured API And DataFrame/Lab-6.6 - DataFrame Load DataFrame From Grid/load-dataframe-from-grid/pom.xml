@@ -19,10 +19,10 @@
                 insightedge-core
             </artifactId>
             <version>
-                12.2.1
+                14.0.0
             </version>
             <scope>
-                provided
+                compile
             </scope>
         </dependency>
     </dependencies>
