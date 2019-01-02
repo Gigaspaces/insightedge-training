@@ -16,9 +16,12 @@ and then load the DataFrame from the grid.
 
 # Troubleshooting
 problem 1:
+
 Error: Could not find or load main class com.gigaspaces.ietraining.SaveLoadDataframeFromGrid
+
 Solution:
 Create a separate project by pointing to the project pom.xml file.
+
 e.g:
 From Intelij menu click on: File -> New -> Project from existing Sources, and point to the following pom file:
 .../Lab-6.6 - DataFrame Save And Load DataFrame From Grid/save-load-dataframe-from-grid/pom.xml
