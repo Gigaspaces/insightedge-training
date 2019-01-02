@@ -15,7 +15,7 @@ and then load the DataFrame from the grid.
 2. run SaveLoadDataframeFromGrid.scala class.
 
 # Troubleshooting
-problem 1:
+Problem 1:
 
 Error: Could not find or load main class com.gigaspaces.ietraining.SaveLoadDataframeFromGrid
 
