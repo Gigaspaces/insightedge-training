@@ -1,4 +1,4 @@
-# Lab: DataFrame-Using-SQL
+# Lab: DataFrame Exercise on Operations and SQL Usage
 
 # Instructions
 
