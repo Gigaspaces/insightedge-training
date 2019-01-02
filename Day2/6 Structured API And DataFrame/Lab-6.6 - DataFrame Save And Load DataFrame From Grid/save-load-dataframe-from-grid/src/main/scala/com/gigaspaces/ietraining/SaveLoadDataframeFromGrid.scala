@@ -17,7 +17,7 @@ case class Person(
 }
 
 
-object LoadDataframeFromGrid {
+object SaveLoadDataframeFromGrid {
 
   def main(args: Array[String]) {
 
