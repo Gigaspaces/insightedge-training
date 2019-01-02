@@ -1,4 +1,4 @@
-# Lab: DataFrame-Using-SQL
+# Lab: GraphX Connected Components
 
 # Instructions
 
