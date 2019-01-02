@@ -1,4 +1,4 @@
-# Lab: save-load-dataframe-from-grid
+# Lab: DataFrame Save And Load DataFrame From Grid
 
 In this lab you will learn how to connect the grid,
 save a DataFrame to the grid
