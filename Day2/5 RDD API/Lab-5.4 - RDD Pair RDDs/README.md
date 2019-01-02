@@ -1,4 +1,4 @@
-# Lab: DataFrame Loading And Saving Data
+# Lab: RDD Pair RDDs
 
 # Instructions
 
