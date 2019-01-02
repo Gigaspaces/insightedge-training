@@ -1,4 +1,4 @@
-# Lab: DataFrame-Using-SQL
+# Lab: GraphX Creation Structural Operators
 
 # Instructions
 
