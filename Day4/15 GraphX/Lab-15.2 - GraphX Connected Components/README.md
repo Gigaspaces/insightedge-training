@@ -12,7 +12,7 @@
 
 3. Import to Zeppelin the following Notebook:
 
-    insightedge-training/Day4/515 GraphX/Lab-15.2 - GraphX Connected Components/
+    insightedge-training/Day4/15 GraphX/Lab-15.2 - GraphX Connected Components/
     Lab 15.2 Exercise - GraphX Connected Components.json
 
 4. Follow the instructions inside the Notebook paragraphs.
