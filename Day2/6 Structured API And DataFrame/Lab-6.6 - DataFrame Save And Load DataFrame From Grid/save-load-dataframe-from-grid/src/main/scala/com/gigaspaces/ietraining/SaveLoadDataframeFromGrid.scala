@@ -1,6 +1,5 @@
 package com.gigaspaces.ietraining
 
-import org.apache.spark.SparkConf
 import org.apache.spark.sql.{SaveMode, SparkSession}
 import org.insightedge.scala.annotation._
 import org.insightedge.spark.context.InsightEdgeConfig
@@ -21,22 +20,9 @@ object SaveLoadDataframeFromGrid {
 
   def main(args: Array[String]) {
 
-    val initConfig = InsightEdgeConfig.fromSparkConf(new SparkConf())
-
-    //args: <spark master url> <space name>
-    val settings = if (args.length > 0) args
-    else Array( new SparkConf().get("spark.master", InsightEdgeConfig.SPARK_MASTER_LOCAL_URL_DEFAULT),
-      initConfig.spaceName)
-
-    if (settings.length != 2) {
-      System.err.println("Usage: LoadDataFrame <spark master url> <space name>")
-      System.exit(1)
-    }
     val ieConfig = InsightEdgeConfig("demo", Some("xap-14.0.0"), Some("127.0.0.1"))
-    val Array(master, space) = settings
     val spark = SparkSession.builder
       .appName("example-load-dataframe")
-      .master(master)
       .insightEdgeConfig(ieConfig)
       .getOrCreate()
 
