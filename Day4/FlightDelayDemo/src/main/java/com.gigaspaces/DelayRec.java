@@ -1,4 +1,4 @@
-package common;
+package com.gigaspaces;
 
 import com.gigaspaces.annotation.pojo.SpaceId;
 import com.gigaspaces.annotation.pojo.SpaceIndex;
@@ -88,7 +88,7 @@ public class DelayRec implements java.io.Serializable{
         this.crsDepTime = crsDepTime;
     }
 
-    @SpaceIndex(type=SpaceIndexType.EXTENDED)
+    @SpaceIndex(type=SpaceIndexType.ORDERED)
     public Integer getDepDelay() {
         return depDelay;
     }
@@ -104,7 +104,8 @@ public class DelayRec implements java.io.Serializable{
     public void setOrigin(String origin) {
         this.origin = origin;
     }
-
+    
+    @SpaceIndex(type=SpaceIndexType.ORDERED)
     public double getDistance() {
         return distance;
     }
