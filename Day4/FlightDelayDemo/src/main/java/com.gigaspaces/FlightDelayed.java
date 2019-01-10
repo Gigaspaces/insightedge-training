@@ -1,4 +1,4 @@
-package common;
+package com.gigaspaces;
 
 import com.gigaspaces.annotation.pojo.SpaceId;
 import com.gigaspaces.annotation.pojo.SpaceRouting;

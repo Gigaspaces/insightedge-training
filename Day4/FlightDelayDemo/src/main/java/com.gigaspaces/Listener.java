@@ -1,4 +1,4 @@
-package common;
+package com.gigaspaces;
 
 import org.openspaces.events.EventDriven;
 import org.openspaces.events.EventTemplate;
