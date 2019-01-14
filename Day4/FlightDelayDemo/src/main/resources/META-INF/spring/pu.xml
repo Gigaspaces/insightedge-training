@@ -17,7 +17,7 @@
 
 
 <!-- Enable scan for OpenSpaces and Spring components -->
-    <context:component-scan base-package="common"/>
+    <context:component-scan base-package="com.gigaspaces"/>
 
 
     <os-events:annotation-support />
@@ -32,7 +32,7 @@
         </os-core:blob-store-data-policy>
     </os-core:embedded-space>
     <os-core:giga-space id="gigaSpace" space="space"/>
-    <bean id="listener" class="common.Listener">
+    <bean id="listener" class="com.gigaspaces.Listener">
     </bean>
 
 

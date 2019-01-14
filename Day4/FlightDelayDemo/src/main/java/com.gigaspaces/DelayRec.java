@@ -4,6 +4,8 @@ import com.gigaspaces.annotation.pojo.SpaceId;
 import com.gigaspaces.annotation.pojo.SpaceIndex;
 import com.gigaspaces.annotation.pojo.SpaceRouting;
 import com.gigaspaces.metadata.index.SpaceIndexType;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 
 /**
  * Created by ester on 07/01/2018.
@@ -28,7 +30,11 @@ public class DelayRec implements java.io.Serializable{
 
     String origin;
 
+    long dateAsLong;
+
     double distance;
+
+
 
     @SpaceId
     public String getId() {
@@ -88,7 +94,7 @@ public class DelayRec implements java.io.Serializable{
         this.crsDepTime = crsDepTime;
     }
 
-    @SpaceIndex(type=SpaceIndexType.ORDERED)
+    @SpaceIndex(type=SpaceIndexType.EXTENDED)
     public Integer getDepDelay() {
         return depDelay;
     }
@@ -104,8 +110,7 @@ public class DelayRec implements java.io.Serializable{
     public void setOrigin(String origin) {
         this.origin = origin;
     }
-    
-    @SpaceIndex(type=SpaceIndexType.ORDERED)
+
     public double getDistance() {
         return distance;
     }
@@ -125,6 +130,8 @@ public class DelayRec implements java.io.Serializable{
         this.origin = origin;
         this.distance = distance;
         setId(String.format(flightNumber + "_" + getDate()));
+
+        setDateAsLong(LocalDateTime.of(year, month, dayOfMonth, getHour(), getMinutes(), 0).toInstant(ZoneOffset.UTC).toEpochMilli());
     }
 
     public String getDate() {return "" + year +":" +month +":" +dayOfMonth;}
@@ -150,6 +157,13 @@ public class DelayRec implements java.io.Serializable{
 
     public int getHour() {return ((int) (crsDepTime / 100.0));}
 
+    public int getMinutes() {return (crsDepTime % 100);}
 
+    public long getDateAsLong() {
+        return dateAsLong;
+    }
 
+    public void setDateAsLong(long dateAsLong) {
+        this.dateAsLong = dateAsLong;
+    }
 }
