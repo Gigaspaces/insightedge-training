@@ -9,12 +9,5 @@
 
 2. Clone this repository.
 
-3. Move the cloned Data folder under the same dir of:
+3. Move the cloned Data folder from this repository. The Data folder and gigaspaces install directory should have the same parent directory.
 
-   gigaspaces-insightedge-enterprise-14.0.0-ga-b20000
-   
-e.g:
-
-../Data
-
-../gigaspaces-insightedge-enterprise-14.0.0-ga-b20000
