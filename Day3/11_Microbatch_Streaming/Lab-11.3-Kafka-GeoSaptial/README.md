@@ -1,5 +1,6 @@
 # Real-time Spatial Analytics with InsightEdge Spark: Taxi Price Surge Use Case
-
+see https://github.com/InsightEdge/insightedge-geo-demo.git
+go over the example
 ## Overview
 
 In this demo we will create an application that runs real-time analytics on a streaming geospatial data.
