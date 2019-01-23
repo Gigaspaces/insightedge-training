@@ -12,7 +12,7 @@
 
 3. Import to Zeppelin the following Notebook:
 
-    insightedge-training/Day2/6 Structured API And DataFrame/Lab-6.6 - SQL Query Benchmark Spark vs InsightEdge/Lab 6.6 Example - SQL Query Benchmark_ Spark vs InsightEdge.json
+    insightedge-training/Day2/6 Structured API And DataFrame/Lab-6.6 - SQL Query Benchmark Spark vs InsightEdge/Lab 6.6 Example - SQL Query Benchmark Spark vs InsightEdge.json
 
 4. Download 2007.csv from here: http://stat-computing.org/dataexpo/2009/the-data.html to your ../Data folder
 
