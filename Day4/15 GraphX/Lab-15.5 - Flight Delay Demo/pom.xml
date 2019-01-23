@@ -14,6 +14,13 @@
         <gs.version>14.0.0</gs.version>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>org.openspaces</id>
+            <url>http://maven-repository.openspaces.org</url>
+        </repository>
+    </repositories>
+         
     <dependencies>
         <dependency>
             <groupId>org.gigaspaces</groupId>
