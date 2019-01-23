@@ -14,6 +14,6 @@
 
 3. Import to Zeppelin the following Notebook:
 
-    insightedge-training/Day3/10_Structured_Streaming/Exercise - Structured Streaming 1.json
+    insightedge-training/Day3/10 Structured Streaming/Lab-10.1 - Structured Streaming.json
 
 4. Follow the instructions inside the Notebook paragraph

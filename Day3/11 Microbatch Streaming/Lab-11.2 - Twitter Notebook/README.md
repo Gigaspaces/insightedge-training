@@ -18,6 +18,6 @@
 
 3. Import to Zeppelin the following Notebook:
 
-    insightedge-training/Day3/10_Structured_Streaming/Exercise - Structured Streaming 1.json
+    insightedge-training/Day3/11 Microbatch Streaming/Lab-11.2 - Twitter Notebook/Lab 11.2 Exercise - Spark Streaming.json
 
 4. Follow the instructions inside the Notebook paragraph

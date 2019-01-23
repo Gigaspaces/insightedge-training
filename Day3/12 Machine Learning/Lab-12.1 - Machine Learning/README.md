@@ -13,6 +13,6 @@
 
 3. Import to Zeppelin the following Notebook:
 
-    insightedge-training/Day3/12_Machine_Learning/Exercise - Machine learning 1.json
+    insightedge-training/Day3/12 Machine Learning/Lab-12.1 - Machine Learning/Lab 12.1 Exercise - Machine Learning.json
 
 4. Follow the instructions inside the Notebook paragraph
