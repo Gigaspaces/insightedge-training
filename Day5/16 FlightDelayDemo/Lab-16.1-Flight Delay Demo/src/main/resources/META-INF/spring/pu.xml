@@ -27,8 +27,8 @@
 
     <os-core:embedded-space id="space" name="insightedge-space">
         <os-core:blob-store-data-policy persistent="false" blob-store-handler="offheapBlobstore">
-            <os-core:blob-store-cache-query class="common.FlightDelayed" where="delayed = true"/>
-            <os-core:blob-store-cache-query class="common.DelayRec" where="year > 2007"/>
+            <os-core:blob-store-cache-query class="com.gigaspaces.FlightDelayed" where="delayed = true"/>
+            <os-core:blob-store-cache-query class="com.gigaspaces.DelayRec" where="year > 2007"/>
         </os-core:blob-store-data-policy>
     </os-core:embedded-space>
     <os-core:giga-space id="gigaSpace" space="space"/>
