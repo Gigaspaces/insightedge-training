@@ -4,4 +4,4 @@ and was open sourced in 2010. In 2013, it was donated to the Apache Software Fou
 and it has been the target of lightning-fast development ever since. In 2015,
 Spark was one of the most active Apache projects and had more than 1000 contributors.
 Today, it is a part of all major Hadoop distributions and is used by many organizations,
-large and small, throughout the world in all kinds of applications.
+large and small, throughout the world in all kinds of applications. 
