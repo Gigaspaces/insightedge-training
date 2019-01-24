@@ -1,14 +1,18 @@
 # Table of Contents #
 
 Below is the listing of all labs and exercises. Labs with a description have an exercise.
-
+* Day1
+  * 1 Course Introduction
+  * 2 Introduction to Big Data
+  * 3 Hadoop and Spark Introduction
+  * 4 Introduction to Scala
 * Day2
   * 5 RDD API
     * Lab-5.1 - RDD Transformations and Actions
-    * Lab-5.2 - RDD Exercise 1
+    * Lab-5.2 - RDD Word Frequency
+      1. Word frequency count with spark-intro.txt
+    * Lab-5.3 - RDD Cities
       1. Read cities.csv, perform analysis and write to grid
-    * Lab-5.3 - RDD Exercise 2
-      1. Word frequency count with spark-into.txt
     * Lab-5.4 - RDD Pair RDDs
       1. Read data_transactions.txt as PairRDDs and perform analysis
   * 6 Structured API and DataFrame
@@ -22,10 +26,11 @@ Below is the listing of all labs and exercises. Labs with a description have an 
       1. Basic DataFrame operations using video-games-sales.csv
     * Lab-6.5 - DataFrame Save and Load DataFrame from Grid
       1. Build and run example project
-    * Lab-6.6 - SQL Query Benchmark Spark vs InsightEdge
+    
   * 7 Introduction to InsightEdge
   * 8 Administration and Deployment
-  * 9
+  * 9 InsightEdge Advantages
+    * Lab-9.1 - SQL Query Benchmark Spark vs InsightEdge
 * Day3
   * 10 Structured Streaming
     * Lab-10.1 - Structured Streaming
