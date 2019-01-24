@@ -49,7 +49,8 @@ Below is the listing of all labs and exercises. Labs with a description have an 
     * Lab-15.3 - GraphX Neighbourhood Aggregation
       1. Perform neighborhood aggregation
     * Lab-15.4 - GraphX Airline Demo
-    * Lab-15.5 - Flight Delay Demo
+* Day5
+    * Lab-16.1 - Flight Delay Demo
       1. Run the Flight Delay Demo example project
     
      

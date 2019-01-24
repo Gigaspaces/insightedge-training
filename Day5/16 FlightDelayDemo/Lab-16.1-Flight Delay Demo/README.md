@@ -1,8 +1,6 @@
-#Lab2
+#Lab 16.1
 
 # Flight Delay Example
-## Getting Started
-
 
 Data for the demo
 Link:  http://stat-computing.org/dataexpo/2009/the-data.html
@@ -19,10 +17,9 @@ Instruction:
 3. Go to web-ui - (http://localhost:8099)
 4. Strat 2 GSC using web-ui (can be done as part of cmd line as well)
 6. Go to rest manager(http://localhost:8090/v2/) and Deploy project jar (2,0 )
-7. Go to zeppelin (http://localhost:9090) , import Flight Delay lab2 notebook (json in resorces)
-8. Add in dependencies section the location of the jar, so it will point to your local jar.
-9. In Saving Flight delay RDD paragraph, put location of the csv file,  and in simulate new data paragraph put the location of DelayRec jar.
-10. Run the notebook.(see grid console to see delays were reported)
-11. Go to web-ui to see if the data is saved correctly.
+7. Go to zeppelin (http://localhost:9090) , import Lab 16.1 Example - Flight Delay Prediction Demo.json notebook 
+8. Follow instructions in the notebook, see notification in gs-agent console
+9. Go to web-ui to see space data in each step
+
 
 
