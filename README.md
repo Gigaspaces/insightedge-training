@@ -11,3 +11,4 @@
 
 3. Move the cloned Data folder from this repository. The Data folder and gigaspaces install directory should have the same parent directory.
 
+..
