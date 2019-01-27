@@ -94,7 +94,7 @@ public class DelayRec implements java.io.Serializable{
         this.crsDepTime = crsDepTime;
     }
 
-    @SpaceIndex(type=SpaceIndexType.EXTENDED)
+    @SpaceIndex(type=SpaceIndexType.EQUAL_AND_ORDERED)
     public Integer getDepDelay() {
         return depDelay;
     }
