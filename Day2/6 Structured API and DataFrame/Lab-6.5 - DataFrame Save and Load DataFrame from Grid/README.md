@@ -24,7 +24,7 @@ and then load the DataFrame from the grid.
 5. It will open up Queries and you can verify both entries for john and sam.
 
 # Troubleshooting
-Problem 1:
+## Problem 1:
 
 Error: Could not find or load main class com.gigaspaces.ietraining.SaveLoadDataframeFromGrid
 
@@ -37,7 +37,14 @@ e.g:
 From Intelij menu click on: File -> New -> Project from existing Sources, and point to the following pom file:
 .../Lab-6.5 - DataFrame Save And Load DataFrame From Grid/save-load-dataframe-from-grid/pom.xml
 
-# Add HADOOP_HOME environment variable in intelliJ Editor
+
+## Problem 2:
+
+Error: "Failed to locate the winutils binary in the hadoop binary path"
+
+Solution:
+
+Add HADOOP_HOME environment variable in IntelliJ Editor
 
 Steps:
 1. Go to Run -> Edit Configuration -> Environment variables text box at right side
