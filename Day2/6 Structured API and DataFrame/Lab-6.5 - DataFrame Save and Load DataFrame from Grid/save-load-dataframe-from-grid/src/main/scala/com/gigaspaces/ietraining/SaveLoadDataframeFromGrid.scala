@@ -22,6 +22,7 @@ object SaveLoadDataframeFromGrid {
 
     val ieConfig = InsightEdgeConfig("demo", Some("xap-14.0.0"), Some("127.0.0.1"))
     val spark = SparkSession.builder
+      .master("local")
       .appName("example-load-dataframe")
       .insightEdgeConfig(ieConfig)
       .getOrCreate()
