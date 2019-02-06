@@ -51,4 +51,15 @@ Steps:
 2. Enter HADOOP_HOME=C:\gigaspaces-insightedge-enterprise-14.0.0-ga-b20000\tools\winutils
 3. Press Ok and rebuild the project, then run SaveLoadDataframeFromGrid.scala class.
 
+## Problem 3:
+How run from command line.
+Edit the pom.xml to change the scope insightedge core dependencies to provided.
+
+Generate jar:
+cd ./save-load-dataframe-from-grid
+mvn clean package
+
+<INSIGHTEDGE_HOME>\insightedge\bin\insightedge-submit --class com.gigaspaces.ietraining.SaveLoadDataframeFromGrid --master spark://127.0.0.1:7077  ./target/load-dataframe-from-grid-1.0-SNAPSHOT.jar
+
+
 
