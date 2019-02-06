@@ -33,7 +33,7 @@
                 14.0.0
             </version>
             <scope>
-                compile
+                provided
             </scope>
         </dependency>
     </dependencies>
