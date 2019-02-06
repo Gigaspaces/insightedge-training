@@ -14,6 +14,15 @@ and then load the DataFrame from the grid.
 
 2. run SaveLoadDataframeFromGrid.scala class.
 
+
+# How to verify dataframe persisted results through XAP Web UI
+
+1. Open web ui http://localhost:8099/
+2. Click Spaces from Top Menu
+3. Click on Types next to Queries from center menu buttons
+4. You can see People Types. Click on this.
+5. It will open up Queries and you can verify both entries for john and sam.
+
 # Troubleshooting
 Problem 1:
 
@@ -26,22 +35,13 @@ Create a separate project by pointing to the project pom.xml file.
 e.g:
 
 From Intelij menu click on: File -> New -> Project from existing Sources, and point to the following pom file:
-.../Lab-6.6 - DataFrame Save And Load DataFrame From Grid/save-load-dataframe-from-grid/pom.xml
+.../Lab-6.5 - DataFrame Save And Load DataFrame From Grid/save-load-dataframe-from-grid/pom.xml
 
 # Add HADOOP_HOME environment variable in intelliJ Editor
 
 Steps:
 1. Go to Run -> Edit Configuration -> Environment variables text box at right side
 2. Enter HADOOP_HOME=C:\gigaspaces-insightedge-enterprise-14.0.0-ga-b20000\tools\winutils
-3. Press Ok and rebuild the project and then run SaveLoadDataframeFromGrid.scala class.
-
-# How to verify dataframe persisted results through XAP Web UI
-
-1. Open web ui http://localhost:8099/
-2. Click Spaces from Top Menu
-3. Click on Types next to Queries from center menu buttons
-4. You can see people data frame entry click that
-5. It will open up Queries and you can verify both entries for john and sam.
-
+3. Press Ok and rebuild the project, then run SaveLoadDataframeFromGrid.scala class.
 
 
