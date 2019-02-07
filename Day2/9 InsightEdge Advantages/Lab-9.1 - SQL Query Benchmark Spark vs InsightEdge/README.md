@@ -18,4 +18,5 @@
 
 5. Follow the instructions inside the Notebook paragraphs.
 
-Note: If running Zeppelin notebooks on Windows, you might need to change println to print and also add "%n" in order to display the output properly.
+Note: If running Zeppelin notebooks on Windows, you might need to change println to print and also add "%n" in order to display the output properly. 
+If the Zepplin interpretor instance fails to work correctly on Windows, you will need to shutdown all browser windows and restart insightedge.
