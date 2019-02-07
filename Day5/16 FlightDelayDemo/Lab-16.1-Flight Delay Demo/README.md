@@ -15,7 +15,7 @@ Instruction:
 2. Start insightedge Manager 
     insightedge host run-agent --auto    
 3. Go to web-ui - (http://localhost:8099)
-4. Strat 2 GSC using web-ui (or cli)
+4. Start 2 GSC using web-ui (or cli)
 6. Go to rest manager(http://localhost:8090/v2/) and Deploy project jar (2,0 )
 7. Go to zeppelin (http://localhost:9090) , import Lab 16.1 Example - Flight Delay Prediction Demo.json notebook 
 8. Follow instructions in the notebook, see notification in gs-agent console
