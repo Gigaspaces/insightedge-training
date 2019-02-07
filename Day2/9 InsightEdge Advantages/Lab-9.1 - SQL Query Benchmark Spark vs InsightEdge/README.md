@@ -20,3 +20,4 @@
 
 Note: If running Zeppelin notebooks on Windows, you might need to change println to print and also add "%n" in order to display the output properly. 
 If the Zepplin interpretor instance fails to work correctly on Windows, you will need to shutdown all browser windows and restart insightedge.
+If the uber jar FlightDelayDemo-1.0.0-SNAPSHOT.jar is not already created, you can generate it by going to "Day5/16 FlightDelayDemo/Lab-16.1-Flight Delay Demo" and running mvn package.
