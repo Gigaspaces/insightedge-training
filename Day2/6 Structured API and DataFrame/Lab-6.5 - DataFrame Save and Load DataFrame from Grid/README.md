@@ -15,7 +15,7 @@ and then load the DataFrame from the grid.
 2. run SaveLoadDataframeFromGrid.scala class.
 
 
-# How to verify dataframe persisted results through XAP Web UI
+# How to verify dataframe persisted results through InsightEdge Web UI
 
 1. Open web ui http://localhost:8099/
 2. Click Spaces from Top Menu
