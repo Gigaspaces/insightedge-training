@@ -53,6 +53,7 @@ Steps:
 
 ## Problem 3:
 Directions on how to run from the command line using insightedge-submit.
+
 Edit the pom.xml to change the scope insightedge core dependencies to provided.
 
 Generate jar:
