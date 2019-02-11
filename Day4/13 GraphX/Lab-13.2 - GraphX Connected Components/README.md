@@ -1,4 +1,4 @@
-# Lab: GraphX Neighbourhood Aggregation
+# Lab: GraphX Connected Components
 
 # Instructions
 
@@ -12,7 +12,7 @@
 
 3. Import to Zeppelin the following Notebook:
 
-    insightedge-training/Day4/15 GraphX/Lab-15.3 - GraphX Neighbourhood Aggregation/
-    Lab 15.3 Exercise - GraphX Neighbourhood Aggregation.json
+    insightedge-training/Day4/13 GraphX/Lab-13.2 - GraphX Connected Components/
+    Lab 13.2 Exercise - GraphX Connected Components.json
 
 4. Follow the instructions inside the Notebook paragraphs.
