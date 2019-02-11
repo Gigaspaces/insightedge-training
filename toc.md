@@ -60,5 +60,6 @@ Labs with a description have an exercise.
   * 16 Kubernetes
 * Day5
   * 17 Flight Delay Demo
-    * Lab-17.1 - Run the Flight Delay Demo example project
+    * Lab-17.1 - Flight Delay Demo
+      1. Run the example project and the notebook
   * Exam
