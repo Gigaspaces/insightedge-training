@@ -52,7 +52,7 @@ Steps:
 3. Press Ok and rebuild the project, then run SaveLoadDataframeFromGrid.scala class.
 
 ## Problem 3:
-How run from command line.
+Directions on how to run from the command line using insightedge-submit.
 Edit the pom.xml to change the scope insightedge core dependencies to provided.
 
 Generate jar:
