@@ -59,6 +59,6 @@ Labs with a description have an exercise.
   * 15 MemoryXtend
   * 16 Kubernetes
 * Day5
-    * Flight Delay Demo
-      1. Run the Flight Delay Demo example project
-    * Exam
+  * 17 Flight Delay Demo
+    * Lab-17.1 - Run the Flight Delay Demo example project
+  * Exam

@@ -1,1 +1,0 @@
-Presentation only. No lab.
