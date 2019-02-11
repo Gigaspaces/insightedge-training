@@ -27,8 +27,7 @@ Labs with a description have an exercise.
     * Lab-6.4 - DataFrame Operations and SQL Usage
       1. Basic DataFrame operations using video-games-sales.csv
     * Lab-6.5 - DataFrame Save and Load DataFrame from Grid
-      1. Build and run example project
-    
+      1. Build and run example project    
   * 7 Architectural Approaches
   * 8 InsightEdge
     * Lab-8.1 - SQL Query Benchmark Spark vs InsightEdge
