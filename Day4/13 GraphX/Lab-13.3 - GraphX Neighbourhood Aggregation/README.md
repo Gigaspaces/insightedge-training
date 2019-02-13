@@ -12,7 +12,7 @@
 
 3. Import to Zeppelin the following Notebook:
 
-    insightedge-training/Day4/15 GraphX/Lab-15.3 - GraphX Neighbourhood Aggregation/
-    Lab 15.3 Exercise - GraphX Neighbourhood Aggregation.json
+    insightedge-training/Day4/13 GraphX/Lab-13.3 - GraphX Neighbourhood Aggregation/
+    Lab 13.3 Exercise - GraphX Neighbourhood Aggregation.json
 
 4. Follow the instructions inside the Notebook paragraphs.

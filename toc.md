@@ -1,6 +1,8 @@
 # Table of Contents #
 
-Below is the listing of all labs and exercises. Labs with a description have an exercise.
+Below is the listing of all labs and exercises and a suggested schedule.
+Labs with a description have an exercise.
+
 * Day1
   * 1 Course Introduction
   * 2 Introduction to Big Data
@@ -25,12 +27,11 @@ Below is the listing of all labs and exercises. Labs with a description have an 
     * Lab-6.4 - DataFrame Operations and SQL Usage
       1. Basic DataFrame operations using video-games-sales.csv
     * Lab-6.5 - DataFrame Save and Load DataFrame from Grid
-      1. Build and run example project
-    
-  * 7 Introduction to InsightEdge
-  * 8 Administration and Deployment
-  * 9 InsightEdge Advantages
-    * Lab-9.1 - SQL Query Benchmark Spark vs InsightEdge
+      1. Build and run example project    
+  * 7 Architectural Approaches
+  * 8 InsightEdge
+    * Lab-8.1 - SQL Query Benchmark Spark vs InsightEdge
+  * 9 Administration and Deployment
 * Day3
   * 10 Structured Streaming
     * Lab-10.1 - Structured Streaming
@@ -47,15 +48,18 @@ Below is the listing of all labs and exercises. Labs with a description have an 
     * Lab-12.1 - Machine Learning
       1. Machine learning
 * Day4
-  * 15 GraphX
-    * Lab-15.1 - GraphX Creation Structural Operators
-    * Lab-15.2 - GraphX Connected Components
+  * 13 GraphX
+    * Lab-13.1 - GraphX Creation Structural Operators
+    * Lab-13.2 - GraphX Connected Components
       1. Find connected components using GraphX
-    * Lab-15.3 - GraphX Neighbourhood Aggregation
+    * Lab-13.3 - GraphX Neighbourhood Aggregation
       1. Perform neighborhood aggregation
-    * Lab-15.4 - GraphX Airline Demo
+    * Lab-13.4 - GraphX Airline Demo
+  * 14 Event Containers
+  * 15 MemoryXtend
+  * 16 Kubernetes
 * Day5
-    * Lab-16.1 - Flight Delay Demo
-      1. Run the Flight Delay Demo example project
-    
-     
+  * 17 Flight Delay Demo
+    * Lab-17.1 - Flight Delay Demo
+      1. Run the example project and the notebook
+  * Exam

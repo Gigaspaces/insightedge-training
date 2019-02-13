@@ -1,4 +1,4 @@
-# Lab: DataFrame Exercise on Loading and Saving Data
+# Lab: GraphX Connected Components
 
 # Instructions
 
@@ -12,6 +12,7 @@
 
 3. Import to Zeppelin the following Notebook:
 
-    insightedge-training/Day2/6 Structured API And DataFrame/Lab-6.2 - DataFrame Exercise on Loading and Saving Data/Lab 6.2 Exercise - DataFrame Loading and Saving Data.json
-    
+    insightedge-training/Day4/13 GraphX/Lab-13.2 - GraphX Connected Components/
+    Lab 13.2 Exercise - GraphX Connected Components.json
+
 4. Follow the instructions inside the Notebook paragraphs.
