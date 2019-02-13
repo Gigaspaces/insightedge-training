@@ -58,6 +58,8 @@ Labs with a description have an exercise.
   * 14 Event Containers
   * 15 MemoryXtend
   * 16 Kubernetes
+    * Lab-16.1 - Kubernetes
+      1. Deploy InsightEdge on minikube
 * Day5
   * 17 Flight Delay Demo
     * Lab-17.1 - Flight Delay Demo
