@@ -1,1 +1,1 @@
-Presentation only. No labs given.
+Please see instructions in accompanying file "Lab for Kubernetes.docx"
