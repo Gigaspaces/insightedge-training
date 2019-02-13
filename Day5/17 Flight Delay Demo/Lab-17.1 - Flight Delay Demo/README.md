@@ -1,25 +1,23 @@
-#Lab 16.1
-
 # Flight Delay Example
 
 Data for the demo
 Link:  http://stat-computing.org/dataexpo/2009/the-data.html
 
 Instruction:
-1. Download from the above Link, 2007 csv files.store the file on your local machine.
-2. Have a look at the file decide which fields To keep in space,
-3. In IDE, go to DelayRec class and decalre the required fields.  
-   Please note Space Routing field is set to flightNumber
-   Space Id is flightNumber and time. 
-4. Build the project jar and store in your local machine
-2. Start insightedge Manager 
-    insightedge host run-agent --auto    
-3. Go to web-ui - (http://localhost:8099)
-4. Start 2 GSC using web-ui (or cli)
-6. Go to rest manager(http://localhost:8090/v2/) and Deploy project jar (2,0 )
-7. Go to zeppelin (http://localhost:9090) , import Lab 16.1 Example - Flight Delay Prediction Demo.json notebook 
-8. Follow instructions in the notebook, see notification in gs-agent console
-9. Go to web-ui to see space data in each step
+1. Download from the above link, 2007 csv files. Save the file on your local machine.
+1. Review the csv file. Decide which fields to keep in space.
+1. In IDE, go to DelayRec class and declare the required fields.  
+   * Please note Space Routing field is set to flightNumber.
+   * Space Id is flightNumber and time. 
+1. Build the project jar (deployment is mentioned in step 8).
+1. Start the InsightEdge Manager
+   * ./insightedge host run-agent --auto    
+1. Open the web-ui in a browser - (http://localhost:8099)
+1. Start 2 GSC using web-ui (or cli)
+1. Open the Rest Manager in a browser - (http://localhost:8090/v2/) and deploy project jar (2,0 - 2 partitions with no backups).
+1. Open Zeppelin in a web browser (http://localhost:9090). Import 'Lab 17.1 Example - Flight Delay Prediction Demo.json' notebook.
+1. Follow instructions in the notebook. Notifications will appear in the console output (gs-agent).
+1. Go to the web-ui to see the data in the space after each step.
 
 
 
