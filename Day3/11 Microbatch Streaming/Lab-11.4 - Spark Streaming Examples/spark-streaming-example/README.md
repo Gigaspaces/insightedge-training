@@ -29,5 +29,6 @@ insightedge/bin/insightedge-submit --class com.gigaspaces.ietraining.SparkStream
 5. Write some messages to the topic. A script can be found at scripts/kafka-write-messages.sh. The console that is running the insightedge-submit should print the messages that were entered.
 
 # Troubleshooting
+1. To check if there any messages in the topic, you can run scripts/kafka-output-topic.sh
 1. If you don't see any output, you can check if the messages are being consumed with scripts/kafka-show-groups.sh
     
