@@ -78,7 +78,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.your-package.MainClass</mainClass>
+                            <mainClass>com.gigaspaces.ietraining.SparkStreamingExample</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
