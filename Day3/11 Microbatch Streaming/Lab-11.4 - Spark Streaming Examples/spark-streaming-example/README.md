@@ -26,6 +26,8 @@ insightedge/bin/insightedge-submit --class com.gigaspaces.ietraining.SparkStream
   --master spark://127.0.0.1:7077 \
   /path to target dir/insightedge-examples-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
+Alternatively, run the "Lab 11.4 Example - Kafka Streaming" notebook found in this directory.
+
 5. Write some messages to the topic. A script can be found at scripts/kafka-write-messages.sh. The console that is running the insightedge-submit should print the messages that were entered.
 
 # Troubleshooting
