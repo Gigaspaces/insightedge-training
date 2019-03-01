@@ -11,7 +11,9 @@ import org.apache.spark.streaming.kafka010._
 import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent
 import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
 
-
+/*
+  See: https://spark.apache.org/docs/2.3.2/streaming-kafka-0-10-integration.html
+ */
 object SparkStreamingExample {
 
   def main(args: Array[String]): Unit = {
