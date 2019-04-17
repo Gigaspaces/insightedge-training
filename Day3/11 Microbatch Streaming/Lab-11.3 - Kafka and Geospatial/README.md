@@ -1,9 +1,11 @@
-# Real-time Spatial Analytics with InsightEdge Spark: Taxi Price Surge Use Case
-see https://github.com/InsightEdge/insightedge-geo-demo.git
-go over the example
+# Real-time Spatial Analytics with InsightEdge Spark:
+
+# Taxi Price Surge Use Case
+See https://github.com/InsightEdge/insightedge-geo-demo.git for the complete example.
+
 ## Overview
 
-In this demo we will create an application that runs real-time analytics on a streaming geospatial data.
+In this demo we will create an application that runs real-time analytics on streaming geospatial data.
 
 We take a fundamental **supply and demand** economic model of price determination in a market.
 We will compute price in real-time based on the current supply and demand.
@@ -17,9 +19,9 @@ With services like Uber the fare rates automatically increase, when the taxi dem
 The Uber prices are [surging](https://help.uber.com/h/19572af0-d494-4885-a1ef-1a0d54d0e68f) to ensure reliability and availability for those who agree to pay a bit more.
 
 You may identify the following architectural questions:
-- how do we handle the events like order request event or pickup event?
-- how do we compute the price accounting the nearby requests? We need an efficient way to execute geospatial queries.
-- how can we scale technology to run business in many cities, states or countries?
+- How do we handle the events like order request event or pickup event?
+- How do we compute the price accounting the nearby requests? We need an efficient way to execute geospatial queries.
+- How can we scale technology to run business in many cities, states or countries?
 
 
 ## Architecture
@@ -32,7 +34,7 @@ Let's now see how this architecture addresses the key questions we outlined earl
 - with InsightEdge Geospatial API we are able to efficiently find nearby orders and, therefore, minimize the time required to compute the price.
 The efficiency comes from the ability to **index order request location** in the datagrid.
 - Kafka allows to handle a **high throughput** of incoming raw events.
-Even if the computation layer starts processing slower(say during the peak hour), all the events will be reliably buffered in Kafka. The seamless and proven integration with Spark makes it a good choice for streaming applications.
+Even if the computation layer starts processing slower (say during the peak hour), all the events will be reliably buffered in Kafka. The seamless and proven integration with Spark makes it a good choice for streaming applications.
 - InsightEdge Data Grid also plays a role of a serving layer **handling any operational/transactional queries** from web/mobile apps.
 - all the components(Kafka and InsightEdge) can **scale out** almost linearly;
 - to scale to many cities, we can leverage data locality principle through a full pipeline (Kafka, Spark, Data Grid)
@@ -77,22 +79,22 @@ ordersStream
 ```
 
 - step 1: initialize a stream of Kafka `orders` topic
-- step 2: parse Kafka message that is in Json format (in real app you may want to use formats like Avro)
+- step 2: parse Kafka message that is in Json format (in a real app you may want to use formats like Avro)
 - step 3: for every order we find other nonprocessed orders within 0.3 km using InsightEdge's `zipWithGridSql()` function
 - step 4: given near orders, we calculate the price with a simple linear function
 - step 5: finally we save the order details including price and near order ids into the data grid with `saveToGrid()` function
 
 ## Running demo on a local machine
 
-1. run mvn clean install from root directory 
+1. run `mvn clean install` from root directory 
 
-2. Launch InsightEdge `./sbin/insightedge mode demo`
+2. Launch InsightEdge `./bin/insightedge demo`
 
 3. Launch Kafka. Set `KAFKA_HOME` env var with `export KAFKA_HOME=<path/to/kafka>` and then run `./scripts/start-local.sh`
 
-4. Launch Feeder `java -cp feeder/target/feeder-??????-jar-with-dependencies.jar  org.insightedge.geodemo.feeder.Feeder
+4. Launch Feeder `java -cp feeder/target/feeder-??????-jar-with-dependencies.jar  org.insightedge.geodemo.feeder.Feeder`
 
-5. Submit InsightEdge processing from InsightEdge directory `./bin/insightedge-submit --class org.insightedge.geodemo.processing.DymanicPriceProcessor --master spark://127.0.0.1:7077 /path/to/insightedgeProcessing.jar spark://127.0.0.1:7077`. Alternatively you can run from IDE with Embedded Spark, see `org.insightedge.geodemo.processing.DymanicPriceProcessor`.
+5. Submit InsightEdge processing from InsightEdge directory `./insightedge/bin/insightedge-submit --class org.insightedge.geodemo.processing.DynamicPriceProcessor --master spark://127.0.0.1:7077 /path/to/insightedgeProcessing.jar spark://127.0.0.1:7077`. Alternatively you can run from IDE with Embedded Spark, see `org.insightedge.geodemo.processing.DynamicPriceProcessor`.
 
 6. Launch web app with `./scripts/start-web.sh`
 
