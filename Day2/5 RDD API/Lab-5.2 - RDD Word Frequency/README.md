@@ -1,4 +1,4 @@
-# Lab: RDD Exercise 2
+# Lab 5.2 Exercise - RDD Word Frequency
 
 # Instructions
 

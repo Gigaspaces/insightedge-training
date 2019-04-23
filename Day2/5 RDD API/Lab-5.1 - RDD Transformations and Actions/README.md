@@ -1,4 +1,4 @@
-# Lab: RDD Transformations and Actions
+# Lab 5.1 Examples: RDD Transformations and Actions
 
 # Instructions
 
