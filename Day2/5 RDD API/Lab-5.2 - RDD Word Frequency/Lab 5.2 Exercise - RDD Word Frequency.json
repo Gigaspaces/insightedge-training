@@ -1,1 +1,203 @@
-﻿{"paragraphs":[{"text":"%md\n\nFor the file **spark-intro.txt**, <font color=\"blue\">**count the number of occurrences of each word [ignore word if it contains '.', '-' and ',']**</font>\n\nPrint the top ten words in decreasing order of their frequency\n","user":"anonymous","dateUpdated":"2018-12-25T16:15:02+0200","config":{"tableHide":false,"editorSetting":{"language":"markdown","editOnDblClick":true,"completionSupport":false},"colWidth":12,"editorMode":"ace/mode/markdown","editorHide":true,"results":[{"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}}}],"enabled":true,"fontSize":9},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"HTML","data":"<div class=\"markdown-body\">\n<p>For the file <strong>spark-intro.txt</strong>, <font color=\"blue\">**count the number of occurrences of each word [ignore word if it contains &lsquo;.&rsquo;, &lsquo;-&rsquo; and &lsquo;,&rsquo;]**</font></p>\n<p>Print the top ten words in decreasing order of their frequency</p>\n</div>"}]},"apps":[],"jobName":"paragraph_1545747137958_-2010002894","id":"20160822-114538_631748392","dateCreated":"2018-12-25T16:12:17+0200","dateStarted":"2018-12-25T16:15:02+0200","dateFinished":"2018-12-25T16:15:02+0200","status":"FINISHED","progressUpdateIntervalMs":500,"focus":true,"$$hashKey":"object:18303"},{"text":"%spark\n","user":"anonymous","dateUpdated":"2018-12-25T16:12:17+0200","config":{"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true,"fontSize":9},"settings":{"params":{},"forms":{}},"apps":[],"jobName":"paragraph_1545747137962_1511105010","id":"20160919-110818_1918993395","dateCreated":"2018-12-25T16:12:17+0200","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:18304"},{"text":"%md\n\nFor the file **spark-intro.txt**, <font color=\"blue\">**print the top twenty words in decreasing order of their frequency**</font>\n","user":"anonymous","dateUpdated":"2018-12-25T16:13:13+0200","config":{"colWidth":12,"editorMode":"ace/mode/markdown","results":[{"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}}}],"enabled":true,"editorSetting":{"language":"markdown","editOnDblClick":true,"completionSupport":false},"fontSize":9,"editorHide":true,"tableHide":false},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"HTML","data":"<div class=\"markdown-body\">\n<p>For the file <strong>spark-intro.txt</strong>, <font color=\"blue\">**print the top twenty words in decreasing order of their frequency**</font></p>\n</div>"}]},"apps":[],"jobName":"paragraph_1545747137962_-1166437805","id":"20170226-203838_1600230806","dateCreated":"2018-12-25T16:12:17+0200","dateStarted":"2018-12-25T16:13:06+0200","dateFinished":"2018-12-25T16:13:06+0200","status":"FINISHED","progressUpdateIntervalMs":500,"$$hashKey":"object:18305"},{"text":"%spark\n","user":"anonymous","dateUpdated":"2018-12-25T16:12:17+0200","config":{"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true,"fontSize":9},"settings":{"params":{},"forms":{}},"apps":[],"jobName":"paragraph_1545747137963_664977429","id":"20170226-204050_95627996","dateCreated":"2018-12-25T16:12:17+0200","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:18306"}],"name":"Lab 5.3 Exercise - RDD Exercise 2","id":"2DYRNF9MA","noteParams":{},"noteForms":{},"angularObjects":{"md:shared_process":[],"spark:shared_process":[]},"config":{"isZeppelinNotebookCronEnable":false,"looknfeel":"default","personalizedMode":"false"},"info":{}}
+﻿{
+  "paragraphs": [
+    {
+      "text": "%md\n\nFor the file **spark-intro.txt**, <font color=\"blue\">**count the number of occurrences of each word [ignore word if it contains '.', '-' and ',']**</font>\n\nPrint the top ten words in decreasing order of their frequency\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-25T16:15:02+0200",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "results": [
+          {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "keys": [],
+              "values": [],
+              "groups": [],
+              "scatter": { }
+            }
+          }
+        ],
+        "enabled": true,
+        "fontSize": 9
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>For the file <strong>spark-intro.txt</strong>, <font color=\"blue\">**count the number of occurrences of each word [ignore word if it contains &lsquo;.&rsquo;, &lsquo;-&rsquo; and &lsquo;,&rsquo;]**</font></p>\n<p>Print the top ten words in decreasing order of their frequency</p>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1545747137958_-2010002894",
+      "id": "20160822-114538_631748392",
+      "dateCreated": "2018-12-25T16:12:17+0200",
+      "dateStarted": "2018-12-25T16:15:02+0200",
+      "dateFinished": "2018-12-25T16:15:02+0200",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500,
+      "focus": true,
+      "$$hashKey": "object:18303"
+    },
+    {
+      "text": "%spark\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-25T16:12:17+0200",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "results": { },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": { }
+        },
+        "enabled": true,
+        "fontSize": 9
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1545747137962_1511105010",
+      "id": "20160919-110818_1918993395",
+      "dateCreated": "2018-12-25T16:12:17+0200",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:18304"
+    },
+    {
+      "text": "%md\n\nFor the file **spark-intro.txt**, <font color=\"blue\">**print the top twenty words in decreasing order of their frequency**</font>\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-25T16:13:13+0200",
+      "config": {
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "results": [
+          {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "keys": [],
+              "values": [],
+              "groups": [],
+              "scatter": { }
+            }
+          }
+        ],
+        "enabled": true,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "fontSize": 9,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>For the file <strong>spark-intro.txt</strong>, <font color=\"blue\">**print the top twenty words in decreasing order of their frequency**</font></p>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1545747137962_-1166437805",
+      "id": "20170226-203838_1600230806",
+      "dateCreated": "2018-12-25T16:12:17+0200",
+      "dateStarted": "2018-12-25T16:13:06+0200",
+      "dateFinished": "2018-12-25T16:13:06+0200",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:18305"
+    },
+    {
+      "text": "%spark\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-25T16:12:17+0200",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "results": { },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": { }
+        },
+        "enabled": true,
+        "fontSize": 9
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1545747137963_664977429",
+      "id": "20170226-204050_95627996",
+      "dateCreated": "2018-12-25T16:12:17+0200",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:18306"
+    }
+  ],
+  "name": "Lab 5.2 Exercise - RDD Word Frequency",
+  "id": "2DYRNF9MA",
+  "noteParams": { },
+  "noteForms": { },
+  "angularObjects": {
+    "md:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": { }
+}

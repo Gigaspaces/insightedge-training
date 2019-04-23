@@ -1,1 +1,268 @@
-﻿{"paragraphs":[{"text":"%md\n\nFor the file **spark-intro.txt**, <font color=\"blue\">**count the number of occurrences of each word [ignore word if it contains '.', '-' and ',']**</font>\n","user":"anonymous","dateUpdated":"2019-01-22T10:08:04-0500","config":{"tableHide":false,"editorSetting":{},"colWidth":12,"editorMode":"ace/mode/markdown","editorHide":true,"fontSize":9,"results":[{"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}}}],"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"HTML","data":"<div class=\"markdown-body\">\n<p>For the file <strong>spark-intro.txt</strong>, <font color=\"blue\">**count the number of occurrences of each word [ignore word if it contains &lsquo;.&rsquo;, &lsquo;-&rsquo; and &lsquo;,&rsquo;]**</font></p>\n</div>"}]},"apps":[],"jobName":"paragraph_1548169684080_-741901307","id":"20160822-114538_631748392","dateCreated":"2019-01-22T10:08:04-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"focus":true,"$$hashKey":"object:1788"},{"text":"%spark\n\nval lines = sc.textFile(\"../../../../Data/spark-intro.txt\")\n\nval wordMap = lines.flatMap(line => line.split(\" \")).filter(w => (! w.contains(\",\")) && (! w.contains(\".\")) && (! w.contains(\"-\")) ).map(w => (w,1))\n\nval wordFreqMap = wordMap.reduceByKey((x,y) => (x + y))\n\nwordFreqMap.collect.foreach(println)\n","user":"anonymous","dateUpdated":"2019-01-22T10:11:00-0500","config":{"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"lines: org.apache.spark.rdd.RDD[String] = ../../../../Data/spark-intro.txt MapPartitionsRDD[23] at textFile at <console>:25\nwordMap: org.apache.spark.rdd.RDD[(String, Int)] = MapPartitionsRDD[26] at map at <console>:27\nwordFreqMap: org.apache.spark.rdd.RDD[(String, Int)] = ShuffledRDD[27] at reduceByKey at <console>:29\n(Zaharia,1)\n(California,1)\n(is,3)\n(conceived,1)\n(one,1)\n(Apache,2)\n(active,1)\n(projects,1)\n(as,1)\n(been,1)\n(ever,1)\n(execution,1)\n(Matei,1)\n(has,1)\n(open,1)\n(prove,1)\n(world,1)\n(Mesos,1)\n(throughout,1)\n(Software,1)\n(Spark,2)\n(Hadoop,1)\n(part,1)\n(it,3)\n(major,1)\n(than,1)\n(most,1)\n(was,4)\n(had,1)\n(a,2)\n(1000,1)\n(many,1)\n(kinds,1)\n(attempt,1)\n(all,2)\n(large,1)\n(to,2)\n(platform,1)\n(feasible,1)\n(in,4)\n(topic,1)\n(distributions,1)\n(development,1)\n(more,1)\n(of,4)\n(In,2)\n(by,2)\n(It,1)\n(sourced,1)\n(used,1)\n(an,1)\n(and,5)\n(2009,1)\n(target,1)\n(these,1)\n(donated,1)\n(the,5)\n(initially,1)\n"}]},"apps":[],"jobName":"paragraph_1548169684082_-926704836","id":"20160919-110818_1918993395","dateCreated":"2019-01-22T10:08:04-0500","status":"FINISHED","progressUpdateIntervalMs":500,"$$hashKey":"object:1789","dateFinished":"2019-01-22T10:11:02-0500","dateStarted":"2019-01-22T10:11:00-0500","runtimeInfos":{"jobUrl":{"propertyName":"jobUrl","label":"SPARK JOB","tooltip":"View in Spark web UI","group":"spark","values":["http://10.10.10.117:4040/jobs/job?id=4"],"interpreterSettingId":"spark"}}},{"text":"%md\n\nFor the file **spark-intro.txt**, <font color=\"blue\">**print the top twenty words in decreasing order of their frequency**</font>\n","user":"anonymous","dateUpdated":"2019-01-22T10:08:04-0500","config":{"editorSetting":{},"colWidth":12,"editorMode":"ace/mode/scala","editorHide":true,"fontSize":9,"results":[{"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}}}],"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"HTML","data":"<div class=\"markdown-body\">\n<p>For the file <strong>spark-intro.txt</strong>, <font color=\"blue\">**print the top twenty words in decreasing order of their frequency**</font></p>\n</div>"}]},"apps":[],"jobName":"paragraph_1548169684083_-1838897098","id":"20170226-203838_1600230806","dateCreated":"2019-01-22T10:08:04-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:1790"},{"text":"%spark\n\nval lines = sc.textFile(\"../../../../Data/spark-intro.txt\")\n\nval wordMap = lines.flatMap(line => line.split(\" \")).filter(w => (! w.contains(\",\")) && (! w.contains(\".\")) && (! w.contains(\"-\")) ).map(w => (w,1))\n\nval wordFreqMap = wordMap.reduceByKey((x,y) => (x + y))\n\nval wordFreqSorted = wordFreqMap.sortBy(_._2, false)\n\nwordFreqSorted.take(20).foreach(println)\n","user":"anonymous","dateUpdated":"2019-01-22T10:11:05-0500","config":{"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"lines: org.apache.spark.rdd.RDD[String] = ../../../../Data/spark-intro.txt MapPartitionsRDD[29] at textFile at <console>:25\nwordMap: org.apache.spark.rdd.RDD[(String, Int)] = MapPartitionsRDD[32] at map at <console>:27\nwordFreqMap: org.apache.spark.rdd.RDD[(String, Int)] = ShuffledRDD[33] at reduceByKey at <console>:29\nwordFreqSorted: org.apache.spark.rdd.RDD[(String, Int)] = MapPartitionsRDD[38] at sortBy at <console>:31\n(and,5)\n(the,5)\n(was,4)\n(in,4)\n(of,4)\n(is,3)\n(it,3)\n(Apache,2)\n(Spark,2)\n(a,2)\n(all,2)\n(to,2)\n(In,2)\n(by,2)\n(Zaharia,1)\n(California,1)\n(conceived,1)\n(one,1)\n(active,1)\n(projects,1)\n"}]},"apps":[],"jobName":"paragraph_1548169684084_-249429222","id":"20170226-204050_95627996","dateCreated":"2019-01-22T10:08:04-0500","status":"FINISHED","progressUpdateIntervalMs":500,"$$hashKey":"object:1791","dateFinished":"2019-01-22T10:11:08-0500","dateStarted":"2019-01-22T10:11:05-0500","runtimeInfos":{"jobUrl":{"propertyName":"jobUrl","label":"SPARK JOB","tooltip":"View in Spark web UI","group":"spark","values":["http://10.10.10.117:4040/jobs/job?id=5","http://10.10.10.117:4040/jobs/job?id=6","http://10.10.10.117:4040/jobs/job?id=7"],"interpreterSettingId":"spark"}}},{"text":"%spark\n","user":"anonymous","dateUpdated":"2019-01-22T10:11:05-0500","config":{"colWidth":12,"fontSize":9,"enabled":true,"results":{},"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"editorMode":"ace/mode/scala"},"settings":{"params":{},"forms":{}},"apps":[],"jobName":"paragraph_1548169865899_-1965781201","id":"20190122-101105_1227957273","dateCreated":"2019-01-22T10:11:05-0500","status":"READY","progressUpdateIntervalMs":500,"focus":true,"$$hashKey":"object:2220"}],"name":"Lab 5.3 Solution - RDD Exercise 2","id":"2E4N3S2UN","noteParams":{},"noteForms":{},"angularObjects":{"md:shared_process":[],"spark:shared_process":[]},"config":{"isZeppelinNotebookCronEnable":false,"looknfeel":"default","personalizedMode":"false"},"info":{}}
+﻿{
+  "paragraphs": [
+    {
+      "text": "%md\n\nFor the file **spark-intro.txt**, <font color=\"blue\">**count the number of occurrences of each word [ignore word if it contains '.', '-' and ',']**</font>\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-01-22T10:08:04-0500",
+      "config": {
+        "tableHide": false,
+        "editorSetting": { },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": [
+          {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "keys": [ ],
+              "values": [ ],
+              "groups": [ ],
+              "scatter": { }
+            }
+          }
+        ],
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>For the file <strong>spark-intro.txt</strong>, <font color=\"blue\">**count the number of occurrences of each word [ignore word if it contains &lsquo;.&rsquo;, &lsquo;-&rsquo; and &lsquo;,&rsquo;]**</font></p>\n</div>"
+          }
+        ]
+      },
+      "apps": [ ],
+      "jobName": "paragraph_1548169684080_-741901307",
+      "id": "20160822-114538_631748392",
+      "dateCreated": "2019-01-22T10:08:04-0500",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "focus": true,
+      "$$hashKey": "object:1788"
+    },
+    {
+      "text": "%spark\n\nval lines = sc.textFile(\"../../../../Data/spark-intro.txt\")\n\nval wordMap = lines.flatMap(line => line.split(\" \")).filter(w => (! w.contains(\",\")) && (! w.contains(\".\")) && (! w.contains(\"-\")) ).map(w => (w,1))\n\nval wordFreqMap = wordMap.reduceByKey((x,y) => (x + y))\n\nwordFreqMap.collect.foreach(println)\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-01-22T10:11:00-0500",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": { },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [ ],
+          "values": [ ],
+          "groups": [ ],
+          "scatter": { }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "lines: org.apache.spark.rdd.RDD[String] = ../../../../Data/spark-intro.txt MapPartitionsRDD[23] at textFile at <console>:25\nwordMap: org.apache.spark.rdd.RDD[(String, Int)] = MapPartitionsRDD[26] at map at <console>:27\nwordFreqMap: org.apache.spark.rdd.RDD[(String, Int)] = ShuffledRDD[27] at reduceByKey at <console>:29\n(Zaharia,1)\n(California,1)\n(is,3)\n(conceived,1)\n(one,1)\n(Apache,2)\n(active,1)\n(projects,1)\n(as,1)\n(been,1)\n(ever,1)\n(execution,1)\n(Matei,1)\n(has,1)\n(open,1)\n(prove,1)\n(world,1)\n(Mesos,1)\n(throughout,1)\n(Software,1)\n(Spark,2)\n(Hadoop,1)\n(part,1)\n(it,3)\n(major,1)\n(than,1)\n(most,1)\n(was,4)\n(had,1)\n(a,2)\n(1000,1)\n(many,1)\n(kinds,1)\n(attempt,1)\n(all,2)\n(large,1)\n(to,2)\n(platform,1)\n(feasible,1)\n(in,4)\n(topic,1)\n(distributions,1)\n(development,1)\n(more,1)\n(of,4)\n(In,2)\n(by,2)\n(It,1)\n(sourced,1)\n(used,1)\n(an,1)\n(and,5)\n(2009,1)\n(target,1)\n(these,1)\n(donated,1)\n(the,5)\n(initially,1)\n"
+          }
+        ]
+      },
+      "apps": [ ],
+      "jobName": "paragraph_1548169684082_-926704836",
+      "id": "20160919-110818_1918993395",
+      "dateCreated": "2019-01-22T10:08:04-0500",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:1789",
+      "dateFinished": "2019-01-22T10:11:02-0500",
+      "dateStarted": "2019-01-22T10:11:00-0500",
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://10.10.10.117:4040/jobs/job?id=4"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      }
+    },
+    {
+      "text": "%md\n\nFor the file **spark-intro.txt**, <font color=\"blue\">**print the top twenty words in decreasing order of their frequency**</font>\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-01-22T10:08:04-0500",
+      "config": {
+        "editorSetting": { },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": [
+          {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "keys": [ ],
+              "values": [ ],
+              "groups": [ ],
+              "scatter": { }
+            }
+          }
+        ],
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>For the file <strong>spark-intro.txt</strong>, <font color=\"blue\">**print the top twenty words in decreasing order of their frequency**</font></p>\n</div>"
+          }
+        ]
+      },
+      "apps": [ ],
+      "jobName": "paragraph_1548169684083_-1838897098",
+      "id": "20170226-203838_1600230806",
+      "dateCreated": "2019-01-22T10:08:04-0500",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:1790"
+    },
+    {
+      "text": "%spark\n\nval lines = sc.textFile(\"../../../../Data/spark-intro.txt\")\n\nval wordMap = lines.flatMap(line => line.split(\" \")).filter(w => (! w.contains(\",\")) && (! w.contains(\".\")) && (! w.contains(\"-\")) ).map(w => (w,1))\n\nval wordFreqMap = wordMap.reduceByKey((x,y) => (x + y))\n\nval wordFreqSorted = wordFreqMap.sortBy(_._2, false)\n\nwordFreqSorted.take(20).foreach(println)\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-01-22T10:11:05-0500",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": { },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [ ],
+          "values": [ ],
+          "groups": [ ],
+          "scatter": { }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "lines: org.apache.spark.rdd.RDD[String] = ../../../../Data/spark-intro.txt MapPartitionsRDD[29] at textFile at <console>:25\nwordMap: org.apache.spark.rdd.RDD[(String, Int)] = MapPartitionsRDD[32] at map at <console>:27\nwordFreqMap: org.apache.spark.rdd.RDD[(String, Int)] = ShuffledRDD[33] at reduceByKey at <console>:29\nwordFreqSorted: org.apache.spark.rdd.RDD[(String, Int)] = MapPartitionsRDD[38] at sortBy at <console>:31\n(and,5)\n(the,5)\n(was,4)\n(in,4)\n(of,4)\n(is,3)\n(it,3)\n(Apache,2)\n(Spark,2)\n(a,2)\n(all,2)\n(to,2)\n(In,2)\n(by,2)\n(Zaharia,1)\n(California,1)\n(conceived,1)\n(one,1)\n(active,1)\n(projects,1)\n"
+          }
+        ]
+      },
+      "apps": [ ],
+      "jobName": "paragraph_1548169684084_-249429222",
+      "id": "20170226-204050_95627996",
+      "dateCreated": "2019-01-22T10:08:04-0500",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:1791",
+      "dateFinished": "2019-01-22T10:11:08-0500",
+      "dateStarted": "2019-01-22T10:11:05-0500",
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://10.10.10.117:4040/jobs/job?id=5",
+            "http://10.10.10.117:4040/jobs/job?id=6",
+            "http://10.10.10.117:4040/jobs/job?id=7"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      }
+    },
+    {
+      "text": "%spark\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-01-22T10:11:05-0500",
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": { },
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [ ],
+      "jobName": "paragraph_1548169865899_-1965781201",
+      "id": "20190122-101105_1227957273",
+      "dateCreated": "2019-01-22T10:11:05-0500",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500,
+      "focus": true,
+      "$$hashKey": "object:2220"
+    }
+  ],
+  "name": "Lab 5.3 Solution - RDD Word Frequency",
+  "id": "2E4N3S2UN",
+  "noteParams": { },
+  "noteForms": { },
+  "angularObjects": {
+    "md:shared_process": [ ],
+    "spark:shared_process": [ ]
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": { }
+}

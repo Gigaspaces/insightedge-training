@@ -12,6 +12,6 @@
 
 3. Import to Zeppelin the following Notebook:
 
-    insightedge-training/Day2/5 RDD API/Lab-5.3 - RDD Exercise 2/Lab 5.3 Exercise - RDD Exercise 2.json
+    insightedge-training/Day2/5 RDD API/Lab-5.2 - RDD Word Frequency/Lab 5.2 Exercise - RDD Word Frequency.json
     
 4. Follow the instructions inside the Notebook paragraphs.
