@@ -1,1 +1,273 @@
-﻿{"paragraphs":[{"text":"%md\n\nFrom the file <b>cities.csv</b>, find the following:\n\n<ul>\n<li>Number of cities with altitude more than 25</li>\n<li>List of cities starting with letter 'N'</li>\n<li>Map the data to the Cities class defined below and write them to the XAP grid. \n</ul>\n","user":"anonymous","dateUpdated":"2019-01-22T10:39:34-0500","config":{"editorSetting":{},"colWidth":12,"editorMode":"ace/mode/markdown","editorHide":true,"fontSize":9,"results":[{"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}}}],"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"HTML","data":"<div class=\"markdown-body\">\n<p>From the file <b>cities.csv</b>, find the following:</p>\n<ul>\n<li>Number of cities with altitude more than 25</li>\n<li>List of cities starting with letter 'N'</li>\n<li>Map the data to the Cities class defined below and write them to the XAP grid. \n</ul>\n</div>"}]},"apps":[],"jobName":"paragraph_1548171201426_-1043523763","id":"20161227-132530_1683227807","dateCreated":"2019-01-22T10:33:21-0500","dateStarted":"2019-01-22T10:39:34-0500","dateFinished":"2019-01-22T10:39:34-0500","status":"FINISHED","progressUpdateIntervalMs":500,"focus":true,"$$hashKey":"object:403"},{"text":"%md First few lines from **cities.csv**\n\n**Country,Name,lat,lng,Altitude**\nUnited States,New York City,40.7142691,-74.0059738,2\nUnited States,Los Angeles,34.0522342,-118.2436829,115\nUnited States,Chicago,41.8500330,-87.6500549,181\nUnited States,Houston,29.7632836,-95.3632736,15\n","user":"anonymous","dateUpdated":"2019-01-22T10:39:35-0500","config":{"editorSetting":{"language":"markdown","editOnDblClick":true,"completionSupport":false},"colWidth":12,"editorMode":"ace/mode/markdown","editorHide":true,"fontSize":9,"results":[{"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}}}],"enabled":true,"tableHide":false},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"HTML","data":"<div class=\"markdown-body\">\n<p>First few lines from <strong>cities.csv</strong></p>\n<p><strong>Country,Name,lat,lng,Altitude</strong><br/>United States,New York City,40.7142691,-74.0059738,2<br/>United States,Los Angeles,34.0522342,-118.2436829,115<br/>United States,Chicago,41.8500330,-87.6500549,181<br/>United States,Houston,29.7632836,-95.3632736,15</p>\n</div>"}]},"apps":[],"jobName":"paragraph_1548171201428_1021297602","id":"20170226-131811_789062440","dateCreated":"2019-01-22T10:33:21-0500","dateStarted":"2019-01-22T10:39:35-0500","dateFinished":"2019-01-22T10:39:35-0500","status":"FINISHED","progressUpdateIntervalMs":500,"$$hashKey":"object:404"},{"text":"%define \n\npackage model.v1\n\nimport org.insightedge.scala.annotation._\nimport scala.beans.{BeanProperty, BooleanBeanProperty}\n\n//// Name,Altitude\ncase class City(\n\n                    @BeanProperty\n                    @SpaceId(autoGenerate = true)\n                    var id: String,\n\n                    @BeanProperty\n                    var name: String,\n                    \n                    @BeanProperty\n                    var latitude: Float,\n                    \n                    @BeanProperty\n                    var longitude: Float,\n\n                    @BeanProperty\n                    var altitude: Int\n\n                  ) {\n\n  def this() = this(null, null, -1.0f, -1.0f, -1)\n\n}","user":"anonymous","dateUpdated":"2019-01-22T11:00:49-0500","config":{"editorSetting":{"language":"scala","editOnDblClick":false},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"results":[{"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}}}],"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"res0: org.apache.zeppelin.dep.Dependency = org.apache.zeppelin.dep.Dependency@48f58f56\n"}]},"apps":[],"jobName":"paragraph_1548171201429_322794346","id":"20170619-044039_1674638881","dateCreated":"2019-01-22T10:33:21-0500","dateStarted":"2019-01-22T11:00:49-0500","dateFinished":"2019-01-22T11:01:01-0500","status":"FINISHED","progressUpdateIntervalMs":500,"$$hashKey":"object:405"},{"text":"%spark\n\nval cities = sc.textFile(\"../../../../Data/cities.csv\").filter( line => (! line.contains(\"Altitude\")) ).map(line => line.split(\",\")).cache\n\nval citiesWithAltitudeMoreThan25 = cities.filter(x => Integer.parseInt(x(4)) > 25).map(x => x(1))\n\nval citiesStartingWithLetterN = cities.filter(x => x(1).startsWith(\"N\")).map(x => x(1))\n\nprintln(\"Cities with altitude greater than 25:\")\n\ncitiesWithAltitudeMoreThan25.collect.foreach(println)\n\nprintln(\"-----------------------------\")\nprintln(\"Cities with first letter 'N':\")\n\ncitiesStartingWithLetterN.collect.foreach(println)\n","user":"anonymous","dateUpdated":"2019-01-22T10:38:25-0500","config":{"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"results":[{"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}}}],"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"cities: org.apache.spark.rdd.RDD[Array[String]] = MapPartitionsRDD[3] at map at <console>:25\ncitiesWithAltitudeMoreThan25: org.apache.spark.rdd.RDD[String] = MapPartitionsRDD[5] at map at <console>:27\ncitiesStartingWithLetterN: org.apache.spark.rdd.RDD[String] = MapPartitionsRDD[7] at map at <console>:27\nCities with altitude greater than 25:\nLos Angeles\nChicago\nSan Antonio\nSan Diego\nDallas\nDetroit\nIndianapolis\nColumbus\nSan Francisco\nAustin\nMemphis\nNew South Memphis\nFort Worth\nCharlotte\nMilwaukee\nSeattle\nEl Paso\nDenver\nPortland\nOklahoma City\nNashville\nTucson\nAlbuquerque\nLas Vegas\nFresno\nCleveland\nNorth Kansas City\nKansas City\nAtlanta\nMesa\nTulsa\nMinneapolis\nColorado Springs\nWichita\nSanta Ana\nWest Raleigh\nArlington\nAnaheim\nSaint Louis\nPittsburgh\nToledo\nCincinnati\nRiverside\nBakersfield\nBuffalo\nAurora\nRaleigh\nSaint Paul\nLexington-Fayette\nPlano\nLouisville\nLincoln\nGlendale\nHenderson\nChandler\nGreensboro\nBirmingham\nFort Wayne\nLexington\nMadison\nGarland\nParadise\nLubbock\nRochester\nLaredo\nAkron\nOrlando\nDurham\nNorth Glendale\nScottsdale\n-----------------------------\nCities with first letter 'N':\nNew York City\nNew South Memphis\nNashville\nNew Orleans\nNorth Kansas City\nNewark\nNorfolk\nNorth Glendale\n"}]},"apps":[],"jobName":"paragraph_1548171201429_123265541","id":"20161227-132809_816447459","dateCreated":"2019-01-22T10:33:21-0500","dateStarted":"2019-01-22T10:38:26-0500","dateFinished":"2019-01-22T10:38:45-0500","status":"FINISHED","progressUpdateIntervalMs":500,"$$hashKey":"object:406"},{"text":"\n// Save to data grid\nimport model.v1._\nimport org.insightedge.spark.implicits.all._\nimport org.insightedge.spark.context.InsightEdgeConfig\n\nval cities = sc.textFile(\"../../../../Data/cities.csv\").filter(line => (! line.contains(\"Altitude\")) ).map(line => line.split(\",\")).map(line => City(null, line(1), line(2).toFloat, line(3).toFloat, line(4).toInt))\n               \ncities.saveToGrid()","user":"anonymous","dateUpdated":"2019-01-22T11:01:50-0500","config":{"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"results":[{"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}}}],"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"import model.v1._\nimport org.insightedge.spark.implicits.all._\nimport org.insightedge.spark.context.InsightEdgeConfig\ncities: org.apache.spark.rdd.RDD[model.v1.City] = MapPartitionsRDD[4] at map at <console>:32\n"}]},"apps":[],"jobName":"paragraph_1548171201432_202020656","id":"20170616-120721_1323332219","dateCreated":"2019-01-22T10:33:21-0500","dateStarted":"2019-01-22T11:01:50-0500","dateFinished":"2019-01-22T11:02:10-0500","status":"FINISHED","progressUpdateIntervalMs":500,"$$hashKey":"object:407","runtimeInfos":{"jobUrl":{"propertyName":"jobUrl","label":"SPARK JOB","tooltip":"View in Spark web UI","group":"spark","values":["http://10.10.10.117:4040/jobs/job?id=0"],"interpreterSettingId":"spark"}}},{"user":"anonymous","dateUpdated":"2019-01-22T10:33:21-0500","config":{"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"results":{},"enabled":true},"settings":{"params":{},"forms":{}},"apps":[],"jobName":"paragraph_1548171201433_-1789533277","id":"20190101-142301_1895269960","dateCreated":"2019-01-22T10:33:21-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:408"}],"name":"Lab 5.2 Solution - RDD Exercise 1","id":"2E3V4W35W","noteParams":{},"noteForms":{},"angularObjects":{"md:shared_process":[],"spark:shared_process":[]},"config":{"isZeppelinNotebookCronEnable":false,"looknfeel":"default","personalizedMode":"false"},"info":{}}
+﻿{
+  "paragraphs": [
+    {
+      "text": "%md\n\nFrom the file <b>cities.csv</b>, find the following:\n\n<ul>\n<li>Number of cities with altitude more than 25</li>\n<li>List of cities starting with letter 'N'</li>\n<li>Map the data to the Cities class defined below and write them to the XAP grid. \n</ul>\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-23T12:09:56+0300",
+      "config": {
+        "editorSetting": { },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": [
+          {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "keys": [ ],
+              "values": [ ],
+              "groups": [ ],
+              "scatter": { }
+            }
+          }
+        ],
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [ ],
+      "jobName": "paragraph_1556010582001_-357987304",
+      "id": "20161227-132530_1683227807",
+      "dateCreated": "2019-04-23T12:09:42+0300",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500,
+      "focus": true,
+      "$$hashKey": "object:42785",
+      "dateFinished": "2019-04-23T12:09:56+0300",
+      "dateStarted": "2019-04-23T12:09:56+0300",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>From the file <b>cities.csv</b>, find the following:</p>\n<ul>\n<li>Number of cities with altitude more than 25</li>\n<li>List of cities starting with letter 'N'</li>\n<li>Map the data to the Cities class defined below and write them to the XAP grid. \n</ul>\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%md First few lines from **cities.csv**\n\n**Country,Name,lat,lng,Altitude**\nUnited States,New York City,40.7142691,-74.0059738,2\nUnited States,Los Angeles,34.0522342,-118.2436829,115\nUnited States,Chicago,41.8500330,-87.6500549,181\nUnited States,Houston,29.7632836,-95.3632736,15\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-23T12:09:57+0300",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": [
+          {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "keys": [ ],
+              "values": [ ],
+              "groups": [ ],
+              "scatter": { }
+            }
+          }
+        ],
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [ ],
+      "jobName": "paragraph_1556010582002_1330059988",
+      "id": "20170226-131811_789062440",
+      "dateCreated": "2019-04-23T12:09:42+0300",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:42786",
+      "dateFinished": "2019-04-23T12:09:57+0300",
+      "dateStarted": "2019-04-23T12:09:57+0300",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>First few lines from <strong>cities.csv</strong></p>\n<p><strong>Country,Name,lat,lng,Altitude</strong><br/>United States,New York City,40.7142691,-74.0059738,2<br/>United States,Los Angeles,34.0522342,-118.2436829,115<br/>United States,Chicago,41.8500330,-87.6500549,181<br/>United States,Houston,29.7632836,-95.3632736,15</p>\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%define \n\npackage model.v1\n\nimport org.insightedge.scala.annotation._\nimport scala.beans.{BeanProperty, BooleanBeanProperty}\n\n//// Name,Altitude\ncase class City(\n\n                    @BeanProperty\n                    @SpaceId(autoGenerate = true)\n                    var id: String,\n\n                    @BeanProperty\n                    var name: String,\n                    \n                    @BeanProperty\n                    var latitude: Float,\n                    \n                    @BeanProperty\n                    var longitude: Float,\n\n                    @BeanProperty\n                    var altitude: Int\n\n                  ) {\n\n  def this() = this(null, null, -1.0f, -1.0f, -1)\n\n}",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-23T12:09:42+0300",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": [
+          {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "keys": [ ],
+              "values": [ ],
+              "groups": [ ],
+              "scatter": { }
+            }
+          }
+        ],
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [ ],
+      "jobName": "paragraph_1556010582002_736968224",
+      "id": "20170619-044039_1674638881",
+      "dateCreated": "2019-04-23T12:09:42+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:42787"
+    },
+    {
+      "text": "%spark\n\nval cities = sc.textFile(\"../../../../Data/cities.csv\").filter( line => (! line.contains(\"Altitude\")) ).map(line => line.split(\",\")).cache\n\nval citiesWithAltitudeMoreThan25 = cities.filter(x => Integer.parseInt(x(4)) > 25).map(x => x(1))\n\nval citiesStartingWithLetterN = cities.filter(x => x(1).startsWith(\"N\")).map(x => x(1))\n\nprintln(\"Cities with altitude greater than 25:\")\n\ncitiesWithAltitudeMoreThan25.collect.foreach(println)\n\nprintln(\"-----------------------------\")\nprintln(\"Cities with first letter 'N':\")\n\ncitiesStartingWithLetterN.collect.foreach(println)\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-23T12:09:42+0300",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": [
+          {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "keys": [ ],
+              "values": [ ],
+              "groups": [ ],
+              "scatter": { }
+            }
+          }
+        ],
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [ ],
+      "jobName": "paragraph_1556010582002_951289712",
+      "id": "20161227-132809_816447459",
+      "dateCreated": "2019-04-23T12:09:42+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:42788"
+    },
+    {
+      "text": "\n// Save to data grid\nimport model.v1._\nimport org.insightedge.spark.implicits.all._\nimport org.insightedge.spark.context.InsightEdgeConfig\n\nval cities = sc.textFile(\"../../../../Data/cities.csv\").filter(line => (! line.contains(\"Altitude\")) ).map(line => line.split(\",\")).map(line => City(null, line(1), line(2).toFloat, line(3).toFloat, line(4).toInt))\n               \ncities.saveToGrid()",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-23T12:09:42+0300",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": [
+          {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "keys": [ ],
+              "values": [ ],
+              "groups": [ ],
+              "scatter": { }
+            }
+          }
+        ],
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [ ],
+      "jobName": "paragraph_1556010582003_-1707076967",
+      "id": "20170616-120721_1323332219",
+      "dateCreated": "2019-04-23T12:09:42+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:42789"
+    },
+    {
+      "user": "anonymous",
+      "dateUpdated": "2019-04-23T12:09:42+0300",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": { },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [ ],
+      "jobName": "paragraph_1556010582003_-551875832",
+      "id": "20190101-142301_1895269960",
+      "dateCreated": "2019-04-23T12:09:42+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:42790"
+    }
+  ],
+  "name": "Lab 5.3 Solution - RDD Cities",
+  "id": "2EAMTTN5B",
+  "noteParams": { },
+  "noteForms": { },
+  "angularObjects": {
+    "md:shared_process": [ ],
+    "spark:shared_process": [ ]
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": { }
+}
