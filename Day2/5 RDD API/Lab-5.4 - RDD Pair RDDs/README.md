@@ -1,4 +1,4 @@
-# Lab: RDD Pair RDDs
+# Lab 5.4 Exercise - RDD Pair RDDs
 
 # Instructions
 
