@@ -1,4 +1,4 @@
-# Lab: DataFrame Operations
+# Lab 6.2 Exercise: DataFrame Operations
 
 # Instructions
 

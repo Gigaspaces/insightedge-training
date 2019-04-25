@@ -1,1 +1,796 @@
-﻿{"paragraphs":[{"title":"Getting information about a Dataframe","text":"%spark\n\nimport org.apache.spark.sql.types.{StructField, StructType, StringType, LongType}\n\nval dataSchema = new StructType(Array(\n    new StructField(\"DEST_COUNTRY_NAME\", StringType, true),\n    new StructField(\"ORIGIN_COUNTRY_NAME\", StringType, true),\n    new StructField(\"count\", LongType, false)\n))\n\nval flightDf = spark.read.format(\"csv\").option(\"header\", \"true\").option(\"mode\", \"FAILFAST\").schema(dataSchema).load(\"../../../../Data/2010-summary.csv\")\n\n// cache the data frame     \n...\n\n// print the DataFrame columns\n...\n\n// prints the DataFrame physical plan\n...\n\n// print the DataFram column names and their data types as an array\n...\n\n// print the DataFrame schema\n...\n\n// print 5 rows\n...\n","user":"anonymous","dateUpdated":"2019-01-23T11:32:47-0500","config":{"tableHide":true,"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"title":true,"results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"apps":[],"jobName":"paragraph_1548261055885_774523197","id":"20160822-145305_1775455394","dateCreated":"2019-01-23T11:30:55-0500","status":"ERROR","errorMessage":"","progressUpdateIntervalMs":500,"focus":true,"$$hashKey":"object:16601","dateFinished":"2019-01-23T11:31:19-0500","dateStarted":"2019-01-23T11:31:19-0500"},{"text":"%spark\n\n// create the Customer DataFrame, the product DataFrame and the Sales DataFrame \n\ncase class Customer(cId: Long, name: String, age: Int, gender: String)\nval customers = List(\n    Customer(1, \"James\", 21, \"M\"),\n    Customer(2, \"Liz\", 25, \"F\"),\n    Customer(3, \"John\", 31, \"M\"),\n    Customer(4, \"Jennifer\", 45, \"F\"),\n    Customer(5, \"Robert\", 41, \"M\"),\n    Customer(6, \"Sandra\", 45, \"F\")\n)\nval customerDF = sc.parallelize(customers).toDF()\n\n// \n\ncase class Product(pId: Long, name: String, price: Double, cost: Double)\n\nval products = List(\n    Product(1, \"Dell\", 600, 400),\n    Product(2, \"Kindle\", 100, 40),\n    Product(3, \"iPad\", 600, 500),\n    Product(4, \"Galaxy\", 600, 400),\n    Product(5, \"MacBook\", 1200, 900),\n    Product(6, \"iPhone\", 500, 400)\n)\nval productDF = sc.parallelize(products).toDF()\n\ncase class SalesSummary(date: String, product: String, country: String, revenue: Double)\n\nval sales = List(SalesSummary(\"01/01/2015\", \"Chromebook\", \"USA\", 40000),\nSalesSummary(\"01/02/2015\", \"Chromebook\", \"USA\", 30000),\nSalesSummary(\"01/01/2015\", \"Chromebook\", \"India\", 10000),\nSalesSummary(\"01/02/2015\", \"Chromebook\", \"India\", 5000),\nSalesSummary(\"01/01/2015\", \"Macbook\", \"USA\", 20000),\nSalesSummary(\"01/02/2015\", \"Macbook\", \"USA\", 10000),\nSalesSummary(\"01/01/2015\", \"Macbook\", \"India\", 9000),\nSalesSummary(\"01/02/2015\", \"Macbook\", \"India\", 6000))\n\nval salesDF = sc.parallelize(sales).toDF()\n\n// hint: nothing to do beside running the paragraph.","user":"anonymous","dateUpdated":"2019-01-23T11:30:55-0500","config":{"tableHide":false,"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"defined class Customer\ncustomers: List[Customer] = List(Customer(1,James,21,M), Customer(2,Liz,25,F), Customer(3,John,31,M), Customer(4,Jennifer,45,F), Customer(5,Robert,41,M), Customer(6,Sandra,45,F))\ncustomerDF: org.apache.spark.sql.DataFrame = [cId: bigint, name: string ... 2 more fields]\ndefined class Product\nproducts: List[Product] = List(Product(1,Dell,600.0,400.0), Product(2,Kindle,100.0,40.0), Product(3,iPad,600.0,500.0), Product(4,Galaxy,600.0,400.0), Product(5,MacBook,1200.0,900.0), Product(6,iPhone,500.0,400.0))\nproductDF: org.apache.spark.sql.DataFrame = [pId: bigint, name: string ... 2 more fields]\ndefined class SalesSummary\nsales: List[SalesSummary] = List(SalesSummary(01/01/2015,Chromebook,USA,40000.0), SalesSummary(01/02/2015,Chromebook,USA,30000.0), SalesSummary(01/01/2015,Chromebook,India,10000.0), SalesSummary(01/02/2015,Chromebook,India,5000.0), SalesSummary(01/01/2015,Macbook,USA,20000.0), SalesSummary(01/02/2015,Macbook,USA,10000.0), SalesSummary(01/01/2015,Macbook,India,9000.0), SalesSummary(01/02/2015,Macbook,India,6000.0))\nsalesDF: org.apache.spark.sql.DataFrame = [date: string, product: string ... 2 more fields]\n"}]},"apps":[],"jobName":"paragraph_1548261055892_-993684574","id":"20160823-175111_1341992873","dateCreated":"2019-01-23T11:30:55-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:16603"},{"text":"%md\n\n## agg\n\nThe **agg** method performs specified aggregations on one or more columns in the source DataFrame and\nreturns the result as a new DataFrame.","user":"anonymous","dateUpdated":"2019-01-23T11:30:55-0500","config":{"editorSetting":{},"colWidth":12,"editorMode":"ace/mode/markdown","editorHide":true,"fontSize":9,"results":[{"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}}}],"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"HTML","data":"<div class=\"markdown-body\">\n<h2>agg</h2>\n<p>The <strong>agg</strong> method performs specified aggregations on one or more columns in the source DataFrame and<br/>returns the result as a new DataFrame.</p>\n</div>"}]},"apps":[],"jobName":"paragraph_1548261055893_608497053","id":"20160823-175710_728578499","dateCreated":"2019-01-23T11:30:55-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:16604"},{"text":"%spark\n\n// print the following information from products DataFrame:\n// 1. the highest price.\n// 2. the lowest price.\n// 3. total namber of products.","user":"anonymous","dateUpdated":"2019-01-23T11:30:55-0500","config":{"tableHide":false,"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"aggregates: org.apache.spark.sql.DataFrame = [max(price): double, min(price): double ... 1 more field]\n+----------+----------+-----------+\n|max(price)|min(price)|count(name)|\n+----------+----------+-----------+\n|    1200.0|     100.0|          6|\n+----------+----------+-----------+\n\n"}]},"apps":[],"jobName":"paragraph_1548261055894_-1054308131","id":"20160823-180618_860695558","dateCreated":"2019-01-23T11:30:55-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:16605"},{"text":"%md\n\n## apply\n\nThe **apply** method takes the name of a column as an argument and returns the specified column in the\nsource DataFrame as an instance of the **Column** class. The **Column** class provides operators for manipulating a\ncolumn in a DataFrame.\n","user":"anonymous","dateUpdated":"2019-01-23T11:30:55-0500","config":{"editorSetting":{},"colWidth":12,"editorMode":"ace/mode/markdown","editorHide":true,"fontSize":9,"results":[{"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}}}],"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"HTML","data":"<div class=\"markdown-body\">\n<h2>apply</h2>\n<p>The <strong>apply</strong> method takes the name of a column as an argument and returns the specified column in the<br/>source DataFrame as an instance of the <strong>Column</strong> class. The <strong>Column</strong> class provides operators for manipulating a<br/>column in a DataFrame.</p>\n</div>"}]},"apps":[],"jobName":"paragraph_1548261055894_-1445531939","id":"20160823-180643_1652513120","dateCreated":"2019-01-23T11:30:55-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:16606"},{"text":"%spark\n\n// create an instance of Column class and initialized it with 10% of the original price","user":"anonymous","dateUpdated":"2019-01-23T11:30:55-0500","config":{"tableHide":true,"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"priceColumn: org.apache.spark.sql.Column = price\ndiscountedPriceColumn: org.apache.spark.sql.Column = (price * 0.1)\n"}]},"apps":[],"jobName":"paragraph_1548261055895_953832161","id":"20160823-180831_1959446161","dateCreated":"2019-01-23T11:30:55-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:16607"},{"text":"%md\n\nScala provides syntactic sugar that allows you to use productDF(\"price\") instead of productDF.apply(\"price\"). \n\nIt automatically converts productDF(\"price\") to productDF.apply(\"price\"). \n\nSo the preceding code can be rewritten as follows:","user":"anonymous","dateUpdated":"2019-01-23T11:30:55-0500","config":{"editorSetting":{},"colWidth":12,"editorMode":"ace/mode/markdown","editorHide":true,"fontSize":9,"title":false,"results":[{"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}}}],"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"HTML","data":"<p>Scala provides syntactic sugar that allows you to use productDF(&ldquo;price&rdquo;) instead of productDF.apply(&ldquo;price&rdquo;).</p>\n<p>It automatically converts productDF(&ldquo;price&rdquo;) to productDF.apply(&ldquo;price&rdquo;).</p>\n<p>So the preceding code can be rewritten as follows:</p>\n"}]},"apps":[],"jobName":"paragraph_1548261055895_1256062187","id":"20160823-181039_165411325","dateCreated":"2019-01-23T11:30:55-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:16608"},{"text":"%spark\n\n// rewrite the previous paragraph with the above suggaring.","user":"anonymous","dateUpdated":"2019-01-23T11:30:55-0500","config":{"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"priceColumn: org.apache.spark.sql.Column = price\ndiscountedPriceColumn: org.apache.spark.sql.Column = (price * 0.5)\n"}]},"apps":[],"jobName":"paragraph_1548261055896_-213142268","id":"20160823-181124_19808600","dateCreated":"2019-01-23T11:30:55-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:16609"},{"text":"%md\n\n## Notes on the **Column** class\n\nAn instance of the **Column** class is generally used as an input to some of the DataFrame methods or functions defined in the Spark SQL library.\n\nIf a method or function expects an instance of the Column class as an argument, we can use the **$\"...\"** notation to select a column in a DataFrame.\n\nFor example, the following three aggregates are equivalent:\n\n","user":"anonymous","dateUpdated":"2019-01-23T11:30:55-0500","config":{"editorSetting":{},"colWidth":12,"editorMode":"ace/mode/markdown","editorHide":true,"fontSize":9,"results":[{"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}}}],"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"HTML","data":"<h2>Notes on the <strong>Column</strong> class</h2>\n<p>An instance of the <strong>Column</strong> class is generally used as an input to some of the DataFrame methods or functions defined in the Spark SQL library.</p>\n<p>If a method or function expects an instance of the Column class as an argument, we can use the <strong>$&ldquo;&hellip;&ldquo;</strong> notation to select a column in a DataFrame.</p>\n<p>For example, the following three aggregates are equivalent:</p>\n"}]},"apps":[],"jobName":"paragraph_1548261055896_93796002","id":"20160823-181235_559377109","dateCreated":"2019-01-23T11:30:55-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:16610"},{"text":"%spark\n\n// the long way\nval aggregates1 = productDF.agg(max(productDF(\"price\")), min(productDF(\"price\")), count(productDF(\"name\")))\n\naggregates1.show\n\n// remove the DataFram prefix\nval aggregates2 = productDF.agg(max(\"price\"), min(\"price\"), count(\"name\"))\n\naggregates2.show\n\n// using $ to select the column in a DataFrame\nval aggregates3 = productDF.agg(max($\"price\"), min($\"price\"), count($\"name\"))\n\naggregates3.show\n\n// hint: nothing to do beside running the paragraph \n","user":"anonymous","dateUpdated":"2019-01-23T11:30:55-0500","config":{"tableHide":true,"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"aggregates1: org.apache.spark.sql.DataFrame = [max(price): double, min(price): double ... 1 more field]\n+----------+----------+-----------+\n|max(price)|min(price)|count(name)|\n+----------+----------+-----------+\n|    1200.0|     100.0|          6|\n+----------+----------+-----------+\n\naggregates2: org.apache.spark.sql.DataFrame = [max(price): double, min(price): double ... 1 more field]\n+----------+----------+-----------+\n|max(price)|min(price)|count(name)|\n+----------+----------+-----------+\n|    1200.0|     100.0|          6|\n+----------+----------+-----------+\n\naggregates3: org.apache.spark.sql.DataFrame = [max(price): double, min(price): double ... 1 more field]\n+----------+----------+-----------+\n|max(price)|min(price)|count(name)|\n+----------+----------+-----------+\n|    1200.0|     100.0|          6|\n+----------+----------+-----------+\n\n"}]},"apps":[],"jobName":"paragraph_1548261055897_60619004","id":"20160823-181903_1519059300","dateCreated":"2019-01-23T11:30:55-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:16611"},{"text":"%spark\n\n// pring the customers name and age","user":"anonymous","dateUpdated":"2019-01-23T11:30:55-0500","config":{"tableHide":true,"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"namesAgeDF: org.apache.spark.sql.DataFrame = [name: string, age: int]\n+--------+---+\n|    name|age|\n+--------+---+\n|   James| 21|\n|     Liz| 25|\n|    John| 31|\n|Jennifer| 45|\n|  Robert| 41|\n|  Sandra| 45|\n+--------+---+\n\n"}]},"apps":[],"jobName":"paragraph_1548261055898_-1671745076","id":"20160825-004303_1682213357","dateCreated":"2019-01-23T11:30:55-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:16613"},{"text":"%md\n\n### **filter**\n\nThe filter method filters rows in the source DataFrame using a SQL expression provided to it as an argument. It returns a new DataFrame containing only the filtered rows. The SQL expression can be passed as a string argument.","user":"anonymous","dateUpdated":"2019-01-23T11:30:55-0500","config":{"editorSetting":{},"colWidth":12,"editorMode":"ace/mode/markdown","editorHide":true,"fontSize":9,"results":[{"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}}}],"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"HTML","data":"<h3><strong>filter</strong></h3>\n<p>The filter method filters rows in the source DataFrame using a SQL expression provided to it as an argument. It returns a new DataFrame containing only the filtered rows. The SQL expression can be passed as a string argument.</p>\n"}]},"apps":[],"jobName":"paragraph_1548261055898_-1627752954","id":"20160823-182045_153856142","dateCreated":"2019-01-23T11:30:55-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:16614"},{"text":"%spark\n\n// print all customers information older than 20 (the long way)\nval filteredDF3 = customerDF.filter(customerDF(\"age\") > 20)\n\nfilteredDF3.show\n// print all customers information older than 25 (omit the DataFrame if you can)\n\n// print all customers information older than 40 (use the \"$\" notation)","user":"anonymous","dateUpdated":"2019-01-23T11:30:55-0500","config":{"tableHide":true,"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"filteredDF: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] = [cId: bigint, name: string ... 2 more fields]\n+---+--------+---+------+\n|cId|    name|age|gender|\n+---+--------+---+------+\n|  3|    John| 31|     M|\n|  4|Jennifer| 45|     F|\n|  5|  Robert| 41|     M|\n|  6|  Sandra| 45|     F|\n+---+--------+---+------+\n\nfilteredDF2: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] = [cId: bigint, name: string ... 2 more fields]\n+---+--------+---+------+\n|cId|    name|age|gender|\n+---+--------+---+------+\n|  4|Jennifer| 45|     F|\n|  5|  Robert| 41|     M|\n|  6|  Sandra| 45|     F|\n+---+--------+---+------+\n\nfilteredDF3: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] = [cId: bigint, name: string ... 2 more fields]\n+---+--------+---+------+\n|cId|    name|age|gender|\n+---+--------+---+------+\n|  1|   James| 21|     M|\n|  2|     Liz| 25|     F|\n|  3|    John| 31|     M|\n|  4|Jennifer| 45|     F|\n|  5|  Robert| 41|     M|\n|  6|  Sandra| 45|     F|\n+---+--------+---+------+\n\n"}]},"apps":[],"jobName":"paragraph_1548261055899_1406750959","id":"20160825-002529_441878203","dateCreated":"2019-01-23T11:30:55-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:16615"},{"text":"%md\n\n### **groupBy**\n\nThe *groupBy* method groups the rows in the source DataFrame using the columns provided to it as arguments. Aggregation can be performed on the grouped data returned by this method.\n","user":"anonymous","dateUpdated":"2019-01-23T11:30:55-0500","config":{"editorSetting":{},"colWidth":12,"editorMode":"ace/mode/markdown","editorHide":true,"fontSize":9,"results":[{"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}}}],"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"HTML","data":"<h3><strong>groupBy</strong></h3>\n<p>The <em>groupBy</em> method groups the rows in the source DataFrame using the columns provided to it as arguments. Aggregation can be performed on the grouped data returned by this method.</p>\n"}]},"apps":[],"jobName":"paragraph_1548261055900_-1707958411","id":"20160825-003138_1418319608","dateCreated":"2019-01-23T11:30:55-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:16616"},{"text":"%spark\n\n// print the number females and males.\nval countByGender = customerDF.groupBy(\"gender\").count\n\ncountByGender.show\n\n// pring the total revenue per product","user":"anonymous","dateUpdated":"2019-01-23T11:30:55-0500","config":{"tableHide":true,"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"countByGender: org.apache.spark.sql.DataFrame = [gender: string, count: bigint]\n+------+-----+\n|gender|count|\n+------+-----+\n|     F|    3|\n|     M|    3|\n+------+-----+\n\nrevenueByProductDF: org.apache.spark.sql.DataFrame = [product: string, sum(revenue): double]\n+----------+------------+\n|   product|sum(revenue)|\n+----------+------------+\n|   Macbook|     45000.0|\n|Chromebook|     85000.0|\n+----------+------------+\n\n"}]},"apps":[],"jobName":"paragraph_1548261055901_-2049313236","id":"20160825-002634_332193277","dateCreated":"2019-01-23T11:30:55-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:16617"},{"text":"%md\n\n### **orderBy**\n\nThe *orderBy* method returns a DataFrame sorted by the given columns. It takes the names of one or more columns as arguments.","user":"anonymous","dateUpdated":"2019-01-23T11:30:55-0500","config":{"editorSetting":{},"colWidth":12,"editorMode":"ace/mode/markdown","editorHide":true,"fontSize":9,"results":[{"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}}}],"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"HTML","data":"<h3><strong>orderBy</strong></h3>\n<p>The <em>orderBy</em> method returns a DataFrame sorted by the given columns. It takes the names of one or more columns as arguments.</p>\n"}]},"apps":[],"jobName":"paragraph_1548261055901_-1748449375","id":"20160825-003347_1250302752","dateCreated":"2019-01-23T11:30:55-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:16618"},{"text":"%spark\n\n// print all customers information sorted by name","user":"anonymous","dateUpdated":"2019-01-23T11:30:55-0500","config":{"tableHide":true,"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"sortedDF: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] = [cId: bigint, name: string ... 2 more fields]\n+---+--------+---+------+\n|cId|    name|age|gender|\n+---+--------+---+------+\n|  1|   James| 21|     M|\n|  4|Jennifer| 45|     F|\n|  3|    John| 31|     M|\n|  2|     Liz| 25|     F|\n|  5|  Robert| 41|     M|\n|  6|  Sandra| 45|     F|\n+---+--------+---+------+\n\n"}]},"apps":[],"jobName":"paragraph_1548261055901_-2035670676","id":"20160825-004007_244050346","dateCreated":"2019-01-23T11:30:55-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:16619"},{"text":"","user":"anonymous","dateUpdated":"2019-01-23T11:30:55-0500","config":{"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"apps":[],"jobName":"paragraph_1548261055902_-130722874","id":"20160825-005916_631693256","dateCreated":"2019-01-23T11:30:55-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:16620"}],"name":"Lab 6.2 Exercise - DataFrame Operations","id":"2E17DS3XS","noteParams":{},"noteForms":{},"angularObjects":{"md:shared_process":[],"spark:shared_process":[]},"config":{"isZeppelinNotebookCronEnable":false,"looknfeel":"default","personalizedMode":"false"},"info":{}}
+﻿{
+  "paragraphs": [
+    {
+      "title": "Getting information about a Dataframe",
+      "text": "%spark\n\nimport org.apache.spark.sql.types.{StructField, StructType, StringType, LongType}\n\nval dataSchema = new StructType(Array(\n    new StructField(\"DEST_COUNTRY_NAME\", StringType, true),\n    new StructField(\"ORIGIN_COUNTRY_NAME\", StringType, true),\n    new StructField(\"count\", LongType, false)\n))\n\nval flightDf = spark.read.format(\"csv\").option(\"header\", \"true\").option(\"mode\", \"FAILFAST\").schema(dataSchema).load(\"../../../../Data/2010-summary.csv\")\n\n// cache the data frame     \n...\n\n// print the DataFrame columns\n...\n\n// prints the DataFrame physical plan\n...\n\n// print the DataFram column names and their data types as an array\n...\n\n// print the DataFrame schema\n...\n\n// print 5 rows\n...\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-25T14:04:23+0300",
+      "config": {
+        "tableHide": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": { },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": { }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556190263638_974722847",
+      "id": "20160822-145305_1775455394",
+      "dateCreated": "2019-04-25T14:04:23+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "focus": true,
+      "$$hashKey": "object:11789"
+    },
+    {
+      "text": "%spark\n\n// create the Customer DataFrame, the product DataFrame and the Sales DataFrame \n\ncase class Customer(cId: Long, name: String, age: Int, gender: String)\nval customers = List(\n    Customer(1, \"James\", 21, \"M\"),\n    Customer(2, \"Liz\", 25, \"F\"),\n    Customer(3, \"John\", 31, \"M\"),\n    Customer(4, \"Jennifer\", 45, \"F\"),\n    Customer(5, \"Robert\", 41, \"M\"),\n    Customer(6, \"Sandra\", 45, \"F\")\n)\nval customerDF = sc.parallelize(customers).toDF()\n\n// \n\ncase class Product(pId: Long, name: String, price: Double, cost: Double)\n\nval products = List(\n    Product(1, \"Dell\", 600, 400),\n    Product(2, \"Kindle\", 100, 40),\n    Product(3, \"iPad\", 600, 500),\n    Product(4, \"Galaxy\", 600, 400),\n    Product(5, \"MacBook\", 1200, 900),\n    Product(6, \"iPhone\", 500, 400)\n)\nval productDF = sc.parallelize(products).toDF()\n\ncase class SalesSummary(date: String, product: String, country: String, revenue: Double)\n\nval sales = List(SalesSummary(\"01/01/2015\", \"Chromebook\", \"USA\", 40000),\nSalesSummary(\"01/02/2015\", \"Chromebook\", \"USA\", 30000),\nSalesSummary(\"01/01/2015\", \"Chromebook\", \"India\", 10000),\nSalesSummary(\"01/02/2015\", \"Chromebook\", \"India\", 5000),\nSalesSummary(\"01/01/2015\", \"Macbook\", \"USA\", 20000),\nSalesSummary(\"01/02/2015\", \"Macbook\", \"USA\", 10000),\nSalesSummary(\"01/01/2015\", \"Macbook\", \"India\", 9000),\nSalesSummary(\"01/02/2015\", \"Macbook\", \"India\", 6000))\n\nval salesDF = sc.parallelize(sales).toDF()\n\n// hint: nothing to do beside running the paragraph.",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-25T14:04:23+0300",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": { },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": { }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556190263648_1010279149",
+      "id": "20160823-175111_1341992873",
+      "dateCreated": "2019-04-25T14:04:23+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:11790"
+    },
+    {
+      "text": "%md\n\n## agg\n\nThe **agg** method performs specified aggregations on one or more columns in the source DataFrame and\nreturns the result as a new DataFrame.",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-25T14:05:09+0300",
+      "config": {
+        "editorSetting": { },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": [
+          {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "keys": [],
+              "values": [],
+              "groups": [],
+              "scatter": { }
+            }
+          }
+        ],
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556190263651_-1236627003",
+      "id": "20160823-175710_728578499",
+      "dateCreated": "2019-04-25T14:04:23+0300",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:11791",
+      "dateFinished": "2019-04-25T14:05:59+0300",
+      "dateStarted": "2019-04-25T14:05:09+0300",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>agg</h2>\n<p>The <strong>agg</strong> method performs specified aggregations on one or more columns in the source DataFrame and<br/>returns the result as a new DataFrame.</p>\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%spark\n\n// print the following information from products DataFrame:\n// 1. the highest price.\n// 2. the lowest price.\n// 3. total namber of products.",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-25T14:04:23+0300",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": { },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": { }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556190263651_1967484008",
+      "id": "20160823-180618_860695558",
+      "dateCreated": "2019-04-25T14:04:23+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:11792"
+    },
+    {
+      "text": "%md\n\n## apply\n\nThe **apply** method takes the name of a column as an argument and returns the specified column in the\nsource DataFrame as an instance of the **Column** class. The **Column** class provides operators for manipulating a\ncolumn in a DataFrame.\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-25T14:05:52+0300",
+      "config": {
+        "editorSetting": { },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": [
+          {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "keys": [],
+              "values": [],
+              "groups": [],
+              "scatter": { }
+            }
+          }
+        ],
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556190263652_-1501451693",
+      "id": "20160823-180643_1652513120",
+      "dateCreated": "2019-04-25T14:04:23+0300",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:11793",
+      "dateFinished": "2019-04-25T14:05:59+0300",
+      "dateStarted": "2019-04-25T14:05:59+0300",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>apply</h2>\n<p>The <strong>apply</strong> method takes the name of a column as an argument and returns the specified column in the<br/>source DataFrame as an instance of the <strong>Column</strong> class. The <strong>Column</strong> class provides operators for manipulating a<br/>column in a DataFrame.</p>\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%spark\n\n// create an instance of Column class and initialized it with 10% of the original price",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-25T14:04:23+0300",
+      "config": {
+        "tableHide": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": { },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": { }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556190263654_79154822",
+      "id": "20160823-180831_1959446161",
+      "dateCreated": "2019-04-25T14:04:23+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:11794"
+    },
+    {
+      "text": "%md\n\nScala provides syntactic sugar that allows you to use productDF(\"price\") instead of productDF.apply(\"price\"). \n\nIt automatically converts productDF(\"price\") to productDF.apply(\"price\"). \n\nSo the preceding code can be rewritten as follows:",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-25T14:06:09+0300",
+      "config": {
+        "editorSetting": { },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "title": false,
+        "results": [
+          {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "keys": [],
+              "values": [],
+              "groups": [],
+              "scatter": { }
+            }
+          }
+        ],
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556190263655_969065565",
+      "id": "20160823-181039_165411325",
+      "dateCreated": "2019-04-25T14:04:23+0300",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:11795",
+      "dateFinished": "2019-04-25T14:06:09+0300",
+      "dateStarted": "2019-04-25T14:06:09+0300",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>Scala provides syntactic sugar that allows you to use productDF(&ldquo;price&rdquo;) instead of productDF.apply(&ldquo;price&rdquo;). </p>\n<p>It automatically converts productDF(&ldquo;price&rdquo;) to productDF.apply(&ldquo;price&rdquo;). </p>\n<p>So the preceding code can be rewritten as follows:</p>\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%spark\n\n// rewrite the previous paragraph with the above suggaring.",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-25T14:04:23+0300",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": { },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": { }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556190263655_-690566689",
+      "id": "20160823-181124_19808600",
+      "dateCreated": "2019-04-25T14:04:23+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:11796"
+    },
+    {
+      "text": "%md\n\n## Notes on the **Column** class\n\nAn instance of the **Column** class is generally used as an input to some of the DataFrame methods or functions defined in the Spark SQL library.\n\nIf a method or function expects an instance of the Column class as an argument, we can use the **$\"...\"** notation to select a column in a DataFrame.\n\nFor example, the following three aggregates are equivalent:\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-25T14:06:12+0300",
+      "config": {
+        "editorSetting": { },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": [
+          {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "keys": [],
+              "values": [],
+              "groups": [],
+              "scatter": { }
+            }
+          }
+        ],
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556190263656_557677470",
+      "id": "20160823-181235_559377109",
+      "dateCreated": "2019-04-25T14:04:23+0300",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:11797",
+      "dateFinished": "2019-04-25T14:06:12+0300",
+      "dateStarted": "2019-04-25T14:06:12+0300",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Notes on the <strong>Column</strong> class</h2>\n<p>An instance of the <strong>Column</strong> class is generally used as an input to some of the DataFrame methods or functions defined in the Spark SQL library.</p>\n<p>If a method or function expects an instance of the Column class as an argument, we can use the <strong>$&ldquo;&hellip;&rdquo;</strong> notation to select a column in a DataFrame.</p>\n<p>For example, the following three aggregates are equivalent:</p>\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%spark\n\n// the long way\nval aggregates1 = productDF.agg(max(productDF(\"price\")), min(productDF(\"price\")), count(productDF(\"name\")))\n\naggregates1.show\n\n// remove the DataFram prefix\nval aggregates2 = productDF.agg(max(\"price\"), min(\"price\"), count(\"name\"))\n\naggregates2.show\n\n// using $ to select the column in a DataFrame\nval aggregates3 = productDF.agg(max($\"price\"), min($\"price\"), count($\"name\"))\n\naggregates3.show\n\n// hint: nothing to do beside running the paragraph \n",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-25T14:04:23+0300",
+      "config": {
+        "tableHide": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": { },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": { }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556190263656_805052473",
+      "id": "20160823-181903_1519059300",
+      "dateCreated": "2019-04-25T14:04:23+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:11798"
+    },
+    {
+      "text": "%spark\n\n// pring the customers name and age",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-25T14:04:23+0300",
+      "config": {
+        "tableHide": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": { },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": { }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556190263657_273645866",
+      "id": "20160825-004303_1682213357",
+      "dateCreated": "2019-04-25T14:04:23+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:11799"
+    },
+    {
+      "text": "%md\n\n### **filter**\n\nThe filter method filters rows in the source DataFrame using a SQL expression provided to it as an argument. It returns a new DataFrame containing only the filtered rows. The SQL expression can be passed as a string argument.",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-25T14:06:17+0300",
+      "config": {
+        "editorSetting": { },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": [
+          {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "keys": [],
+              "values": [],
+              "groups": [],
+              "scatter": { }
+            }
+          }
+        ],
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556190263657_95956049",
+      "id": "20160823-182045_153856142",
+      "dateCreated": "2019-04-25T14:04:23+0300",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:11800",
+      "dateFinished": "2019-04-25T14:06:17+0300",
+      "dateStarted": "2019-04-25T14:06:17+0300",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3><strong>filter</strong></h3>\n<p>The filter method filters rows in the source DataFrame using a SQL expression provided to it as an argument. It returns a new DataFrame containing only the filtered rows. The SQL expression can be passed as a string argument.</p>\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%spark\n\n// print all customers information older than 20 (the long way)\nval filteredDF3 = customerDF.filter(customerDF(\"age\") > 20)\n\nfilteredDF3.show\n// print all customers information older than 25 (omit the DataFrame if you can)\n\n// print all customers information older than 40 (use the \"$\" notation)",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-25T14:04:23+0300",
+      "config": {
+        "tableHide": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": { },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": { }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556190263658_1802154560",
+      "id": "20160825-002529_441878203",
+      "dateCreated": "2019-04-25T14:04:23+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:11801"
+    },
+    {
+      "text": "%md\n\n### **groupBy**\n\nThe *groupBy* method groups the rows in the source DataFrame using the columns provided to it as arguments. Aggregation can be performed on the grouped data returned by this method.\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-25T14:06:20+0300",
+      "config": {
+        "editorSetting": { },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": [
+          {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "keys": [],
+              "values": [],
+              "groups": [],
+              "scatter": { }
+            }
+          }
+        ],
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556190263658_-475205938",
+      "id": "20160825-003138_1418319608",
+      "dateCreated": "2019-04-25T14:04:23+0300",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:11802",
+      "dateFinished": "2019-04-25T14:06:20+0300",
+      "dateStarted": "2019-04-25T14:06:20+0300",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3><strong>groupBy</strong></h3>\n<p>The <em>groupBy</em> method groups the rows in the source DataFrame using the columns provided to it as arguments. Aggregation can be performed on the grouped data returned by this method.</p>\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%spark\n\n// print the number females and males.\nval countByGender = customerDF.groupBy(\"gender\").count\n\ncountByGender.show\n\n// pring the total revenue per product",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-25T14:04:23+0300",
+      "config": {
+        "tableHide": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": { },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": { }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556190263659_1283807474",
+      "id": "20160825-002634_332193277",
+      "dateCreated": "2019-04-25T14:04:23+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:11803"
+    },
+    {
+      "text": "%md\n\n### **orderBy**\n\nThe *orderBy* method returns a DataFrame sorted by the given columns. It takes the names of one or more columns as arguments.",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-25T14:06:23+0300",
+      "config": {
+        "editorSetting": { },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": [
+          {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "keys": [],
+              "values": [],
+              "groups": [],
+              "scatter": { }
+            }
+          }
+        ],
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556190263659_1582512894",
+      "id": "20160825-003347_1250302752",
+      "dateCreated": "2019-04-25T14:04:23+0300",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:11804",
+      "dateFinished": "2019-04-25T14:06:23+0300",
+      "dateStarted": "2019-04-25T14:06:23+0300",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3><strong>orderBy</strong></h3>\n<p>The <em>orderBy</em> method returns a DataFrame sorted by the given columns. It takes the names of one or more columns as arguments.</p>\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%spark\n\n// print all customers information sorted by name",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-25T14:04:23+0300",
+      "config": {
+        "tableHide": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": { },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": { }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556190263659_-436493490",
+      "id": "20160825-004007_244050346",
+      "dateCreated": "2019-04-25T14:04:23+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:11805"
+    },
+    {
+      "text": "",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-25T14:04:23+0300",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": { },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": { }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556190263660_-1316080735",
+      "id": "20160825-005916_631693256",
+      "dateCreated": "2019-04-25T14:04:23+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:11806"
+    }
+  ],
+  "name": "Lab 6.2 Exercise - DataFrame Operations",
+  "id": "2E9D8H5UQ",
+  "noteParams": { },
+  "noteForms": { },
+  "angularObjects": {
+    "md:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": { }
+}
