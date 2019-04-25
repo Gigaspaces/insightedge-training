@@ -1,4 +1,4 @@
-# Lab: DataFrame Loading And Saving Data
+# Lab 6.1 Exercise: DataFrame Loading And Saving Data
 
 # Instructions
 

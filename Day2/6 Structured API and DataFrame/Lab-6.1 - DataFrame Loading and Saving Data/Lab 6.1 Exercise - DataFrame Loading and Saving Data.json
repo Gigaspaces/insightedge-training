@@ -1,1 +1,557 @@
-﻿{"paragraphs":[{"text":"%md\n\n## Loading data from CSV file\n\nCSV stands for commma-separated values. This is a common text file format in which each line represents a single record, and commas separate each field\nwithin a record.\n","user":"anonymous","dateUpdated":"2018-12-25T17:11:50+0200","config":{"tableHide":false,"editorSetting":{"language":"markdown","editOnDblClick":true,"completionSupport":false},"colWidth":12,"editorMode":"ace/mode/markdown","editorHide":false,"fontSize":9,"results":{},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"HTML","data":"<h2>Loading data from CSV file</h2>\n<p>CSV stands for commma-separated values. This is a common text file format in which each line represents a single record, and commas separate each field\n<br  />within a record.</p>\n"}]},"apps":[],"jobName":"paragraph_1545750710826_-281049093","id":"20180310-232008_2084436888","dateCreated":"2018-12-25T17:11:50+0200","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"focus":true,"$$hashKey":"object:35634"},{"text":"%spark\n\nimport org.apache.spark.sql.types.{StructField, StructType, StringType, LongType}\n\n// defined the schema for 2010-summary.csv file. Use org.apache.spark.sql.types.StructType class\n\n\n// use the schema to load the 2010-summary.csv file \nval dfFromCsvFile = ...\n\n// print 10 rows from the loaded file    \n...\n","user":"anonymous","dateUpdated":"2018-12-25T17:11:50+0200","config":{"tableHide":true,"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"title":false,"results":{},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"ERROR","msg":[{"type":"TEXT","data":"import org.apache.spark.sql.types.{StructField, StructType, StringType, LongType}\ndataSchema: org.apache.spark.sql.types.StructType = StructType(StructField(DEST_COUNTRY_NAME,StringType,true), StructField(ORIGIN_COUNTRY_NAME,StringType,true), StructField(count,LongType,false))\n<console>:26: error: not found: value ?\n       val dfFromCsvFile = spark.read.format(?).option(\"header\", \"true\").option(\"mode\", \"FAILFAST\").schema(dataSchema).load(\"my path/2010-summary.csv\")\n                                             ^\n"}]},"apps":[],"jobName":"paragraph_1545750710827_1598862081","id":"20180310-232058_1854265386","dateCreated":"2018-12-25T17:11:50+0200","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:35635"},{"text":"%md\n\n## Saving DataFrame to a CSV file\n\nWe can take our CSV file and write it out as a TSV file (with tabs separating data fields)\n\nWhen we list the destination directory, we will see that my-tsv-file is actually a folder with numerous files within it. This actually reflects the number of paritions in our DataFrame at that time. If we were to repartition our data before then, we would end up with a different number of files.\n","user":"anonymous","dateUpdated":"2018-12-25T17:11:50+0200","config":{"tableHide":false,"editorSetting":{"language":"markdown","editOnDblClick":true},"colWidth":12,"editorMode":"ace/mode/markdown","editorHide":true,"fontSize":9,"results":{},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"HTML","data":"<h2>Saving DataFrame to a CSV file</h2>\n<p>We can take our CSV file and write it out as a TSV file (with tabs separating data fields)</p>\n<p>When we list the destination directory, we will see that my-tsv-file is actually a folder with numerous files within it. This actually reflects the number of paritions in our DataFrame at that time. If we were to repartition our data before then, we would end up with a different number of files.</p>\n"}]},"apps":[],"jobName":"paragraph_1545750710827_1889144989","id":"20180310-233015_1064163149","dateCreated":"2018-12-25T17:11:50+0200","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:35636"},{"text":"%spark\n\n// use the previous dfFromCsvFile object to write a new tsv file called my-tsv-file.tsv  \n...","user":"anonymous","dateUpdated":"2018-12-25T17:11:50+0200","config":{"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"results":{},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[]},"apps":[],"jobName":"paragraph_1545750710828_-2028707718","id":"20180310-232850_120441597","dateCreated":"2018-12-25T17:11:50+0200","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:35637"},{"text":"%md\n\n## Using Parquet files with Spark\n\nParquet is an interoperable columnar storage format. It focusses on space efficiency and query efficiency. Parquet's origin is based on Google's Dremel and was developed by Twitter and Cloudera.\n\nParquet is now an Apache project - [Apache Parquet](https://parquet.apache.org).\n\nSpark can load data from Parquet files and save data as Parquet files.\n\n","user":"anonymous","dateUpdated":"2018-12-25T17:11:50+0200","config":{"tableHide":false,"editorSetting":{"language":"markdown","editOnDblClick":true},"colWidth":12,"editorMode":"ace/mode/markdown","editorHide":true,"fontSize":9,"results":[{"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}}}],"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"HTML","data":"<div class=\"markdown-body\">\n<h2>Using Parquet files with Spark</h2>\n<p>Parquet is an interoperable columnar storage format. It focusses on space efficiency and query efficiency. Parquet&rsquo;s origin is based on Google&rsquo;s Dremel and was developed by Twitter and Cloudera.</p>\n<p>Parquet is now an Apache project - <a href=\"https://parquet.apache.org\">Apache Parquet</a>.</p>\n<p>Spark can load data from Parquet files and save data as Parquet files.</p>\n</div>"}]},"apps":[],"jobName":"paragraph_1545750710828_1446739758","id":"20160822-165125_1131574017","dateCreated":"2018-12-25T17:11:50+0200","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:35638"},{"title":"Loading data from Parquet file","text":"%spark\n\n// load the data from 2010-summary.parquet file\nval flightData = ...\n\n// print the first 10 rows\n...\n","user":"anonymous","dateUpdated":"2018-12-25T17:11:50+0200","config":{"tableHide":true,"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"title":true,"results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"flightData: org.apache.spark.sql.DataFrame = [DEST_COUNTRY_NAME: string, ORIGIN_COUNTRY_NAME: string ... 1 more field]\n+-----------------+-------------------+-----+\n|DEST_COUNTRY_NAME|ORIGIN_COUNTRY_NAME|count|\n+-----------------+-------------------+-----+\n|    United States|            Romania|    1|\n|    United States|            Ireland|  264|\n|    United States|              India|   69|\n|            Egypt|      United States|   24|\n|Equatorial Guinea|      United States|    1|\n+-----------------+-------------------+-----+\nonly showing top 5 rows\n\n"}]},"apps":[],"jobName":"paragraph_1545750710829_-2133367068","id":"20160823-111517_1662906000","dateCreated":"2018-12-25T17:11:50+0200","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:35639"},{"title":"Saving data to Parquet file","text":"%spark\n\n// save the data to a Parquet file (hint: use the dfFromCsvFile object from the previous Paragraphs) \n\ndfFromCsvFile...\n","user":"anonymous","dateUpdated":"2018-12-25T17:11:50+0200","config":{"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"title":true,"results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[]},"apps":[],"jobName":"paragraph_1545750710829_-1323646278","id":"20160823-112553_610561150","dateCreated":"2018-12-25T17:11:50+0200","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:35640"},{"text":"%md\n\n## Using JSON files with Spark\n\nSpark can read data from JSON files.\n\nThere are some catches when working with this kind of data that are worth considering before we jump in. \n\nIn Spark, when we refer to JSON files, we refer to _line-delimited_ JSON files. This contrasts with files that have a large JSON object or array per file.\n\nThe _line-delimited_ versus _multiline_ trade-off is controlled by a single option: **multiLine**. \n\nWhen you set this option to true, you can read an entire file as one json object and Spark will go through the work of parsing that into a\nDataFrame. \n\nLine-delimited JSON is actually a much more stable format because it allows you to append to a file with a new record (rather than\nhaving to read in an entire file and then write it out), which is what we recommend that you use. \n\nAnother key reason for the popularity of line-delimited JSON is because JSON objects have structure, and JavaScript (on which JSON is based) has at least basic types. This makes it easier to work with because Spark can make more assumptions on our behalf about the data.\n\n","user":"anonymous","dateUpdated":"2018-12-25T17:11:50+0200","config":{"tableHide":false,"editorSetting":{"language":"markdown","editOnDblClick":true},"colWidth":12,"editorMode":"ace/mode/markdown","editorHide":true,"fontSize":9,"results":[{"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}}}],"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"HTML","data":"<h2>Using JSON files with Spark</h2>\n<p>Spark can read data from JSON files.</p>\n<p>There are some catches when working with this kind of data that are worth considering before we jump in.</p>\n<p>In Spark, when we refer to JSON files, we refer to <em>line-delimited</em> JSON files. This contrasts with files that have a large JSON object or array per file.</p>\n<p>The <em>line-delimited</em> versus <em>multiline</em> trade-off is controlled by a single option: <strong>multiLine</strong>.</p>\n<p>When you set this option to true, you can read an entire file as one json object and Spark will go through the work of parsing that into a\n<br  />DataFrame.</p>\n<p>Line-delimited JSON is actually a much more stable format because it allows you to append to a file with a new record (rather than\n<br  />having to read in an entire file and then write it out), which is what we recommend that you use.</p>\n<p>Another key reason for the popularity of line-delimited JSON is because JSON objects have structure, and JavaScript (on which JSON is based) has at least basic types. This makes it easier to work with because Spark can make more assumptions on our behalf about the data.</p>\n"}]},"apps":[],"jobName":"paragraph_1545750710830_-1433256060","id":"20160823-120136_710583192","dateCreated":"2018-12-25T17:11:50+0200","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:35641"},{"title":"Loading data from JSON","text":"%spark\n\nimport org.apache.spark.sql.types.{StructField, StructType, StringType, LongType}\n\n// defined the schema for 2010-summary.json file. Use org.apache.spark.sql.types.StructType class\n\n\n// use the schema to load the 2010-summary.json file \nval dfFromJson = ...\n\n// print 10 rows from the loaded file    \n...\n\n// print the json data frame schema\n...\n","user":"anonymous","dateUpdated":"2018-12-25T17:11:50+0200","config":{"tableHide":true,"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"title":true,"results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"import org.apache.spark.sql.types.{StructField, StructType, StringType, LongType}\ndataSchema: org.apache.spark.sql.types.StructType = StructType(StructField(DEST_COUNTRY_NAME,StringType,true), StructField(ORIGIN_COUNTRY_NAME,StringType,true), StructField(count,LongType,false))\ndfFromJson: org.apache.spark.sql.DataFrame = [DEST_COUNTRY_NAME: string, ORIGIN_COUNTRY_NAME: string ... 1 more field]\n+-----------------+-------------------+-----+\n|DEST_COUNTRY_NAME|ORIGIN_COUNTRY_NAME|count|\n+-----------------+-------------------+-----+\n|    United States|            Romania|    1|\n|    United States|            Ireland|  264|\n|    United States|              India|   69|\n|            Egypt|      United States|   24|\n|Equatorial Guinea|      United States|    1|\n+-----------------+-------------------+-----+\nonly showing top 5 rows\n\nroot\n |-- DEST_COUNTRY_NAME: string (nullable = true)\n |-- ORIGIN_COUNTRY_NAME: string (nullable = true)\n |-- count: long (nullable = true)\n\n"}]},"apps":[],"jobName":"paragraph_1545750710830_-1293446218","id":"20160823-120614_1736879537","dateCreated":"2018-12-25T17:11:50+0200","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:35642"},{"title":"Saving data as JSON file","text":"%spark\n\n// save the data in json format (hint: use the dfFromJson object)\n...\n    \n","user":"anonymous","dateUpdated":"2018-12-25T17:11:50+0200","config":{"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"title":true,"results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[]},"apps":[],"jobName":"paragraph_1545750710832_995305012","id":"20160823-120800_314999582","dateCreated":"2018-12-25T17:11:50+0200","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:35643"},{"title":"Reading data from JSON file whose schema is known","text":"%spark\n\nimport org.apache.spark.sql.types.{StructField, StructType, StringType, LongType}\n\nval dataSchema = new StructType(Array(\n    new StructField(\"DEST_COUNTRY_NAME\", StringType, true),\n    new StructField(\"ORIGIN_COUNTRY_NAME\", StringType, true),\n    new StructField(\"count\", LongType, true)\n))\n\n// read the content of 2010-summary.json using the above dataSchema  \n...\n\n// print 10 rows\n...\n\n","user":"anonymous","dateUpdated":"2018-12-25T17:11:50+0200","config":{"tableHide":true,"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"title":true,"results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"import org.apache.spark.sql.types.{StructField, StructType, StringType, LongType}\ndataSchema: org.apache.spark.sql.types.StructType = StructType(StructField(DEST_COUNTRY_NAME,StringType,true), StructField(ORIGIN_COUNTRY_NAME,StringType,true), StructField(count,LongType,true))\ndfFromJson: org.apache.spark.sql.DataFrame = [DEST_COUNTRY_NAME: string, ORIGIN_COUNTRY_NAME: string ... 1 more field]\n+-----------------+-------------------+-----+\n|DEST_COUNTRY_NAME|ORIGIN_COUNTRY_NAME|count|\n+-----------------+-------------------+-----+\n|    United States|            Romania|    1|\n|    United States|            Ireland|  264|\n|    United States|              India|   69|\n|            Egypt|      United States|   24|\n|Equatorial Guinea|      United States|    1|\n+-----------------+-------------------+-----+\nonly showing top 5 rows\n\n"}]},"apps":[],"jobName":"paragraph_1545750710833_1554156078","id":"20160823-122854_1466425181","dateCreated":"2018-12-25T17:11:50+0200","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:35644"},{"text":"","user":"anonymous","dateUpdated":"2018-12-25T17:11:50+0200","config":{"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"apps":[],"jobName":"paragraph_1545750710834_637069413","id":"20160825-005916_631693256","dateCreated":"2018-12-25T17:11:50+0200","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:35645"}],"name":"Lab 6.1 Exercise - DataFrame Loading and Saving Data","id":"2DYDW2M9P","noteParams":{},"noteForms":{},"angularObjects":{"md:shared_process":[],"spark:shared_process":[]},"config":{"isZeppelinNotebookCronEnable":false,"looknfeel":"default","personalizedMode":"false"},"info":{}}
+﻿{
+  "paragraphs": [
+    {
+      "text": "%md\n\n## Loading data from CSV file\n\nCSV stands for commma-separated values. This is a common text file format in which each line represents a single record, and commas separate each field\nwithin a record.\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-25T17:11:50+0200",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": false,
+        "fontSize": 9,
+        "results": { },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<h2>Loading data from CSV file</h2>\n<p>CSV stands for commma-separated values. This is a common text file format in which each line represents a single record, and commas separate each field\n<br  />within a record.</p>\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1545750710826_-281049093",
+      "id": "20180310-232008_2084436888",
+      "dateCreated": "2018-12-25T17:11:50+0200",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "focus": true,
+      "$$hashKey": "object:35634"
+    },
+    {
+      "text": "%spark\n\nimport org.apache.spark.sql.types.{StructField, StructType, StringType, LongType}\n\n// defined the schema for 2010-summary.csv file. Use org.apache.spark.sql.types.StructType class\n\n\n// use the schema to load the 2010-summary.csv file \nval dfFromCsvFile = ...\n\n// print 10 rows from the loaded file    \n...\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-25T17:11:50+0200",
+      "config": {
+        "tableHide": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": false,
+        "results": { },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.apache.spark.sql.types.{StructField, StructType, StringType, LongType}\ndataSchema: org.apache.spark.sql.types.StructType = StructType(StructField(DEST_COUNTRY_NAME,StringType,true), StructField(ORIGIN_COUNTRY_NAME,StringType,true), StructField(count,LongType,false))\n<console>:26: error: not found: value ?\n       val dfFromCsvFile = spark.read.format(?).option(\"header\", \"true\").option(\"mode\", \"FAILFAST\").schema(dataSchema).load(\"my path/2010-summary.csv\")\n                                             ^\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1545750710827_1598862081",
+      "id": "20180310-232058_1854265386",
+      "dateCreated": "2018-12-25T17:11:50+0200",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:35635"
+    },
+    {
+      "text": "%md\n\n## Saving DataFrame to a CSV file\n\nWe can take our CSV file and write it out as a TSV file (with tabs separating data fields)\n\nWhen we list the destination directory, we will see that my-tsv-file is actually a folder with numerous files within it. This actually reflects the number of paritions in our DataFrame at that time. If we were to repartition our data before then, we would end up with a different number of files.\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-25T17:11:50+0200",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": { },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<h2>Saving DataFrame to a CSV file</h2>\n<p>We can take our CSV file and write it out as a TSV file (with tabs separating data fields)</p>\n<p>When we list the destination directory, we will see that my-tsv-file is actually a folder with numerous files within it. This actually reflects the number of paritions in our DataFrame at that time. If we were to repartition our data before then, we would end up with a different number of files.</p>\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1545750710827_1889144989",
+      "id": "20180310-233015_1064163149",
+      "dateCreated": "2018-12-25T17:11:50+0200",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:35636"
+    },
+    {
+      "text": "%spark\n\n// use the previous dfFromCsvFile object to write a new tsv file called my-tsv-file.tsv  \n...",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-25T17:11:50+0200",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": { },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1545750710828_-2028707718",
+      "id": "20180310-232850_120441597",
+      "dateCreated": "2018-12-25T17:11:50+0200",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:35637"
+    },
+    {
+      "text": "%md\n\n## Using Parquet files with Spark\n\nParquet is an interoperable columnar storage format. It focusses on space efficiency and query efficiency. Parquet's origin is based on Google's Dremel and was developed by Twitter and Cloudera.\n\nParquet is now an Apache project - [Apache Parquet](https://parquet.apache.org).\n\nSpark can load data from Parquet files and save data as Parquet files.\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-25T17:11:50+0200",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": [
+          {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "keys": [],
+              "values": [],
+              "groups": [],
+              "scatter": { }
+            }
+          }
+        ],
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Using Parquet files with Spark</h2>\n<p>Parquet is an interoperable columnar storage format. It focusses on space efficiency and query efficiency. Parquet&rsquo;s origin is based on Google&rsquo;s Dremel and was developed by Twitter and Cloudera.</p>\n<p>Parquet is now an Apache project - <a href=\"https://parquet.apache.org\">Apache Parquet</a>.</p>\n<p>Spark can load data from Parquet files and save data as Parquet files.</p>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1545750710828_1446739758",
+      "id": "20160822-165125_1131574017",
+      "dateCreated": "2018-12-25T17:11:50+0200",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:35638"
+    },
+    {
+      "title": "Loading data from Parquet file",
+      "text": "%spark\n\n// load the data from 2010-summary.parquet file\nval flightData = ...\n\n// print the first 10 rows\n...\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-25T17:11:50+0200",
+      "config": {
+        "tableHide": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": { },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": { }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "flightData: org.apache.spark.sql.DataFrame = [DEST_COUNTRY_NAME: string, ORIGIN_COUNTRY_NAME: string ... 1 more field]\n+-----------------+-------------------+-----+\n|DEST_COUNTRY_NAME|ORIGIN_COUNTRY_NAME|count|\n+-----------------+-------------------+-----+\n|    United States|            Romania|    1|\n|    United States|            Ireland|  264|\n|    United States|              India|   69|\n|            Egypt|      United States|   24|\n|Equatorial Guinea|      United States|    1|\n+-----------------+-------------------+-----+\nonly showing top 5 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1545750710829_-2133367068",
+      "id": "20160823-111517_1662906000",
+      "dateCreated": "2018-12-25T17:11:50+0200",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:35639"
+    },
+    {
+      "title": "Saving data to Parquet file",
+      "text": "%spark\n\n// save the data to a Parquet file (hint: use the dfFromCsvFile object from the previous Paragraphs) \n\ndfFromCsvFile...\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-25T17:11:50+0200",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": { },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": { }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1545750710829_-1323646278",
+      "id": "20160823-112553_610561150",
+      "dateCreated": "2018-12-25T17:11:50+0200",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:35640"
+    },
+    {
+      "text": "%md\n\n## Using JSON files with Spark\n\nSpark can read data from JSON files.\n\nThere are some catches when working with this kind of data that are worth considering before we jump in. \n\nIn Spark, when we refer to JSON files, we refer to _line-delimited_ JSON files. This contrasts with files that have a large JSON object or array per file.\n\nThe _line-delimited_ versus _multiline_ trade-off is controlled by a single option: **multiLine**. \n\nWhen you set this option to true, you can read an entire file as one json object and Spark will go through the work of parsing that into a\nDataFrame. \n\nLine-delimited JSON is actually a much more stable format because it allows you to append to a file with a new record (rather than\nhaving to read in an entire file and then write it out), which is what we recommend that you use. \n\nAnother key reason for the popularity of line-delimited JSON is because JSON objects have structure, and JavaScript (on which JSON is based) has at least basic types. This makes it easier to work with because Spark can make more assumptions on our behalf about the data.\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-25T17:11:50+0200",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": [
+          {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "keys": [],
+              "values": [],
+              "groups": [],
+              "scatter": { }
+            }
+          }
+        ],
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<h2>Using JSON files with Spark</h2>\n<p>Spark can read data from JSON files.</p>\n<p>There are some catches when working with this kind of data that are worth considering before we jump in.</p>\n<p>In Spark, when we refer to JSON files, we refer to <em>line-delimited</em> JSON files. This contrasts with files that have a large JSON object or array per file.</p>\n<p>The <em>line-delimited</em> versus <em>multiline</em> trade-off is controlled by a single option: <strong>multiLine</strong>.</p>\n<p>When you set this option to true, you can read an entire file as one json object and Spark will go through the work of parsing that into a\n<br  />DataFrame.</p>\n<p>Line-delimited JSON is actually a much more stable format because it allows you to append to a file with a new record (rather than\n<br  />having to read in an entire file and then write it out), which is what we recommend that you use.</p>\n<p>Another key reason for the popularity of line-delimited JSON is because JSON objects have structure, and JavaScript (on which JSON is based) has at least basic types. This makes it easier to work with because Spark can make more assumptions on our behalf about the data.</p>\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1545750710830_-1433256060",
+      "id": "20160823-120136_710583192",
+      "dateCreated": "2018-12-25T17:11:50+0200",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:35641"
+    },
+    {
+      "title": "Loading data from JSON",
+      "text": "%spark\n\nimport org.apache.spark.sql.types.{StructField, StructType, StringType, LongType}\n\n// defined the schema for 2010-summary.json file. Use org.apache.spark.sql.types.StructType class\n\n\n// use the schema to load the 2010-summary.json file \nval dfFromJson = ...\n\n// print 10 rows from the loaded file    \n...\n\n// print the json data frame schema\n...\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-25T17:11:50+0200",
+      "config": {
+        "tableHide": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": { },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": { }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.apache.spark.sql.types.{StructField, StructType, StringType, LongType}\ndataSchema: org.apache.spark.sql.types.StructType = StructType(StructField(DEST_COUNTRY_NAME,StringType,true), StructField(ORIGIN_COUNTRY_NAME,StringType,true), StructField(count,LongType,false))\ndfFromJson: org.apache.spark.sql.DataFrame = [DEST_COUNTRY_NAME: string, ORIGIN_COUNTRY_NAME: string ... 1 more field]\n+-----------------+-------------------+-----+\n|DEST_COUNTRY_NAME|ORIGIN_COUNTRY_NAME|count|\n+-----------------+-------------------+-----+\n|    United States|            Romania|    1|\n|    United States|            Ireland|  264|\n|    United States|              India|   69|\n|            Egypt|      United States|   24|\n|Equatorial Guinea|      United States|    1|\n+-----------------+-------------------+-----+\nonly showing top 5 rows\n\nroot\n |-- DEST_COUNTRY_NAME: string (nullable = true)\n |-- ORIGIN_COUNTRY_NAME: string (nullable = true)\n |-- count: long (nullable = true)\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1545750710830_-1293446218",
+      "id": "20160823-120614_1736879537",
+      "dateCreated": "2018-12-25T17:11:50+0200",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:35642"
+    },
+    {
+      "title": "Saving data as JSON file",
+      "text": "%spark\n\n// save the data in json format (hint: use the dfFromJson object)\n...\n    \n",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-25T17:11:50+0200",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": { },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": { }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1545750710832_995305012",
+      "id": "20160823-120800_314999582",
+      "dateCreated": "2018-12-25T17:11:50+0200",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:35643"
+    },
+    {
+      "title": "Reading data from JSON file whose schema is known",
+      "text": "%spark\n\nimport org.apache.spark.sql.types.{StructField, StructType, StringType, LongType}\n\nval dataSchema = new StructType(Array(\n    new StructField(\"DEST_COUNTRY_NAME\", StringType, true),\n    new StructField(\"ORIGIN_COUNTRY_NAME\", StringType, true),\n    new StructField(\"count\", LongType, true)\n))\n\n// read the content of 2010-summary.json using the above dataSchema  \n...\n\n// print 10 rows\n...\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-25T17:11:50+0200",
+      "config": {
+        "tableHide": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": { },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": { }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.apache.spark.sql.types.{StructField, StructType, StringType, LongType}\ndataSchema: org.apache.spark.sql.types.StructType = StructType(StructField(DEST_COUNTRY_NAME,StringType,true), StructField(ORIGIN_COUNTRY_NAME,StringType,true), StructField(count,LongType,true))\ndfFromJson: org.apache.spark.sql.DataFrame = [DEST_COUNTRY_NAME: string, ORIGIN_COUNTRY_NAME: string ... 1 more field]\n+-----------------+-------------------+-----+\n|DEST_COUNTRY_NAME|ORIGIN_COUNTRY_NAME|count|\n+-----------------+-------------------+-----+\n|    United States|            Romania|    1|\n|    United States|            Ireland|  264|\n|    United States|              India|   69|\n|            Egypt|      United States|   24|\n|Equatorial Guinea|      United States|    1|\n+-----------------+-------------------+-----+\nonly showing top 5 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1545750710833_1554156078",
+      "id": "20160823-122854_1466425181",
+      "dateCreated": "2018-12-25T17:11:50+0200",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:35644"
+    },
+    {
+      "text": "",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-25T17:11:50+0200",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": { },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": { }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1545750710834_637069413",
+      "id": "20160825-005916_631693256",
+      "dateCreated": "2018-12-25T17:11:50+0200",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:35645"
+    }
+  ],
+  "name": "Lab 6.1 Exercise - DataFrame Loading and Saving Data",
+  "id": "2DYDW2M9P",
+  "noteParams": { },
+  "noteForms": { },
+  "angularObjects": {
+    "md:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": { }
+}
