@@ -1,4 +1,4 @@
-# Lab: DataFrame Exercise on Operations and SQL Usage
+# Lab 6.4 Exercise: DataFrame on Operations and SQL Usage
 
 # Instructions
 
@@ -12,6 +12,6 @@
 
 3. Import to Zeppelin the following Notebook:
 
-    insightedge-training/Day2/6 Structured API And DataFrame/Lab-6.4 - DataFrame  Exercise on Operations and SQL Usage/Lab 6.4 Exercise - DataFrame Operations and SQL Usage.json
+    insightedge-training/Day2/6 Structured API And DataFrame/Lab-6.4 - DataFrame Operations and SQL Usage/Lab 6.4 Exercise - DataFrame Operations and SQL Usage.json
 
 4. Follow the instructions inside the Notebook paragraphs.
