@@ -23,63 +23,48 @@
 
     <dependencies>
         <dependency>
-            <groupId>
-                org.gigaspaces.insightedge
-            </groupId>
-            <artifactId>
-                insightedge-core
-            </artifactId>
-            <version>
-                14.0.0
-            </version>
-            <scope>
-                compile
-            </scope>
+            <groupId>org.gigaspaces.insightedge</groupId>
+            <artifactId>insightedge-core</artifactId>
+            <version>14.2.0</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
     <build>
         <plugins>
             <plugin>
-                <groupId>
-                    net.alchim31.maven
-                </groupId>
-                <artifactId>
-                    scala-maven-plugin
-                </artifactId>
-                <version>
-                    3.2.2
-                </version>
-                <executions>
-                    <execution>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+                <version>3.2.2</version>
+                <executions><execution>
                         <goals>
-                            <goal>
-                                compile
-                            </goal>
+                            <goal>compile</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
             <plugin>
-                <groupId>
-                    org.apache.maven.plugins
-                </groupId>
-                <artifactId>
-                    maven-shade-plugin
-                </artifactId>
-                <version>
-                    3.0.0
-                </version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.0.0</version>
                 <executions>
                     <execution>
-                        <phase>
-                            package
-                        </phase>
+                        <phase>package</phase>
                         <goals>
-                            <goal>
-                                shade
-                            </goal>
+                            <goal>shade</goal>
                         </goals>
+                        <configuration>
+                            <filters>
+                                <filter>
+                                    <artifact>*:*</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/*.SF</exclude>
+                                        <exclude>META-INF/*.DSA</exclude>
+                                        <exclude>META-INF/*.RSA</exclude>
+                                    </excludes>
+                                </filter>
+                            </filters>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
