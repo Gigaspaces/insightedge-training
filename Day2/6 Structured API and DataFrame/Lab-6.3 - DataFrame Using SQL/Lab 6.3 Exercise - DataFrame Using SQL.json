@@ -1,1 +1,363 @@
-﻿{"paragraphs":[{"title":"Register DataFrame as temporary table","text":"%spark\n\nimport org.apache.spark.sql.types._\n\nval countrySchema = new StructType(Array(\n                            new StructField(\"country\", StringType, true),\n                            new StructField(\"name\", StringType, true),\n                            new StructField(\"lat\", DoubleType, true),\n                            new StructField(\"lng\", DoubleType, true),\n                            new StructField(\"altitude\", DoubleType, false)\n))\n\nval myMapDf = spark.read.format(\"csv\").option(\"header\", \"true\").option(\"mode\", \"FAILFAST\").schema(countrySchema).load(\"../../../../Data/cities.csv\")\n\nmyMapDf.show(5)\n\nmyMapDf.createOrReplaceTempView(\"myMap\")\n\n// hint: load the cities csv file and run this paragraph","user":"anonymous","dateUpdated":"2019-01-23T11:58:26-0500","config":{"tableHide":true,"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"title":true,"results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"import org.apache.spark.sql.types._\ncountrySchema: org.apache.spark.sql.types.StructType = StructType(StructField(country,StringType,true), StructField(name,StringType,true), StructField(lat,DoubleType,true), StructField(lng,DoubleType,true), StructField(altitude,DoubleType,false))\nmyMapDf: org.apache.spark.sql.DataFrame = [country: string, name: string ... 3 more fields]\n+-------------+-------------+----------+------------+--------+\n|      country|         name|       lat|         lng|altitude|\n+-------------+-------------+----------+------------+--------+\n|United States|New York City|40.7142691| -74.0059738|     2.0|\n|United States|  Los Angeles|34.0522342|-118.2436829|   115.0|\n|United States|      Chicago| 41.850033| -87.6500549|   181.0|\n|United States|      Houston|29.7632836| -95.3632736|    15.0|\n|United States| Philadelphia| 39.952335| -75.1637878|     8.0|\n+-------------+-------------+----------+------------+--------+\nonly showing top 5 rows\n\n"}]},"apps":[],"jobName":"paragraph_1548262706342_659419069","id":"20160825-010136_2062919277","dateCreated":"2019-01-23T11:58:26-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"focus":true,"$$hashKey":"object:4856"},{"title":"Getting DataFrame using SQL query","text":"%spark\n\nval result1 = spark.sql(\"select * from myMap\")\n\nresult1.show(10)\n\n// show the name and the altitude of the cities where their altitude is higher than 1000\n\n\n// show the name and the altitude of the cities where their altitude is higher than 1000 ordered by altitude","user":"anonymous","dateUpdated":"2019-01-23T11:58:26-0500","config":{"tableHide":true,"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"title":true,"results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"result1: org.apache.spark.sql.DataFrame = [country: string, name: string ... 3 more fields]\n+-------------+-------------+----------+------------+--------+\n|      country|         name|       lat|         lng|altitude|\n+-------------+-------------+----------+------------+--------+\n|United States|New York City|40.7142691| -74.0059738|     2.0|\n|United States|  Los Angeles|34.0522342|-118.2436829|   115.0|\n|United States|      Chicago| 41.850033| -87.6500549|   181.0|\n|United States|      Houston|29.7632836| -95.3632736|    15.0|\n|United States| Philadelphia| 39.952335| -75.1637878|     8.0|\n|United States|      Phoenix|33.4483771|-112.0740356|     0.0|\n|United States|  San Antonio|29.4241219| -98.4936295|   196.0|\n|United States|    San Diego|32.7153292|-117.1572571|    26.0|\n|United States|       Dallas|32.7830556| -96.8066635|   137.0|\n|United States|      Detroit| 42.331427| -83.0457535|   181.0|\n+-------------+-------------+----------+------------+--------+\nonly showing top 10 rows\n\nresult2: org.apache.spark.sql.DataFrame = [name: string, altitude: double]\n+----------------+--------+\n|            name|altitude|\n+----------------+--------+\n|         El Paso|  1147.0|\n|          Denver|  1598.0|\n|     Albuquerque|  1510.0|\n|Colorado Springs|  1829.0|\n|          Aurora|  1647.0|\n+----------------+--------+\n\nresult3: org.apache.spark.sql.DataFrame = [name: string, altitude: double]\n+----------------+--------+\n|            name|altitude|\n+----------------+--------+\n|         El Paso|  1147.0|\n|     Albuquerque|  1510.0|\n|          Denver|  1598.0|\n|          Aurora|  1647.0|\n|Colorado Springs|  1829.0|\n+----------------+--------+\n\n"}]},"apps":[],"jobName":"paragraph_1548262706343_451011087","id":"20160825-011459_8500640","dateCreated":"2019-01-23T11:58:26-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:4857"},{"title":"SQL with dataframe","text":"%sql\n\n/* run sql query which show the name and the altitude of the cities ordered by altitude */\n","user":"anonymous","dateUpdated":"2019-01-23T11:58:26-0500","config":{"tableHide":true,"editorSetting":{"language":"sql","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/sql","fontSize":9,"title":true,"results":{"0":{"graph":{"mode":"table","height":300,"optionOpen":false,"setting":{"table":{"tableGridState":{},"tableColumnTypeState":{"names":{"name":"string","altitude":"string"},"updated":false},"tableOptionSpecHash":"[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]","tableOptionValue":{"useFilter":false,"showPagination":false,"showAggregationFooter":false},"updated":false,"initialized":false}},"commonSetting":{}}}},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TABLE","data":"name\taltitude\nOakland\t0.0\nBaton Rouge\t0.0\nOmaha\t0.0\nPhoenix\t0.0\nNew Orleans\t0.0\nHonolulu\t0.0\nAnchorage\t0.0\nLong Beach\t1.0\nTampa\t1.0\nNew York City\t2.0\nMiami\t2.0\nBaltimore\t2.0\nHialeah\t2.0\nVirginia Beach\t3.0\nNorfolk\t3.0\nStockton\t4.0\nSacramento\t5.0\nCorpus Christi\t6.0\nJacksonville\t7.0\nPhiladelphia\t8.0\nSouth Boston\t10.0\nBoston\t11.0\nWashington\t11.0\nModesto\t12.0\nSaint Petersburg\t14.0\nJersey City\t14.0\nHouston\t15.0\nNewark\t16.0\nChula Vista\t23.0\nSan Jose\t24.0\nSan Diego\t26.0\nSanta Ana\t30.0\nOrlando\t34.0\nAnaheim\t40.0\nSan Francisco\t60.0\nSeattle\t60.0\nPortland\t61.0\nNew South Memphis\t74.0\nMemphis\t75.0\nRaleigh\t91.0\nFresno\t91.0\nLos Angeles\t115.0\nLaredo\t115.0\nWest Raleigh\t122.0\nDurham\t122.0\nBakersfield\t122.0\nLouisville\t128.0\nSaint Louis\t135.0\nDallas\t137.0\nNashville\t151.0\nRochester\t155.0\nAustin\t163.0\nGarland\t165.0\nBirmingham\t173.0\nNorth Glendale\t174.0\nDetroit\t181.0\nChicago\t181.0\nBuffalo\t183.0\nArlington\t184.0\nCleveland\t185.0\nToledo\t191.0\nMilwaukee\t195.0\nSan Antonio\t196.0\nFort Worth\t199.0\nPlano\t200.0\nCincinnati\t203.0\nTulsa\t213.0\nIndianapolis\t222.0\nNorth Kansas City\t223.0\nCharlotte\t229.0\nSaint Paul\t235.0\nPittsburgh\t235.0\nColumbus\t237.0\nFort Wayne\t243.0\nGreensboro\t244.0\nMinneapolis\t259.0\nRiverside\t262.0\nMadison\t270.0\nKansas City\t271.0\nAkron\t290.0\nLexington\t298.0\nAtlanta\t305.0\nLexington-Fayette\t312.0\nGlendale\t336.0\nOklahoma City\t364.0\nChandler\t380.0\nLincoln\t382.0\nScottsdale\t386.0\nMesa\t386.0\nWichita\t402.0\nHenderson\t580.0\nLas Vegas\t609.0\nParadise\t626.0\nTucson\t751.0\nLubbock\t976.0\nEl Paso\t1147.0\nAlbuquerque\t1510.0\nDenver\t1598.0\nAurora\t1647.0\nColorado Springs\t1829.0\n"}]},"apps":[],"jobName":"paragraph_1548262706344_620249126","id":"20160825-010614_1623710967","dateCreated":"2019-01-23T11:58:26-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:4858"},{"title":"SQL with dataframe with user-provided input","text":"%sql\n\n/* run the above query, this time use user provided input */\n","user":"anonymous","dateUpdated":"2019-01-23T11:58:26-0500","config":{"tableHide":true,"editorSetting":{"language":"sql","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/sql","fontSize":9,"title":true,"results":{"0":{"graph":{"mode":"table","height":300,"optionOpen":false,"setting":{"table":{"tableGridState":{},"tableColumnTypeState":{"names":{"country":"string","name":"string","lat":"string","lng":"string","altitude":"string"},"updated":false},"tableOptionSpecHash":"[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]","tableOptionValue":{"useFilter":false,"showPagination":false,"showAggregationFooter":false},"updated":false,"initialized":false}},"commonSetting":{}}}},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[{"name":"country","index":0,"aggr":"sum"}],"values":[{"name":"name","index":1,"aggr":"sum"}],"groups":[],"scatter":{"xAxis":{"name":"country","index":0,"aggr":"sum"},"yAxis":{"name":"name","index":1,"aggr":"sum"}}},"enabled":true},"settings":{"params":{"altitude":"1000"},"forms":{"altitude":{"type":"TextBox","name":"altitude","defaultValue":"?","hidden":false,"$$hashKey":"object:4979"}}},"results":{"code":"SUCCESS","msg":[{"type":"TABLE","data":"country\tname\tlat\tlng\taltitude\nUnited States\tEl Paso\t31.7587198\t-106.4869308\t1147.0\nUnited States\tDenver\t39.7391536\t-104.9847031\t1598.0\nUnited States\tAlbuquerque\t35.0844909\t-106.6511383\t1510.0\nUnited States\tColorado Springs\t38.8338816\t-104.8213654\t1829.0\nUnited States\tAurora\t39.7294319\t-104.8319168\t1647.0\n"}]},"apps":[],"jobName":"paragraph_1548262706344_1021139282","id":"20160825-010655_728923842","dateCreated":"2019-01-23T11:58:26-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:4859"},{"title":"SQL with user-defined functions","text":"%spark\n\ndef altInKm(v : Double) : Double = v / 1000.0\n\n// to do\n\nspark.udf.register(\n    \"altInKm\", \n    altInKm(_:Double):Double\n)\n\nval resultDf = spark.sql(\"select country, name, altInKm(altitude) as AltitudeInKm from myMap\")\n\nresultDf.show(10)\n\n// nothing to do. just run the paragraph\n","user":"anonymous","dateUpdated":"2019-01-23T11:58:26-0500","config":{"tableHide":true,"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","editorHide":false,"fontSize":9,"title":true,"results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"altInKm: (v: Double)Double\nres36: org.apache.spark.sql.expressions.UserDefinedFunction = UserDefinedFunction(<function1>,DoubleType,Some(List(DoubleType)))\nresultDf: org.apache.spark.sql.DataFrame = [country: string, name: string ... 1 more field]\n+-------------+-------------+------------+\n|      country|         name|AltitudeInKm|\n+-------------+-------------+------------+\n|United States|New York City|       0.002|\n|United States|  Los Angeles|       0.115|\n|United States|      Chicago|       0.181|\n|United States|      Houston|       0.015|\n|United States| Philadelphia|       0.008|\n|United States|      Phoenix|         0.0|\n|United States|  San Antonio|       0.196|\n|United States|    San Diego|       0.026|\n|United States|       Dallas|       0.137|\n|United States|      Detroit|       0.181|\n+-------------+-------------+------------+\nonly showing top 10 rows\n\n"}]},"apps":[],"jobName":"paragraph_1548262706344_1735860180","id":"20161017-151257_1766634922","dateCreated":"2019-01-23T11:58:26-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:4860"},{"text":"","user":"anonymous","dateUpdated":"2019-01-23T11:58:26-0500","config":{"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"apps":[],"jobName":"paragraph_1548262706345_286480788","id":"20160825-005916_631693256","dateCreated":"2019-01-23T11:58:26-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:4861"}],"name":"Lab 6.3 Exercise - DataFrame Using SQL","id":"2E1RKZTY3","noteParams":{},"noteForms":{},"angularObjects":{"md:shared_process":[],"spark:shared_process":[]},"config":{"isZeppelinNotebookCronEnable":false,"looknfeel":"default","personalizedMode":"false"},"info":{}}
+﻿{
+  "paragraphs": [
+    {
+      "title": "Register DataFrame as temporary table",
+      "text": "%spark\n\nimport org.apache.spark.sql.types._\n\nval countrySchema = new StructType(Array(\n                            new StructField(\"country\", StringType, true),\n                            new StructField(\"name\", StringType, true),\n                            new StructField(\"lat\", DoubleType, true),\n                            new StructField(\"lng\", DoubleType, true),\n                            new StructField(\"altitude\", DoubleType, false)\n))\n\nval myMapDf = spark.read.format(\"csv\").option(\"header\", \"true\").option(\"mode\", \"FAILFAST\").schema(countrySchema).load(\"../../../../Data/cities.csv\")\n\nmyMapDf.show(5)\n\nmyMapDf.createOrReplaceTempView(\"myMap\")\n\n// hint: load the cities csv file and run this paragraph",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-26T10:48:12+0300",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1556264885397_-1278425031",
+      "id": "20160825-010136_2062919277",
+      "dateCreated": "2019-04-26T10:48:05+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "focus": true,
+      "$$hashKey": "object:12108"
+    },
+    {
+      "title": "Getting DataFrame using SQL query",
+      "text": "%spark\n\nval result1 = spark.sql(\"select * from myMap\")\n\nresult1.show(10)\n\n// show the name and the altitude of the cities where their altitude is higher than 1000\n\n\n// show the name and the altitude of the cities where their altitude is higher than 1000 ordered by altitude",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-26T10:48:15+0300",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1556264885398_-1095243036",
+      "id": "20160825-011459_8500640",
+      "dateCreated": "2019-04-26T10:48:05+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:12109"
+    },
+    {
+      "title": "SQL with dataframe",
+      "text": "%sql\n\n/* run sql query which show the name and the altitude of the cities ordered by altitude */\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-26T10:48:19+0300",
+      "config": {
+        "tableHide": true,
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "title": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "name": "string",
+                      "altitude": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1556264885398_1098825426",
+      "id": "20160825-010614_1623710967",
+      "dateCreated": "2019-04-26T10:48:05+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:12110"
+    },
+    {
+      "title": "SQL with dataframe with user-provided input",
+      "text": "%sql\n\n/* run the above query, this time use user provided input */\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-26T10:48:21+0300",
+      "config": {
+        "tableHide": true,
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "title": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "country": "string",
+                      "name": "string",
+                      "lat": "string",
+                      "lng": "string",
+                      "altitude": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "country",
+              "index": 0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "name",
+              "index": 1,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "country",
+              "index": 0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "name",
+              "index": 1,
+              "aggr": "sum"
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {
+          "altitude": "1000"
+        },
+        "forms": {
+          "altitude": {
+            "type": "TextBox",
+            "name": "altitude",
+            "defaultValue": "?",
+            "hidden": false,
+            "$$hashKey": "object:12223"
+          }
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556264885399_-2002964664",
+      "id": "20160825-010655_728923842",
+      "dateCreated": "2019-04-26T10:48:05+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:12111"
+    },
+    {
+      "title": "SQL with user-defined functions",
+      "text": "%spark\n\ndef altInKm(v : Double) : Double = v / 1000.0\n\n// to do\n\nspark.udf.register(\n    \"altInKm\", \n    altInKm(_:Double):Double\n)\n\nval resultDf = spark.sql(\"select country, name, altInKm(altitude) as AltitudeInKm from myMap\")\n\nresultDf.show(10)\n\n// nothing to do. just run the paragraph\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-26T10:48:23+0300",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "editorHide": false,
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1556264885399_-606184528",
+      "id": "20161017-151257_1766634922",
+      "dateCreated": "2019-04-26T10:48:05+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:12112"
+    },
+    {
+      "text": "",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-26T10:48:05+0300",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1556264885399_-785222518",
+      "id": "20160825-005916_631693256",
+      "dateCreated": "2019-04-26T10:48:05+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:12113"
+    }
+  ],
+  "name": "Lab 6.3 Exercise - DataFrame Using SQL",
+  "id": "2EB2VFXX7",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {}
+}

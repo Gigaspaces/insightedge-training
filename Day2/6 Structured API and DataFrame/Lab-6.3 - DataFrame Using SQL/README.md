@@ -1,4 +1,4 @@
-# Lab: DataFrame-Using-SQL
+# Lab 6.3 Exercise: DataFrame-Using-SQL
 
 # Instructions
 
