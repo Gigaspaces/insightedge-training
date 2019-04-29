@@ -4,7 +4,7 @@
 
 1. Start InsightEdge in Demo mode:
 
-    go to gigaspaces-insightedge-enterprise-14.0.0-ga-b20000/bin
+    go to gigaspaces-insightedge-enterprise-14.2.0-ga-b20400/bin
 
     run ./insightedge demo
 
@@ -18,8 +18,12 @@
 
 5. Follow the instructions inside the Notebook paragraphs.
 
-Note: If running Zeppelin notebooks on Windows, you might need to change println to print and also add "%n" in order to display the output properly. 
+**In Step1 - IE Query Measurement (import dependencies) please verify the following:**
+
+If the jar FlightDelayDemo-1.0.0-SNAPSHOT.jar is not already created, you can generate it by going to "Day5/17 Flight Delay Demo/Lab-17.1-Flight Delay Demo" and running mvn package.
+
+Please copy FlightDelayDemo-1.0.0-SNAPSHOT.jar to the Data directory.
+
+**Note:** If running Zeppelin notebooks on Windows, you might need to change println to print and also add "%n" in order to display the output properly. 
 
 If the Zepplin interpretor instance fails to work correctly on Windows, you will need to shutdown all browser windows and restart insightedge.
-
-If the uber jar FlightDelayDemo-1.0.0-SNAPSHOT.jar is not already created, you can generate it by going to "Day5/17 Flight Delay Demo/Lab-17.1-Flight Delay Demo" and running mvn package.

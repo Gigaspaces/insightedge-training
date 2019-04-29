@@ -3,7 +3,7 @@
 
 # Instructions
 
-1. Download or copy gigaspaces-insightedge-enterprise-14.0.0-ga-b20000 package to your machine.
+1. Download or copy gigaspaces-insightedge-enterprise-14.2.0-ga-b20400 package to your machine.
 
    download link: https://www.gigaspaces.com/product/insightedge-platform
 

@@ -1,1 +1,222 @@
-﻿{"paragraphs":[{"title":"Spark Query Measurement","text":"%spark\n\nimport org.apache.spark._\nimport org.apache.spark.sql._\nimport sqlContext.implicits._\n\n\ncase class DelayRec(flightNumber: String, year: Integer, month: Integer, dayOfMonth: Integer, dayOfWeek: Integer, crsDepTime: Integer, depDelay: Integer, origin: String, distance: Double)\n\nval flightRDD = sc.textFile(\"../../../../Data/2007.csv\").map(line => line.split(\",\")).filter(rec => rec(4).toString() != \"NA\").filter(rec => rec(0) !=\"Year\").filter(rec => rec(16).toString() == \"ORD\").filter(rec => rec(21).toString() != \"1\").map(rec => new DelayRec( rec(9).toString(),rec(0).toInt,rec(1).toInt,rec(2).toInt,rec(3).toInt,rec(5).toInt,rec(15).toInt,rec(16).toString(),rec(18).toDouble))\n\n\nval flightDF = flightRDD.toDF()\nflightDF.createOrReplaceTempView(\"flightView\")\nval t0 = System.nanoTime()\nval result1 = spark.sql(\"select flightNumber, distance from flightView where distance > 1200.0 AND distance < 1300.0\").collect()\nval t1 = System.nanoTime()\nprintln(\"Elapsed time for query using pure spark: \" + (t1 - t0)/1000000 + \" millisecond\")\nval result2 = spark.sql(\"select count(*) from flightView where distance > 1200.0 AND distance < 1300.0\").collect()","user":"anonymous","dateUpdated":"2019-02-11T11:27:27-0500","config":{"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"title":true,"results":{},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"import org.apache.spark._\nimport org.apache.spark.sql._\nimport sqlContext.implicits._\ndefined class DelayRec\nflightRDD: org.apache.spark.rdd.RDD[DelayRec] = MapPartitionsRDD[7] at map at <console>:38\nflightDF: org.apache.spark.sql.DataFrame = [flightNumber: string, year: int ... 7 more fields]\nt0: Long = 292286930564618\nresult1: Array[org.apache.spark.sql.Row] = Array([6997,1249.0], [6997,1249.0], [6997,1249.0], [6997,1249.0], [6997,1249.0], [4028,1249.0], [6997,1249.0], [6997,1249.0], [6997,1249.0], [6997,1249.0], [6997,1249.0], [6997,1249.0], [6997,1249.0], [4028,1249.0], [5967,1249.0], [6997,1249.0], [6997,1249.0], [6997,1249.0], [6997,1249.0], [6997,1249.0], [6997,1249.0], [6997,1249.0], [4028,1249.0], [5967,1249.0], [6997,1249.0], [6997,1249.0], [6997,1249.0], [6997,1249.0], [6997,1249.0], [6997,1249.0], [6997,1249.0], [5967,1249.0], [6997,1249.0], [6997,1249.0], [6997,1249.0], [6997,1249.0], [6997,1249.0], [119,1249.0], [119,1249.0], [119,1249.0], [119,1249.0], [119,1249.0], [119,1249.0], [119,1249.0], [119,1249.0], [265,1249.0], [265,1249.0], [265,1249.0], [265,1249.0], [265,1249.0], [265,1249.0...t1: Long = 292298351177331\nElapsed time for query using pure spark: 11420 millisecond\nresult2: Array[org.apache.spark.sql.Row] = Array([3592])\n"}]},"apps":[],"jobName":"paragraph_1549902447357_1336034925","id":"20190109-144707_102449233","dateCreated":"2019-02-11T11:27:27-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"focus":true,"$$hashKey":"object:3362"},{"title":"Step1 - IE Query Measurement (import dependencies)","text":"%dep\n\nz.reset()\n\nz.load(\"../../../../insightedge-training/Day5/17 Flight Delay Demo/Lab-17.1 - Flight Delay Demo/target/FlightDelayDemo-1.0.0-SNAPSHOT.jar\")\n","user":"anonymous","dateUpdated":"2019-02-11T12:00:56-0500","config":{"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"title":true,"results":{},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"res0: org.apache.zeppelin.dep.Dependency = org.apache.zeppelin.dep.Dependency@62da4d2a\n"}]},"apps":[],"jobName":"paragraph_1549902447369_1420007780","id":"20190109-145305_803990758","dateCreated":"2019-02-11T11:27:27-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:3363"},{"title":"Step2 - IE Query Measurement (save to grid)","text":"%spark\n\nimport com.gigaspaces.DelayRec\nimport org.insightedge.spark.implicits.all._\n\n\nval flightRDD = sc.textFile(\"../../../../Data/2007.csv\").map(line => line.split(\",\")).filter(rec => rec(4).toString() != \"NA\").filter(rec => rec(0) !=\"Year\").filter(rec => rec(16).toString() == \"ORD\").filter(rec=> rec(21).toString() != \"1\").map(rec => new DelayRec( rec(9).toString(),rec(0).toInt,rec(1).toInt,rec(2).toInt,rec(3).toInt,rec(5).toInt,rec(15).toInt,rec(16).toString(),rec(18).toDouble))\n\nflightRDD.saveToGrid()\n","user":"anonymous","dateUpdated":"2019-02-11T11:27:27-0500","config":{"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"title":true,"results":{},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"import com.gigaspaces.DelayRec\nimport org.insightedge.spark.implicits.all._\nflightRDD: org.apache.spark.rdd.RDD[com.gigaspaces.DelayRec] = MapPartitionsRDD[7] at map at <console>:29\n"}]},"apps":[],"jobName":"paragraph_1549902447372_-894657119","id":"20190109-145202_1609569219","dateCreated":"2019-02-11T11:27:27-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:3364"},{"title":"Step3 - IE Query Measurement (run query)","text":"\n%spark\n\nval t0 = System.nanoTime()\nval flightRDD = sc.gridSql[com.gigaspaces.DelayRec](\"distance > ? AND distance < ?\", Seq(1200.0,1300.0))\nval t1 = System.nanoTime()\nprintln(\"Elapsed time for query using IE: \" + (t1 - t0)/1000000 + \" millisecond\")\nval count = flightRDD.count()\n","user":"anonymous","dateUpdated":"2019-02-11T11:27:27-0500","config":{"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"title":true,"results":{},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"t0: Long = 292406199727445\nflightRDD: org.insightedge.spark.rdd.InsightEdgeSqlRDD[com.gigaspaces.DelayRec] = InsightEdgeSqlRDD[8] at RDD at InsightEdgeAbstractRDD.scala:36\nt1: Long = 292407105045698\nElapsed time for query using IE: 905 millisecond\ncount: Long = 3405\n"}]},"apps":[],"jobName":"paragraph_1549902447374_591626642","id":"20190109-151101_291276507","dateCreated":"2019-02-11T11:27:27-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:3365"},{"text":"%spark\n","user":"anonymous","dateUpdated":"2019-02-11T11:27:27-0500","config":{"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"results":{},"enabled":true},"settings":{"params":{},"forms":{}},"apps":[],"jobName":"paragraph_1549902447377_1317606430","id":"20190113-105707_775026371","dateCreated":"2019-02-11T11:27:27-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:3366"}],"name":"Lab 8.1 Example - SQL Query Benchmark: Spark vs InsightEdge","id":"2E2WDKKPR","noteParams":{},"noteForms":{},"angularObjects":{"spark:shared_process":[]},"config":{"isZeppelinNotebookCronEnable":false,"looknfeel":"default","personalizedMode":"false"},"info":{}}
+﻿{
+  "paragraphs": [
+    {
+      "title": "Spark Query Measurement",
+      "text": "%spark\n\nimport org.apache.spark._\nimport org.apache.spark.sql._\nimport sqlContext.implicits._\n\n\ncase class DelayRec(flightNumber: String, year: Integer, month: Integer, dayOfMonth: Integer, dayOfWeek: Integer, crsDepTime: Integer, depDelay: Integer, origin: String, distance: Double)\n\nval flightRDD = sc.textFile(\"../../../../Data/2007.csv\").map(line => line.split(\",\")).filter(rec => rec(4).toString() != \"NA\").filter(rec => rec(0) !=\"Year\").filter(rec => rec(16).toString() == \"ORD\").filter(rec => rec(21).toString() != \"1\").map(rec => new DelayRec( rec(9).toString(),rec(0).toInt,rec(1).toInt,rec(2).toInt,rec(3).toInt,rec(5).toInt,rec(15).toInt,rec(16).toString(),rec(18).toDouble))\n\n\nval flightDF = flightRDD.toDF()\nflightDF.createOrReplaceTempView(\"flightView\")\nval t0 = System.nanoTime()\nval result1 = spark.sql(\"select flightNumber, distance from flightView where distance > 1200.0 AND distance < 1300.0\").collect()\nval t1 = System.nanoTime()\nprintln(\"Elapsed time for query using pure spark: \" + (t1 - t0)/1000000 + \" millisecond\")\nval result2 = spark.sql(\"select count(*) from flightView where distance > 1200.0 AND distance < 1300.0\").collect()",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-29T17:25:24+0300",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://192.168.9.222:4040/jobs/job?id=5",
+            "http://192.168.9.222:4040/jobs/job?id=6"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556542097856_539561795",
+      "id": "20190109-144707_102449233",
+      "dateCreated": "2019-04-29T15:48:17+0300",
+      "dateStarted": "2019-04-29T17:25:24+0300",
+      "dateFinished": "2019-04-29T17:25:32+0300",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "focus": true,
+      "$$hashKey": "object:6895"
+    },
+    {
+      "title": "Step1 - IE Query Measurement (import dependencies)",
+      "text": "%dep\n\nz.reset()\n\nz.load(\"../../../../Data/FlightDelayDemo-1.0.0-SNAPSHOT.jar\")\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-29T17:28:38+0300",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1556542097861_-2114205983",
+      "id": "20190109-145305_803990758",
+      "dateCreated": "2019-04-29T15:48:17+0300",
+      "dateStarted": "2019-04-29T17:28:38+0300",
+      "dateFinished": "2019-04-29T17:29:32+0300",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:6896"
+    },
+    {
+      "title": "Step2 - IE Query Measurement (save to grid)",
+      "text": "%spark\n\nimport com.gigaspaces.DelayRec\nimport org.insightedge.spark.implicits.all._\n\n\nval flightRDD = sc.textFile(\"../../../../Data/2007.csv\").map(line => line.split(\",\")).filter(rec => rec(4).toString() != \"NA\").filter(rec => rec(0) !=\"Year\").filter(rec => rec(16).toString() == \"ORD\").filter(rec=> rec(21).toString() != \"1\").map(rec => new DelayRec( rec(9).toString(),rec(0).toInt,rec(1).toInt,rec(2).toInt,rec(3).toInt,rec(5).toInt,rec(15).toInt,rec(16).toString(),rec(18).toDouble))\n\nflightRDD.saveToGrid()\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-29T17:29:51+0300",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://192.168.9.222:4040/jobs/job?id=0"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556542097863_2051273602",
+      "id": "20190109-145202_1609569219",
+      "dateCreated": "2019-04-29T15:48:17+0300",
+      "dateStarted": "2019-04-29T17:29:51+0300",
+      "dateFinished": "2019-04-29T17:30:38+0300",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:6897"
+    },
+    {
+      "title": "Step3 - IE Query Measurement (run query)",
+      "text": "\n%spark\n\nval t0 = System.nanoTime()\nval flightRDD = sc.gridSql[com.gigaspaces.DelayRec](\"distance > ? AND distance < ?\", Seq(1200.0,1300.0))\nval t1 = System.nanoTime()\nprintln(\"Elapsed time for query using IE: \" + (t1 - t0)/1000000 + \" millisecond\")\nval count = flightRDD.count()\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-29T17:32:45+0300",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://192.168.9.222:4040/jobs/job?id=2"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556542097865_-1426004070",
+      "id": "20190109-151101_291276507",
+      "dateCreated": "2019-04-29T15:48:17+0300",
+      "dateStarted": "2019-04-29T17:32:45+0300",
+      "dateFinished": "2019-04-29T17:32:50+0300",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:6898"
+    },
+    {
+      "text": "%spark\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-04-29T15:48:17+0300",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1556542097868_-855881648",
+      "id": "20190113-105707_775026371",
+      "dateCreated": "2019-04-29T15:48:17+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:6899"
+    }
+  ],
+  "name": "Lab 8.1 Example - SQL Query Benchmark: Spark vs InsightEdge",
+  "id": "2E9EJHJ92",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {}
+}
