@@ -20,7 +20,7 @@
 
 **In Step1 - IE Query Measurement (import dependencies) please verify the following:**
 
-If the jar FlightDelayDemo-1.0.0-SNAPSHOT.jar is not already created, you can generate it by going to "Day5/17 Flight Delay Demo/Lab-17.1-Flight Delay Demo" and running mvn package.
+If the uber jar FlightDelayDemo-1.0.0-SNAPSHOT.jar is not already created, you can generate it by going to "Day5/17 Flight Delay Demo/Lab-17.1-Flight Delay Demo" and running mvn package.
 
 Please copy FlightDelayDemo-1.0.0-SNAPSHOT.jar to the Data directory.
 
