@@ -198,7 +198,7 @@
     },
     {
       "title": "Counts per word",
-      "text": "%sql\nselect * from countTable2 ",
+      "text": "%sql\nselect * from countTable ",
       "user": "anonymous",
       "dateUpdated": "2019-05-01T14:12:00+0300",
       "config": {
