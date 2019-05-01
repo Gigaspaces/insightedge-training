@@ -6,7 +6,7 @@
 
 1. Start InsightEdge in Demo mode:
 
-    go to gigaspaces-insightedge-enterprise-14.0.0-ga-b20000/bin
+    go to gigaspaces-insightedge-enterprise-14.2.0-ga-b20400/bin
 
     run ./insightedge demo
 
@@ -14,6 +14,6 @@
 
 3. Import to Zeppelin the following Notebook:
 
-    insightedge-training/Day3/10 Structured Streaming/Lab-10.1 Exercise - Structured Streaming.json
+    insightedge-training/Day3/10 Structured Streaming/Lab-10.1 - Structured Streaming/Lab-10.1 Exercise - Structured Streaming.json
 
 4. Follow the instructions inside the Notebook paragraph

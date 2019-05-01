@@ -1,1 +1,345 @@
-﻿{"paragraphs":[{"text":"%md\n\n## Initialize the stream\n\n","user":"anonymous","dateUpdated":"2019-01-22T21:06:36-0500","config":{"tableHide":false,"editorSetting":{"language":"markdown","editOnDblClick":true,"completionSupport":false},"colWidth":12,"editorMode":"ace/mode/markdown","editorHide":true,"fontSize":9,"results":{},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"HTML","data":"<div class=\"markdown-body\">\n<h2>Initialize the stream</h2>\n</div>"}]},"apps":[],"jobName":"paragraph_1548209196322_1319327588","id":"20180310-232008_2084436888","dateCreated":"2019-01-22T21:06:36-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"focus":true,"$$hashKey":"object:16882"},{"text":"%spark\n\nimport org.apache.spark.sql.types._\n\n\nval inputPath = \"path of the files\"\n\n//val streamingInput = read stream, 1 file at a time\n\n//val streamingCounts = trasform stream to have count per each word\n    \nval isSteraming = streamingCounts.isStreaming   // check if your DataSet is streaming dataset \n\n   ","user":"anonymous","dateUpdated":"2019-01-22T21:06:36-0500","config":{"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"editorHide":false,"title":false,"results":{},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"import org.apache.spark.sql.types._\ninputPath: String = C:/train/data/stream1/data/othello/\nstreamingInput: org.apache.spark.sql.Dataset[String] = [value: string]\nstreamingCounts: org.apache.spark.sql.Dataset[(String, Long)] = [value: string, count(1): bigint]\nisSteraming: Boolean = true\n"}]},"apps":[],"jobName":"paragraph_1548209196324_1334333951","id":"20180310-232058_1854265386","dateCreated":"2019-01-22T21:06:36-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:16883"},{"text":"%md\n\n## Start streaming Computions\n\nAs you can see, streamingCounts is a streaming DataSet (streamingCounts.isStreaming was true). You can start streaming computation, by defining the sink and starting it. In our case, we want to interactively query the counts ( so we will set the complete set to be a in a in-memory table (note that this for testing purpose only)\n","user":"anonymous","dateUpdated":"2019-01-22T21:06:36-0500","config":{"tableHide":false,"editorSetting":{"language":"markdown","editOnDblClick":true,"completionSupport":false},"colWidth":12,"editorMode":"ace/mode/markdown","editorHide":true,"fontSize":9,"results":{},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"HTML","data":"<div class=\"markdown-body\">\n<h2>Start streaming Computions</h2>\n<p>As you can see, streamingCounts is a streaming DataSet (streamingCounts.isStreaming was true). You can start streaming computation, by defining the sink and starting it. In our case, we want to interactively query the counts ( so we will set the complete set to be a in a in-memory table (note that this for testing purpose only)</p>\n</div>"}]},"apps":[],"jobName":"paragraph_1548209196325_2023079481","id":"20180310-233015_1064163149","dateCreated":"2019-01-22T21:06:36-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:16884"},{"text":"import org.apache.spark.sql.streaming._\n\n// Write the stream to a memory table, set delay between proccesing of each file to 5 seconds \n\n\n//val query =  \n  // memory = store in-memory table (for testing only)  \n  // countTable2 = name of the in-memory table\n  // complete = all the counts should be in the table\n  // Triggrer 5 seconds delay   \n","user":"anonymous","dateUpdated":"2019-01-22T21:06:36-0500","config":{"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"editorHide":false,"results":{},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TEXT","data":"import org.apache.spark.sql.streaming._\nquery1: org.apache.spark.sql.streaming.StreamingQuery = org.apache.spark.sql.execution.streaming.StreamingQueryWrapper@301f7933\n"}]},"apps":[],"jobName":"paragraph_1548209196326_1319688324","id":"20180310-232850_120441597","dateCreated":"2019-01-22T21:06:36-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:16885"},{"text":"%md\n\n## See Streaming in action\n\nquery is a handle to the streaming,This query is continuously picking up files and updating the counts.\nWe set a trigger of 5 seconds, so you can run the next pargraph several times to see the progress\n\n","user":"anonymous","dateUpdated":"2019-01-22T21:06:36-0500","config":{"tableHide":false,"editorSetting":{"language":"markdown","editOnDblClick":true,"completionSupport":false},"colWidth":12,"editorMode":"ace/mode/markdown","editorHide":true,"fontSize":9,"results":[{"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}}}],"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"HTML","data":"<div class=\"markdown-body\">\n<h2>See Streaming in action</h2>\n<p>query is a handle to the streaming,This query is continuously picking up files and updating the counts.<br/>We set a trigger of 5 seconds, so you can run the next pargraph several times to see the progress</p>\n</div>"}]},"apps":[],"jobName":"paragraph_1548209196329_1118287733","id":"20160822-165125_1131574017","dateCreated":"2019-01-22T21:06:36-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:16886"},{"title":"Counts per word","text":"%sql\n/* select all from your memory table, refresh several time to see the progress*/\n","user":"anonymous","dateUpdated":"2019-01-22T21:06:36-0500","config":{"editorSetting":{"language":"sql","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/sql","fontSize":9,"title":true,"results":{"0":{"graph":{"mode":"table","height":300,"optionOpen":false,"setting":{"table":{"tableGridState":{},"tableColumnTypeState":{"names":{"value":"string","count(1)":"string"},"updated":false},"tableOptionSpecHash":"[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]","tableOptionValue":{"useFilter":false,"showPagination":false,"showAggregationFooter":false},"updated":false,"initialized":false},"multiBarChart":{"rotate":{"degree":"-45"},"xLabelStatus":"default"}},"commonSetting":{},"keys":[{"name":"value","index":0,"aggr":"sum"}],"groups":[],"values":[{"name":"count(1)","index":1,"aggr":"sum"}]},"helium":{}}},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"results":{"code":"SUCCESS","msg":[{"type":"TABLE","data":"value\tcount(1)\no,\t62\nluccicos,\t1\nfalse:\t2\nplace\t14\ntoo;\t3\nhappy\t2\nlawful\t1\npassion!--\t1\nwheresoever\t1\nnose\t4\nheart?\t1\ntorments\t1\nstaying\t1\ngrief--\t1\nspeak\t37\nseeming\t4\ntest\t1\nkneel:\t1\nsafely\t1\nlascivious\t1\nelection:\t1\nleast,\t1\nliberty,\t1\ncanst:\t1\nfire\t3\nottomites.\t1\nencave\t1\nlost;\t1\nlife!\t1\nbesides,\t3\nkilling\t1\nfellows\t2\nworth.\t1\nmesses:\t1\nlive:\t1\nlearn\t2\ndaughter!\t2\npottle-deep;\t1\nblood.\t1\nbest,\t1\nup\t25\nsuborn'd\t1\nventure\t1\nhonesty?\t1\nlieutenant\t6\nam,\t4\nnobody;\t1\ndiscords\t1\nperjury;\t1\ndrinking:\t1\nretires.\t1\npeer,\t1\nsing\t8\nhands\t1\nsooth,\t1\n[going]\t1\nbrains.\t1\nreceived\t4\nthee;\t3\nnothing.\t1\nslain,\t1\npalate\t1\naboard:\t1\nthieves?--\t1\ntonight,\t1\ntrumpet\t4\none.\t4\nhands,\t3\nhas.\t1\npromulgate--i\t1\nbeauties;\t1\nstrumpet,\t2\nfury\t2\n'twas,\t1\ncivil\t2\nhowling\t1\nsea\t2\nnot\t278\nhate.\t1\nman's\t4\nvenice,\t5\nhere.\t5\nnecessaries\t1\nchose\t2\nrain'd\t1\nwin\t4\nmeat\t1\npersuaded\t2\nvomit,\t1\nsay!\t2\nconsequence\t1\ndoubt;\t1\nbrawl:\t1\ncity,\t2\ndote\t1\nquiet,\t1\nprated,\t1\nstranger\t2\nwatch;\t1\nstones;\t1\ngive\t40\ndistinctly;\t1\nheard\t13\nprayer,\t1\nturn\t6\nruffians,\t1\nnever.\t1\ntrue:\t1\nsafety!\t1\nsacred\t1\nensteep'd\t1\ncoming.\t2\nchaste,\t1\nmelt\t1\nneither\t4\nmuch--\t1\nyawn\t1\nthen,\t9\ndead;\t1\nthat!\t1\ndiest.\t1\ntrust:\t1\nhusband;\t1\nharlotry,\t1\nspirit;\t1\nneither,\t1\nrefrain\t1\nlooks,\t1\ntraverse!\t1\nlies:\t1\nlook\t29\n[striking\t1\nsup\t2\ncommencement,\t1\nunjustly.\t1\ni;\t2\nanswer\t7\nodious,\t1\nhast\t19\neducation;\t1\nout\t42\ndane,\t1\nshrewd\t1\nheathen,\t1\nsir,--o\t1\nstory.\t2\nwalked\t1\nresolution.\t1\ndivorce\t1\nguess?\t1\npass'd,\t1\nwrong.\t2\nallowance,\t1\near\t3\nface.\t2\nmortal\t5\nparley\t1\nlikes\t1\nprofess\t2\ndaughter?\t1\nact\t13\nhear\t19\nship\t3\nguardage\t1\neyes\t7\nhall\t1\nsummons?\t1\nparadoxes\t1\nmoor,--\t1\nface?\t1\nhereabout:\t1\nnews\t2\nidleness,\t1\nsomething\t7\ndespite;\t1\nstubborn\t1\nfire,\t2\nhours\t2\nsmell't:\t1\nnever,\t3\nsea-port\t1\nflorentine,\t1\ndisproportion'd;\t1\nwaked\t2\nsail\t1\nsurfeited\t1\ncords,\t1\nenjoy\t2\niago:\t5\nlivest\t1\ncry?\t1\nbelike\t1\nmany\t14\nlonger\t1\niago]\t1\ncastle:\t1\nbaboon.\t1\nknow'st\t2\noath;\t1\nscene\t15\nsuit:\t4\nextremity.\t1\nconduct\t3\napt,\t1\nsupport\t1\nalas,\t16\noccasion\t3\nquicken\t1\nthan\t48\nhaving\t4\namongst\t1\nmerits\t1\nreport:\t1\npure,\t1\nyou?\t16\nto,\t3\nold\t8\nvexation\t1\nhere!\t2\nchair\t1\nfavour.\t1\nquarrel\t1\njoint-ring,\t1\nfatal\t1\nfoams\t1\ngenerous\t1\nunpin\t2\nleast\t3\ndie,\t3\nreason--\t1\neffect,\t1\npitiful:\t1\nsweats\t1\nstirs:\t1\nallowance;\t1\nbark\t2\nunlike\t1\nfalse\t9\nexcellent\t5\nstate-affairs\t1\npray'd\t1\nhoney,\t1\nfurther.\t1\nliving\t2\nbravery,\t1\nwelcome:\t1\ndesire.\t1\no!\t6\nextreme;\t1\nmoon,\t1\nexpectation\t1\ntime\t12\nthence!\t1\nwrite\t4\nfall\t9\nnow\t40\nfellow\t5\ntragic\t1\nbliss\t1\niv.\t1\nbruised\t1\nevades\t1\nuncleanly\t1\nseaside,\t1\nborne\t1\nwife's?\t1\nhalts:\t1\ncommission\t3\nfertile\t1\nearnestness,\t1\nsea?\t1\ndeath,\t1\ndear:\t1\nrequired\t1\ndealings.\t1\nthere,\t4\ntedious\t2\ncircumstance\t2\n'sblood,\t1\nuses\t1\nshoulders.\t1\na\t441\nsoul,--\t1\nlaughter.\t1\nrepute\t1\ntoads\t1\npray;\t1\narabian\t1\nwits\t2\ndegree:\t1\nfitchew!\t1\nothello!\t4\nfiends\t1\nbreath\t1\nus!\t2\nspeculative\t1\nfavour\t4\njove.\t1\nflock\t1\nsailor\t3\nfortunes\t9\nunused\t1\ncompasses,\t1\ncontent\t8\nmaking\t4\nassays\t1\nthat.\t6\nin!\t2\ncannot,\t2\nhorrible\t3\nlately;\t1\nvice\t1\noffices\t1\nhousewives\t1\npromised.\t1\nsmallest\t1\nfaintly?\t1\nours,\t1\nperfection\t1\ngain,\t1\nsword,\t2\ndetermine,\t1\ncircumscription\t1\nlegs\t1\nhurt.\t1\nexception;\t1\nbrimful\t1\nmaster's\t1\nguard:--first,\t1\n'cursed\t1\nfeasting\t1\nthence:\t1\nsong.\t1\nconfess.--i\t1\npass\t1\nwholesome\t2\nno,\t24\nshows\t4\nnight.\t3\nwind-shaked\t1\noft,\t2\nfurnish\t1\nbrabantio,\t6\ndid\t60\nperson\t1\nloving\t2\nknow;\t2\nwithin:\t1\ninfirmity,\t2\narticle\t2\nwars;\t1\nwas\t68\ndishes,\t1\nimport,\t1\nglorious\t2\nsorrow\t1\nspartan\t1\nunforced\t1\nwisdom,\t1\ntoo:\t2\nsupplied\t1\nintent.\t1\neye?\t1\nthree\t7\nconversation\t1\nperhaps\t2\nsings\t1\nensnare\t1\ncredit.\t1\ndespise\t2\nindeed!\t6\nopposite\t2\ncommon\t3\nduke:\t1\nuse.\t1\nsenators,\t2\nbuys\t1\nengines,\t1\ncompulsive\t1\nmoving\t1\nteach\t6\nancient,\t4\nhandkerchief.\t3\nblack.\t1\nmake\t51\nenough\t4\ncups,\t1\nlist,\t1\nclog\t1\nforked\t1\nwit:\t2\nspeed\t1\nfame\t1\ntempts,\t1\ncaitiff!\t2\nattendant\t1\nshirt.\t1\nused.\t1\ndew\t1\nperil.\t1\nfustian\t1\nlieutenantry,\t1\nto't:\t2\nfour\t1\nharm\t1\nforth.\t2\ngrace.\t1\nimportune\t2\ndelay'd.\t1\nsake!\t1\n'a\t3\nfriends;\t2\nocular\t1\nguesses\t1\nrecovered?\t1\nsoon\t1\nkissed!\t1\nhear,\t4\nrelish\t1\ncontrol\t1\ndrunkard!\t1\nbetray'd\t1\nvillain.\t2\ndebitor\t1\nfortune.\t3\nwoman;\t1\npain\t1\nfame;\t1\nknives,\t1\nstrife.\t1\nmove\t3\nowe\t2\nasleep.\t1\ngone!\t2\nemperor's\t1\nyet.\t2\nyours\t2\nstops\t3\nofficer.\t1\nimminent\t1\ntown!--ho!\t1\nfaints!\t1\nreconciliation\t1\nsign\t1\npardon.\t1\nidle\t2\ngrief,\t1\naches\t1\ngender\t2\ntears:\t1\nshortly\t2\narrived:\t1\nwarrior\t1\nmen--\t1\nclouds;\t1\nvoice,\t1\nwillow:\t3\ntasks:\t1\nhaste,\t1\nourselves\t6\nbreak\t2\nsoldier,\t1\nno.\t2\nquench\t2\ndamn\t5\nknave\t6\nstillness\t1\nbearded\t1\naffright\t1\nno:\t1\nweep;\t2\nlife,\t3\nchoice.\t1\nhe's\t18\nis.\t3\nmoving?\t1\nfain\t2\niago\t299\ngavest\t1\nblame.\t2\ncommonly\t1\nchoice:\t1\ncherubin,--\t1\nlight:\t1\nobedient.\t2\nright.\t3\nabsence\t1\nho!--are\t1\nportance\t1\nhand\t6\npartly\t2\ndeliver'd.\t1\nemilia,--\t1\nbeat\t4\ndisloyal\t1\nwherefore?\t2\nclown\t17\npurest\t1\nbenefit\t1\npress'd:\t1\nreach\t1\nletter,\t2\nabout,\t1\nhell!\t3\nplenteous\t1\nlieutenant!\t1\ncritical.\t1\ninordinate\t1\njealousy!\t2\nbe\t208\nmembers\t1\nmisuse?\t1\nmarry.\t1\ninhuman\t1\na-bed,\t1\nbrain?\t1\nright\t2\nbeshrew\t3\nnotice,\t1\nbeauty,\t2\ncharms\t1\nsure.\t1\nmend!\t1\nwise;\t1\nslight,\t1\nquarries,\t1\nsupper!\t1\ncircumstances,\t1\njoy!\t1\nproduced--as,\t1\nopportunity.\t1\nconspire\t1\ngo\t52\nfoot,\t1\nto\t572\nguard,\t1\nfairness\t1\ndevoted\t1\nmanners\t2\npassion\t5\nheels,\t1\ndelicate\t6\nwithout,\t1\nalong\t2\nbegot\t1\nancient\t1\nis't\t16\nblush'd\t1\ndiscarded\t1\nface:\t1\nescape\t1\nproceed\t3\nvice!\t1\nbelief\t1\nthem;\t1\ndead?\t4\nsteps\t1\nrepent.\t1\nsorrow.\t1\nbrothers\t1\nthigh,\t1\nensue;\t1\nsteed,\t1\nembay'd,\t1\ndrops\t1\nmaidens'\t1\nunprovide\t1\nsteep-down\t1\npresence.\t1\ndream:\t1\ncozening\t1\nlust?\t1\nbesort\t1\nsuitors\t1\nwicked\t1\nmutter\t1\npotting:\t1\nfashion\t1\n--handkerchief--confessions--handkerchief!--to\t1\nrevels:\t1\nhold\t15\nhear?\t1\nto.\t4\nconjuration\t1\nmockery\t1\nho?\t1\ndone!\t1\nnourishing\t1\nv\t1\ndireful.\t1\nsatisfying\t1\nso?\t4\ntraduced\t1\n'i\t1\ntime,\t11\napt\t3\nsight\t1\npain:\t2\ngroan\t1\nconjured\t2\nmass\t2\nunlucky\t1\nparts\t3\nsaved\t1\nexecute\t1\ngovernment.\t2\nleg,\t1\nlast\t2\ndwell,\t1\nflowing\t1\nattends\t1\nodds;\t1\nsafe.\t1\nmoment\t2\nmerit\t1\ntransported,\t1\nknavery--how,\t1\nbound,\t2\nitself?\t1\nspinster;\t1\nour\t51\ncapable\t1\nspent;\t1\nstore\t1\nconfess'd\t3\nnobility\t1\njove's\t1\nbirth,\t1\nsequester\t1\nsuspected,\t1\nremoving\t2\ndark.\t1\nenglish.\t1\nknows?\t1\nill-starr'd\t1\nus.\t4\nchuck,\t1\nstick\t1\noffence.\t1\nunderstand\t3\nwelcome\t1\ndistance,\t1\ndispose\t1\ngives\t6\nfolly,\t1\nre-enter\t15\nthing,\t1\nbusiness,\t1\ngate\t1\nnegligence.\t1\nanswerable\t1\nlordship,\t1\ngape\t1\ndyed\t1\nsubstitute\t1\nvillain\t4\nmurder'd\t1\nworthy\t11\nhum!\t1\nforth\t2\nadvised;\t1\ndeed--\t1\nflood-gate\t1\nstomachs,\t1\ndiscreet\t1\ncaptain's\t1\ngo?\t2\ncalms,\t1\ndash'd\t1\njudgment\t4\niago?\t7\nhusband,\t3\nweb\t2\nlodovico?\t2\ncassio?\t6\ntogether,\t2\nmighty\t2\npoor.\t1\nsecure\t2\noutlive\t1\nways\t1\nprison,\t1\nloathe\t1\ntooth,\t1\nspite:\t1\nhotly\t1\nkill'd\t6\npoverty\t1\nexecution\t1\npractise\t2\niii\t1\nrest;\t1\nsay?\t2\nemilia,.\t1\nmurderer,\t1\nshake\t6\nmad.\t2\nroots\t1\nimpediment\t1\nspoken\t1\nbereft\t1\nunvarnish'd\t1\nsyrups\t1\ncassio:\t4\nfather's\t4\nmistress?\t1\ndoor.\t1\nutter\t1\nfind\t20\nproud\t1\noffenceless\t1\nown\t27\nworld,\t6\ntook\t3\nassails\t1\ninjury,\t1\nproclaimed.\t1\ndeath\t6\nrot,\t1\nsaved,\t1\nchoke\t1\nslain\t3\nindirect\t1\nvapour\t1\nthat?\t8\nenforce\t2\nunquietness.\t1\ngone,\t2\nquality,\t1\nmuch:\t1\nrevenge\t5\nlook'st\t1\n[aside\t2\nvalour,\t1\nwithin?\t1\nofficer.'\t1\nwise,\t3\nmasters!--here's\t1\nfrailty,\t1\nforges\t1\npaddle\t1\ndid.\t5\nfelt\t2\ndevil!--\t1\nunbitted\t1\ngrave\t3\nhaunts\t1\nvery\t44\nat.\t1\nfit,\t2\nforbid!\t2\nofficers,\t1\nbrabantio!\t2\nturks\t1\nimport?\t1\ndeath?\t1\nhuman\t1\nlord,\t23\nfate.\t1\nforced\t2\nequinox,\t1\nbrow\t2\nperish,\t1\nloud\t1\ntyranny,\t1\nvirtuously,\t1\nbegin\t2\nthrice-driven\t1\nheavenly\t6\npoint:\t1\nheaven,\t17\neclipse\t1\ndie.\t6\nin't\t1\nclose\t4\nlike?\t1\nand,\t22\nstream.\t1\nforeign\t1\nbroil\t1\nfree\t12\nstreams,\t1\ncovered\t1\ngum.\t1\nangry?\t4\naway;\t1\nrage\t2\ntilting\t1\nhome:\t1\nangry.\t2\npossible,\t1\nlabour;--first,\t1\ndo't;\t2\ndance,\t1\ntitle\t1\npleasure,\t3\nstreets;\t1\naddition,\t1\nbase;\t1\nwarranty\t1\nform\t1\nsentences,\t1\nmen\t18\ndesdemona?\t3\ngroom\t1\nmoraler:\t1\ndraw\t8\nbehind,\t4\nshall.\t1\ngravity\t1\nprayer\t1\nabused,\t2\nwhile,\t1\nask?\t1\nmark,\t1\nvillany!--\t1\nnature's\t1\nlieutenant?\t3\nwronger;\t1\ndiest!\t1\nsoul.\t1\nsir?\t3\ncustody.\t1\ngrandsire\t1\nhungerly,\t1\ncourtesy:\t1\nleg\t2\nforget:\t1\ninterim\t2\ntoo--\t1\ncopied:\t1\ndispleasure.\t1\ncompassing\t2\nnothing\t16\nso;\t4\nduty:\t1\nottoman.\t1\ncitizens\t1\npermission\t1\nassay.\t1\ndeny,\t1\nbeloved,\t1\nope\t1\nfilth,\t1\ninvention\t1\nweight\t1\nfear--how\t1\nvast\t1\npoisons\t1\nworld?\t2\nguilty-like,\t1\nviolent\t3\nlieutenant;\t5\ncuckold\t4\nclean\t1\nweeping?\t1\nthink'st\t2\nbegg'd\t1\ntold'st\t2\nuttermost.\t1\nbig\t1\nnot:\t1\nbanner,\t1\nhis,\t1\nanother,\t1\nwhore:\t1\nhe:--o\t1\nhither.\t4\nmorning\t2\ncrusadoes:\t1\npunishment\t1\nsycamore\t1\nmurder?\t1\nopinion,\t1\nplay\t7\nmood,\t2\ndangerous\t2\nenwheel\t1\npranks\t2\nsleeve\t1\njourney's\t1\nburst,\t1\naffrighted\t1\ndevil!\t4\nprompt\t1\nsibyl,\t1\nconfused:\t1\newe.\t1\nblind,\t1\nfouler.\t1\nimposition:\t1\nbeguile\t3\nloser.\t1\ndies\t4\nsorrow's\t1\nproof:\t1\ntelling\t1\nsour,\t1\npestilent\t1\nminds\t2\nmoor,\t10\namiss\t1\nuncapable\t1\ngentlemen.\t3\ntrue\t7\nbedchamber\t1\npreserve\t1\nfancy's\t1\ngesture\t1\nremorse;\t1\npride\t2\nmoved\t2\nsweetest\t1\namorous\t1\nrose,\t1\npresently;\t1\nminx!\t1\nfor't.\t4\nfight,\t1\nnight-brawler?\t1\nintermingle\t1\nmaiden\t1\nglad\t9\ndone\t12\nerrs\t1\nowedst\t1\npierce?\t1\ndistinguish\t1\nfriend;\t1\nwere\t31\ncriedst\t1\nnothing?\t1\nsorry\t7\nitself\t3\ntoad,\t1\nkeep\t16\nmotive\t1\ntears,\t3\nsooner,\t1\ndilate,\t1\ndissemble!--\t1\nknees.\t1\ndoubt\t4\nhell-pains.\t1\nroderigo?\t2\nfarewell.\t3\nmass,\t1\ndownright\t1\nalready,\t2\nspeed.\t1\ncharm\t2\nspirits,\t1\npropontic\t1\namen,\t1\nwhat?\t5\nbed;\t2\nnapkin,\t1\nbe:\t2\nstartingly\t1\nat\t67\nsir;\t2\ncharmer,\t1\nsuspects,\t1\nsoon.\t1\npattern\t1\nfortune's\t1\nscore\t3\noffice:\t2\nalone.\t2\nthoughts.\t4\nsignior;\t2\nwhore\t1\naloud.\t1\nsmote\t1\nthis--desdemona\t1\ncreature:\t1\npurpose;\t1\nstreet.\t4\npassing\t1\npost-post-haste\t1\nwill--'\t1\nprotest\t1\nhire,\t1\nmurders\t2\nprocess;\t1\nsequent\t1\nslander\t1\nwear\t4\nwell,\t18\ni.\t7\nassure\t2\nplumed\t1\nside,\t3\ndo:\t1\nremain,\t1\ngave\t17\nbusy\t3\nmotions,\t1\nnight-gown?\t1\nmad?\t1\n"},{"type":"HTML","data":"<div class=\"result-alert alert-warning\" role=\"alert\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button><strong>Output is truncated</strong> to 1000 rows. Learn more about <strong>zeppelin.spark.maxResult</strong></div>"}]},"apps":[],"jobName":"paragraph_1548209196329_-1788951511","id":"20160823-111517_1662906000","dateCreated":"2019-01-22T21:06:36-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:16887"},{"text":"","user":"anonymous","dateUpdated":"2019-01-22T21:06:36-0500","config":{"editorSetting":{"language":"scala","editOnDblClick":false,"completionKey":"TAB","completionSupport":true},"colWidth":12,"editorMode":"ace/mode/scala","fontSize":9,"results":{},"graph":{"mode":"table","height":300,"optionOpen":false,"keys":[],"values":[],"groups":[],"scatter":{}},"enabled":true},"settings":{"params":{},"forms":{}},"apps":[],"jobName":"paragraph_1548209196331_1052535648","id":"20160825-005916_631693256","dateCreated":"2019-01-22T21:06:36-0500","status":"READY","errorMessage":"","progressUpdateIntervalMs":500,"$$hashKey":"object:16888"}],"name":"Lab 10.1 Exercise - Structured Streaming","id":"2E2NDAV5R","noteParams":{},"noteForms":{},"angularObjects":{"md:shared_process":[],"spark:shared_process":[]},"config":{"isZeppelinNotebookCronEnable":false,"looknfeel":"default","personalizedMode":"false"},"info":{}}
+﻿{
+  "paragraphs": [
+    {
+      "text": "%md\n\n## Initialize the stream\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-05-01T14:11:46+0300",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": { },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Initialize the stream</h2>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1556709106541_1051603686",
+      "id": "20180310-232008_2084436888",
+      "dateCreated": "2019-05-01T14:11:46+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "focus": true,
+      "$$hashKey": "object:4692"
+    },
+    {
+      "text": "%spark\n\nimport org.apache.spark.sql.types._\n\n\nval inputPath = \"path of the files\"\n\n//val streamingInput = read stream, 1 file at a time\n\n//val streamingCounts = trasform stream to have count per each word\n    \nval isSteraming = streamingCounts.isStreaming   // check if your DataSet is streaming dataset \n\n   ",
+      "user": "anonymous",
+      "dateUpdated": "2019-05-01T14:11:46+0300",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "title": false,
+        "results": { },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556709106543_644894717",
+      "id": "20180310-232058_1854265386",
+      "dateCreated": "2019-05-01T14:11:46+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:4693"
+    },
+    {
+      "text": "%md\n\n## Start streaming Computions\n\nAs you can see, streamingCounts is a streaming DataSet (streamingCounts.isStreaming was true). You can start streaming computation, by defining the sink and starting it. In our case, we want to interactively query the counts ( so we will set the complete set to be a in a in-memory table (note that this for testing purpose only)\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-05-01T14:11:46+0300",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": { },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Start streaming Computions</h2>\n<p>As you can see, streamingCounts is a streaming DataSet (streamingCounts.isStreaming was true). You can start streaming computation, by defining the sink and starting it. In our case, we want to interactively query the counts ( so we will set the complete set to be a in a in-memory table (note that this for testing purpose only)</p>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1556709106544_1405568623",
+      "id": "20180310-233015_1064163149",
+      "dateCreated": "2019-05-01T14:11:46+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:4694"
+    },
+    {
+      "text": "import org.apache.spark.sql.streaming._\n\n// Write the stream to a memory table, set delay between proccesing of each file to 5 seconds \n\n\n//val query =  \n  // memory = store in-memory table (for testing only)  \n  // countTable = name of the in-memory table\n  // complete = all the counts should be in the table\n  // Triggrer 5 seconds delay   \n",
+      "user": "anonymous",
+      "dateUpdated": "2019-05-01T14:12:41+0300",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": { },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556709106544_2827252",
+      "id": "20180310-232850_120441597",
+      "dateCreated": "2019-05-01T14:11:46+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:4695"
+    },
+    {
+      "text": "%md\n\n## See Streaming in action\n\nquery is a handle to the streaming,This query is continuously picking up files and updating the counts.\nWe set a trigger of 5 seconds, so you can run the next pargraph several times to see the progress\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-05-01T14:11:46+0300",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": [
+          {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "keys": [],
+              "values": [],
+              "groups": [],
+              "scatter": { }
+            }
+          }
+        ],
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>See Streaming in action</h2>\n<p>query is a handle to the streaming,This query is continuously picking up files and updating the counts.<br/>We set a trigger of 5 seconds, so you can run the next pargraph several times to see the progress</p>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1556709106544_-719812973",
+      "id": "20160822-165125_1131574017",
+      "dateCreated": "2019-05-01T14:11:46+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:4696"
+    },
+    {
+      "title": "Counts per word",
+      "text": "%sql\n/* select all from your memory table, refresh several time to see the progress*/\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-05-01T14:11:46+0300",
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "title": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": { },
+                  "tableColumnTypeState": {
+                    "names": {
+                      "value": "string",
+                      "count(1)": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": { },
+              "keys": [
+                {
+                  "name": "value",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "count(1)",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": { }
+          }
+        },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": { }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556709106545_-525680688",
+      "id": "20160823-111517_1662906000",
+      "dateCreated": "2019-05-01T14:11:46+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:4697"
+    },
+    {
+      "text": "",
+      "user": "anonymous",
+      "dateUpdated": "2019-05-01T14:11:46+0300",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": { },
+        "graph": {
+          "mode": "table",
+          "height": 300,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": { }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": { },
+        "forms": { }
+      },
+      "apps": [],
+      "jobName": "paragraph_1556709106545_1753138746",
+      "id": "20160825-005916_631693256",
+      "dateCreated": "2019-05-01T14:11:46+0300",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:4698"
+    }
+  ],
+  "name": "Lab 10.1 Exercise - Structured Streaming",
+  "id": "2EAMMUFWS",
+  "noteParams": { },
+  "noteForms": { },
+  "angularObjects": {
+    "md:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": { }
+}
