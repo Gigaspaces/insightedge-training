@@ -25,7 +25,7 @@
 
     <blob-store:off-heap-blob-store id="offheapBlobstore" memory-threshold="1g"/>
 
-    <os-core:embedded-space id="space" name="insightedge-space">
+    <os-core:embedded-space id="space" name="demo">
         <os-core:blob-store-data-policy persistent="false" blob-store-handler="offheapBlobstore">
             <os-core:blob-store-cache-query class="com.gigaspaces.FlightDelayed" where="delayed = true"/>
             <os-core:blob-store-cache-query class="com.gigaspaces.DelayRec" where="year > 2007"/>
