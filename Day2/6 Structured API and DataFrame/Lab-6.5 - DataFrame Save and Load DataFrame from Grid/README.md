@@ -48,7 +48,7 @@ Add HADOOP_HOME environment variable in IntelliJ Editor
 
 Steps:
 1. Go to Run -> Edit Configuration -> Environment variables text box at right side
-2. Enter HADOOP_HOME=C:\gigaspaces-insightedge-enterprise-14.0.0-ga-b20000\tools\winutils
+2. Enter HADOOP_HOME=C:\gigaspaces-insightedge-enterprise-14.2.0-ga-b20400\tools\winutils
 3. Press Ok and rebuild the project, then run SaveLoadDataframeFromGrid.scala class.
 
 ## Problem 3:
