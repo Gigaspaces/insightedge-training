@@ -10,7 +10,7 @@
 
 1. Start InsightEdge in Demo mode:
 
-    go to gigaspaces-insightedge-enterprise-14.0.0-ga-b20000/bin
+    go to gigaspaces-insightedge-enterprise-14.2.0-ga-b20400/bin
 
     run ./insightedge demo
 
