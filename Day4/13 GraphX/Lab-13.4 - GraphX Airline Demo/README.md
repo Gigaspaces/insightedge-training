@@ -12,7 +12,7 @@
 
 3. Import to Zeppelin the following Notebook:
 
-    insightedge-training/Day4/15 GraphX/Lab-15.4 - GraphX Airline Demo/
-    Lab 15.4 Example - GraphX Airline Demo.json
+    insightedge-training/Day4/13 GraphX/Lab-13.4 - GraphX Airline Demo/
+    Lab 13.4 Example - GraphX Airline Demo.json
 
 4. Follow the instructions inside the Notebook paragraphs.
