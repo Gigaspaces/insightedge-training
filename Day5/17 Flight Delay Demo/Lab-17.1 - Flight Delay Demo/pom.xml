@@ -4,14 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.gigaspaces</groupId>
-    <artifactId>FlightDelayDemo</artifactId>
+    <artifactId>flightdelaydemo</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <gs.version>14.0.0</gs.version>
+        <gs.version>14.5.0</gs.version>
     </properties>
 
     <repositories>
@@ -25,13 +25,13 @@
         <dependency>
             <groupId>org.gigaspaces</groupId>
             <artifactId>xap-openspaces</artifactId>
-            <version>14.0.0</version>
+            <version>14.5.0</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.gigaspaces</groupId>
             <artifactId>xap-datagrid</artifactId>
-            <version>14.0.0</version>
+            <version>14.5.0</version>
         </dependency>
     </dependencies>
 </project>
