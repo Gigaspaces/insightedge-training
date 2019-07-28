@@ -1,9 +1,9 @@
 ﻿{
   "paragraphs": [
     {
-      "text": "%md\n> If you see 'Interpreter binding' above, just hit `Save` without deselecting any interpreters.\n\n## Welcome to Flight Delay prediction example.\n\n##### This example shows the following:\n\n* 1.Import dependencies - including space data class\n* 2.Read csv file containing actual flight details with delays into the space class. \n* 3.Possible to Enrich the delay records with weather data of the same date at flight origin and destination and if its holiday etc. \n* 4.Save data to the grid\n* 5.Train machine learning  algo with grid data so it will be able to predict if there will be delay(todo test + improve the model ) \n* 6.Save the model to the grid \n* 7.Load the model from the grid and predict flight delays for new data coming from kaka this will usually be done in diffrent job(possible to add  weather forecast for related date and loacationd)\n* 8.Inform the grid on predicted delays\n* 9.Grid will use delay objects to trigger logic (event container in space)\n\n##### This is a live tutorial, you can run the code yourself. _(click `Run` button in each paragraph from top to bottom)_",
+      "text": "%md\n> If you see 'Interpreter binding' above, just hit `Save` without deselecting any interpreters.\n\n## Welcome to Flight Delay prediction example.\n\n##### This example shows the following:\n\n1. Import dependencies - including space data class\n2. Read csv file containing actual flight details with delays into the space class. \n3. Possible to enrich the delay records with weather data of the same date at flight origin and destination and if it's holiday etc. \n4. Save data to the grid\n5. Train machine learning algo with grid data so it will be able to predict if there will be delay (todo test + improve the model) \n6. Save the model to the grid \n7. Load the model from the grid and predict flight delays for new data coming from kafka. This will usually be done in a different job (possible to add weather forecast for related date and location)\n8. Inform the grid on predicted delays\n9. Grid will use delay objects to trigger logic (event container in space)\n\n##### This is a live tutorial, you can run the code yourself. _(Click `Run` button in each paragraph from top to bottom)_",
       "user": "anonymous",
-      "dateUpdated": "2019-05-05T15:57:56+0300",
+      "dateUpdated": "2019-07-25T20:37:15-0400",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -13,7 +13,7 @@
         },
         "colWidth": 12,
         "editorMode": "ace/mode/markdown",
-        "editorHide": true,
+        "editorHide": false,
         "fontSize": 9,
         "results": {},
         "enabled": true
@@ -23,30 +23,22 @@
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1557060370969_-1398232397",
+      "jobName": "paragraph_1563393275462_-608090535",
       "id": "20170620-093024_406952967",
-      "dateCreated": "2019-05-05T15:46:10+0300",
+      "dateCreated": "2019-07-17T15:54:35-0400",
+      "dateStarted": "2019-07-25T19:36:04-0400",
+      "dateFinished": "2019-07-25T19:36:06-0400",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500,
       "focus": true,
-      "$$hashKey": "object:16457",
-      "dateFinished": "2019-05-05T15:57:56+0300",
-      "dateStarted": "2019-05-05T15:57:56+0300",
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "HTML",
-            "data": "<div class=\"markdown-body\">\n<blockquote>\n  <p>If you see &lsquo;Interpreter binding&rsquo; above, just hit <code>Save</code> without deselecting any interpreters.</p>\n</blockquote>\n<h2>Welcome to Flight Delay prediction example.</h2>\n<h5>This example shows the following:</h5>\n<ul>\n  <li>1.Import dependencies - including space data class</li>\n  <li>2.Read csv file containing actual flight details with delays into the space class.</li>\n  <li>3.Possible to Enrich the delay records with weather data of the same date at flight origin and destination and if its holiday etc.</li>\n  <li>4.Save data to the grid</li>\n  <li>5.Train machine learning algo with grid data so it will be able to predict if there will be delay(todo test + improve the model )</li>\n  <li>6.Save the model to the grid</li>\n  <li>7.Load the model from the grid and predict flight delays for new data coming from kaka this will usually be done in diffrent job(possible to add weather forecast for related date and loacationd)</li>\n  <li>8.Inform the grid on predicted delays</li>\n  <li>9.Grid will use delay objects to trigger logic (event container in space)</li>\n</ul>\n<h5>This is a live tutorial, you can run the code yourself. <em>(click <code>Run</code> button in each paragraph from top to bottom)</em></h5>\n</div>"
-          }
-        ]
-      }
+      "$$hashKey": "object:172",
+      "errorMessage": ""
     },
     {
       "title": "Import dependencies",
-      "text": "%dep\n\nz.reset()\n// Space classes dependecies\nz.load(\"../../../../Data/FlightDelayDemo-1.0.0-SNAPSHOT.jar\")\n\n//load kafka dependencies if in use\n/*z.load(\"org.apache.spark:spark-streaming_2.10:jar:1.6.2\")\nz.load(\"org.apache.spark:spark-streaming-kafka_2.10:jar:1.6.2\")\nz.load(\"org.apache.kafka:kafka_2.10:jar:0.10.0.1\")\nz.load(\"org.apache.spark:spark-sql-kafka-0-10_2.10\")\nz.load(\"com.yammer.metrics:metrics-core:jar:2.2.0\")\nz.load(\"com.101tec:zkclient:jar:0.9\")*/",
+      "text": "%dep\n\nz.reset()\n// Space classes dependencies\nz.load(\"../../../../Data/flightdelaydemo-1.0.0-SNAPSHOT.jar\")\n\n//load kafka dependencies if in use\n// for writing to kafka\nz.load(\"org.apache.kafka:kafka_2.11:jar:2.3.0\")\n// for reading from kafka\nz.load(\"org.apache.spark:spark-streaming-kafka-0-10_2.11:jar:2.4.0\")\n",
       "user": "anonymous",
-      "dateUpdated": "2019-05-05T15:46:54+0300",
+      "dateUpdated": "2019-07-25T20:37:15-0400",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -59,27 +51,29 @@
         "fontSize": 9,
         "title": true,
         "results": {},
-        "enabled": true
+        "enabled": true,
+        "editorHide": false
       },
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1557060370970_1467425882",
+      "jobName": "paragraph_1563393275472_190411299",
       "id": "20180103-104153_1795376572",
-      "dateCreated": "2019-05-05T15:46:10+0300",
-      "dateStarted": "2019-05-05T15:46:54+0300",
-      "dateFinished": "2019-05-05T15:47:21+0300",
+      "dateCreated": "2019-07-17T15:54:35-0400",
+      "dateStarted": "2019-07-25T20:30:09-0400",
+      "dateFinished": "2019-07-25T20:30:19-0400",
       "status": "FINISHED",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500,
-      "$$hashKey": "object:16458"
+      "$$hashKey": "object:173",
+      "errorMessage": ""
     },
     {
-      "text": "%spark\n//run only when not using demo space -> different space name can be changed here\nimport org.insightedge.spark.implicits.all._\n    import org.insightedge.spark.context.InsightEdgeConfig\n    \n    //spaceName is required, other two parameters are optional\n    val ieConfig = new InsightEdgeConfig(spaceName = \"insightedge-space\", lookupGroups = None, lookupLocators = None)\n    \n    //sc is the spark context initalized by zeppelin\n    sc.initializeInsightEdgeContext(ieConfig)\n",
+      "title": "Initialize InsightEdge Spark context",
+      "text": "%spark\n//run only when not using demo space -> different space name can be changed here\nimport org.insightedge.spark.implicits.all._\nimport org.insightedge.spark.context.InsightEdgeConfig\n    \n//spaceName is required, other two parameters are optional\nval ieConfig = new InsightEdgeConfig(spaceName = \"demo\", lookupGroups = Some(\"xap-14.5.0\"), lookupLocators = Some(\"localhost\"))\n    \n//sc is the spark context initalized by zeppelin\nsc.initializeInsightEdgeContext(ieConfig)\n",
       "user": "anonymous",
-      "dateUpdated": "2019-05-05T15:52:10+0300",
+      "dateUpdated": "2019-07-25T20:37:15-0400",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -91,26 +85,30 @@
         "editorMode": "ace/mode/scala",
         "fontSize": 9,
         "results": {},
-        "enabled": true
+        "enabled": true,
+        "title": true,
+        "editorHide": false
       },
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1557060370971_1689934937",
+      "jobName": "paragraph_1563393275474_393071489",
       "id": "20190505-143722_616681277",
-      "dateCreated": "2019-05-05T15:46:10+0300",
-      "status": "READY",
-      "errorMessage": "",
+      "dateCreated": "2019-07-17T15:54:35-0400",
+      "dateStarted": "2019-07-25T20:30:16-0400",
+      "dateFinished": "2019-07-25T20:30:29-0400",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500,
-      "$$hashKey": "object:16459"
+      "$$hashKey": "object:174",
+      "errorMessage": ""
     },
     {
-      "title": "Saving Flight delay RDD to the Grid after reading from csv",
+      "title": "Saving Flight delay RDD to the grid after reading from csv",
       "text": "%spark\n\nimport com.gigaspaces.DelayRec\nimport org.insightedge.spark.implicits.all._\n\n//Reading and filtering the data\nval data = sc.textFile(\"../../../../Data/2007.csv\").map(line => line.split(\",\")).filter(rec => rec(4).toString() != \"NA\").filter(rec => rec(0) !=\"Year\").filter(rec => rec(16).toString() == \"ORD\").filter(rec => rec(21).toString() != \"1\").map(rec => new DelayRec( rec(9).toString(),rec(0).toInt,rec(1).toInt,rec(2).toInt,rec(3).toInt,rec(5).toInt,rec(15).toInt,rec(16).toString(),rec(18).toDouble))\n//Filter header\n//filter canceled flights\n//filter origin to have less records in the example\n\n   \n//see how the data looks like    \ndata.take(5).map(x => x.toString() ).foreach(println)\n\n//save the data to the grid (routing is flight number, id is flight+date)\ndata.saveToGrid()\n    \n\n",
       "user": "anonymous",
-      "dateUpdated": "2019-05-05T15:52:10+0300",
+      "dateUpdated": "2019-07-25T20:37:15-0400",
       "config": {
         "lineNumbers": true,
         "editorSetting": {
@@ -131,35 +129,22 @@
         "params": {},
         "forms": {}
       },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://192.168.9.222:4040/jobs/job?id=0",
-            "http://192.168.9.222:4040/jobs/job?id=1"
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
       "apps": [],
-      "jobName": "paragraph_1557060370971_-1702858238",
+      "jobName": "paragraph_1563393275476_-1745122328",
       "id": "20170620-093337_2060899833",
-      "dateCreated": "2019-05-05T15:46:10+0300",
-      "dateStarted": "2019-05-05T15:52:10+0300",
-      "dateFinished": "2019-05-05T15:52:46+0300",
+      "dateCreated": "2019-07-17T15:54:35-0400",
+      "dateStarted": "2019-07-25T20:01:01-0400",
+      "dateFinished": "2019-07-25T20:01:15-0400",
       "status": "FINISHED",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500,
-      "$$hashKey": "object:16460"
+      "$$hashKey": "object:175",
+      "errorMessage": ""
     },
     {
       "title": "Loading RDD from the grid ",
       "text": "%spark\nval delayRecRdd = sc.gridRdd[DelayRec]()\nval count = delayRecRdd.count()\n",
       "user": "anonymous",
-      "dateUpdated": "2019-05-05T15:53:02+0300",
+      "dateUpdated": "2019-07-25T20:37:15-0400",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -172,40 +157,29 @@
         "fontSize": 9,
         "title": true,
         "results": {},
-        "enabled": true
+        "enabled": true,
+        "editorHide": false
       },
       "settings": {
         "params": {},
         "forms": {}
       },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://192.168.9.222:4040/jobs/job?id=2"
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
       "apps": [],
-      "jobName": "paragraph_1557060370972_1415870459",
+      "jobName": "paragraph_1563393275477_1804806921",
       "id": "20170620-093424_256644097",
-      "dateCreated": "2019-05-05T15:46:10+0300",
-      "dateStarted": "2019-05-05T15:53:02+0300",
-      "dateFinished": "2019-05-05T15:53:09+0300",
+      "dateCreated": "2019-07-17T15:54:35-0400",
+      "dateStarted": "2019-07-25T20:01:35-0400",
+      "dateFinished": "2019-07-25T20:01:40-0400",
       "status": "FINISHED",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500,
-      "$$hashKey": "object:16461"
+      "$$hashKey": "object:176",
+      "errorMessage": ""
     },
     {
       "title": "Loading from the grid as DataFrame and register as view - in order to use sql in later paragraphs",
       "text": "%spark\nval df = spark.read.grid[DelayRec]\ndf.printSchema()\n\n\ndf.createOrReplaceTempView(\"DelayRecView\") // for sark sql needed only for data that is not in space.\n\nval notDelayed = df.filter(df(\"depDelay\") < 15).count() //example for filter\n",
       "user": "anonymous",
-      "dateUpdated": "2019-05-05T15:53:12+0300",
+      "dateUpdated": "2019-07-25T20:37:15-0400",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -226,34 +200,22 @@
         "params": {},
         "forms": {}
       },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://192.168.9.222:4040/jobs/job?id=3"
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
       "apps": [],
-      "jobName": "paragraph_1557060370972_793961737",
+      "jobName": "paragraph_1563393275477_-658998663",
       "id": "20170620-093540_604441252",
-      "dateCreated": "2019-05-05T15:46:10+0300",
-      "dateStarted": "2019-05-05T15:53:12+0300",
-      "dateFinished": "2019-05-05T15:53:21+0300",
+      "dateCreated": "2019-07-17T15:54:35-0400",
+      "dateStarted": "2019-07-25T20:01:44-0400",
+      "dateFinished": "2019-07-25T20:01:54-0400",
       "status": "FINISHED",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500,
-      "$$hashKey": "object:16462"
+      "$$hashKey": "object:177",
+      "errorMessage": ""
     },
     {
-      "title": "Query Grid Data - Delays per day of the week",
+      "title": "Query grid data - Delays per day of the week",
       "text": "%insightedge_jdbc\n\n\nselect dayOfWeek, case when depDelay > 15 then 'delayed' else 'ok' end , count(1)\nfrom DelayRec\ngroup by dayOfWeek , case when depDelay > 15 then 'delayed' else 'ok' end \n\n",
       "user": "anonymous",
-      "dateUpdated": "2019-05-05T15:54:04+0300",
+      "dateUpdated": "2019-07-25T20:37:15-0400",
       "config": {
         "editorSetting": {
           "language": "sql",
@@ -306,28 +268,29 @@
             "helium": {}
           }
         },
-        "enabled": true
+        "enabled": true,
+        "editorHide": false
       },
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1557060370973_-1988148048",
+      "jobName": "paragraph_1563393275478_131216345",
       "id": "20180103-085703_2003026011",
-      "dateCreated": "2019-05-05T15:46:10+0300",
-      "dateStarted": "2019-05-05T15:53:32+0300",
-      "dateFinished": "2019-05-05T15:54:04+0300",
+      "dateCreated": "2019-07-17T15:54:35-0400",
+      "dateStarted": "2019-07-25T20:01:51-0400",
+      "dateFinished": "2019-07-25T20:02:06-0400",
       "status": "FINISHED",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500,
-      "$$hashKey": "object:16463"
+      "$$hashKey": "object:178",
+      "errorMessage": ""
     },
     {
       "title": "Delay per hour",
       "text": "%insightedge_jdbc\r\n\r\nselect cast( cast(crsDepTime as int) / 100 as int),  case when depDelay > 15 then 'delayed' else 'ok' end as delay, count(1) \r\nfrom  DelayRec \r\ngroup by  cast( cast(crsDepTime as int) / 100 as int),  case when depDelay > 15 then 'delayed' else 'ok' end\r\n",
       "user": "anonymous",
-      "dateUpdated": "2019-05-05T15:54:20+0300",
+      "dateUpdated": "2019-07-25T20:37:15-0400",
       "config": {
         "editorSetting": {
           "language": "sql",
@@ -380,28 +343,29 @@
             "helium": {}
           }
         },
-        "enabled": true
+        "enabled": true,
+        "editorHide": false
       },
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1557060370973_736224263",
+      "jobName": "paragraph_1563393275478_-496755290",
       "id": "20180103-091807_546038974",
-      "dateCreated": "2019-05-05T15:46:10+0300",
-      "dateStarted": "2019-05-05T15:54:17+0300",
-      "dateFinished": "2019-05-05T15:54:20+0300",
+      "dateCreated": "2019-07-17T15:54:35-0400",
+      "dateStarted": "2019-07-25T20:02:05-0400",
+      "dateFinished": "2019-07-25T20:02:24-0400",
       "status": "FINISHED",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500,
-      "$$hashKey": "object:16464"
+      "$$hashKey": "object:179",
+      "errorMessage": ""
     },
     {
       "title": "Loading RDD with SQL",
       "text": "%spark\nval sqlRdd = sc.gridSql[DelayRec](\"depDelay > ?\", Seq(15))\nval count = sqlRdd.count()\n",
       "user": "anonymous",
-      "dateUpdated": "2019-05-05T15:54:39+0300",
+      "dateUpdated": "2019-07-25T20:37:15-0400",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -414,40 +378,29 @@
         "fontSize": 9,
         "title": true,
         "results": {},
-        "enabled": true
+        "enabled": true,
+        "editorHide": false
       },
       "settings": {
         "params": {},
         "forms": {}
       },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://192.168.9.222:4040/jobs/job?id=4"
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
       "apps": [],
-      "jobName": "paragraph_1557060370974_-1750935252",
+      "jobName": "paragraph_1563393275478_-1391156951",
       "id": "20170620-093458_2093934595",
-      "dateCreated": "2019-05-05T15:46:10+0300",
-      "dateStarted": "2019-05-05T15:54:40+0300",
-      "dateFinished": "2019-05-05T15:54:46+0300",
+      "dateCreated": "2019-07-17T15:54:35-0400",
+      "dateStarted": "2019-07-25T20:02:15-0400",
+      "dateFinished": "2019-07-25T20:02:19-0400",
       "status": "FINISHED",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500,
-      "$$hashKey": "object:16465"
+      "$$hashKey": "object:180",
+      "errorMessage": ""
     },
     {
-      "title": "Create a Machine learning model based on grid data and save the model to the grid",
-      "text": "%spark\n\nimport org.apache.spark.mllib.regression.LabeledPoint\nimport org.apache.spark.mllib.linalg.Vectors\nimport org.apache.spark.mllib.feature.StandardScaler\nimport org.apache.spark.mllib.classification.LogisticRegressionWithSGD\n\n def gen_features(rec: DelayRec): (String, Array[Double]) = {\n      val values = Array(\n        rec.getDepDelay().toDouble,\n        rec.getMonth().toDouble,\n        rec.getDayOfMonth().toDouble,\n        rec.getDayOfWeek().toDouble,\n        rec.getHour().toDouble,\n        rec.getDistance().toDouble\n      )\n      new Tuple2(rec.getId(), values)\n    }\n    \n def parseData(vals: Array[Double]): LabeledPoint = {\n        LabeledPoint(if (vals(0)>=15) 1.0 else 0.0, Vectors.dense(vals.drop(1)))\n    }\n\n// Load rdd from the grid\nval delayRecRdd = sc.gridRdd[DelayRec]()\n\n// Prepare training set\nval data_2007 = delayRecRdd.map(delayRec => gen_features(delayRec)._2)\nval parsedTrainData = data_2007.map(parseData)\nparsedTrainData.cache\nval scaler = new StandardScaler(withMean = true, withStd = true).fit(parsedTrainData.map(x => x.features))\nval scaledTrainData = parsedTrainData.map(x => LabeledPoint(x.label, scaler.transform(Vectors.dense(x.features.toArray))))\nscaledTrainData.cache\n\n\n\nscaledTrainData.take(3).map(x => (x.label, x.features)).foreach(println)\n\n\n// Build the Logistic Regression model (numIteration should be much higher for accurecy)\nval model_lr = LogisticRegressionWithSGD.train(scaledTrainData, numIterations=20)\n\n\n///ToDo test the model agianst test data, improve using other algo if required and afterward save it to the grid\n\n//Save the model to the grid\nmodel_lr.saveToGrid(sc, \"DelayModel\")\n\n",
+      "title": "Create a machine learning model based on grid data and save the model to the grid",
+      "text": "%spark\n\nimport org.apache.spark.mllib.regression.LabeledPoint\nimport org.apache.spark.mllib.linalg.Vectors\nimport org.apache.spark.mllib.feature.StandardScaler\nimport org.apache.spark.mllib.classification.LogisticRegressionWithSGD\n\n def gen_features(rec: DelayRec): (String, Array[Double]) = {\n      val values = Array(\n        rec.getDepDelay().toDouble,\n        rec.getMonth().toDouble,\n        rec.getDayOfMonth().toDouble,\n        rec.getDayOfWeek().toDouble,\n        rec.getHour().toDouble,\n        rec.getDistance().toDouble\n      )\n      new Tuple2(rec.getId(), values)\n    }\n    \n def parseData(vals: Array[Double]): LabeledPoint = {\n        LabeledPoint(if (vals(0)>=15) 1.0 else 0.0, Vectors.dense(vals.drop(1)))\n    }\n\n// Load rdd from the grid\nval delayRecRdd = sc.gridRdd[DelayRec]()\n\n// Prepare training set\nval data_2007 = delayRecRdd.map(delayRec => gen_features(delayRec)._2)\nval parsedTrainData = data_2007.map(parseData)\nparsedTrainData.cache\nval scaler = new StandardScaler(withMean = true, withStd = true).fit(parsedTrainData.map(x => x.features))\nval scaledTrainData = parsedTrainData.map(x => LabeledPoint(x.label, scaler.transform(Vectors.dense(x.features.toArray))))\nscaledTrainData.cache\n\n\n\nscaledTrainData.take(3).map(x => (x.label, x.features)).foreach(println)\n\n\n// Build the Logistic Regression model (numIteration should be much higher for accuracy)\nval model_lr = LogisticRegressionWithSGD.train(scaledTrainData, numIterations=20)\n\n\n///ToDo test the model against test data, improve using other algo if required and afterward save it to the grid\n\n//Save the model to the grid\nmodel_lr.saveToGrid(sc, \"DelayModel\")\n\n",
       "user": "anonymous",
-      "dateUpdated": "2019-05-05T15:54:53+0300",
+      "dateUpdated": "2019-07-25T20:37:15-0400",
       "config": {
         "lineNumbers": true,
         "editorSetting": {
@@ -461,63 +414,28 @@
         "fontSize": 9,
         "title": true,
         "results": {},
-        "enabled": true
+        "enabled": true,
+        "editorHide": false
       },
       "settings": {
         "params": {},
         "forms": {}
       },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://192.168.9.222:4040/jobs/job?id=5",
-            "http://192.168.9.222:4040/jobs/job?id=6",
-            "http://192.168.9.222:4040/jobs/job?id=7",
-            "http://192.168.9.222:4040/jobs/job?id=8",
-            "http://192.168.9.222:4040/jobs/job?id=9",
-            "http://192.168.9.222:4040/jobs/job?id=10",
-            "http://192.168.9.222:4040/jobs/job?id=11",
-            "http://192.168.9.222:4040/jobs/job?id=12",
-            "http://192.168.9.222:4040/jobs/job?id=13",
-            "http://192.168.9.222:4040/jobs/job?id=14",
-            "http://192.168.9.222:4040/jobs/job?id=15",
-            "http://192.168.9.222:4040/jobs/job?id=16",
-            "http://192.168.9.222:4040/jobs/job?id=17",
-            "http://192.168.9.222:4040/jobs/job?id=18",
-            "http://192.168.9.222:4040/jobs/job?id=19",
-            "http://192.168.9.222:4040/jobs/job?id=20",
-            "http://192.168.9.222:4040/jobs/job?id=21",
-            "http://192.168.9.222:4040/jobs/job?id=22",
-            "http://192.168.9.222:4040/jobs/job?id=23",
-            "http://192.168.9.222:4040/jobs/job?id=24",
-            "http://192.168.9.222:4040/jobs/job?id=25",
-            "http://192.168.9.222:4040/jobs/job?id=26",
-            "http://192.168.9.222:4040/jobs/job?id=27",
-            "http://192.168.9.222:4040/jobs/job?id=28",
-            "http://192.168.9.222:4040/jobs/job?id=29"
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
       "apps": [],
-      "jobName": "paragraph_1557060370974_-1352246953",
+      "jobName": "paragraph_1563393275479_-84937057",
       "id": "20180104-104737_795828311",
-      "dateCreated": "2019-05-05T15:46:10+0300",
-      "dateStarted": "2019-05-05T15:54:53+0300",
-      "dateFinished": "2019-05-05T15:55:03+0300",
+      "dateCreated": "2019-07-17T15:54:35-0400",
+      "dateStarted": "2019-07-25T20:02:27-0400",
+      "dateFinished": "2019-07-25T20:02:40-0400",
       "status": "FINISHED",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500,
-      "$$hashKey": "object:16466"
+      "$$hashKey": "object:181",
+      "errorMessage": ""
     },
     {
-      "text": "%md\nAt this stage we want to simulate a new data and predict if new flight is going to be delayed according to the model,We can either\nput new data in kafka and read here the data from the stream related to newFlights topic, or read a csv with the new data.\n",
+      "text": "%md\nAt this stage we want to simulate new data and predict if a new flight is going to be delayed according to the model. We can either\nput new data in kafka and read the data from the stream related to newFlights topic, or read a csv file with the new data.\n",
       "user": "anonymous",
-      "dateUpdated": "2019-05-05T15:58:04+0300",
+      "dateUpdated": "2019-07-25T20:37:15-0400",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -529,7 +447,7 @@
         "colWidth": 12,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9,
-        "editorHide": true,
+        "editorHide": false,
         "results": {},
         "enabled": true
       },
@@ -538,29 +456,21 @@
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1557060370974_-989925829",
+      "jobName": "paragraph_1563393275479_-1300382958",
       "id": "20181206-145040_381020263",
-      "dateCreated": "2019-05-05T15:46:10+0300",
+      "dateCreated": "2019-07-17T15:54:35-0400",
+      "dateStarted": "2019-07-17T17:07:01-0400",
+      "dateFinished": "2019-07-17T17:07:01-0400",
       "status": "FINISHED",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500,
-      "$$hashKey": "object:16467",
-      "dateFinished": "2019-05-05T15:58:05+0300",
-      "dateStarted": "2019-05-05T15:58:04+0300",
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "HTML",
-            "data": "<div class=\"markdown-body\">\n<p>At this stage we want to simulate a new data and predict if new flight is going to be delayed according to the model,We can either<br/>put new data in kafka and read here the data from the stream related to newFlights topic, or read a csv with the new data.</p>\n</div>"
-          }
-        ]
-      }
+      "$$hashKey": "object:182"
     },
     {
       "title": "Simulate new data reading CSV and save it to the grid",
-      "text": "%spark\nimport com.gigaspaces.DelayRec\nimport org.insightedge.spark.implicits.all._\n\n\nval data = sc.textFile(\"../../../../Data/2008.csv\").map(line => line.split(\",\")).filter(rec => rec(4).toString() != \"NA\").filter(rec => rec(0) !=\"Year\").filter(rec => rec(21).toString() != \"1\").filter(rec => rec(16).toString() == \"ORD\").filter(rec => rec(1).toString() == \"1\").filter(rec => rec(2).toString() == \"3\").map(rec => new DelayRec( rec(9).toString(),rec(0).toInt,rec(1).toInt,rec(2).toInt,rec(3).toInt,rec(5).toInt,rec(15).toInt,rec(16).toString(),rec(18).toDouble))\n   \n//see how the data looks like    \ndata.take(5).map(x => x.toString()).foreach(println)\n\n//save the data to the grid (routing is flight number, id is flight+date)\ndata.saveToGrid()",
+      "text": "%spark\nimport com.gigaspaces.DelayRec\nimport org.insightedge.spark.implicits.all._\n\nval data = sc.textFile(\"../../../../Data/2008.csv\")\n  .map(line => line.split(\",\"))\n  .filter(rec => rec(4).toString() != \"NA\")\n  .filter(rec => rec(0) !=\"Year\")\n  .filter(rec => rec(21).toString() != \"1\")\n  .filter(rec => rec(16).toString() == \"ORD\")\n  .filter(rec => rec(1).toString() == \"1\")\n  .filter(rec => rec(2).toString() == \"3\")\n  .map(rec => new DelayRec( rec(9).toString(),rec(0).toInt,rec(1).toInt,rec(2).toInt,rec(3).toInt,rec(5).toInt,rec(15).toInt,rec(16).toString(),rec(18).toDouble))\n   \n//see how the data looks like    \ndata.take(5).map(x => x.toString()).foreach(println)\n\n//save the data to the grid (routing is flight number, id is flight+date)\ndata.saveToGrid()",
       "user": "anonymous",
-      "dateUpdated": "2019-05-05T15:55:23+0300",
+      "dateUpdated": "2019-07-25T20:37:16-0400",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -573,41 +483,98 @@
         "fontSize": 9,
         "title": true,
         "results": {},
-        "enabled": true
+        "enabled": true,
+        "editorHide": false
       },
       "settings": {
         "params": {},
         "forms": {}
       },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://192.168.9.222:4040/jobs/job?id=30",
-            "http://192.168.9.222:4040/jobs/job?id=31"
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
       "apps": [],
-      "jobName": "paragraph_1557060370975_2035729178",
+      "jobName": "paragraph_1563393275480_-1556926231",
       "id": "20180108-130822_1347993732",
-      "dateCreated": "2019-05-05T15:46:10+0300",
-      "dateStarted": "2019-05-05T15:55:23+0300",
-      "dateFinished": "2019-05-05T15:55:26+0300",
+      "dateCreated": "2019-07-17T15:54:35-0400",
+      "dateStarted": "2019-07-17T16:35:19-0400",
+      "dateFinished": "2019-07-17T16:35:27-0400",
       "status": "FINISHED",
       "errorMessage": "",
       "progressUpdateIntervalMs": 500,
-      "$$hashKey": "object:16468"
+      "$$hashKey": "object:183"
+    },
+    {
+      "title": "Working with Kafka",
+      "text": "%md\n\nThe following instructions are for setting up Kafka and writing messages to the Kafka topic.\nDetailed instructions can be found at https://kafka.apache.org/quickstart\n\n1. Download Kafka\n2. Start the Kafka server\nbin/kafka-server-start.sh config/server.properties\nNote: Since InsightEdge already starts Zookeeper, there is no need to start ZK.\n3. Create a topic\nbin/kafka-topics.sh --create --zookeeper 127.0.0.1:2181 --replication-factor 1 --partitions 1 --topic flights\n4. Write messages to topic. Go to next paragraph.\n\n\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-07-25T20:37:16-0400",
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true,
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1563397723587_-1950817603",
+      "id": "20190717-170843_768878684",
+      "dateCreated": "2019-07-17T17:08:43-0400",
+      "dateStarted": "2019-07-25T19:17:06-0400",
+      "dateFinished": "2019-07-25T19:17:09-0400",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:184",
+      "errorMessage": ""
+    },
+    {
+      "text": "%spark\n\nimport java.util.Properties\nimport org.apache.kafka.clients.producer._\n\nimport scala.io.Source\n\nval props = new Properties()\nprops.put(\"bootstrap.servers\", \"localhost:9092\")\nprops.put(\"key.serializer\", \"org.apache.kafka.common.serialization.StringSerializer\")\nprops.put(\"value.serializer\", \"org.apache.kafka.common.serialization.StringSerializer\")\n\nval producer = new KafkaProducer[String, String](props)\n\ndef writeToKafka(topic: String, value: String): Unit = {\n  val record = new ProducerRecord[String, String](topic, value)\n  producer.send(record)\n}\n\n\nval bufferedSource = Source.fromFile(\"../../../../Data/2008.csv\")\nfor (line <- bufferedSource.getLines) {\n    writeToKafka(\"flights\", line)\n}\n\n//producer.close\n//bufferedSource.close\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-07-25T20:37:16-0400",
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1563895619843_-611809990",
+      "id": "20190723-112659_1457989249",
+      "dateCreated": "2019-07-23T11:26:59-0400",
+      "dateStarted": "2019-07-25T20:24:53-0400",
+      "dateFinished": "2019-07-25T20:25:18-0400",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:185",
+      "errorMessage": ""
     },
     {
       "title": "Read new data from kafka if started",
-      "text": "%spark \nimport org.apache.spark.streaming.{Seconds, StreamingContext}\nimport org.apache.spark.streaming.kafka._\nimport org.apache.spark.streaming.kafka.KafkaUtils\nimport common.DelayRec\n \nval ssc = new StreamingContext(sc, Seconds(10))\n\nssc.checkpoint(\"/tmp\")\n \nval kafkaParams = Map(\n    \"metadata.broker.list\" -> \"localhost:9092\",\n    \"auto.offset.reset\" -> \"smallest\"\n)\n \nval topics = Set(\"newFlights\")\n \nval messagesStream = KafkaUtils.createDirectStream[String, String, StringDecoder, StringDecoder](ssc, kafkaParams, topics)\n  \nval data = messagesStream.foreachRDD(rdd => rdd..map(line => line.split(\",\")).filter(rec => rec(4).toString() != \"NA\").filter(rec => rec(0) !=\"Year\").filter(rec => rec(16).toString() == \"ORD\").filter(rec => rec(21).toString() != \"1\").map(rec => new DelayRec( rec(9).toString(),rec(0).toInt,rec(1).toInt,rec(2).toInt,rec(3).toInt,rec(5).toInt,rec(15).toInt,rec(16).toString(),rec(18).toDouble))\n\ndata.saveToGrid()\n\nssc.start \n",
+      "text": "%spark \n\nimport org.apache.kafka.clients.consumer.ConsumerRecord\nimport org.apache.kafka.common.serialization.StringDeserializer\nimport org.apache.spark.streaming.kafka010._\nimport org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent\nimport org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe\nimport org.apache.spark.streaming._\nimport com.gigaspaces.DelayRec\n \nval ssc =  StreamingContext.getActiveOrCreate(() => new StreamingContext(sc, Seconds(5)))    // creating the StreamingContext with 5 seconds interval\nval kafkaParams = Map[String, Object](\n  \"bootstrap.servers\" -> \"localhost:9092\",\n  \"key.deserializer\" -> classOf[StringDeserializer],\n  \"value.deserializer\" -> classOf[StringDeserializer],\n  \"group.id\" -> \"newFlights\",\n  \"auto.offset.reset\" -> \"earliest\",\n  \"enable.auto.commit\" -> (false: java.lang.Boolean)\n)\n\nval topics = Array(\"flights\")\nval messages = KafkaUtils.createDirectStream[String, String](\n  ssc,\n  PreferConsistent,\n  Subscribe[String, String](topics, kafkaParams)\n)\n\n\nmessages.foreachRDD{ rdd =>\n  if (! rdd.isEmpty()) {\n    rdd\n      .filter( rec => \n        rec.value.toString.split(\",\")(0) != \"Year\") // header\n      .filter( rec => \n        rec.value.toString.split(\",\")(21) != \"1\") // cancelled is true\n      .filter( rec =>\n        rec.value.toString.split(\",\")(4) != \"NA\") // cancelled, DepTime is NA\n      .filter( rec =>\n        rec.value.toString.split(\",\")(16) == \"ORD\") // ORD\n      .filter( rec =>\n        rec.value.toString.split(\",\")(1) == \"1\") // month is January\n      .map{ rec =>\n        try {\n          val arr = rec.value.toString.split(\",\")\n          // FlightNum, Year, Month, Day, DayOfWeek, CRSDepTime, DepDelay, Origin, Distance\n          new DelayRec(arr(9).toString(), arr(0).toInt, arr(1).toInt, arr(2).toInt, arr(3).toInt, arr(5).toInt, arr(15).toInt, arr(16).toString(), arr(18).toDouble)\n        } catch {\n          case e: Exception => e.printStackTrace \n          System.out.println(rec.value.toString())\n        }\n      }\n    .saveToGrid()\n  }\n}\n \n\nssc.start\n\nssc.awaitTermination \n",
       "user": "anonymous",
-      "dateUpdated": "2019-05-05T15:46:10+0300",
+      "dateUpdated": "2019-07-25T20:37:16-0400",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -620,26 +587,29 @@
         "fontSize": 9,
         "title": true,
         "results": {},
-        "enabled": true
+        "enabled": true,
+        "editorHide": false
       },
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1557060370975_-1712592746",
+      "jobName": "paragraph_1563393275481_-216712122",
       "id": "20181213-132602_1351345709",
-      "dateCreated": "2019-05-05T15:46:10+0300",
-      "status": "READY",
+      "dateCreated": "2019-07-17T15:54:35-0400",
+      "dateStarted": "2019-07-25T20:32:28-0400",
+      "dateFinished": "2019-07-25T20:40:15-0400",
+      "status": "ABORT",
       "errorMessage": "",
       "progressUpdateIntervalMs": 500,
-      "$$hashKey": "object:16469"
+      "$$hashKey": "object:186"
     },
     {
       "title": "Stop streaming context",
       "text": "%spark\nssc.stop(stopSparkContext=false, stopGracefully=true)",
       "user": "anonymous",
-      "dateUpdated": "2019-05-05T15:46:10+0300",
+      "dateUpdated": "2019-07-25T20:37:16-0400",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -653,25 +623,28 @@
         "editorHide": false,
         "title": true,
         "results": {},
-        "enabled": true
+        "enabled": true,
+        "tableHide": true
       },
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1557060370976_653208719",
+      "jobName": "paragraph_1563393275482_1451897300",
       "id": "20181209-151359_1079697451",
-      "dateCreated": "2019-05-05T15:46:10+0300",
-      "status": "READY",
+      "dateCreated": "2019-07-17T15:54:35-0400",
+      "dateStarted": "2019-07-25T19:57:18-0400",
+      "dateFinished": "2019-07-25T19:57:47-0400",
+      "status": "ERROR",
       "errorMessage": "",
       "progressUpdateIntervalMs": 500,
-      "$$hashKey": "object:16470"
+      "$$hashKey": "object:187"
     },
     {
-      "text": "%md\nAt this stage we will load machine learnning model from the grid\nWe will also load the new information(in this case the 2008 data) and predict if scheduled flights are going to be delayed, In the grid itselef there is a notify container waiting for those predictions that can trigger logics in case of expected delay.",
+      "text": "%md\nAt this stage we will load machine learning model from the grid\nWe will also load the new information(in this case the 2008 data) and predict if scheduled flights are going to be delayed, In the grid itself there is a notify container waiting for those predictions that can trigger logic in case of expected delay.",
       "user": "anonymous",
-      "dateUpdated": "2019-05-05T15:58:11+0300",
+      "dateUpdated": "2019-07-25T20:37:16-0400",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -683,7 +656,7 @@
         "colWidth": 12,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9,
-        "editorHide": true,
+        "editorHide": false,
         "results": {},
         "enabled": true
       },
@@ -692,29 +665,21 @@
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1557060370976_-1749472259",
+      "jobName": "paragraph_1563393275483_-1478602654",
       "id": "20181217-115640_404323044",
-      "dateCreated": "2019-05-05T15:46:10+0300",
+      "dateCreated": "2019-07-17T15:54:35-0400",
+      "dateStarted": "2019-07-23T17:37:42-0400",
+      "dateFinished": "2019-07-23T17:37:42-0400",
       "status": "FINISHED",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500,
-      "$$hashKey": "object:16471",
-      "dateFinished": "2019-05-05T15:58:11+0300",
-      "dateStarted": "2019-05-05T15:58:11+0300",
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "HTML",
-            "data": "<div class=\"markdown-body\">\n<p>At this stage we will load machine learnning model from the grid<br/>We will also load the new information(in this case the 2008 data) and predict if scheduled flights are going to be delayed, In the grid itselef there is a notify container waiting for those predictions that can trigger logics in case of expected delay.</p>\n</div>"
-          }
-        ]
-      }
+      "$$hashKey": "object:188"
     },
     {
       "title": "Predict according to model, save prediction objects to grid",
       "text": "%spark\nimport com.gigaspaces.FlightDelayed\nimport org.insightedge.spark.implicits.all._\nimport org.apache.spark.mllib.classification.LogisticRegressionModel\n\n//load the model from the grid\nval model = sc.loadMLInstance[LogisticRegressionModel](\"DelayModel\").get\n\n//Load new data(2008) from the grid\nval newdata = sc.gridSql[DelayRec](\"year = ?\", Seq(2008))\nnewdata.count\n\n// Prepare the new data\n\ndef gen_features(rec: DelayRec): (String, Array[Double]) = {\n      val values = Array(\n        rec.getDepDelay().toDouble,\n        rec.getMonth().toDouble,\n        rec.getDayOfMonth().toDouble,\n        rec.getDayOfWeek().toDouble,\n        rec.getHour().toDouble,\n        rec.getDistance().toDouble\n      )\n      new Tuple2(rec.getId(), values)\n    }\n    \n def parseData(vals: Array[Double]): LabeledPoint = {\n        LabeledPoint(if (vals(0)>=15) 1.0 else 0.0, Vectors.dense(vals.drop(1)))\n    }\n\n\n\nval parsedNewData = newdata.map(delayRec => gen_features(delayRec)._2).map(parseData)\nparsedNewData.cache\nval scaledNewData = parsedNewData.map(x => LabeledPoint(x.label, scaler.transform(Vectors.dense(x.features.toArray))))\nscaledNewData.cache\n\n//predict\nval preds_lr = scaledNewData.map(point => model.predict(point.features)) \n  \n\npreds_lr.count()\n\n//zip together data and prediction filter only delayed predictions (prediction 1.0)\nval zipped = newdata.zip(preds_lr).filter(rec => rec._2 == 1.0)\n\n \n//Report to the grid on flight delay predictions\nval predictions = zipped.map { rec => new FlightDelayed(rec._1.getId(), true)}\npredictions.saveToGrid()\n\n",
       "user": "anonymous",
-      "dateUpdated": "2019-05-05T15:57:19+0300",
+      "dateUpdated": "2019-07-25T20:37:16-0400",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -727,41 +692,28 @@
         "fontSize": 9,
         "title": true,
         "results": {},
-        "enabled": true
+        "enabled": true,
+        "editorHide": false
       },
       "settings": {
         "params": {},
         "forms": {}
       },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://192.168.9.222:4040/jobs/job?id=32",
-            "http://192.168.9.222:4040/jobs/job?id=33",
-            "http://192.168.9.222:4040/jobs/job?id=34"
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
       "apps": [],
-      "jobName": "paragraph_1557060370977_3490856",
+      "jobName": "paragraph_1563393275484_-1846352721",
       "id": "20180103-092239_1051986871",
-      "dateCreated": "2019-05-05T15:46:10+0300",
-      "dateStarted": "2019-05-05T15:57:19+0300",
-      "dateFinished": "2019-05-05T15:57:25+0300",
+      "dateCreated": "2019-07-17T15:54:35-0400",
+      "dateStarted": "2019-07-25T20:03:28-0400",
+      "dateFinished": "2019-07-25T20:03:48-0400",
       "status": "FINISHED",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500,
-      "$$hashKey": "object:16472"
+      "$$hashKey": "object:189",
+      "errorMessage": ""
     },
     {
       "text": "%md\n## Congratulations, it's done.\n##### You can create your own notebook in 'Notebook' menu. Good luck!\n",
       "user": "anonymous",
-      "dateUpdated": "2019-05-05T15:46:10+0300",
+      "dateUpdated": "2019-07-25T20:37:16-0400",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -770,7 +722,7 @@
         },
         "colWidth": 12,
         "editorMode": "ace/mode/markdown",
-        "editorHide": true,
+        "editorHide": false,
         "fontSize": 9,
         "results": {},
         "enabled": true
@@ -780,17 +732,17 @@
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1557060370977_-631558644",
+      "jobName": "paragraph_1563393275484_41765027",
       "id": "20170620-093845_67106827",
-      "dateCreated": "2019-05-05T15:46:10+0300",
+      "dateCreated": "2019-07-17T15:54:35-0400",
       "status": "READY",
       "errorMessage": "",
       "progressUpdateIntervalMs": 500,
-      "$$hashKey": "object:16473"
+      "$$hashKey": "object:190"
     }
   ],
   "name": "Lab 17.1 Example - Flight Delay Prediction Demo",
-  "id": "2ECSRFHEF",
+  "id": "2EHH6U768",
   "noteParams": {},
   "noteForms": {},
   "angularObjects": {

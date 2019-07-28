@@ -10,6 +10,7 @@
 # maven #
 #########
 target/
+dependency-reduced-pom.xml
 
 # Intellij #
 ############
