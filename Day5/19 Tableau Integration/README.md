@@ -19,24 +19,15 @@ zeppelin will lunched on http://localhost:9090 <br />
 REST Manager API will lunched on http://localhost:8090 <br /> 
 
 ### 3. Write some data
- Go to Lab 18 Jupyter Notebook <br />
- 
-    cd insightedge-training/Day5/18 Jupyter Notebook/Lab-18 - DF Save and Load from Grid - Jupyter Notebook
+
+1. Under the extracted insightedge-sql-demo folder, build the sample with mvn clean install <br />
+        
+        mvn clean install
+
+2. Feed the demo space with data <br />
+
+        java -jar target\insightedge-sql-demo.jar --space-url "jini://*/*/demo?locators=127.0.0.1" --lookup-group <DATA_GRID_LOOKUP_GROUP>
     
- ** Add lookupLocators and lookupGroups to SpaceProxyConfigurer in RegisterSpaceDocument and WriteSpaceDocument classes   
-    
- Compile the source code <br />
- 
-    mvn clean install
-    
- Register Product SpaceDocument <br />
- 
-    cd target
-    java -cp SpaceDocumentFeeder-1.0-SNAPSHOT.jar:$IE_HOME/lib/required/*  RegisterSpaceDocument
- 
- Write 100 records of Product SpaceDocument to demo space
-    
-    java -cp SpaceDocumentFeeder-1.0-SNAPSHOT.jar:$IE_HOME/lib/required/*  WriteSpaceDocument
 
  
 ### 4. Starting Tableau
@@ -83,9 +74,12 @@ REST Manager API will lunched on http://localhost:8090 <br />
  
  ![Screenshot](../Pictures/connectToSpace.png) <br />
  
-  ### 6. Create an Histogram
+  ### 6. Create an Symbol Maps chart
  
- Create an Histogram chart using the Product CatalogNumber and price. 
+ Create a Symbol Maps chart using the Orders and the Locations data. <br />
+ 
+  ![Screenshot](../Pictures/symbolMaps.png) <br /> 
+ 
  
  
  
