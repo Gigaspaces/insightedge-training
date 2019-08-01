@@ -74,7 +74,7 @@ REST Manager API will lunched on http://localhost:8090 <br />
  
  ![Screenshot](../Pictures/connectToSpace.png) <br />
  
-  ### 6. Create an Symbol Maps chart
+  ### 6. Create a Symbol Maps chart
  
  Create a Symbol Maps chart using the Orders and the Locations data. <br />
  
