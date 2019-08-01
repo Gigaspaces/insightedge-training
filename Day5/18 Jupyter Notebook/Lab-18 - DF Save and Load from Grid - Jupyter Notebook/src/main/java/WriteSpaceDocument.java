@@ -10,22 +10,24 @@ public class WriteSpaceDocument {
 
     public static void main(String[] args) {
         GigaSpace gigaspace = new GigaSpaceConfigurer(new SpaceProxyConfigurer("demo")).gigaSpace();
-        // 1. Create the properties:
-        Map<String, Object> properties = new HashMap<String, Object>();
-        properties.put("CatalogNumber", "hw-1234");
-        properties.put("Category", "Hardware");
-        properties.put("Name", "Anvil");
-        properties.put("Price", 9.99f);
+        for (int i=0; i<100; i++) {
+            // 1. Create the properties:
+            Map<String, Object> properties = new HashMap<String, Object>();
+            properties.put("CatalogNumber", "hw-1234" + i);
+            properties.put("Category", "Hardware");
+            properties.put("Name", "Anvil");
+            properties.put("Price", 9.99f + 1);
 
-        Map<String, Object> features = new HashMap<String, Object>();
-        features.put("Manufacturer", "Acme");
-        features.put("RequiresAssembly", false);
-        features.put("Weight", 100);
-        properties.put("Features", features);
+            Map<String, Object> features = new HashMap<String, Object>();
+            features.put("Manufacturer", "Acme");
+            features.put("RequiresAssembly", false);
+            features.put("Weight", 100);
+            properties.put("Features", features);
 
-        // 2. Create the document using the type name and properties:
-        SpaceDocument document = new SpaceDocument("Product", properties);
-        // 3. Write the document to the space:
-        gigaspace.write(document);
+            // 2. Create the document using the type name and properties:
+            SpaceDocument document = new SpaceDocument("Product", properties);
+            // 3. Write the document to the space:
+            gigaspace.write(document);
+        }
     }
 }
