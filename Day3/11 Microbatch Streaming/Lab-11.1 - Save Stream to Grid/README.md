@@ -16,10 +16,10 @@ Make sure you set "Callback URL" to any valid URL, e.g. http://insightedge.io/, 
 2. Build and run TwitterPopularTags  
 
 The below application keys can be used:
-consumerKey = "aXbCpq9Zru7UimHAfnzVA"
-consumerSecret = "NlXxNAv1hHR9RUxm5o9WMiSBnzNJV7RpWGzffixKQ"
-accessToken = "28462935-f9vhPSCfDd6BlMefL4hbReDgbLp1c6FME72nJIlIi"
-accessTokenSecret = "nELm7MW28sBhJt7F3lqQr0pWVnCzrewMmx3WFlq2W0"
+* consumerKey = "aXbCpq9Zru7UimHAfnzVA"
+* consumerSecret = "NlXxNAv1hHR9RUxm5o9WMiSBnzNJV7RpWGzffixKQ"
+* accessToken = "28462935-f9vhPSCfDd6BlMefL4hbReDgbLp1c6FME72nJIlIi"
+* accessTokenSecret = "nELm7MW28sBhJt7F3lqQr0pWVnCzrewMmx3WFlq2W0"
 
 
 3. See the data in the space
