@@ -8,9 +8,9 @@ and then load the DataFrame from the grid.
 
 1. Start InsightEdge in Demo mode:
 
-    go to gigaspaces-insightedge-enterprise-14.2.0-ga-b20400/bin
+    go to gigaspaces-insightedge-enterprise-14.5.0/bin
 
-    run ./insightedge demo
+    run ./gs.sh demo
 
 2. run SaveLoadDataframeFromGrid.scala class.
 
@@ -48,7 +48,7 @@ Add HADOOP_HOME environment variable in IntelliJ Editor
 
 Steps:
 1. Go to Run -> Edit Configuration -> Environment variables text box at right side
-2. Enter HADOOP_HOME=C:\gigaspaces-insightedge-enterprise-14.2.0-ga-b20400\tools\winutils
+2. Enter HADOOP_HOME=C:\gigaspaces-insightedge-enterprise-14.5.0\tools\winutils
 3. Press Ok and rebuild the project, then run SaveLoadDataframeFromGrid.scala class.
 
 ## Problem 3:
@@ -60,7 +60,7 @@ Generate jar:
 cd ./save-load-dataframe-from-grid
 mvn clean package
 
-<INSIGHTEDGE_HOME>\insightedge\bin\insightedge-submit --class com.gigaspaces.ietraining.SaveLoadDataframeFromGrid --master spark://127.0.0.1:7077  ./target/load-dataframe-from-grid-1.0-SNAPSHOT.jar
+<INSIGHTEDGE_HOME>/insightedge/bin/insightedge-submit --class com.gigaspaces.ietraining.SaveLoadDataframeFromGrid --master spark://127.0.0.1:7077  ./target/load-dataframe-from-grid-1.0-SNAPSHOT.jar
 
 
 
