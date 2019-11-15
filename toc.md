@@ -39,11 +39,9 @@ Labs with a description have an exercise.
   * 11 Microbatch Streaming
     * Lab-11.1 - Save Stream to Grid
       1. From Twitter to Grid project
-    * Lab-11.2 - Twitter Notebook
-      1. Twitter streaming from a Notebook
-    * Lab-11.3 - Kafka and Geospatial
+    * Lab-11.2 - Kafka and Geospatial
       1. Instructions and links to Github demo
-    * Lab-11.4 - Spark Streaming Examples
+    * Lab-11.3 - Spark Streaming Examples
   * 12 Machine Learning
     * Lab-12.1 - Machine Learning
       1. Machine learning

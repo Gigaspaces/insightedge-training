@@ -88,7 +88,7 @@ ordersStream
 
 1. run `mvn clean install` from root directory 
 
-2. Launch InsightEdge `./bin/insightedge demo`
+2. Launch InsightEdge `./bin/gs.sh demo`
 
 3. Launch Kafka. Set `KAFKA_HOME` env var with `export KAFKA_HOME=<path/to/kafka>` and then run `./scripts/start-local.sh`
 

@@ -5,9 +5,9 @@
 
 1. Start InsightEdge in Demo mode:
 
-    go to gigaspaces-insightedge-enterprise-14.2.0-ga-b20400/bin
+    go to gigaspaces-insightedge-enterprise-14.5.0/bin
 
-    run ./insightedge demo
+    run ./gs.sh demo
 
 2. Open Zeppelin on http://localhost:9090
 
