@@ -6,8 +6,9 @@ Labs with a description have an exercise.
 * Day1
   * 1 Course Introduction
   * 2 Introduction to Big Data
-  * 3 Hadoop and Spark Introduction
-  * 4 Introduction to Scala
+  * 3 Introduction to Scala
+    * Lab-3.1 - Introduction to Scala
+  * 4 Hadoop and Spark Introduction
 * Day2
   * 5 RDD API
     * Lab-5.1 - RDD Transformations and Actions
