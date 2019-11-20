@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:os-core="http://www.openspaces.org/schema/core"
+       xmlns:os-remoting="http://www.openspaces.org/schema/remoting"
+       xsi:schemaLocation="
+   http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+   http://www.openspaces.org/schema/core http://www.openspaces.org/schema/core/openspaces-core.xsd
+   http://www.openspaces.org/schema/remoting http://www.openspaces.org/schema/remoting/openspaces-remoting.xsd">
+
+
+    <context:annotation-config/>
+
+    <os-core:annotation-support/>
+
+    <bean id="myFactory" class="com.gigaspaces.analytics_xtreme.server.AnalyticsXtremeManagerFactory">
+        <property name="config" ref="ax-config"/>
+    </bean>
+
+    <os-remoting:service-exporter id="serviceExporter">
+        <os-remoting:service ref="myFactory"/>
+    </os-remoting:service-exporter>
+
+    <bean id="ax-config" class="com.gigaspaces.analytics_xtreme.AnalyticsXtremeConfigurationFactoryBean">
+        <property name="verbose" value="true"/>
+        <property name="coldStart" value="true"/>
+        <property name="policies">
+            <list>
+                <ref bean="partitionedDataLifecyclePolicy"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="partitionedDataLifecyclePolicy" class="com.gigaspaces.analytics_xtreme.DataLifecyclePolicyFactoryBean">
+        <property name="typeName" value="model.Person"/>
+        <property name="speedPeriod" value="pt5h"/>
+        <property name="timeColumn" value="joinDate"/>
+        <property name="batchDataSource" ref="ax-datasource"/>
+        <property name="batchDataTarget" ref="ax-datatarget"/>
+        <property name="mutabilityPeriod" value="pt4h50m"/>
+        <property name="batchFeedInterval" value="pt60s"/>
+        <property name="evictionPollingInterval" value="pt10m"/>
+        <property name="evictionBuffer" value="pt10m"/>
+        <property name="timeFormat" value="yyyy-MM-dd HH:mm:ss"/>
+        <property name="batchIndexSpaceName" value="batchIndex"/>
+        <property name="batchIndexPolicies">
+            <list>
+                <ref bean="basicIndexPolicy"/>
+                <ref bean="rangeIndexPolicy"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="basicIndexPolicy" class="com.gigaspaces.analytics_xtreme.batch_index.BatchIndexPolicyFactoryBean">
+        <property name="columnName" value="name"/>
+        <property name="period" value="pt5h"/>
+        <property name="granularity" value="pt30m"/>
+        <property name="ordered" value="false"/>
+    </bean>
+
+    <bean id="rangeIndexPolicy" class="com.gigaspaces.analytics_xtreme.batch_index.BatchIndexPolicyFactoryBean">
+        <property name="columnName" value="age"/>
+        <property name="period" value="pt5h"/>
+        <property name="granularity" value="pt1h"/>
+        <property name="ordered" value="true"/>
+    </bean>
+
+
+    <os-core:embedded-space id="space" space-name="speedSpace"/>
+
+    <!-- Define the GigaSpace instance that the application will use to access the space  -->
+    <os-core:giga-space id="speedSpace" space="space"/>
+
+    <beans profile="spark,default">
+
+        <bean id="ax-datasource" class="com.gigaspaces.analytics_xtreme.spark.SparkHiveBatchDataSourceFactoryBean">
+            <property name="sparkSessionProvider" ref="sparkSessionFactory"/>
+        </bean>
+
+        <bean id="ax-datatarget" class="com.gigaspaces.analytics_xtreme.spark.SparkHiveBatchDataTargetFactoryBean">
+            <property name="format" value="hive"/>
+            <property name="mode" value="append"/>
+            <property name="partitionColumns" value="country,city"/>
+            <property name="sparkSessionProvider" ref="sparkSessionFactory"/>
+
+        </bean>
+        <bean id="sparkSessionFactory" class="org.insightedge.spark.SparkSessionProviderFactoryBean">
+            <property name="master" value="local[*]"/>
+            <property name="enableHiveSupport" value="true"/>
+            <property name="logLevel" value="WARNING"/>
+            <property name="configOptions">
+                <map>
+                    <entry key="hive.metastore.uris" value="thrift://hive-metastore:9083"/>
+                    <entry key="spark.sql.hive.metastore.version" value="2.3.2"/>
+                    <entry key="spark.sql.hive.metastore.jars"
+                           value="#{systemEnvironment['SPARK_HOME']}/jars/hive/*:#{systemEnvironment['SPARK_HOME']}/jars/*"/>
+                    <entry key="spark.ui.enabled" value="false"/>
+                    <entry key="spark.cores.max" value="1"/>
+                </map>
+            </property>
+        </bean>
+
+    </beans>
+
+</beans>
