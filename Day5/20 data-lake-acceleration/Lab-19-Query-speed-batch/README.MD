@@ -21,12 +21,12 @@ Deploy ax-pu jar
 Deploy index space pu (gs-home/insightedge/lib/analytics-xtreme/batch-index/batch-index.jar
 
 See existing types and data in index space using web-ui.
-
-Write new entries to speed space Client in remote-client module
  
 Preform queries - AXClient in remote-client module
 
 Examine statistics and index distributions, see files created in your training home/logs
+
+Write new entries to speed space Client in remote-client module
 
 Go to zeppelin, import exercise notebook
 
