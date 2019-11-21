@@ -41,7 +41,7 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>com.gigaspaces</groupId>
+                <groupId>ie.training</groupId>
                 <artifactId>common</artifactId>
                 <version>${project.version}</version>
                 <scope>compile</scope>
