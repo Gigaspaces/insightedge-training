@@ -8,20 +8,16 @@ import com.gigaspaces.analytics_xtreme.batch_index.statistics.IndexColumnStatsDo
 import com.gigaspaces.analytics_xtreme.batch_index.statistics.IndexStatistics;
 import com.gigaspaces.analytics_xtreme.batch_index.statistics.IndexTableInfoDocument;
 import com.gigaspaces.analytics_xtreme.internal.TimeProvider;
-import com.gigaspaces.analytics_xtreme.spi.BatchDataTarget;
-import com.gigaspaces.document.SpaceDocument;
-import com.gigaspaces.metadata.SpaceTypeDescriptorBuilder;
+
 import com.j_spaces.core.client.SpaceURL;
 import model.Person;
 import org.hsqldb.lib.StopWatch;
-import org.openspaces.admin.Admin;
-import org.openspaces.admin.AdminFactory;
-import org.openspaces.admin.pu.ProcessingUnitDeployment;
+
+
 import org.openspaces.core.GigaSpace;
 import org.openspaces.core.GigaSpaceConfigurer;
 import org.openspaces.core.space.UrlSpaceConfigurer;
 
-import java.io.File;
 import java.sql.*;
 import java.time.Clock;
 import java.time.Duration;
@@ -42,6 +38,8 @@ public class AXClient {
         try {
             speedSpace = new GigaSpaceConfigurer(new UrlSpaceConfigurer("jini://*/*/speedSpace")).gigaSpace();
             index =  new GigaSpaceConfigurer(new UrlSpaceConfigurer("jini://*/*/batchIndex")).gigaSpace();
+
+            speedSpace.getTypeManager().registerTypeDescriptor(Person.class);
 
             BatchIndexService indexService = BatchIndexService.proxy(index);
             while (!(indexService.isValid(Person.class.getSimpleName(), "name") && indexService.isValid(Person.class.getSimpleName(), "age"))) {
