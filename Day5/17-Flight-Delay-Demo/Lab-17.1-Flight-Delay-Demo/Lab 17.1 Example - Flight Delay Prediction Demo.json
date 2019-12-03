@@ -71,7 +71,7 @@
     },
     {
       "title": "Initialize InsightEdge Spark context",
-      "text": "%spark\n//run only when not using demo space -> different space name can be changed here\nimport org.insightedge.spark.implicits.all._\nimport org.insightedge.spark.context.InsightEdgeConfig\n    \n//spaceName is required, other two parameters are optional\nval ieConfig = new InsightEdgeConfig(spaceName = \"demo\", lookupGroups = Some(\"xap-14.5.0\"), lookupLocators = Some(\"localhost\"))\n    \n//sc is the spark context initalized by zeppelin\nsc.initializeInsightEdgeContext(ieConfig)\n",
+      "text": "%spark\n//run only when not using demo space -> different space name can be changed here\nimport org.insightedge.spark.implicits.all._\nimport org.insightedge.spark.context.InsightEdgeConfig\n    \n//spaceName is required, other two parameters are optional\nval ieConfig = new InsightEdgeConfig(spaceName = \"demo\", lookupGroups = Some(\"xap-15.0.0\"), lookupLocators = Some(\"localhost\"))\n    \n//sc is the spark context initalized by zeppelin\nsc.initializeInsightEdgeContext(ieConfig)\n",
       "user": "anonymous",
       "dateUpdated": "2019-07-25T20:37:15-0400",
       "config": {
