@@ -16,8 +16,9 @@ Instruction:<br>
    
 **6.** Open the web-ui in a browser - (`http://localhost:8099`)<br>
 **7.** deploy project jar (2,0 - 2 partitions with no backups):<br>
-`./gs.sh pu deploy FlightDelayDemo /home/vagrant/insightedge-training/Day5/17-Flight-Delay-Demo/Lab-17.1-Flight-Delay-Demo/target/flightdelaydemo-1.0.0-SNAPSHOT.jar --partitions=2`
-**8.** Open Zeppelin in a web browser (`http://localhost:9090`). Import `Lab 17.1 Example - Flight Delay Prediction Demo.json` notebook.<br>
+`./gs.sh pu deploy FlightDelayDemo /home/vagrant/insightedge-training/Day5/17-Flight-Delay-Demo/Lab-17.1-Flight-Delay-Demo/target/flightdelaydemo-1.0.0-SNAPSHOT.jar --partitions=2`<br>
+**8.** Open Zeppelin in a web browser (`http://localhost:9090`).<br>
+        Import `Lab 17.1 Example - Flight Delay Prediction Demo.json` notebook.<br>
 **9.** Follow instructions in the notebook. Notifications will appear in the console output (gs.sh).<br>
 **10.** Go to the web-ui to see the data in the space after each step.
 
