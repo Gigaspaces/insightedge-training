@@ -9,13 +9,15 @@
    
 2. Unzip the package.
 
-3. cd $GS_HOME/bin
+3. Replace the license key under gigaspaces-insightedge-enterprise-14.5.0/gs-license.txt
+
+4. cd $GS_HOME/bin
    ./gs.sh maven install
 
-4. Clone this repository:
+5. Clone this repository:
    git clone https://github.com/Gigaspaces/insightedge-training
 
-5. Move the cloned Data folder from this repository. The Data folder and gigaspaces install directory should have the same parent directory.
+6. Move the cloned Data folder from this repository. The Data folder and gigaspaces install directory should have the same parent directory.
 
 
 Note regarding Zeppelin:
@@ -25,5 +27,5 @@ Occasionally you might need to restart the %spark interpreter with in Zeppelin.
 3. Click OK
 4. Click Save to close the Settings menu.
 
-Note regarding WebUI, Ops Manager
+Note regarding WebUI, Ops Manager:
 1. If you have run an older version of InsightEdge and 1) when running the webui, you get a blank screen or 2) the Ops Manager will not come up, the browser always gets directed to the REST manager, clear the browser cache or view the website in Incognito or Private mode.
