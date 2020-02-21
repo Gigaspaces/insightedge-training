@@ -63,4 +63,10 @@ Labs with a description have an exercise.
   * 17 Flight Delay Demo
     * Lab-17.1 - Flight Delay Demo
       1. Run the example project and the notebook
+  * 18 Jupyter Notebook
+    * Lab-18.1 - Jupyter Demo
+  * 19 Tableau Integration
+    * Lab-19.1 - Tableau setup
+  * 20 Data Lake Acceleration
+    * Lab-20.1 - Query Speed Batch
   * Exam
