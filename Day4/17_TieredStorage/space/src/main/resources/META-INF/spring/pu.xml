@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Note: description is used to infer processing unit type -->
+    <description>pu-type=stateful</description>
+    <!-- Enable Spring annotation support -->
+    <context:annotation-config/>
+    <!-- Bootstrap service configuration -->
+    <bean class="com.gs.ServiceConfig" />
+    <bean id="SLA" class="org.openspaces.pu.sla.SLA">
+        <property name="clusterSchema" value="partitioned" />
+        <property name="numberOfInstances" value="1" />
+        <property name="numberOfBackups" value="1" />
+        <property name="maxInstancesPerVM" value="1" />
+        <property name="instanceSLAs">
+            <list>
+                <bean class="org.openspaces.pu.sla.InstanceSLA">
+                    <property name="instanceId" value="1" />
+                    <property name="requirements">
+                        <list>
+                            <bean class="org.openspaces.pu.sla.requirement.HostRequirement">
+                                <property name="ip" value="localhost" />
+                            </bean>
+                        </list>
+                    </property>
+                </bean>
+                <bean class="org.openspaces.pu.sla.InstanceSLA">
+                    <property name="instanceId" value="1" />
+                    <property name="backupId" value="1" />
+                    <property name="requirements">
+                        <list>
+                            <bean class="org.openspaces.pu.sla.requirement.HostRequirement">
+                                <property name="ip" value="localhost" />
+                            </bean>
+                        </list>
+                    </property>
+                </bean>
+            </list>
+        </property>
+    </bean>
+</beans>

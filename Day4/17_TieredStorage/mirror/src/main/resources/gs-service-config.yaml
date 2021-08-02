@@ -1,0 +1,12 @@
+db:
+  driver: org.postgresql.Driver
+  url: jdbc:postgresql://localhost/mydb
+  user: postgres
+  password: test
+hibernate:
+  dialect: org.hibernate.dialect.PostgreSQL95Dialect
+space:
+  name: myspace
+
+
+ha: true
