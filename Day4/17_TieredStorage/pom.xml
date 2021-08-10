@@ -20,7 +20,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <gs.version>16.0.0-rc1</gs.version>
+        <gs.version>16.0.0</gs.version>
         <hibernate.version>5.3.10.Final</hibernate.version>
         <db.driver.groupId>org.postgresql</db.driver.groupId>
         <db.driver.artifactId>postgresql</db.driver.artifactId>
@@ -33,6 +33,14 @@
             <url>http://maven-repository.openspaces.org</url>
         </repository>
     </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.gigaspaces</groupId>
+            <artifactId>xap-openspaces</artifactId>
+            <version>${gs.version}</version>
+        </dependency>
+    </dependencies>
 
 
 </project>

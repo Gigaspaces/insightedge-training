@@ -29,8 +29,7 @@ public class ZooKeeperAttributeStoreReader implements Serializable {
     public static void main(String[] args) throws Exception {
 
         String    connectionString = "localhost";
-        String prefix = args.length > 1 ? args[1] : "xap";
-        ZooKeeperAttributeStoreReader reader = new ZooKeeperAttributeStoreReader("", CuratorFrameworkFactory.newClient(connectionString, new RetryOneTime(2000)));
+        ZooKeeperAttributeStoreReader reader = new ZooKeeperAttributeStoreReader("/xap", CuratorFrameworkFactory.newClient(connectionString, new RetryOneTime(2000)));
         long startTime = System.currentTimeMillis();
         reader.dump(System.out);
         long elapsed = System.currentTimeMillis() - startTime;
