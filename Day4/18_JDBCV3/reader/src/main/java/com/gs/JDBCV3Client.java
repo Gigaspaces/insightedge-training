@@ -19,10 +19,13 @@ public class JDBCV3Client {
         GigaSpace gs = new GigaSpaceConfigurer(new SpaceProxyConfigurer("demo")).gigaSpace();
         JDBCV3Client client = new JDBCV3Client();
         Connection connection = client.connect(gs);
-        client.read1(connection);
-        client.read3(connection);
         client.read2(connection);
+        /*client.read1(connection);
+        client.read3(connection);
+
         client.read4(connection);
+        client.read5(connection);
+        client.read6(connection);*/
 
     }
 
@@ -49,20 +52,42 @@ public class JDBCV3Client {
      */
     protected  void read2(Connection connection) throws SQLException {
         //" join from Purchase & Product by PU.productId" U.productId, P.name, P.price, PU.amount
-        String queryPrefix = "Select P.name, sum(PU.amount) from \"" +  Purchase.class.getName() + "\" as PU " ;
-        String condition = " LEFT JOIN \"" + Product.class.getName() + "\" as P ON P.id=PU.productId group by P.name" ;
+        // PU.productId, P.id
+        String queryPrefix = "Select P.id, sum(PU.amount) from \"" +  Purchase.class.getName() + "\" as PU " ;
+        String condition = " LEFT JOIN \"" + Product.class.getName() + "\" as P ON PU.productId=P.id group by P.id, PU.productId" ;
 
         String query = queryPrefix + condition;
         read(connection,query);
     }
 
     /*
-   Find per each product how many were sold
+   Find per each customer how many products he bought
     */
     protected  void read4(Connection connection) throws SQLException {
         //" join from Purchase & Product by PU.productId" U.productId, P.name, P.price, PU.amount
-        String queryPrefix = "Select P.id, sum(PU.amount) from \"" +  Purchase.class.getName() + "\" as PU " ;
-        String condition = " LEFT JOIN \"" + Product.class.getName() + "\" as P ON P.id=PU.productId group by P.id" ;
+        String queryPrefix = "Select PU.customerId, C.firsName,  sum(PU.amount) from \"" +  Purchase.class.getName() + "\" as PU " ;
+        String condition = " LEFT JOIN \"" + Customer.class.getName() + "\" as C ON C.id=PU.customerId group by PU.customerId, C.id, C.firsName" ;
+
+        String query = queryPrefix + condition;
+        read(connection,query);
+    }
+
+
+    /*
+    Find the product that was sold the most (order by max_amount not supported yet)
+  */
+    protected  void read5(Connection connection) throws SQLException {
+        //" join from Purchase & Product by PU.productId" U.productId, P.name, P.price, PU.amount
+        String queryPrefix = "Select PU.productId, P.name,  max(PU.amount) as max_amount from \"" +  Purchase.class.getName() + "\" as PU " ;
+        String condition = " INNER JOIN \"" + Product.class.getName() + "\" as P ON P.id=PU.productId group by PU.productId,P.name"  ;
+
+        String query = queryPrefix + condition;
+        read(connection,query);
+    }
+
+    protected  void read6(Connection connection) throws SQLException {
+        String queryPrefix = "Select  P.name,  P.price  from \"" +  Product.class.getName() + "\" as P " ;
+        String condition = " where  P.price > 100"  ;
 
         String query = queryPrefix + condition;
         read(connection,query);
