@@ -1,7 +1,9 @@
 package com.gs;
 
 import com.gigaspaces.annotation.pojo.SpaceId;
+import com.gigaspaces.annotation.pojo.SpaceIndex;
 import com.gigaspaces.annotation.pojo.SpaceRouting;
+import com.gigaspaces.metadata.index.SpaceIndexType;
 
 public class Product {
     Integer id;
@@ -37,9 +39,11 @@ public class Product {
         this.name = name;
     }
 
+    @SpaceIndex(type = SpaceIndexType.EQUAL_AND_ORDERED)
     public Double getPrice() {
         return price;
     }
+
 
     public void setPrice(Double price) {
         this.price = price;
