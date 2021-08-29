@@ -4,14 +4,11 @@ package com.gs;
 import org.openspaces.core.GigaSpace;
 import org.openspaces.core.GigaSpaceConfigurer;
 import org.openspaces.core.space.SpaceProxyConfigurer;
-import shaded.com.google.protobuf.ByteString;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
-import java.util.stream.Collectors;
 
 public class JDBCV3Client {
     private final String EXPLAIN_PLAN_PREFIX = "EXPLAIN PLAN FOR ";
@@ -20,8 +17,8 @@ public class JDBCV3Client {
         GigaSpace gs = new GigaSpaceConfigurer(new SpaceProxyConfigurer("demo")).gigaSpace();
         JDBCV3Client client = new JDBCV3Client();
         Connection connection = client.connect(gs);
-        client.read2(connection);
         client.read1(connection);
+        client.read2(connection);
         client.read3(connection);
         client.read4(connection);
         client.read5(connection);
@@ -53,10 +50,15 @@ public class JDBCV3Client {
         System.out.println("Results:");
         try {
             dumpResult(statement.executeQuery(query));
+
         }
         catch (Throwable t){
+
             System.out.println("Fail to run query:" + t);
             t.printStackTrace();
+        }
+        finally {
+            statement.close();
         }
 
     }
@@ -143,13 +145,14 @@ public class JDBCV3Client {
 
     /*
    Find all products that amount of  sold is more than X
+   ToDo fail to explain and fail to query
     */
     protected  void read7(Connection connection) throws SQLException {
         //" join from Purchase & Product by PU.productId" U.productId, P.name, P.price, PU.amount
         System.out.println("======================= Read7 ===========================");
 
-        String queryPrefix = "Select PU.productId, P.name, sum(PU.amount) as total from \"" +  Purchase.class.getName() + "\" as PU " ;
-        String condition = " LEFT JOIN \"" + Product.class.getName() + "\" as P ON P.id=PU.productId group by PU.productId,P.name having total > 5 " ;
+        String queryPrefix = "Select  P.name, sum(PU.amount) as total from \"" +  Purchase.class.getName() + "\" as PU " ;
+        String condition = " LEFT JOIN \"" + Product.class.getName() + "\" as P ON P.id=PU.productId group by P.name having total > 5 " ;
 
         String query = queryPrefix + condition;
         read(connection,query);
@@ -164,14 +167,12 @@ public class JDBCV3Client {
         read(connection,query);
     }
 
-   //--ToDO wrong results Fail explain
     protected void read9(Connection connection) throws SQLException{
         System.out.println("======================= Read9 ===========================");
-        String queryPrefix = "Select PU.productId, P.name, PU.amount, P.price  from \"" +  Purchase.class.getName() + "\" as PU " ;
-        String condition1 = " LEFT JOIN \"" + Product.class.getName() + "\" as P ON P.id=PU.productId " ;
-        String condition2 = " WHERE EXISTS (select D.id from \"" + Department.class.getName() + "\" as D where P.depId= D.id and D.name <> 'toys')" ;
+        String queryPrefix = "Select D.id,D.name  from \"" +  Department.class.getName() + "\" as D " ;
+        String condition1 = " WHERE EXISTS (select P.name from \""+  Product.class.getName() + "\" as P where P.depId=D.id and P.price>500)";
 
-        String query = queryPrefix + condition1 + condition2;
+        String query = queryPrefix + condition1;
         read(connection,query);
     }
 
@@ -193,9 +194,7 @@ public class JDBCV3Client {
         read(connection,query);
     }
 
-
-
-
+    
 
     private List<String> dumpResult(ResultSet resultSet) throws SQLException {
         ResultSetMetaData rsmd = resultSet.getMetaData();

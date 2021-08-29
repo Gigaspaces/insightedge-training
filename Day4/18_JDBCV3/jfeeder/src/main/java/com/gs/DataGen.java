@@ -8,7 +8,6 @@ import org.openspaces.core.space.SpaceProxyConfigurer;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 
 public class DataGen {

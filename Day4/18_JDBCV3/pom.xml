@@ -17,13 +17,13 @@
         <dependency>
             <groupId>org.gigaspaces</groupId>
             <artifactId>xap-openspaces</artifactId>
-            <version>16.1.0-m1</version>
+            <version>16.1.0-m3</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.gigaspaces</groupId>
             <artifactId>xap-jdbc</artifactId>
-            <version>16.1.0-m1</version>
+            <version>16.1.0-m3</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
@@ -33,7 +33,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <gs.version>16.0.0</gs.version>
+        <gs.version>16.1.0-m3</gs.version>
     </properties>
 
     <repositories>
