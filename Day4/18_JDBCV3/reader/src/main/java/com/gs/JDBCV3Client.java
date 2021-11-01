@@ -83,7 +83,7 @@ public class JDBCV3Client {
         // PU.productId, P.id
         System.out.println("======================= Read2 ===========================");
 
-        String queryPrefix = "Select P.id, sum(PU.amount) from \"" +  Purchase.class.getName() + "\" as PU " ;
+        String queryPrefix = "Select P.id as product_id, sum(PU.amount) as purchase_amount from \"" +  Purchase.class.getName() + "\" as PU " ;
         String condition = " LEFT JOIN \"" + Product.class.getName() + "\" as P ON PU.productId=P.id group by P.id" ;
 
         String query = queryPrefix + condition;
@@ -97,8 +97,8 @@ public class JDBCV3Client {
         //" join from Purchase & Product by PU.productId" U.productId, P.name, P.price, PU.amount
         System.out.println("======================= Read4 ===========================");
 
-        String queryPrefix = "Select PU.customerId, C.firsName,  sum(PU.amount) from \"" +  Purchase.class.getName() + "\" as PU " ;
-        String condition = " LEFT JOIN \"" + Customer.class.getName() + "\" as C ON C.id=PU.customerId group by PU.customerId, C.firsName" ;
+        String queryPrefix = "Select PU.customerId as customer_id, C.firsName, C.lastName, sum(PU.amount) as amount from \"" +  Purchase.class.getName() + "\" as PU " ;
+        String condition = " LEFT JOIN \"" + Customer.class.getName() + "\" as C ON C.id=PU.customerId group by PU.customerId, C.firsName, C.lastName" ;
 
         String query = queryPrefix + condition;
         read(connection,query);
@@ -136,7 +136,7 @@ public class JDBCV3Client {
     protected  void read3(Connection connection) throws SQLException {
         //" join from Purchase & Product by PU.productId" U.productId, P.name, P.price, PU.amount
         System.out.println("======================= Read3 ===========================");
-        String queryPrefix = "Select PU.customerId, P.name, PU.amount from \"" +  Purchase.class.getName() + "\" as PU " ;
+        String queryPrefix = "Select PU.customerId as customer_id, P.name as product_name, PU.amount from \"" +  Purchase.class.getName() + "\" as PU " ;
         String condition = " LEFT JOIN \"" + Product.class.getName() + "\" as P ON P.id=PU.productId order by P.name" ;
 
         String query = queryPrefix + condition;
@@ -145,7 +145,6 @@ public class JDBCV3Client {
 
     /*
    Find all products that amount of  sold is more than X
-   ToDo fail to explain and fail to query
     */
     protected  void read7(Connection connection) throws SQLException {
         //" join from Purchase & Product by PU.productId" U.productId, P.name, P.price, PU.amount
@@ -186,7 +185,7 @@ public class JDBCV3Client {
 
     protected void read11(Connection connection) throws SQLException{
         System.out.println("======================= Read11 ===========================");
-        String queryPrefix = "SELECT Avg(P.price)  from \"" +  Product.class.getName() + "\" as P " ;
+        String queryPrefix = "SELECT Avg(P.price) as avg_price  from \"" +  Product.class.getName() + "\" as P " ;
         String condition1 = " WHERE P.price >50 " ;
 
 
