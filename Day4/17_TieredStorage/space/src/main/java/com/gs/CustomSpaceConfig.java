@@ -40,36 +40,12 @@ public class CustomSpaceConfig extends EmbeddedSpaceBeansConfig {
 	@ClusterInfoContext
 	private ClusterInfo clusterInfo;
 
-	@Value("${db.driver}")
-	private String dbDriver;
-	@Value("${db.url}")
-	private String dbUrl;
-	@Value("${db.user:#{null}}")
-	private String dbUser;
-	@Value("${db.password:#{null}}")
-	private String dbPassword;
-	@Value("${hibernate.dialect}")
-	private String hibernateDialect;
-	@Value("${hibernate.limitResults:-1}")
-	private int limitResults;
-	
+
     @Override
     protected void configure(EmbeddedSpaceFactoryBean factoryBean) {
 		super.configure(factoryBean);
-
-	factoryBean.setSchema("persistent");
-		factoryBean.setMirrored(true);
-       	factoryBean.setSpaceDataSource(new DefaultHibernateSpaceDataSourceConfigurer()
-		    .sessionFactory(initSessionFactory())
-		    .clusterInfo(clusterInfo)
-		    .limitResults(limitResults)
-		    .create());
-
 		Properties properties = new Properties();
         properties.setProperty("space-config.engine.cache_policy", "1");
-        properties.setProperty("space-config.external-data-source.usage", "read-only");
-        properties.setProperty("cluster-config.cache-loader.external-data-source", "true");
-        properties.setProperty("cluster-config.cache-loader.central-data-source", "true");
         factoryBean.setProperties(properties);
 
 		TieredStorageConfig tieredStorageConfig = new TieredStorageConfig();
@@ -77,26 +53,11 @@ public class CustomSpaceConfig extends EmbeddedSpaceBeansConfig {
 		tables.put(Data1.class.getName(), new TieredStorageTableConfig().setName(Data1.class.getName()).setCriteria("type='4'"));
 		tables.put(Data2.class.getName(), new TieredStorageTableConfig().setName(Data2.class.getName()).setTransient(true));
 		tables.put(Data4.class.getName(), new TieredStorageTableConfig().setName(Data4.class.getName()).setCriteria("all"));
+		tables.put("MyTestClass", new TieredStorageTableConfig().setName("MyTestClass").setCriteria("all"));
 		tieredStorageConfig.setTables(tables);
 		factoryBean.setTieredStorageConfig(tieredStorageConfig);
 
 	}
 
-	private SessionFactory initSessionFactory() {
-		return new LocalSessionFactoryBuilder(initDataSource())
-		    .scanPackages("com.gs")
-            .setProperty("hibernate.dialect", hibernateDialect)
-            .setProperty("hibernate.cache.provider_class", "org.hibernate.cache.NoCacheProvider")
-            .setProperty("hibernate.jdbc.use_scrollable_resultset", "true")
-		    .buildSessionFactory();
-	}
-	
-	private DataSource initDataSource() {
-		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setDriverClassName(dbDriver);
-		dataSource.setUrl(dbUrl);
-		dataSource.setUsername(dbUser);
-		dataSource.setPassword(dbPassword);
-		return dataSource;
-	}
+
 }

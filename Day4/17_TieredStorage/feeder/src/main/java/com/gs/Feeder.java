@@ -1,5 +1,8 @@
 package com.gs;
 
+import com.gigaspaces.document.SpaceDocument;
+import com.gigaspaces.metadata.SpaceTypeDescriptor;
+import com.gigaspaces.metadata.SpaceTypeDescriptorBuilder;
 import com.j_spaces.core.client.SQLQuery;
 import org.openspaces.core.GigaSpace;
 import org.openspaces.core.GigaSpaceConfigurer;
@@ -14,14 +17,29 @@ public class Feeder {
     }
 
     public void feed(int amount){
+        SpaceTypeDescriptor typeDescriptor = new SpaceTypeDescriptorBuilder("MyTestClass").supportsDynamicProperties(false)
+                .idProperty("id")
+                .addFixedProperty("name", String.class)
+                .addFixedProperty("price", Float.class)
+                .addFixedProperty("id", String.class).create();
+
+        gs.getTypeManager().registerTypeDescriptor(typeDescriptor);
         Data1[] objects = new Data1[amount];
         for (int k=0; k<amount; k++){
             objects[k]= new Data1(k, "" + (4 + (k%2)));
             gs.write(new Data2(k, "" + (4 + (k%2))));
             gs.write(new Data3(k, "" + (4 + (k%2))));
             gs.write(new Data4(k, "" + (4 + (k%2))));
+            SpaceDocument doc = new SpaceDocument("MyTestClass");
+            doc.setProperty("id",""+k );
+            doc.setProperty("name", "name_"+k);
+            doc.setProperty("price", 1.5F*k);
+            gs.write(doc);
         }
         gs.writeMultiple(objects);
+
+
+
     }
 
     public void read(int amount){
@@ -36,7 +54,7 @@ public class Feeder {
 
     public static void main(String[] args) throws InterruptedException {
         GigaSpace gs1 = new GigaSpaceConfigurer(new SpaceProxyConfigurer("test1")).gigaSpace();
-        LocalViewSpaceConfigurer localViewConfigurer = new LocalViewSpaceConfigurer(new SpaceProxyConfigurer("test1"))
+       /* LocalViewSpaceConfigurer localViewConfigurer = new LocalViewSpaceConfigurer(new SpaceProxyConfigurer("test1"))
                 .batchSize(1000)
                 .batchTimeout(100)
                 .maxDisconnectionDuration(1000*60*60)
@@ -47,14 +65,13 @@ public class Feeder {
                 .addProperty("space-config.engine.memory_usage.explicit", "false")
                 .addProperty("space-config.engine.memory_usage.retry_yield_time", "50")
                 .addViewQuery(new SQLQuery(com.gs.Data1.class, ""));
-// Create local view:
-        GigaSpace localView = new GigaSpaceConfigurer(localViewConfigurer).gigaSpace();
+        Test  local view:
+        GigaSpace localView = new GigaSpaceConfigurer(localViewConfigurer).gigaSpace();*/
 
         Feeder feeder = new Feeder(gs1);
         feeder.feed(1000);
-        feeder.read(1000);
-        Thread.sleep(1000);
-        Data1 obj = localView.read(new Data1());
-        System.out.println("got object:" + obj);
+        //feeder.read(1000);
+        //Data1 obj = localView.read(new Data1());
+        //System.out.println("got object:" + obj);
     }
 }

@@ -11,7 +11,8 @@
     <context:annotation-config/>
     <!-- Bootstrap service configuration -->
     <bean class="com.gs.ServiceConfig" />
-    <bean id="SLA" class="org.openspaces.pu.sla.SLA">
+    <!-- Note: If required you can add SLA per instance and not use the auto generated sla -->
+    <!--bean id="SLA" class="org.openspaces.pu.sla.SLA">
         <property name="clusterSchema" value="partitioned" />
         <property name="numberOfInstances" value="1" />
         <property name="numberOfBackups" value="1" />
@@ -41,5 +42,5 @@
                 </bean>
             </list>
         </property>
-    </bean>
+    </bean-->
 </beans>
