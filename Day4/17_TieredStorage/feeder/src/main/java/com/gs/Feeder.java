@@ -1,13 +1,18 @@
 package com.gs;
 
+import com.gigaspaces.async.AsyncResult;
 import com.gigaspaces.document.SpaceDocument;
+import com.gigaspaces.internal.server.space.tiered_storage.TieredStorageTableConfig;
 import com.gigaspaces.metadata.SpaceTypeDescriptor;
 import com.gigaspaces.metadata.SpaceTypeDescriptorBuilder;
-import com.j_spaces.core.client.SQLQuery;
+
 import org.openspaces.core.GigaSpace;
 import org.openspaces.core.GigaSpaceConfigurer;
+import org.openspaces.core.executor.DistributedTask;
 import org.openspaces.core.space.SpaceProxyConfigurer;
-import org.openspaces.core.space.cache.LocalViewSpaceConfigurer;
+
+import java.util.List;
+
 
 public class Feeder {
     GigaSpace gs;
@@ -16,62 +21,87 @@ public class Feeder {
         this.gs = gs;
     }
 
-    public void feed(int amount){
-        SpaceTypeDescriptor typeDescriptor = new SpaceTypeDescriptorBuilder("MyTestClass").supportsDynamicProperties(false)
+    public void feed(int amount) {
+
+        SpaceTypeDescriptor typeDescriptorDoc1 = new SpaceTypeDescriptorBuilder("Doc1").supportsDynamicProperties(false)
                 .idProperty("id")
-                .addFixedProperty("name", String.class)
-                .addFixedProperty("price", Float.class)
-                .addFixedProperty("id", String.class).create();
+                .addFixedProperty("info", String.class)
+                .addFixedProperty("type", String.class)
+                .addFixedProperty("id", Integer.class).create();
 
-        gs.getTypeManager().registerTypeDescriptor(typeDescriptor);
-        Data1[] objects = new Data1[amount];
-        for (int k=0; k<amount; k++){
-            objects[k]= new Data1(k, "" + (4 + (k%2)));
-            gs.write(new Data2(k, "" + (4 + (k%2))));
-            gs.write(new Data3(k, "" + (4 + (k%2))));
-            gs.write(new Data4(k, "" + (4 + (k%2))));
-            SpaceDocument doc = new SpaceDocument("MyTestClass");
-            doc.setProperty("id",""+k );
-            doc.setProperty("name", "name_"+k);
-            doc.setProperty("price", 1.5F*k);
-            gs.write(doc);
+        SpaceTypeDescriptor typeDescriptorDoc2 = new SpaceTypeDescriptorBuilder("Doc2").supportsDynamicProperties(false)
+                .idProperty("id")
+                .addFixedProperty("info", String.class)
+                .addFixedProperty("type", String.class)
+                .addFixedProperty("id", Integer.class).create();
+
+        // Example for setting criteria at registration time
+        // This type doesn't have a criteria set in space config, without setting criteria here nothing will be cached.
+        SpaceTypeDescriptor typeDescriptorDoc3 = new SpaceTypeDescriptorBuilder("Doc3").supportsDynamicProperties(false)
+                .idProperty("id")
+                .addFixedProperty("info", String.class)
+                .addFixedProperty("type", String.class)
+                .addFixedProperty("id", Integer.class)
+                .setTieredStorageTableConfig(new TieredStorageTableConfig()
+                        .setName("Doc3")
+                        .setCriteria("type != '4' ")
+                ).create();
+
+
+        SpaceTypeDescriptor typeDescriptorDoc4 = new SpaceTypeDescriptorBuilder("Doc4").supportsDynamicProperties(false)
+                .idProperty("id")
+                .addFixedProperty("info", String.class)
+                .addFixedProperty("type", String.class)
+                .addFixedProperty("id", Integer.class).create();
+
+
+        SpaceTypeDescriptor typeDescriptorDoc5 = new SpaceTypeDescriptorBuilder("Doc5").supportsDynamicProperties(false)
+                .idProperty("id")
+                .addFixedProperty("id", Integer.class)
+                .addFixedProperty("expire", java.sql.Date.class)
+                .addFixedProperty("info", String.class)
+                .addFixedProperty("type", String.class).create();
+
+        gs.getTypeManager().registerTypeDescriptor(typeDescriptorDoc1);
+        gs.getTypeManager().registerTypeDescriptor(typeDescriptorDoc2);
+        gs.getTypeManager().registerTypeDescriptor(typeDescriptorDoc3);
+        gs.getTypeManager().registerTypeDescriptor(typeDescriptorDoc4);
+        gs.getTypeManager().registerTypeDescriptor(typeDescriptorDoc5);
+
+
+        for (int k = 0; k < amount; k++) {
+            SpaceDocument doc1 = new SpaceDocument("Doc1");
+            SpaceDocument doc2 = new SpaceDocument("Doc2");
+            SpaceDocument doc3 = new SpaceDocument("Doc3");
+            SpaceDocument doc4 = new SpaceDocument("Doc4");
+            SpaceDocument doc5 = new SpaceDocument("Doc5");
+            ;
+            gs.write(getDoc(k, doc1));
+            gs.write(getDoc(k, doc2));
+            gs.write(getDoc(k, doc3));
+            gs.write(getDoc(k, doc4));
+            gs.write(getDoc(k, doc5));
         }
-        gs.writeMultiple(objects);
-
 
 
     }
 
-    public void read(int amount){
-        long start = System.currentTimeMillis();
-        Data2[] res2 = gs.readMultiple(new Data2(),amount);
-        System.out.println("read of Data2 took:" + (System.currentTimeMillis() - start) + " res:" + res2.length);
-
-        long start2 = System.currentTimeMillis();
-        Data1[] res4 = gs.readMultiple(new Data1(),amount);
-        System.out.println("read of Data1 took:" + (System.currentTimeMillis() - start2) + " res:" + res4.length);
+    SpaceDocument getDoc(int k, SpaceDocument doc) {
+        doc.setProperty("id", k);
+        doc.setProperty("info", "info_" + k);
+        doc.setProperty("type", String.valueOf(4 + (k % 5)));
+        if (doc.getTypeName().equals("Doc5"))
+            doc.setProperty("expire", new java.sql.Date(System.currentTimeMillis() - 24 * 60 * 60 * 10 * k));
+        return doc;
     }
+
 
     public static void main(String[] args) throws InterruptedException {
-        GigaSpace gs1 = new GigaSpaceConfigurer(new SpaceProxyConfigurer("test1")).gigaSpace();
-       /* LocalViewSpaceConfigurer localViewConfigurer = new LocalViewSpaceConfigurer(new SpaceProxyConfigurer("test1"))
-                .batchSize(1000)
-                .batchTimeout(100)
-                .maxDisconnectionDuration(1000*60*60)
-                .addProperty("space-config.engine.memory_usage.high_watermark_percentage", "90")
-                .addProperty("space-config.engine.memory_usage.write_only_block_percentage", "88")
-                .addProperty("space-config.engine.memory_usage.write_only_check_percentage", "86")
-                .addProperty("space-config.engine.memory_usage.retry_count", "5")
-                .addProperty("space-config.engine.memory_usage.explicit", "false")
-                .addProperty("space-config.engine.memory_usage.retry_yield_time", "50")
-                .addViewQuery(new SQLQuery(com.gs.Data1.class, ""));
-        Test  local view:
-        GigaSpace localView = new GigaSpaceConfigurer(localViewConfigurer).gigaSpace();*/
-
+        GigaSpace gs1 = new GigaSpaceConfigurer(new SpaceProxyConfigurer("test1").lookupGroups("xap-16.2.0").lookupLocators()).gigaSpace();
         Feeder feeder = new Feeder(gs1);
-        feeder.feed(1000);
-        //feeder.read(1000);
-        //Data1 obj = localView.read(new Data1());
-        //System.out.println("got object:" + obj);
+        feeder.feed(10000);
+
     }
+
+
 }

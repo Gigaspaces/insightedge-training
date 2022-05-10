@@ -17,6 +17,12 @@
             <artifactId>xap-zookeeper</artifactId>
             <version>${gs.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.gigaspaces</groupId>
+            <artifactId>xap-admin</artifactId>
+            <version>16.1.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
 

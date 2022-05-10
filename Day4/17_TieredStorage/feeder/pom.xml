@@ -16,24 +16,6 @@
             <artifactId>xap-openspaces</artifactId>
             <version>${gs.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.gigaspaces</groupId>
-            <artifactId>xap-near-cache</artifactId>
-            <version>${gs.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.gigaspaces</groupId>
-            <artifactId>xap-near-cache-spring</artifactId>
-            <version>${gs.version}</version>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.example</groupId>
-            <artifactId>common</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
     </dependencies>
 
 

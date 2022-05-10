@@ -17,20 +17,13 @@ package com.gs;
 
 import com.gigaspaces.internal.server.space.tiered_storage.TieredStorageConfig;
 import com.gigaspaces.internal.server.space.tiered_storage.TieredStorageTableConfig;
-import com.gs.Data1;
-import com.gs.Data2;
-import com.gs.Data4;
-import org.hibernate.SessionFactory;
+
 import org.openspaces.core.cluster.ClusterInfo;
 import org.openspaces.core.cluster.ClusterInfoContext;
 import org.openspaces.core.config.annotation.EmbeddedSpaceBeansConfig;
 import org.openspaces.core.space.EmbeddedSpaceFactoryBean;
-import org.openspaces.persistency.hibernate.DefaultHibernateSpaceDataSourceConfigurer;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 
-import javax.sql.DataSource;
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -46,14 +39,21 @@ public class CustomSpaceConfig extends EmbeddedSpaceBeansConfig {
 		super.configure(factoryBean);
 		Properties properties = new Properties();
         properties.setProperty("space-config.engine.cache_policy", "1");
-        factoryBean.setProperties(properties);
+		properties.setProperty("space-config.engine.query.result.size.limit", "400");
+		properties.setProperty("space-config.engine.query.result.size.limit.memory.check.batch.size", "250");
+		factoryBean.setProperties(properties);
 
 		TieredStorageConfig tieredStorageConfig = new TieredStorageConfig();
+
+		//Criteria per table can be defined in space configuration or when registering the type
 		Map<String, TieredStorageTableConfig> tables = new HashMap<>();
-		tables.put(Data1.class.getName(), new TieredStorageTableConfig().setName(Data1.class.getName()).setCriteria("type='4'"));
-		tables.put(Data2.class.getName(), new TieredStorageTableConfig().setName(Data2.class.getName()).setTransient(true));
-		tables.put(Data4.class.getName(), new TieredStorageTableConfig().setName(Data4.class.getName()).setCriteria("all"));
-		tables.put("MyTestClass", new TieredStorageTableConfig().setName("MyTestClass").setCriteria("all"));
+		tables.put("Doc1", new TieredStorageTableConfig().setName("Doc1").setCriteria("type='4'"));
+		tables.put("Doc2", new TieredStorageTableConfig().setName("Doc2").setTransient(true));
+		//example for Pojo configuration
+		//tables.put(Pojo.class.getName(), new TieredStorageTableConfig().setName(Pojo.class.getName()).setCriteria("all"));
+		tables.put("Doc4", new TieredStorageTableConfig().setName("Doc4").setCriteria("all"));
+		tables.put("Doc5", new TieredStorageTableConfig().setName("Doc5").setTimeColumn("expire").setPeriod( Duration.ofHours(24)));
+
 		tieredStorageConfig.setTables(tables);
 		factoryBean.setTieredStorageConfig(tieredStorageConfig);
 
