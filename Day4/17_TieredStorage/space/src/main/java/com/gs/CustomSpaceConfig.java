@@ -24,8 +24,6 @@ import org.openspaces.core.config.annotation.EmbeddedSpaceBeansConfig;
 import org.openspaces.core.space.EmbeddedSpaceFactoryBean;
 
 import java.time.Duration;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Properties;
 
 public class CustomSpaceConfig extends EmbeddedSpaceBeansConfig {
@@ -38,24 +36,20 @@ public class CustomSpaceConfig extends EmbeddedSpaceBeansConfig {
     protected void configure(EmbeddedSpaceFactoryBean factoryBean) {
 		super.configure(factoryBean);
 		Properties properties = new Properties();
-        properties.setProperty("space-config.engine.cache_policy", "1");
+        properties.setProperty("space-config.engine.cache_policy", "1"); //change to 4 for 16.2
 		properties.setProperty("space-config.engine.query.result.size.limit", "400");
 		properties.setProperty("space-config.engine.query.result.size.limit.memory.check.batch.size", "250");
+		properties.setProperty("cluster-config.groups.group.repl-policy.sync-replication.target-consume-timeout", "500");
 		factoryBean.setProperties(properties);
 
 		TieredStorageConfig tieredStorageConfig = new TieredStorageConfig();
-
-		//Criteria per table can be defined in space configuration or when registering the type
-		Map<String, TieredStorageTableConfig> tables = new HashMap<>();
-		tables.put("Doc1", new TieredStorageTableConfig().setName("Doc1").setCriteria("type='4'"));
-		tables.put("Doc2", new TieredStorageTableConfig().setName("Doc2").setTransient(true));
-		//example for Pojo configuration
-		//tables.put(Pojo.class.getName(), new TieredStorageTableConfig().setName(Pojo.class.getName()).setCriteria("all"));
-		tables.put("Doc4", new TieredStorageTableConfig().setName("Doc4").setCriteria("all"));
-		tables.put("Doc5", new TieredStorageTableConfig().setName("Doc5").setTimeColumn("expire").setPeriod( Duration.ofHours(24)));
-
-		tieredStorageConfig.setTables(tables);
+		tieredStorageConfig.addTable(new TieredStorageTableConfig().setName("Doc1").setCriteria("type='4'"));
+		tieredStorageConfig.addTable(new TieredStorageTableConfig().setName("Doc2").setTransient(true));
+		tieredStorageConfig.addTable(new TieredStorageTableConfig().setName("Doc4").setCriteria("all"));
+		tieredStorageConfig.addTable(new TieredStorageTableConfig().setName("Doc5").setTimeColumn("expire").setPeriod( Duration.ofHours(24)));
+		//factoryBean.setCachePolicy(new TieredStorageCachePolicy(tieredStorageConfig)); --> 16.2
 		factoryBean.setTieredStorageConfig(tieredStorageConfig);
+
 
 	}
 

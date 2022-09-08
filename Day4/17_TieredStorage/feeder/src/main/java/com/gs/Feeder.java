@@ -1,6 +1,7 @@
 package com.gs;
 
 import com.gigaspaces.async.AsyncResult;
+import com.gigaspaces.client.WriteModifiers;
 import com.gigaspaces.document.SpaceDocument;
 import com.gigaspaces.internal.server.space.tiered_storage.TieredStorageTableConfig;
 import com.gigaspaces.metadata.SpaceTypeDescriptor;
@@ -11,11 +12,14 @@ import org.openspaces.core.GigaSpaceConfigurer;
 import org.openspaces.core.executor.DistributedTask;
 import org.openspaces.core.space.SpaceProxyConfigurer;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class Feeder {
     GigaSpace gs;
+    final static int BATCH_SIZE = 10;
+    final static long WAIT_TIME = 200;
 
     public Feeder(GigaSpace gs) {
         this.gs = gs;
@@ -68,6 +72,7 @@ public class Feeder {
         gs.getTypeManager().registerTypeDescriptor(typeDescriptorDoc4);
         gs.getTypeManager().registerTypeDescriptor(typeDescriptorDoc5);
 
+        ArrayList<SpaceDocument> batch = new ArrayList<>(BATCH_SIZE+5);
 
         for (int k = 0; k < amount; k++) {
             SpaceDocument doc1 = new SpaceDocument("Doc1");
@@ -76,11 +81,21 @@ public class Feeder {
             SpaceDocument doc4 = new SpaceDocument("Doc4");
             SpaceDocument doc5 = new SpaceDocument("Doc5");
             ;
-            gs.write(getDoc(k, doc1));
-            gs.write(getDoc(k, doc2));
-            gs.write(getDoc(k, doc3));
-            gs.write(getDoc(k, doc4));
-            gs.write(getDoc(k, doc5));
+            batch.add(getDoc(k, doc1));
+            batch.add(getDoc(k, doc2));
+            batch.add(getDoc(k, doc3));
+            batch.add(getDoc(k, doc4));
+            batch.add(getDoc(k, doc5));
+            if (batch.size() >= BATCH_SIZE) {
+                gs.writeMultiple(batch.toArray(new SpaceDocument[0]), WriteModifiers.ONE_WAY);
+                batch.clear();
+                try {
+                    Thread.sleep(WAIT_TIME);
+                }
+                catch (Exception e){
+
+                }
+            }
         }
 
 
@@ -97,9 +112,9 @@ public class Feeder {
 
 
     public static void main(String[] args) throws InterruptedException {
-        GigaSpace gs1 = new GigaSpaceConfigurer(new SpaceProxyConfigurer("test1").lookupGroups("xap-16.2.0").lookupLocators()).gigaSpace();
+        GigaSpace gs1 = new GigaSpaceConfigurer(new SpaceProxyConfigurer("test1").lookupGroups("xap-16.1.1")).gigaSpace();
         Feeder feeder = new Feeder(gs1);
-        feeder.feed(10000);
+        feeder.feed(100);
 
     }
 
