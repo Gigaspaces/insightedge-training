@@ -6,17 +6,16 @@ import org.openspaces.core.GigaSpaceConfigurer;
 import org.openspaces.core.space.SpaceProxyConfigurer;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Properties;
 
-public class JDBCV3Client {
+
+public class JDBCV3Client extends AbsractJDBCClient{
     private final String EXPLAIN_PLAN_PREFIX = "EXPLAIN PLAN FOR ";
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        GigaSpace gs = new GigaSpaceConfigurer(new SpaceProxyConfigurer("demo")).gigaSpace();
+        GigaSpace gs = new GigaSpaceConfigurer(new SpaceProxyConfigurer("demo").lookupGroups("xap-16.2.0")).gigaSpace();
         JDBCV3Client client = new JDBCV3Client();
         Connection connection = client.connect(gs);
+        client.insetDataExample(connection);
         client.read1(connection);
         client.read2(connection);
         client.read3(connection);
@@ -28,12 +27,18 @@ public class JDBCV3Client {
         client.read9(connection);
         client.read10(connection);
         client.read11(connection);
+
     }
 
-    protected Connection connect(GigaSpace gigaSpace) throws SQLException, ClassNotFoundException {
-        Properties properties = new Properties();
-       // properties.put("readModifiers", ReadModifiers.MEMORY_ONLY_SEARCH);
-       return DriverManager.getConnection("jdbc:gigaspaces:v3://localhost:4174/" + gigaSpace.getSpaceName(), properties);
+    /*
+    Run feeder to fill test with data, this is just an example for insert
+     */
+    private void insetDataExample(Connection connection) throws SQLException {
+        String customerInsertSql = "INSERT INTO \"com.gs.Customer\" (id, firsName, lastName, birthday) VALUES (?, ?, ?, ?)";
+        PreparedStatement ps = connection.prepareStatement(customerInsertSql);
+        ps.setInt(1,101); ps.setString(2,"George");ps.setString(3,"Washington");
+        ps.setDate(4, java.sql.Date.valueOf("2000-11-1"));
+        ps.execute();
     }
 
     protected void read(Connection connection, String query) throws SQLException {
@@ -70,9 +75,13 @@ public class JDBCV3Client {
         System.out.println("======================= Read1 ===========================");
 
         String queryPrefix = "select * from  \"" + Customer.class.getName()+"\"" +" where ";
-        String query = queryPrefix + "lastName = 'Cohen' order by firsName";
+        String query = queryPrefix + "lastName = 'Cohen' order by firsName DESC NULLS LAST";
         read(connection,query);
+        //desc1(connection, query);
     }
+
+
+
 
 
     /*
@@ -185,36 +194,37 @@ public class JDBCV3Client {
 
     protected void read11(Connection connection) throws SQLException{
         System.out.println("======================= Read11 ===========================");
-        String queryPrefix = "SELECT Avg(P.price) as avg_price  from \"" +  Product.class.getName() + "\" as P " ;
+        String queryPrefix = "SELECT Max(P.price) as avg_price  from \"" +  Product.class.getName() + "\" as P " ;
         String condition1 = " WHERE P.price >50 " ;
 
 
-        String query = queryPrefix + condition1;
+        String query = queryPrefix /*+ condition1*/;
         read(connection,query);
     }
 
     
 
-    private List<String> dumpResult(ResultSet resultSet) throws SQLException {
-        ResultSetMetaData rsmd = resultSet.getMetaData();
-        int columnsNumber = rsmd.getColumnCount();
-        List<String> rows = new ArrayList<>();
-        for (int k=1; k<= columnsNumber; k++){
-            if (k > 1) System.out.print(",  ");
-            System.out.print(rsmd.getColumnName(k));
+
+
+
+    public void desc1(Connection connection, String query)  throws SQLException{
+        System.out.println("======================= desc1 ===========================");
+        Statement statement = connection.createStatement();
+        try {
+            String desc = "DESCRIBE "+ query;
+            dumpResult(statement.executeQuery(desc));
         }
-        System.out.println();
-        while (resultSet.next()) {
-            for (int i = 1; i <= columnsNumber; i++) {
-                if (i > 1) System.out.print(",  ");
-                String columnValue = resultSet.getString(i);
-                System.out.print(columnValue);
-                rows.add(columnValue);
-            }
-            System.out.println();
+        catch (Throwable e){
+            System.out.println("Fail to run describe for query:" + e);
+            e.printStackTrace();
         }
-        return rows;
+
+        finally {
+            statement.close();
+        }
+
     }
+
 
 
 

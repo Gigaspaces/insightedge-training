@@ -5,7 +5,7 @@ import com.gigaspaces.annotation.pojo.SpaceIndex;
 import com.gigaspaces.annotation.pojo.SpaceRouting;
 import com.gigaspaces.metadata.index.SpaceIndexType;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Customer {
     String lastName;

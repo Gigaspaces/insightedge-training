@@ -1,6 +1,7 @@
 package com.gs;
 
 
+import com.j_spaces.core.client.SQLQuery;
 import org.openspaces.core.GigaSpace;
 import org.openspaces.core.GigaSpaceConfigurer;
 import org.openspaces.core.space.SpaceProxyConfigurer;
@@ -9,13 +10,24 @@ import java.sql.Date;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import static org.openspaces.extensions.QueryExtension.sum;
+
 
 public class DataGen {
 
     public static void main(String[] args) throws SQLException {
-        GigaSpace gs = new GigaSpaceConfigurer(new SpaceProxyConfigurer("demo")).gigaSpace();
+        GigaSpace gs = new GigaSpaceConfigurer(new SpaceProxyConfigurer("demo").lookupGroups("xap-16.2.0")).gigaSpace();
         DataGen dataGenerator = new DataGen();
         dataGenerator.writeData(gs);
+       // gs.
+    }
+
+    public void readData(GigaSpace gs){
+        SQLQuery<Product> sqlQuery = new SQLQuery<>(Product.class, "rownum < 3");
+        Double sum = sum(gs, sqlQuery, "price");
+        Object[] results = gs.readMultiple(sqlQuery);
+        if (results != null)
+        System.out.println("got results: " + results.length + " sum: "+ sum );
     }
 
     public void writeData(GigaSpace gs){
