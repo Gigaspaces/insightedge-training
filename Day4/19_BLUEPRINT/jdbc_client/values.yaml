@@ -3,7 +3,7 @@ project:
 java:
   version: 1.8
 gigaspaces:
-  version: 16.1.1
+  version: 16.2.1
 service:
   name: JDBCService1
   description: service example
