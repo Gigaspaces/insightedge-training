@@ -1,6 +1,8 @@
 package com.gs;
 
 
+import com.gigaspaces.internal.license.LicenseManager;
+import com.j_spaces.kernel.SystemProperties;
 import org.openspaces.core.GigaSpace;
 import org.openspaces.core.GigaSpaceConfigurer;
 import org.openspaces.core.space.SpaceProxyConfigurer;
@@ -12,7 +14,13 @@ public class JDBCV3Client extends AbsractJDBCClient{
     private final String EXPLAIN_PLAN_PREFIX = "EXPLAIN PLAN FOR ";
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        GigaSpace gs = new GigaSpaceConfigurer(new SpaceProxyConfigurer("demo").lookupGroups("xap-16.2.0")).gigaSpace();
+
+        String key = System.getProperty(SystemProperties.LICENSE_KEY);
+        System.out.println("System.getProperty(SystemProperties.LICENSE_KEY)=" + System.getProperty(SystemProperties.LICENSE_KEY));
+        System.out.println("LicenseManager.getInstance().getLicenseKey()=" + LicenseManager.getInstance().getLicenseKey());
+        System.out.printf("DONE");
+        /*GigaSpace gs = new GigaSpaceConfigurer(new SpaceProxyConfigurer("demo").lookupGroups("xap-16.2.1")).gigaSpace();
+
         JDBCV3Client client = new JDBCV3Client();
         Connection connection = client.connect(gs);
         client.insetDataExample(connection);
@@ -26,7 +34,7 @@ public class JDBCV3Client extends AbsractJDBCClient{
         client.read8(connection);
         client.read9(connection);
         client.read10(connection);
-        client.read11(connection);
+        client.read11(connection);*/
 
     }
 

@@ -16,7 +16,7 @@ import static org.openspaces.extensions.QueryExtension.sum;
 public class DataGen {
 
     public static void main(String[] args) throws SQLException {
-        GigaSpace gs = new GigaSpaceConfigurer(new SpaceProxyConfigurer("demo").lookupGroups("xap-16.2.0")).gigaSpace();
+        GigaSpace gs = new GigaSpaceConfigurer(new SpaceProxyConfigurer("demo").lookupGroups("xap-16.2.1")).gigaSpace();
         DataGen dataGenerator = new DataGen();
         dataGenerator.writeData(gs);
        // gs.
