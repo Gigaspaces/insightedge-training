@@ -23,7 +23,7 @@
         <dependency>
             <groupId>org.gigaspaces</groupId>
             <artifactId>xap-datagrid</artifactId>
-            <version>16.2.0</version>
+            <version>${gs.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -39,7 +39,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <gs.version>16.2.1</gs.version>
+        <gs.version>16.3.0</gs.version>
     </properties>
 
 <!-- <repositories>

@@ -11,7 +11,7 @@ public class MetaDataExplorer extends AbsractJDBCClient{
     }
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        GigaSpace gs = new GigaSpaceConfigurer(new SpaceProxyConfigurer("demo").lookupGroups("xap-16.2.0")).gigaSpace();
+        GigaSpace gs = new GigaSpaceConfigurer(new SpaceProxyConfigurer("demo").lookupGroups("xap-16.3.0")).gigaSpace();
         MetaDataExplorer client = new MetaDataExplorer();
         Connection connection = client.connect(gs);
         System.out.println("================ information_schema_catalog_name==========");

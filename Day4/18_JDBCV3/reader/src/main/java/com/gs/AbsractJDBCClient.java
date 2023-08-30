@@ -36,10 +36,11 @@ public class AbsractJDBCClient {
         ResultSetMetaData rsmd = resultSet.getMetaData();
         int columnsNumber = rsmd.getColumnCount();
         List<String> rows = new ArrayList<>();
-        for (int k=1; k<= columnsNumber; k++){
+        for (int k=1; k<= columnsNumber; k++) {
             if (k > 1) System.out.print(",  ");
             System.out.print(rsmd.getColumnName(k));
         }
+
         System.out.println();
         while (resultSet.next()) {
             for (int i = 1; i <= columnsNumber; i++) {

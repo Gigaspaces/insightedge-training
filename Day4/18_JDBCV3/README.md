@@ -17,6 +17,6 @@
 6. Run queries using the ops-ui 
 7. Run JDBCV3Client see queries, explain plan and results
 8. For 16.2+ run MetaDataExplorer
-9. Follow the instructions in the presentation to connect to power-bi
+9. Follow the instructions in the presentation to connect to dbbeaver or powerbi
    (https://docs.gigaspaces.com/latest/dev-java/16-2-odbc-jdbc-connection-to-tableau-and-power-bi-using-data-gateway.html)
 
