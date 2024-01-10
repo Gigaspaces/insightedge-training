@@ -3,7 +3,6 @@ package com.gs;
 
 import com.gigaspaces.internal.license.LicenseManager;
 import com.j_spaces.kernel.SystemProperties;
-import javafx.beans.property.adapter.ReadOnlyJavaBeanBooleanProperty;
 import org.openspaces.core.GigaSpace;
 import org.openspaces.core.GigaSpaceConfigurer;
 import org.openspaces.core.space.SpaceProxyConfigurer;
